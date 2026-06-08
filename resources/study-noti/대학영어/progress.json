@@ -1,0 +1,12 @@
+{
+  "track": "대학영어 학습 (필수 문법 7주 집중)",
+  "label": "대학영어",
+  "keyword": "대학영어",
+  "currentStep": 1,
+  "totalSteps": 47,
+  "completedSteps": [],
+  "lastTelegramUpdateId": 976349975,
+  "active": false,
+  "notionUrl": "https://app.notion.com/p/379fe77d5256815ebae3f356ffd327c3",
+  "note": "active=true일 때만 노티 발송(학습 시작 시 true로). currentStep=발송할 단계 번호. 7주 42단계 문법 집중. 진도 전진=텔레그램에 '다음 대학영어'(활성 1개면 '다음') 텍스트를 보내면 currentStep+1. 회차(같은 단계 반복 학습)는 노션 회차 토글로 사용자가 직접 관리(텔레그램은 회차를 세지 않고 버튼도 없음). notionUrl은 학습 기록 노션 페이지로 노티 하단 첨부."
+}
