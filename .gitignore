@@ -1,0 +1,75 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE / Editor =====
+.idea/
+.vscode/
+*.iml
+*.swp
+*~
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ===== Java =====
+*.class
+target/
+build/
+out/
+*.jar
+!**/libs/*.jar
+
+# ===== Web / Node =====
+node_modules/
+dist/
+.cache/
+
+# ===== C / C++ =====
+# 오브젝트 / 컴파일 중간 산출물
+*.o
+*.obj
+*.lo
+*.slo
+*.gch
+*.pch
+*.d
+# 실행 파일
+*.exe
+*.out
+*.app
+# 라이브러리 (단, libs/ 의존성은 추적 유지)
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+!**/libs/*.a
+!**/libs/*.lib
+!**/libs/*.so
+!**/libs/*.dll
+# 디버그 심볼 (Visual Studio 등)
+*.pdb
+*.ilk
+*.idb
+# CMake 산출물
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# ===== 개인 메모 / 임시 파일 =====
+*.log
+*.tmp
+scratch/
+TODO.local.md
+
+# ===== Claude Code (개인 설정/권한 - 공유 안 함) =====
+.claude/settings.local.json
