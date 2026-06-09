@@ -1,0 +1,278 @@
+/* ==========================================================================
+   KNOU 모의시험 스타일 (exam.js 전용)
+   - style.css의 공용 토큰(var(--...))만 사용하므로 다크모드 자동 대응
+   - 시험 페이지(<body data-exam>)에서만 style.css와 함께 로드
+   ========================================================================== */
+
+#exam {
+    margin-top: 8px;
+}
+
+.exam__loading {
+    color: var(--text-muted);
+}
+
+/* ---- 시작 패널 ---- */
+.exam__panel {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 18px 16px;
+}
+
+.exam__panel h2 {
+    margin: 0 0 6px;
+}
+
+.exam__meta {
+    color: var(--text-soft);
+    margin: 0 0 14px;
+}
+
+.exam__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.exam__select {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font: inherit;
+    max-width: 100%;
+}
+
+/* ---- 버튼 ---- */
+.exam__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--tap);
+    margin: 8px 8px 0 0;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease, border-color 0.15s ease,
+        transform 0.08s ease;
+}
+
+.exam__btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+.exam__btn:active {
+    transform: scale(0.98);
+}
+
+.exam__btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.exam__btn--primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.exam__btn--primary:hover {
+    background: var(--accent-text);
+    border-color: var(--accent-text);
+}
+
+/* ---- 응시 상단 고정 바 ---- */
+.exam__bar {
+    position: sticky;
+    top: var(--topbar-h);
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin-bottom: 8px;
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.exam__bar .exam__btn {
+    margin: 0 0 0 auto;
+}
+
+.exam__timer {
+    font-variant-numeric: tabular-nums;
+}
+
+.exam__timer.warn {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* ---- 문항 카드 ---- */
+.exam__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.exam__q {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 14px 14px 12px;
+}
+
+.exam__q--correct {
+    box-shadow: inset 4px 0 0 var(--accent);
+}
+
+.exam__q--wrong {
+    box-shadow: inset 4px 0 0 var(--text-muted);
+}
+
+.exam__q-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.exam__num {
+    font-weight: 700;
+    color: var(--accent-text);
+}
+
+.exam__type {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+}
+
+.exam__stem {
+    margin: 4px 0 10px;
+    line-height: var(--lh-body);
+}
+
+/* ---- 입력 ---- */
+.exam__input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.exam__choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 9px 10px;
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    background: var(--bg-soft);
+    cursor: pointer;
+    line-height: 1.45;
+}
+
+.exam__choice:hover {
+    border-color: var(--accent);
+}
+
+.exam__choice input {
+    margin-top: 3px;
+    flex: 0 0 auto;
+}
+
+.exam__text {
+    padding: 9px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font: inherit;
+    width: 100%;
+    max-width: 360px;
+}
+
+.exam__blank {
+    display: inline-block;
+    width: auto;
+    min-width: 90px;
+    max-width: 220px;
+    margin: 0 3px;
+    padding: 3px 8px;
+    vertical-align: baseline;
+}
+
+/* 매칭/순서 행 */
+.exam__pair {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    flex-wrap: wrap;
+}
+
+.exam__pair-left {
+    flex: 1 1 160px;
+    min-width: 120px;
+}
+
+.exam__order-sel {
+    width: 64px;
+    flex: 0 0 auto;
+}
+
+/* 정답/해설 피드백(리뷰) */
+.exam__fb {
+    margin-top: 10px;
+}
+
+.exam__fb:empty {
+    display: none;
+}
+
+.exam__foot {
+    margin-top: 16px;
+    text-align: center;
+}
+
+/* ---- 결과 패널 ---- */
+.exam__result {
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    background: var(--accent-soft);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.exam__result h2 {
+    margin: 0 0 6px;
+}
+
+.exam__score {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 4px 0 10px;
+}
+
+.exam__hint {
+    color: var(--text-soft);
+    margin: 10px 0 0;
+}
+
+.exam__history {
+    margin-top: 14px;
+}
