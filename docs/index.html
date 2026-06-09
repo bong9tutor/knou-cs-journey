@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>KNOU 컴퓨터과학과 학습 노트</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title">KNOU 컴퓨터과학과 학습 노트</h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#intro">소개</a>
+            <a href="#sem1">1학년 1학기</a>
+            <a href="#sem2">1학년 2학기</a>
+            <a href="#guide">이용 안내</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>KNOU 컴퓨터과학과 학습 노트</h1>
+        <blockquote>방송통신대학교 컴퓨터과학과 4년 과정의 학습 기록입니다. 과목별 학습 노트를 휴대폰으로 빠르게 훑어보도록 정리했습니다.</blockquote>
+
+        <p id="intro">아래에서 학기별 과목 카드를 눌러 해당 과목의 학습 노트 페이지로 이동하세요. 각 페이지는 개념 요약, 표, 플래시카드, 퀴즈로 복습하기 좋게 재구성되어 있습니다.</p>
+
+        <h2 id="sem1">1학년 1학기</h2>
+        <ul class="vocab">
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./python.html">파이썬프로그래밍기초</a></p>
+                <p class="vocab__def">파이썬 문법과 기초 프로그래밍을 다루는 첫 코딩 과목. 실행 가능한 예제로 배웁니다.</p>
+                <p><span class="chip">1-1</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./data.html">데이터정보처리입문</a></p>
+                <p class="vocab__def">스프레드시트와 파이썬으로 데이터를 다루고 처리하는 입문 실습 과목.</p>
+                <p><span class="chip">1-1</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./ubicomp.html">유비쿼터스컴퓨팅개론</a></p>
+                <p class="vocab__def">언제 어디서나 연결되는 컴퓨팅 환경의 개념과 응용을 살펴보는 이론 과목.</p>
+                <p><span class="chip">1-1</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./computers.html">컴퓨터의이해</a></p>
+                <p class="vocab__def">컴퓨터의 구성 원리와 동작 방식을 폭넓게 개괄하는 기초 이론 과목.</p>
+                <p><span class="chip">1-1</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+        </ul>
+
+        <h2 id="sem2">1학년 2학기</h2>
+        <ul class="vocab">
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./english.html">대학영어</a></p>
+                <p class="vocab__def">대학 수준의 영문법과 어휘를 다지는 교양 어학 과목. 발음 듣기를 지원합니다.</p>
+                <p><span class="chip">1-2</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./c.html">C프로그래밍</a></p>
+                <p class="vocab__def">C 언어로 변수, 제어문, 포인터까지 익히는 시스템 기초 프로그래밍 과목.</p>
+                <p><span class="chip">1-2</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./cs-intro.html">컴퓨터과학개론</a></p>
+                <p class="vocab__def">컴퓨터과학 전반의 핵심 분야를 두루 소개하는 전공 입문 이론 과목.</p>
+                <p><span class="chip">1-2</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+            <li class="vocab__item">
+                <p class="vocab__term"><a href="./ai-literacy.html">AI리터러시</a></p>
+                <p class="vocab__def">인공지능의 기본 개념과 활용, 윤리적 쟁점을 이해하는 데이터/AI 교양 과목.</p>
+                <p><span class="chip">1-2</span> <span class="chip tip">노트 있음</span></p>
+            </li>
+        </ul>
+
+        <h2 id="guide">이용 안내</h2>
+        <div class="callout tip">
+            <p class="callout__title">학습 노트 활용법</p>
+            <p>각 과목 카드를 누르면 해당 과목의 학습 노트 페이지가 열립니다. 페이지 상단의 목차 버튼으로 섹션을 빠르게 이동하고, 우측 상단 버튼으로 다크 모드를 켤 수 있습니다.</p>
+        </div>
+        <div class="callout info">
+            <p class="callout__title">복습 도구</p>
+            <p>프로그래밍 과목은 코드와 예상 출력을, 어학 과목은 발음 듣기를 제공합니다. 플래시카드와 퀴즈로 능동 회상 복습을 해보세요.</p>
+        </div>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

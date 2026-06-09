@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>컴퓨터과학개론 - 전공의 지도를 그리는 한 학기</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#what-is-cs">1. 컴퓨터과학이란 무엇인가</a>
+            <a href="#history">2. 컴퓨터의 역사와 발전</a>
+            <a href="#number-data">3. 진법과 데이터 표현</a>
+            <a href="#boolean-logic">4. 불 대수와 논리 회로</a>
+            <a href="#architecture">5. 컴퓨터 구조 - CPU, 메모리, 입출력</a>
+            <a href="#os">6. 운영체제 기초</a>
+            <a href="#lang-algo">7. 프로그래밍 언어와 알고리즘</a>
+            <a href="#data-structure">8. 자료구조 개요</a>
+            <a href="#network-web">9. 컴퓨터 네트워크와 인터넷/웹</a>
+            <a href="#database">10. 데이터베이스 기초</a>
+            <a href="#security">11. 정보보안 기초</a>
+            <a href="#ai">12. 인공지능 개요</a>
+            <a href="#se-ethics">13. 소프트웨어공학과 컴퓨팅 윤리</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>컴퓨터과학개론</h1>
+        <blockquote>컴퓨터과학 전 분야의 용어와 원리를 한 번씩 훑어 상위 전공(자료구조-운영체제-컴퓨터구조-데이터베이스-정보통신망)의 토대를 만드는 과목이다. 한 분야를 깊게 파기보다, 전체 지도를 그려 두는 데 목표를 둔다.</blockquote>
+
+        <div class="callout info">
+            <p class="callout__title">교재 서지</p>
+            <p>이관용-정광식, 『컴퓨터과학개론』, 한국방송통신대학교출판문화원, 2021. ISBN 9788920039553. 1학년 2학기 과목, 워크북 포함, 본문 8개 장 구성. 이 노트는 교재 8개 장에 컴퓨터의 역사, 데이터 표현 심화, 불 대수-논리회로, 정보보안, 인공지능, 소프트웨어공학-윤리를 보강해 13개 단원으로 정리했다. 보강 단원에는 단원 머리에 별도 라벨을 달았다.</p>
+        </div>
+
+        <h2 id="what-is-cs">1. 컴퓨터과학이란 무엇인가</h2>
+
+        <details class="section" open>
+            <summary>개요 - 계산과 정보 처리의 학문</summary>
+            <div class="section__body">
+                <p>컴퓨터과학(Computer Science)은 "계산(computation)"과 "정보 처리"를 연구하는 학문이다. 흔히 컴퓨터라는 기계를 다루는 학문으로 오해하지만, 본질은 <strong>문제를 어떻게 표현하고, 어떤 절차로 풀며, 그 절차가 얼마나 효율적인가</strong>를 다룬다. 컴퓨터는 그 절차를 실행하는 도구일 뿐이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영역</th><th>다루는 질문</th><th>방통대 대응 과목</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>이론</td><td>무엇을 계산할 수 있는가, 얼마나 빠른가</td><td>알고리즘, 컴파일러구성</td></tr>
+                            <tr><td>시스템</td><td>하드웨어/소프트웨어가 어떻게 동작하는가</td><td>컴퓨터구조, 운영체제, 정보통신망</td></tr>
+                            <tr><td>데이터</td><td>정보를 어떻게 저장-조직-검색하는가</td><td>자료구조, 데이터베이스시스템</td></tr>
+                            <tr><td>응용</td><td>사람의 문제를 어떻게 푸는가</td><td>인공지능, 소프트웨어공학</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>컴퓨터과학 전체를 관통하는 세 가지 핵심 사고법:</p>
+                <ul>
+                    <li><strong>알고리즘(algorithm)</strong>: 문제를 푸는 단계의 명확한 나열. "유한한 단계 안에 끝나고, 입력에 대해 정해진 출력을 낸다"는 조건을 만족해야 한다.</li>
+                    <li><strong>추상화(abstraction)</strong>: 복잡한 대상에서 지금 필요한 본질만 남기고 세부를 감추는 것. 가장 중요한 사고법이다. (예: 운전자는 엔진 내부를 몰라도 페달과 핸들이라는 추상화된 인터페이스로 차를 몬다.)</li>
+                    <li><strong>자동화(automation)</strong>: 추상화한 절차를 기계가 반복 실행하게 만드는 것.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>1.1 컴퓨터과학 vs 컴퓨터공학</summary>
+            <div class="section__body">
+                <p>비슷해 보이지만 강조점이 다르다. 둘은 겹치는 영역이 넓고 상호 보완적이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>컴퓨터과학(CS)</th><th>컴퓨터공학(CE)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>초점</td><td>계산-알고리즘-소프트웨어-이론</td><td>하드웨어 설계와 HW-SW 결합</td></tr>
+                            <tr><td>핵심 질문</td><td>무엇을 어떻게 효율적으로 계산하는가</td><td>회로-소자-시스템을 어떻게 만드는가</td></tr>
+                            <tr><td>뿌리</td><td>수학-논리학</td><td>전기전자공학</td></tr>
+                            <tr><td>예</td><td>알고리즘, 자료구조, OS, AI, DB</td><td>프로세서 설계, 임베디드, VLSI, 회로</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>방통대 컴퓨터과학과는 이름 그대로 <strong>소프트웨어-이론 중심</strong>이지만, 디지털논리회로-컴퓨터구조처럼 하드웨어 기초도 함께 다룬다.</p>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>1.2 컴퓨터 시스템의 4가지 구성요소</summary>
+            <div class="section__body">
+                <p>컴퓨터 "시스템"은 기계(하드웨어)만이 아니라 다음 네 가지가 맞물려 동작한다.</p>
+                <ul>
+                    <li><strong>하드웨어(hardware)</strong>: CPU-기억장치-입출력장치 등 물리적 장치.</li>
+                    <li><strong>소프트웨어(software)</strong>: 하드웨어를 동작시키는 프로그램. 시스템 소프트웨어(OS 등)와 응용 소프트웨어로 나뉜다.</li>
+                    <li><strong>데이터(data)</strong>: 프로그램이 처리하는 입력-출력-저장 정보. 가공되어 의미를 가지면 정보(information)가 된다.</li>
+                    <li><strong>사용자(user)</strong>: 시스템을 사용-운영하는 사람. 일반 사용자부터 시스템 관리자-개발자까지 포함한다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 컴퓨터과학의 본질을 "기계를 다루는 학문"이라고 하면 무엇을 놓치는가?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">본질은 문제를 어떻게 표현하고 어떤 절차로 풀며 그 절차가 얼마나 효율적인가를 다루는 데 있다. 컴퓨터는 그 절차를 실행하는 도구일 뿐이다. 핵심 사고법은 알고리즘-추상화-자동화다.</div>
+            </details>
+        </details>
+
+        <h2 id="history">2. 컴퓨터의 역사와 발전</h2>
+
+        <details class="section">
+            <summary>기계식 계산기에서 폰 노이만 구조까지</summary>
+            <div class="section__body">
+                <p>기계로 계산을 자동화하려는 시도는 수백 년에 걸쳐 발전했다.</p>
+                <ul>
+                    <li><strong>기계식 계산기</strong>: 파스칼의 가산기(17세기), 라이프니츠의 사칙연산기. 톱니바퀴로 숫자를 다뤘다.</li>
+                    <li><strong>해석기관(Analytical Engine)</strong>: 찰스 배비지가 19세기에 구상한, 프로그램으로 제어되는 범용 계산기 개념. 에이다 러브레이스가 최초의 알고리즘을 기술해 "최초의 프로그래머"로 불린다.</li>
+                    <li><strong>튜링 기계(Turing Machine, 1936)</strong>: 앨런 튜링이 제안한 추상적 계산 모델. "계산 가능하다"는 것의 수학적 정의를 세워 현대 컴퓨터의 이론적 뿌리가 되었다.</li>
+                    <li><strong>폰 노이만 구조(1945)</strong>: 프로그램과 데이터를 같은 메모리에 저장하는 <strong>프로그램 내장 방식(stored-program)</strong>. 오늘날 거의 모든 컴퓨터가 이 구조를 따른다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>컴퓨터 세대 구분과 무어의 법칙</summary>
+            <div class="section__body">
+                <p>소자(부품)를 기준으로 세대를 나눈다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>세대</th><th>핵심 소자</th><th>시기(대략)</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1세대</td><td>진공관</td><td>1940s-50s</td><td>ENIAC, 거대하고 발열 큼</td></tr>
+                            <tr><td>2세대</td><td>트랜지스터</td><td>1950s-60s</td><td>작고 안정적, 고급언어 등장</td></tr>
+                            <tr><td>3세대</td><td>집적회로(IC)</td><td>1960s-70s</td><td>운영체제 보편화</td></tr>
+                            <tr><td>4세대</td><td>LSI/VLSI, 마이크로프로세서</td><td>1970s-</td><td>개인용 컴퓨터(PC) 시대</td></tr>
+                            <tr><td>이후</td><td>모바일-클라우드-AI</td><td>2000s-</td><td>네트워크와 인공지능 중심</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">무어의 법칙(Moore's Law)</p>
+                    <p>집적회로의 트랜지스터 수가 약 2년마다 두 배가 된다는 경험 법칙. 수십 년간 성능 향상의 동력이었으나 물리적 한계로 둔화되며, 그 대안으로 멀티코어-병렬처리-GPU가 부상했다.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 폰 노이만 구조의 핵심 아이디어 한 가지는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">프로그램과 데이터를 같은 메모리에 저장하는 프로그램 내장 방식(stored-program). 오늘날 거의 모든 컴퓨터가 따른다.</div>
+            </details>
+        </details>
+
+        <h2 id="number-data">3. 진법과 데이터 표현</h2>
+
+        <details class="section">
+            <summary>비트, 바이트, 데이터 단위</summary>
+            <div class="section__body">
+                <p>컴퓨터는 전기의 켜짐/꺼짐 두 상태만 구분한다. 그래서 모든 정보를 <strong>2진수(binary)</strong>, 즉 0과 1의 조합으로 표현한다. 정보의 최소 단위가 <strong>비트(bit)</strong>이고, 8비트가 모여 <strong>바이트(byte)</strong>가 된다.</p>
+                <p>데이터 단위 스펙트럼(작은 것 -&gt; 큰 것):</p>
+                <pre>비트(bit) -&gt; 바이트(B, 8bit) -&gt; KB -&gt; MB -&gt; GB -&gt; TB -&gt; PB -&gt; EB -&gt; ZB -&gt; YB</pre>
+                <ul>
+                    <li>1바이트씩 올라갈 때마다 2진 기준 1,024배(= 2^10)씩 커진다. KB(킬로)-MB(메가)-GB(기가)-TB(테라)-PB(페타)-EB(엑사)-ZB(제타)-YB(요타) 순.</li>
+                    <li>1바이트(8비트)는 2^8 = 256가지 상태를 표현할 수 있어 ASCII 문자 한 글자나 0~255 정수를 담는 기본 단위로 쓰인다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>3.1 진법 변환</summary>
+            <div class="section__body">
+                <p><strong>r진법(base-r)의 일반 정의</strong>: r진법에서 한 자리에는 0부터 r-1까지 r개의 숫자(digit)를 쓰고, 각 자리의 가중치는 밑수 r의 거듭제곱이다. n자리 정수 값은 다음과 같다.</p>
+                <pre>값 = d_(n-1) x r^(n-1) + ... + d_1 x r^1 + d_0 x r^0</pre>
+                <p>예: 2진법 r=2(0,1), 8진법 r=8(0~7), 10진법 r=10(0~9), 16진법 r=16(0~9, A~F). 16진수 1A = 1 x 16^1 + 10 x 16^0 = 26.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>10진수</th><th>2진수</th><th>8진수</th><th>16진수</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+                            <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+                            <tr><td>16</td><td>10000</td><td>20</td><td>10</td></tr>
+                            <tr><td>255</td><td>11111111</td><td>377</td><td>FF</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>10진 -&gt; 2진</strong>: 2로 계속 나누며 나머지를 거꾸로 읽는다. 13 = 2x6+1, 6=2x3+0, 3=2x1+1, 1=2x0+1 -&gt; 아래에서 위로 1101.</li>
+                    <li><strong>2진 -&gt; 10진</strong>: 자리값(2의 거듭제곱)을 곱해 더한다. 1101 = 8+4+0+1 = 13.</li>
+                    <li>16진수는 4비트를 한 자리로 묶어 표기하므로 2진수와 변환이 쉽다(예: 1101 1110 = DE).</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>3.2 정수 표현 - 4가지 방식</summary>
+            <div class="section__body">
+                <p>고정된 n비트로 정수를 표현하는 방식은 크게 네 가지다. 앞의 셋은 음수까지 담고, 부호없는 정수는 0 이상만 담는다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>방식</th><th>음수 표현 방법</th><th>4비트 +5 / -5</th><th>0의 표현</th><th>n비트 범위</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>부호없는 정수</td><td>음수 없음(0 이상만)</td><td>+5 = 0101 (-5 없음)</td><td>0000 (1개)</td><td>0 ~ 2^n - 1</td></tr>
+                            <tr><td>부호화-크기</td><td>최상위 비트=부호, 나머지=절댓값</td><td>0101 / 1101</td><td>+0=0000, -0=1000 (2개)</td><td>-(2^(n-1)-1) ~ +(2^(n-1)-1)</td></tr>
+                            <tr><td>1의 보수</td><td>모든 비트 반전(0&lt;-&gt;1)</td><td>0101 / 1010</td><td>+0=0000, -0=1111 (2개)</td><td>-(2^(n-1)-1) ~ +(2^(n-1)-1)</td></tr>
+                            <tr><td>2의 보수</td><td>1의 보수에 1을 더함</td><td>0101 / 1011</td><td>0000 (1개)</td><td>-2^(n-1) ~ +2^(n-1) - 1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>부호없는 정수</strong>: 부호 비트가 없어 같은 비트 수로 가장 큰 양수까지 담는다. 8비트면 0~255.</li>
+                    <li><strong>부호화-크기</strong>: 가장 직관적이다. 최상위 1비트로 부호(0=양, 1=음), 나머지로 크기. 단점은 +0과 -0이 따로 존재하고 덧셈 회로가 복잡해진다는 것.</li>
+                    <li><strong>1의 보수</strong>: 모든 비트를 반전해 음수를 만든다. +5 = 0101 -&gt; -5 = 1010. 역시 +0(0000)과 -0(1111)이 둘 다 존재한다.</li>
+                    <li><strong>2의 보수</strong>: 1의 보수에 1을 더한다. +5 = 0101 -&gt; 반전 1010 -&gt; +1 = 1011 = -5. 0이 하나뿐(0000)이고 뺄셈을 덧셈 회로로 그대로 처리할 수 있다.</li>
+                </ul>
+                <div class="callout tip">
+                    <p class="callout__title">현대 표준은 2의 보수</p>
+                    <p>0이 하나뿐이고 덧셈 회로를 그대로 쓸 수 있어 현대 컴퓨터의 표준이다. n비트 2의 보수 범위는 -2^(n-1) ~ +2^(n-1)-1 (8비트면 -128 ~ +127).</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>3.3 실수 표현 - 부동소수점</summary>
+            <div class="section__body">
+                <p>아주 크거나 작은 실수를 고정된 비트로 표현하려고 <strong>부호 + 지수 + 가수(mantissa)</strong>로 나눈다. 과학적 표기법(예: 1.01 x 2^3)을 2진수로 구현한 것이다. 국제 표준 <strong>IEEE 754</strong>가 32비트(단정밀도)/64비트(배정밀도)를 정의한다.</p>
+                <div class="callout warn">
+                    <p class="callout__title">0.1 + 0.2 != 0.3</p>
+                    <p>0.1처럼 10진 소수는 2진 부동소수점으로 정확히 표현되지 않아 미세한 오차가 생긴다. 금액 계산에 부동소수점을 쓰면 안 되는 근거다.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>3.4 문자 표현 - 문자 코드</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>ASCII</strong>: 7비트로 영문자-숫자-기호 128개를 표현. 'A'=65, 'a'=97, '0'=48.</li>
+                    <li><strong>EUC-KR / CP949</strong>: 한글을 2바이트로 표현하던 한국형 코드.</li>
+                    <li><strong>유니코드(Unicode)</strong>: 전 세계 문자를 하나의 번호 체계로 통합. 실제 저장 인코딩으로 <strong>UTF-8</strong>(가변 길이, 영문 1바이트-한글 3바이트, 웹 표준)이 가장 널리 쓰인다.</li>
+                </ul>
+                <div class="callout info">
+                    <p class="callout__title">"뷁" 현상의 원인</p>
+                    <p>파일이 깨져 보이는 현상은 대부분 저장한 인코딩과 읽는 인코딩이 달라서 생긴다. 이 레포가 UTF-8을 강제하는 이유이기도 하다.</p>
+                </div>
+            </div>
+        </details>
+
+        <ul class="vocab">
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">2의 보수에서 +5(0101)의 -5는?</div>
+                    <div class="back">반전 1010에 1을 더해 1011. 0이 하나뿐이고 뺄셈을 덧셈으로 처리.</div>
+                </div></div>
+            </li>
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">1바이트(8비트)가 표현하는 상태 수는?</div>
+                    <div class="back">2^8 = 256가지. ASCII 한 글자나 0~255 정수를 담는다.</div>
+                </div></div>
+            </li>
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">웹 표준 문자 인코딩은?</div>
+                    <div class="back">UTF-8 (가변 길이, 영문 1바이트-한글 3바이트). 유니코드를 저장하는 방식.</div>
+                </div></div>
+            </li>
+        </ul>
+
+        <h2 id="boolean-logic">4. 불 대수와 논리 회로</h2>
+
+        <p><span class="chip warn">보강 단원</span> 시험 필수 범위 아님 - 상위과목(디지털논리회로-컴퓨터구조) 대비 보강.</p>
+
+        <details class="section">
+            <summary>4.1 기본 논리 게이트</summary>
+            <div class="section__body">
+                <p>컴퓨터 하드웨어는 0과 1의 논리 연산으로 모든 계산을 수행한다. 그 수학적 토대가 <strong>불 대수(Boolean algebra)</strong>다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>게이트</th><th>의미</th><th>예 (A=1, B=0)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AND</td><td>둘 다 1이면 1</td><td>1 AND 0 = 0</td></tr>
+                            <tr><td>OR</td><td>하나라도 1이면 1</td><td>1 OR 0 = 1</td></tr>
+                            <tr><td>NOT</td><td>반전</td><td>NOT 1 = 0</td></tr>
+                            <tr><td>NAND</td><td>AND의 반전</td><td>1 NAND 0 = 1</td></tr>
+                            <tr><td>NOR</td><td>OR의 반전</td><td>1 NOR 0 = 0</td></tr>
+                            <tr><td>XOR</td><td>다르면 1</td><td>1 XOR 0 = 1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>NAND</strong>(또는 <strong>NOR</strong>) 게이트 하나만으로 다른 모든 게이트를 만들 수 있어 "완전 집합(universal gate)"이라 부른다.</p>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>4.2 불 대수 법칙</summary>
+            <div class="section__body">
+                <ul>
+                    <li>교환/결합/분배 법칙은 일반 대수와 유사하다.</li>
+                    <li><strong>드모르간의 법칙</strong>: NOT(A AND B) = (NOT A) OR (NOT B), NOT(A OR B) = (NOT A) AND (NOT B). 회로 단순화의 핵심 도구.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>4.3 조합 회로와 순차 회로</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>조합 회로(combinational)</strong>: 현재 입력만으로 출력이 정해짐. 가산기(adder), 멀티플렉서, 디코더 등. 1비트 덧셈을 하는 <strong>반가산기</strong>는 합(XOR)과 자리올림(AND)으로 만든다. 자리올림 입력까지 받는 것이 <strong>전가산기</strong>.</li>
+                    <li><strong>순차 회로(sequential)</strong>: 과거 상태(기억)에 따라 출력이 달라짐. 1비트를 저장하는 <strong>플립플롭(flip-flop)</strong>이 기본 단위이며, 이것이 모여 레지스터와 메모리가 된다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 게이트 하나만으로 다른 모든 게이트를 만들 수 있는 "완전 집합" 게이트는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">NAND 또는 NOR. 이 둘 각각으로 AND/OR/NOT을 모두 구성할 수 있다.</div>
+            </details>
+        </details>
+
+        <h2 id="architecture">5. 컴퓨터 구조 - CPU, 메모리, 입출력</h2>
+
+        <details class="section">
+            <summary>5.1 CPU의 구성</summary>
+            <div class="section__body">
+                <p>폰 노이만 구조의 컴퓨터는 크게 <strong>중앙처리장치(CPU)-기억장치(memory)-입출력장치(I/O)</strong>로 이뤄지고, 이들을 <strong>버스(bus)</strong>가 연결한다.</p>
+                <ul>
+                    <li><strong>산술논리장치(ALU)</strong>: 실제 사칙연산-논리연산 수행.</li>
+                    <li><strong>제어장치(CU)</strong>: 명령어를 해석해 각 부품에 신호를 보냄.</li>
+                    <li><strong>레지스터(register)</strong>: CPU 내부의 초고속 임시 저장소. 다음 명령 주소를 가리키는 <strong>프로그램 카운터(PC)</strong>, 현재 명령을 담는 <strong>명령 레지스터(IR)</strong> 등.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>5.2 명령어 실행 사이클</summary>
+            <div class="section__body">
+                <p>CPU는 다음을 끊임없이 반복한다.</p>
+                <ol>
+                    <li><strong>인출(Fetch)</strong>: PC가 가리키는 메모리에서 명령어를 가져옴.</li>
+                    <li><strong>해독(Decode)</strong>: 제어장치가 명령어 종류를 해석.</li>
+                    <li><strong>실행(Execute)</strong>: ALU 등이 연산 수행.</li>
+                    <li><strong>저장(Store/Write-back)</strong>: 결과를 레지스터/메모리에 기록.</li>
+                </ol>
+                <p>성능 향상 기법: <strong>파이프라이닝</strong>(여러 명령의 각 단계를 겹쳐 실행), <strong>멀티코어</strong>(CPU 코어를 여러 개), <strong>캐시</strong>(자주 쓰는 데이터를 CPU 가까이에).</p>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>5.3 기억장치 계층</summary>
+            <div class="section__body">
+                <p>위로 갈수록 빠르고 비싸고 작다. 아래로 갈수록 느리고 싸고 크다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>계층</th><th>속도</th><th>용량</th><th>휘발성</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>레지스터</td><td>가장 빠름</td><td>수십 바이트</td><td>휘발성</td></tr>
+                            <tr><td>캐시(L1/L2/L3)</td><td>매우 빠름</td><td>KB~MB</td><td>휘발성</td></tr>
+                            <tr><td>주기억장치(RAM)</td><td>빠름</td><td>GB</td><td>휘발성</td></tr>
+                            <tr><td>보조기억장치(SSD/HDD)</td><td>느림</td><td>TB</td><td>비휘발성</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>RAM</strong>: 전원이 꺼지면 내용이 사라짐(휘발성), 프로그램 실행 중 데이터를 담는 작업 공간.</li>
+                    <li><strong>ROM</strong>: 읽기 전용, 부팅 같은 기본 동작을 담음.</li>
+                    <li><strong>클럭(clock)</strong>: CPU의 동작 박자. 3GHz는 초당 30억 번 박자.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>5.4 입출력(I/O)</summary>
+            <div class="section__body">
+                <p>키보드-마우스-모니터-디스크 등 외부 장치와 데이터를 주고받는다. 효율을 위해 다음 기법을 쓴다.</p>
+                <ul>
+                    <li><strong>인터럽트(interrupt)</strong>: 장치가 CPU에 "처리해 달라"고 신호.</li>
+                    <li><strong>DMA(직접 메모리 접근)</strong>: CPU를 거치지 않고 장치-메모리 직접 전송.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 명령어 실행 사이클의 4단계를 순서대로 말해 보자.</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">인출(Fetch) -&gt; 해독(Decode) -&gt; 실행(Execute) -&gt; 저장(Store/Write-back).</div>
+            </details>
+        </details>
+
+        <h2 id="os">6. 운영체제 기초</h2>
+
+        <details class="section">
+            <summary>운영체제의 핵심 역할 4가지</summary>
+            <div class="section__body">
+                <p><strong>운영체제(OS)</strong>는 하드웨어와 응용 프로그램 사이에서 자원을 관리하고 사용자에게 편리한 환경을 제공하는 시스템 소프트웨어다. (Windows, Linux, macOS, Android, iOS 등)</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>역할</th><th>설명</th><th>핵심 기법</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>프로세스 관리</td><td>실행 중인 프로그램에 CPU를 나눠 줌</td><td>스케줄링: FCFS, SJF, 라운드 로빈</td></tr>
+                            <tr><td>주기억장치 관리</td><td>한정된 RAM을 프로세스들에 배분</td><td>가상 메모리, 페이징</td></tr>
+                            <tr><td>장치 관리</td><td>입출력 장치를 제어</td><td>드라이버</td></tr>
+                            <tr><td>파일 관리</td><td>데이터를 파일-디렉터리로 저장</td><td>권한 관리</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>핵심 추가 개념</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>프로세스 vs 스레드</strong>: 프로세스는 독립된 실행 단위(고유 메모리 공간), 스레드는 한 프로세스 안에서 메모리를 공유하며 동시에 도는 더 가벼운 실행 흐름.</li>
+                    <li><strong>교착 상태(deadlock)</strong>: 둘 이상의 프로세스가 서로의 자원을 기다리며 무한정 멈추는 상황.</li>
+                    <li><strong>커널(kernel)</strong>: OS의 핵심부. 하드웨어를 직접 다루며 가장 높은 권한으로 동작.</li>
+                </ul>
+                <div class="callout info">
+                    <p class="callout__title">CPU 스케줄링 대표 알고리즘</p>
+                    <p>FCFS(선착순), SJF(짧은 작업 우선), 라운드 로빈(시간 분할). 여러 프로세스가 동시에 도는 것처럼 보이게 CPU를 빠르게 전환한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <ul class="vocab">
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">프로세스 vs 스레드의 메모리 차이는?</div>
+                    <div class="back">프로세스는 고유 메모리 공간을 가진 독립 실행 단위, 스레드는 한 프로세스 안에서 메모리를 공유하는 더 가벼운 실행 흐름.</div>
+                </div></div>
+            </li>
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">물리 메모리보다 큰 주소 공간을 쓰게 하는 기법은?</div>
+                    <div class="back">가상 메모리(virtual memory). 메모리를 일정 크기로 나누는 페이징(paging)과 함께 쓴다.</div>
+                </div></div>
+            </li>
+        </ul>
+
+        <h2 id="lang-algo">7. 프로그래밍 언어와 알고리즘</h2>
+
+        <details class="section">
+            <summary>7.1 프로그래밍 언어의 분류와 번역 방식</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>저급 언어</strong>: 기계어(0/1), 어셈블리어(기계어에 1:1 대응하는 기호). 하드웨어에 가깝고 빠르지만 작성이 어렵다.</li>
+                    <li><strong>고급 언어</strong>: 사람이 이해하기 쉬운 언어(C, Java, Python 등). 번역기를 거쳐 실행된다.</li>
+                </ul>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>방식</th><th>설명</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>컴파일러</td><td>전체 소스를 한 번에 기계어로 번역 후 실행</td><td>C, C++</td></tr>
+                            <tr><td>인터프리터</td><td>한 줄씩 해석하며 즉시 실행</td><td>Python(전통적)</td></tr>
+                            <tr><td>혼합(중간코드+VM)</td><td>바이트코드로 번역 후 가상머신이 실행</td><td>Java(JVM)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>패러다임: <strong>절차지향</strong>(C, 순서대로 명령), <strong>객체지향</strong>(Java, 데이터와 동작을 객체로 묶음 - 캡슐화-상속-다형성), <strong>함수형</strong>(상태 변경 없이 함수 조합) 등.</p>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>7.2 알고리즘과 복잡도(빅오 표기법)</summary>
+            <div class="section__body">
+                <p>알고리즘의 좋고 나쁨은 입력 크기 n이 커질 때의 자원 사용 증가율로 따진다. 이를 <strong>빅오 표기법(Big-O)</strong>으로 나타낸다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>표기</th><th>이름</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>O(1)</td><td>상수</td><td>배열 인덱스 접근</td></tr>
+                            <tr><td>O(log n)</td><td>로그</td><td>이진 탐색</td></tr>
+                            <tr><td>O(n)</td><td>선형</td><td>순차 탐색</td></tr>
+                            <tr><td>O(n log n)</td><td>선형로그</td><td>병합-퀵 정렬(평균)</td></tr>
+                            <tr><td>O(n^2)</td><td>제곱</td><td>버블-선택 정렬</td></tr>
+                            <tr><td>O(2^n)</td><td>지수</td><td>부분집합 완전 탐색</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>정렬</strong>: 버블-선택-삽입 정렬(O(n^2)), 병합-퀵 정렬(평균 O(n log n)).</li>
+                    <li><strong>탐색</strong>: 순차 탐색(O(n)), 이진 탐색(정렬된 데이터에서 O(log n)).</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. Java가 "컴파일러"도 "인터프리터"도 아닌 혼합 방식이라 불리는 이유는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">소스를 먼저 바이트코드로 번역한 뒤, 그 바이트코드를 가상머신(JVM)이 실행하기 때문이다.</div>
+            </details>
+        </details>
+
+        <h2 id="data-structure">8. 자료구조 개요</h2>
+
+        <details class="section">
+            <summary>대표 자료구조 비교</summary>
+            <div class="section__body">
+                <p><strong>자료구조(data structure)</strong>는 데이터를 메모리에 효율적으로 조직하는 방식이다. 어떤 자료구조를 쓰느냐가 알고리즘의 속도를 좌우한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>자료구조</th><th>특징</th><th>대표 연산 / 용도</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>배열(array)</td><td>같은 자료를 연속 공간에 저장, 인덱스로 즉시 접근</td><td>임의 접근 O(1), 삽입/삭제 비쌈</td></tr>
+                            <tr><td>연결 리스트(linked list)</td><td>노드가 다음 노드를 가리킴</td><td>삽입/삭제 유리, 임의 접근 느림</td></tr>
+                            <tr><td>스택(stack)</td><td>후입선출(LIFO)</td><td>함수 호출, 실행 취소(undo), 괄호 검사</td></tr>
+                            <tr><td>큐(queue)</td><td>선입선출(FIFO)</td><td>작업 대기열, 너비 우선 탐색</td></tr>
+                            <tr><td>트리(tree)</td><td>계층 구조, 부모-자식</td><td>디렉터리, 이진 탐색 트리(탐색 O(log n))</td></tr>
+                            <tr><td>그래프(graph)</td><td>정점과 간선의 망</td><td>지도 경로, SNS 관계, 네트워크</td></tr>
+                            <tr><td>해시 테이블(hash table)</td><td>키를 함수로 위치 변환</td><td>평균 O(1) 검색, 사전(dict)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>스택과 큐</strong>의 차이: 스택은 쌓은 접시처럼 마지막에 넣은 것을 먼저 꺼내고, 큐는 줄 서기처럼 먼저 온 것을 먼저 꺼낸다.</li>
+                    <li><strong>이진 탐색 트리</strong>: 왼쪽 자식 &lt; 부모 &lt; 오른쪽 자식 규칙으로, 균형이 잡히면 탐색이 O(log n)이다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <ul class="vocab">
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">LIFO 자료구조와 FIFO 자료구조는?</div>
+                    <div class="back">LIFO = 스택(마지막에 넣은 것 먼저), FIFO = 큐(먼저 온 것 먼저).</div>
+                </div></div>
+            </li>
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">평균 O(1) 검색을 제공하는 자료구조는?</div>
+                    <div class="back">해시 테이블(hash table). 키를 해시 함수로 위치로 변환한다. 사전(dict)의 토대.</div>
+                </div></div>
+            </li>
+        </ul>
+
+        <h2 id="network-web">9. 컴퓨터 네트워크와 인터넷/웹</h2>
+
+        <details class="section">
+            <summary>9.1 네트워크 기본</summary>
+            <div class="section__body">
+                <p>여러 컴퓨터를 연결해 데이터를 주고받는 것이 <strong>컴퓨터 네트워크</strong>다. 인터넷은 전 세계 네트워크를 하나로 묶은 "네트워크의 네트워크"다. 데이터는 작은 조각인 <strong>패킷(packet)</strong>으로 나뉘어 전송된다(패킷 교환).</p>
+                <p>규모별 분류: <strong>LAN</strong>(근거리, 사무실/가정), <strong>WAN</strong>(원거리, 도시-국가 간).</p>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>9.2 프로토콜 계층 - TCP/IP와 OSI</summary>
+            <div class="section__body">
+                <p>통신 규칙(프로토콜)을 역할별로 층으로 나눈다. 각 층은 아래층 서비스를 이용하고 위층에 서비스를 제공한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>TCP/IP 4계층</th><th>대표 프로토콜</th><th>역할</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>응용 계층</td><td>HTTP, FTP, SMTP, DNS</td><td>사용자 서비스</td></tr>
+                            <tr><td>전송 계층</td><td>TCP, UDP</td><td>종단 간 신뢰성 있는/빠른 전달</td></tr>
+                            <tr><td>인터넷 계층</td><td>IP</td><td>주소(IP)로 경로 선택(라우팅)</td></tr>
+                            <tr><td>네트워크 접근 계층</td><td>Ethernet, Wi-Fi</td><td>물리적 전송</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>이론적 참조 모델인 <strong>OSI 7계층</strong>은 TCP/IP 4계층을 더 잘게 쪼갠 것이다(위가 사용자에 가깝고, 아래가 물리에 가깝다).</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>OSI 7계층</th><th>대응 TCP/IP</th><th>역할</th><th>대표 프로토콜/예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>7. 응용</td><td>응용 계층</td><td>사용자 서비스-응용 인터페이스</td><td>HTTP, FTP, SMTP, DNS</td></tr>
+                            <tr><td>6. 표현</td><td>응용 계층</td><td>인코딩-암호화-압축</td><td>TLS, JPEG, ASCII</td></tr>
+                            <tr><td>5. 세션</td><td>응용 계층</td><td>연결(세션) 설정-유지-종료</td><td>RPC, 세션 관리</td></tr>
+                            <tr><td>4. 전송</td><td>전송 계층</td><td>종단 간 전달, 신뢰성-흐름 제어</td><td>TCP, UDP</td></tr>
+                            <tr><td>3. 네트워크</td><td>인터넷 계층</td><td>주소 지정-경로 선택(라우팅)</td><td>IP, ICMP, 라우터</td></tr>
+                            <tr><td>2. 데이터 링크</td><td>네트워크 접근 계층</td><td>인접 노드 간 프레임 전송-오류 검출</td><td>Ethernet, MAC, 스위치</td></tr>
+                            <tr><td>1. 물리</td><td>네트워크 접근 계층</td><td>비트를 전기-광-전파 신호로 전송</td><td>케이블, 허브, 신호 규격</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>TCP vs UDP</strong>: TCP는 연결을 맺고 순서-재전송을 보장(웹-메일), UDP는 빠르지만 보장 없음(실시간 스트리밍-게임).</li>
+                    <li><strong>IP 주소와 DNS</strong>: IP 주소(예: 142.250.x.x)는 컴퓨터의 번지수. <strong>DNS</strong>는 사람이 외우는 도메인 이름(google.com)을 IP 주소로 변환하는 인터넷의 전화번호부. IPv4 주소 고갈로 IPv6로 전환 중.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>9.3 웹의 동작</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>웹(WWW)</strong>은 인터넷 위에서 도는 하나의 서비스. <strong>HTTP(S)</strong> 프로토콜로 통신한다.</li>
+                    <li><strong>URL</strong>: 자원의 주소(https://도메인/경로).</li>
+                    <li><strong>클라이언트-서버 모델</strong>: 브라우저(클라이언트)가 요청(request)하면 서버가 응답(response)으로 HTML/CSS/JS를 보내고, 브라우저가 화면으로 렌더링한다.</li>
+                    <li><strong>HTTPS</strong>: HTTP에 암호화(TLS)를 더해 도청-위변조를 막은 안전한 통신.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 실시간 게임이나 영상 스트리밍에 TCP보다 UDP를 쓰는 이유는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">UDP는 순서 보장-재전송 없이 빠르게 보낸다. 약간의 손실보다 지연이 더 치명적인 실시간 서비스에 적합하다. TCP는 신뢰성을 보장하는 대신 느리다.</div>
+            </details>
+        </details>
+
+        <h2 id="database">10. 데이터베이스 기초</h2>
+
+        <details class="section">
+            <summary>10.1 관계형 데이터베이스</summary>
+            <div class="section__body">
+                <p><strong>데이터베이스(DB)</strong>는 여러 사용자가 공유하는, 체계적으로 통합-저장된 데이터의 모음이다. 이를 관리하는 소프트웨어가 <strong>DBMS</strong>다. 파일로 데이터를 흩어 관리할 때 생기는 중복-불일치 문제를 해결한다.</p>
+                <p>가장 널리 쓰이는 모델은 데이터를 <strong>표(테이블/릴레이션)</strong>로 표현한다.</p>
+                <ul>
+                    <li><strong>행(row/튜플)</strong> = 한 건의 레코드, <strong>열(column/속성)</strong> = 항목.</li>
+                    <li><strong>기본키(primary key)</strong>: 각 행을 유일하게 식별하는 열(예: 학번).</li>
+                    <li><strong>외래키(foreign key)</strong>: 다른 테이블의 기본키를 참조해 테이블을 연결.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>10.2 SQL</summary>
+            <div class="section__body">
+                <p>관계형 DB를 다루는 표준 언어.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">sql</span><button class="copy">복사</button></div>
+                    <pre><code class="language-sql">SELECT 이름, 학점 FROM 학생 WHERE 학과 = '컴퓨터과학' ORDER BY 학점 DESC;</code></pre>
+                </div>
+                <ul>
+                    <li>데이터 조작: SELECT(조회), INSERT(삽입), UPDATE(수정), DELETE(삭제).</li>
+                    <li>데이터 정의: CREATE, ALTER, DROP.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>10.3 정규화와 트랜잭션</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>정규화(normalization)</strong>: 중복을 줄이고 이상 현상(갱신-삽입-삭제 이상)을 막도록 테이블을 분해하는 설계 과정.</li>
+                    <li><strong>트랜잭션(transaction)</strong>: 더 이상 쪼갤 수 없는 작업 묶음(예: 계좌 이체 = 출금 + 입금). <strong>ACID</strong>(원자성-일관성-고립성-지속성)를 보장해야 한다. "원자성"은 전부 성공하거나 전부 취소되어야 한다는 뜻.</li>
+                    <li><strong>NoSQL</strong>: 대용량-비정형 데이터를 위해 표 구조를 벗어난 DB(문서형-키-값형 등). 빅데이터-웹 서비스에서 함께 쓰인다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 트랜잭션의 ACID에서 "원자성(Atomicity)"이 뜻하는 바는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">작업 묶음이 전부 성공하거나 전부 취소되어야 한다는 것. 계좌 이체에서 출금만 되고 입금이 안 되는 중간 상태가 남으면 안 된다.</div>
+            </details>
+        </details>
+
+        <h2 id="security">11. 정보보안 기초</h2>
+
+        <p><span class="chip warn">보강 단원</span> 시험 필수 범위 아님 - 상위과목(컴퓨터보안) 대비 보강.</p>
+
+        <details class="section">
+            <summary>CIA 3요소</summary>
+            <div class="section__body">
+                <p>정보보안의 목표는 <strong>CIA 3요소</strong>로 요약된다.</p>
+                <ul>
+                    <li><strong>기밀성(Confidentiality)</strong>: 허가된 사람만 정보를 본다.</li>
+                    <li><strong>무결성(Integrity)</strong>: 정보가 위변조되지 않는다.</li>
+                    <li><strong>가용성(Availability)</strong>: 필요할 때 정보를 쓸 수 있다.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>11.1 암호화</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>방식</th><th>키</th><th>특징</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>대칭키</td><td>암호화/복호화에 같은 키</td><td>빠름, 키 공유가 문제</td><td>AES</td></tr>
+                            <tr><td>공개키(비대칭키)</td><td>공개키/개인키 한 쌍</td><td>키 공유 안전, 느림</td><td>RSA</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>공개키 암호</strong>: 공개키로 잠그면 짝이 되는 개인키로만 열 수 있다. 이를 응용해 본인 인증을 하는 것이 <strong>전자서명</strong>.</li>
+                    <li><strong>해시 함수</strong>: 임의 데이터를 고정 길이 값으로 바꾸는 일방향 함수(SHA-256 등). 무결성 검증과 비밀번호 저장에 쓴다(원본 복원 불가).</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>11.2 위협과 대응</summary>
+            <div class="section__body">
+                <ul>
+                    <li>흔한 위협: 악성코드(바이러스-웜-랜섬웨어), 피싱, <strong>DDoS</strong>(대량 트래픽으로 서비스 마비), SQL 인젝션.</li>
+                    <li>기본 대응: 방화벽, 백신, 최신 보안 패치, 강한 비밀번호와 <strong>2단계 인증(2FA)</strong>, 최소 권한 원칙.</li>
+                </ul>
+            </div>
+        </details>
+
+        <ul class="vocab">
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">정보보안의 CIA 3요소는?</div>
+                    <div class="back">기밀성(Confidentiality), 무결성(Integrity), 가용성(Availability).</div>
+                </div></div>
+            </li>
+            <li class="vocab__item">
+                <div class="flashcard"><div class="flashcard__inner">
+                    <div class="front">대칭키와 공개키 암호의 차이는?</div>
+                    <div class="back">대칭키는 같은 키로 암복호화(빠르나 키 공유가 문제, 예 AES), 공개키는 공개키/개인키 한 쌍(키 공유 안전하나 느림, 예 RSA).</div>
+                </div></div>
+            </li>
+        </ul>
+
+        <h2 id="ai">12. 인공지능 개요</h2>
+
+        <p><span class="chip warn">보강 단원</span> 시험 필수 범위 아님 - 상위과목(인공지능-머신러닝-딥러닝) 대비 보강.</p>
+
+        <details class="section">
+            <summary>AI ⊃ 머신러닝 ⊃ 딥러닝</summary>
+            <div class="section__body">
+                <p><strong>인공지능(AI)</strong>은 사람의 학습-추론-인지 능력을 기계로 구현하려는 분야다. 포함 관계를 기억하면 좋다: <strong>인공지능 ⊃ 머신러닝 ⊃ 딥러닝</strong>.</p>
+                <ul>
+                    <li><strong>머신러닝(기계학습)</strong>: 규칙을 사람이 일일이 코딩하지 않고, 데이터에서 패턴을 스스로 학습하는 방법.
+                        <ul>
+                            <li><strong>지도학습</strong>: 정답(레이블)이 있는 데이터로 학습(분류-회귀). 예: 사진에 "고양이/개" 라벨.</li>
+                            <li><strong>비지도학습</strong>: 정답 없이 구조를 찾음(군집화). 예: 비슷한 고객 묶기.</li>
+                            <li><strong>강화학습</strong>: 보상을 최대화하도록 시행착오로 학습. 예: 게임-로봇 제어.</li>
+                        </ul>
+                    </li>
+                    <li><strong>딥러닝</strong>: 인간 뇌의 신경망을 모방한 <strong>인공신경망</strong>을 깊게 쌓은 방법. 이미지 인식, 음성 인식, 자연어 처리에서 큰 성과를 냈다.</li>
+                    <li><strong>생성형 AI / 대규모 언어 모델(LLM)</strong>: 방대한 텍스트로 학습해 사람처럼 글-이미지를 생성하는 모델(ChatGPT 등). 환각(hallucination), 편향, 저작권 같은 한계와 윤리 쟁점도 함께 안고 있다.</li>
+                </ul>
+                <div class="callout info">
+                    <p class="callout__title">여기서는 큰 그림만</p>
+                    <p>방통대에서는 상위 학년의 인공지능-머신러닝-딥러닝 과목으로 이어지므로, 여기서는 용어와 큰 그림만 잡아 두면 된다.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 지도학습-비지도학습-강화학습을 한 단어 키워드로 구분하면?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">지도학습 = 정답(레이블) 있음(분류-회귀), 비지도학습 = 정답 없이 구조 찾기(군집화), 강화학습 = 보상 최대화(시행착오).</div>
+            </details>
+        </details>
+
+        <h2 id="se-ethics">13. 소프트웨어공학과 컴퓨팅 윤리</h2>
+
+        <p><span class="chip warn">보강 단원</span> 시험 필수 범위 아님 - 상위과목(소프트웨어공학) 대비 보강.</p>
+
+        <details class="section">
+            <summary>13.1 소프트웨어공학</summary>
+            <div class="section__body">
+                <p>규모가 큰 소프트웨어를 <strong>체계적-경제적으로</strong> 개발-유지하기 위한 공학적 방법론이다.</p>
+                <ul>
+                    <li><strong>개발 생명주기(SDLC)</strong>: 요구분석 -&gt; 설계 -&gt; 구현 -&gt; 테스트 -&gt; 유지보수.</li>
+                    <li><strong>폭포수 모델</strong>: 단계를 순서대로 진행. 단순하지만 변경에 약함.</li>
+                    <li><strong>애자일(Agile)</strong>: 짧은 주기로 반복-점진 개발하며 변화에 유연하게 대응(스크럼 등).</li>
+                    <li><strong>버전 관리(Git)</strong>: 코드 변경 이력을 추적하고 협업하는 필수 도구. (이 레포도 Git으로 관리된다.)</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="section">
+            <summary>13.2 컴퓨팅 윤리와 사회적 영향</summary>
+            <div class="section__body">
+                <p>기술이 사회에 미치는 영향이 커지면서 윤리적 책임도 커졌다.</p>
+                <ul>
+                    <li><strong>개인정보 보호</strong>: 데이터 수집-활용의 동의와 최소 수집 원칙(국내 개인정보보호법).</li>
+                    <li><strong>지식재산권</strong>: 저작권, 오픈소스 라이선스(GPL, MIT 등) 준수.</li>
+                    <li><strong>디지털 격차(digital divide)</strong>: 정보 접근 기회의 불평등.</li>
+                    <li><strong>AI 윤리</strong>: 알고리즘 편향, 자동화로 인한 일자리 변화, 책임 소재, 딥페이크 등.</li>
+                    <li><strong>정보윤리의 기본</strong>: 정확성, 타인 권리 존중, 보안 책임, 표절 금지.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="quiz">
+            <div class="quiz__q">Q. 폭포수 모델과 애자일의 가장 큰 차이는?</div>
+            <details class="quiz__a">
+                <summary>정답 보기</summary>
+                <div class="quiz__a-body">폭포수는 단계를 한 번에 순서대로 진행해 변경에 약하고, 애자일은 짧은 주기로 반복-점진 개발해 변화에 유연하게 대응한다(스크럼 등).</div>
+            </details>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

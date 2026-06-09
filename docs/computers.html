@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>컴퓨터의이해 - 정보사회와 컴퓨터 기초 소양</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#overview">0. 과목 개요와 평가</a>
+            <a href="#ch1">1. 정보사회와 컴퓨터</a>
+            <a href="#ch2">2. 컴퓨터와 통신산업의 발전</a>
+            <a href="#ch3">3. 처리장치와 데이터 처리</a>
+            <a href="#ch4">4. 컴퓨터의 입출력</a>
+            <a href="#ch5">5. 보조기억장치와 데이터 저장</a>
+            <a href="#ch6">6. 소프트웨어와 정보 시스템</a>
+            <a href="#ch7">7. 데이터베이스</a>
+            <a href="#ch8">8. 정보통신기술과 우리 사회</a>
+            <a href="#ch9">9. 4차 산업혁명과 미래사회</a>
+            <a href="#ch10">10. 정보통신</a>
+            <a href="#ch11">11. 인터넷</a>
+            <a href="#ch12">12. 정보보안</a>
+            <a href="#ch13">13. 멀티미디어</a>
+            <a href="#ch14">14. 유비쿼터스</a>
+            <a href="#ch15">15. 모바일 서비스</a>
+            <a href="#review">16. 시험·과제 대비 핵심 정리</a>
+            <a href="#free">17. 무료 학습 자료</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>컴퓨터의이해</h1>
+        <blockquote>정보사회의 일원으로서 갖춰야 할 컴퓨터 기초 소양과 시사 흐름(4차 산업혁명, 유비쿼터스, 모바일 서비스 등)을 코딩 없이 폭넓게 다루는 1학년 1학기 교양/이론 입문 과목이다. KNOU 교재 15장 구성에 1:1로 대응하도록 정리했다.</blockquote>
+
+        <h2 id="overview">0. 과목 개요와 평가</h2>
+        <details class="section" open>
+            <summary>과목 성격·교재·주차·평가 한눈에</summary>
+            <div class="section__body">
+                <div class="callout info">
+                    <p class="callout__title">"컴퓨터의이해" vs "컴퓨터과학개론"</p>
+                    <p>두 과목은 다른 과목이다. 컴퓨터과학개론이 전공 심화의 출발점(자료 표현, 알고리즘, 운영체제, 네트워크를 학문적으로 다룸)이라면, 컴퓨터의이해는 정보사회 일원으로서의 컴퓨터 기초 소양과 시사 흐름을 폭넓고 쉽게 소개하는 데 초점이 있다. 프로그래밍 실습이 없는 이론/교양 과목이다.</p>
+                </div>
+
+                <h3>지정 교재</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>항목</th><th>내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>제목</td><td>컴퓨터의이해</td></tr>
+                            <tr><td>저자</td><td>김강현, 손진곤, 이병래</td></tr>
+                            <tr><td>출판사</td><td>한국방송통신대학교 출판문화원</td></tr>
+                            <tr><td>출판일</td><td>2022년 1월 25일</td></tr>
+                            <tr><td>ISBN</td><td>9788920041730</td></tr>
+                            <tr><td>분량 / 구성</td><td>468쪽 / 전 15장 (eBook 동일)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>주차(장) 구성</h3>
+                <p>한 학기 15주차로 진행되며, 교재 15장이 각 주차에 1:1로 배정되는 표준 구성이다(주차별 강의 1강 = 교재 1장).</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>주차</th><th>장</th><th>단원명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1주</td><td>1장</td><td>정보사회와 컴퓨터</td></tr>
+                            <tr><td>2주</td><td>2장</td><td>컴퓨터와 통신산업의 발전</td></tr>
+                            <tr><td>3주</td><td>3장</td><td>처리장치와 데이터 처리</td></tr>
+                            <tr><td>4주</td><td>4장</td><td>컴퓨터의 입출력</td></tr>
+                            <tr><td>5주</td><td>5장</td><td>보조기억장치와 데이터 저장</td></tr>
+                            <tr><td>6주</td><td>6장</td><td>소프트웨어와 정보 시스템</td></tr>
+                            <tr><td>7주</td><td>7장</td><td>데이터베이스</td></tr>
+                            <tr><td>8주</td><td>8장</td><td>정보통신기술과 우리 사회</td></tr>
+                            <tr><td>9주</td><td>9장</td><td>4차 산업혁명과 미래사회</td></tr>
+                            <tr><td>10주</td><td>10장</td><td>정보통신</td></tr>
+                            <tr><td>11주</td><td>11장</td><td>인터넷</td></tr>
+                            <tr><td>12주</td><td>12장</td><td>정보보안</td></tr>
+                            <tr><td>13주</td><td>13장</td><td>멀티미디어</td></tr>
+                            <tr><td>14주</td><td>14장</td><td>유비쿼터스</td></tr>
+                            <tr><td>15주</td><td>15장</td><td>모바일 서비스</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>평가 방식 (공통 기준, 학기별 강의계획서로 확인)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>평가 항목</th><th>배점</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>형성평가</td><td>20점</td><td>온라인 강의 진도율 + 학습활동(연습문제). 기간 내 동영상을 모두 시청하면 사실상 확보</td></tr>
+                            <tr><td>중간평가</td><td>30점</td><td>출석수업 시험/과제물, 출석수업대체 과제물, 또는 (온라인)과제물 중 하나</td></tr>
+                            <tr><td>기말평가</td><td>50점</td><td>기말시험</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">출제 경향</p>
+                    <p>교양 입문 과목이라 기말은 교재 개념 위주의 객관식/단답형 중심으로 알려져 있다. 중간(과제물)은 특정 장의 개념을 골라 서술하는 형태가 많다(예: 9장 사물인터넷 사례 4가지, 4장 컴퓨터의 입출력 등). 정확한 배점/유형/범위는 매 학기 다를 수 있으니 본인 학기의 공식 강의계획서에서 확인한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch1">1. 정보사회와 컴퓨터</h2>
+        <details class="section">
+            <summary>정보혁명, 데이터 vs 정보, 컴퓨터의 5대 기능</summary>
+            <div class="section__body">
+                <h3>정보사회와 정보혁명</h3>
+                <p><strong>정보사회</strong>는 정보의 생산·처리·유통이 경제와 생활의 중심이 된 사회로, 농업혁명 → 산업혁명 → 정보혁명의 흐름이 낳은 결과다. 과거 핵심 자원이 토지/자본/노동이었다면, 정보사회에서는 "정보와 지식"이 가장 중요한 자원이 된다.</p>
+
+                <h3>데이터와 정보의 차이 (핵심 구분)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>데이터(Data)</th><th>정보(Information)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>의미</td><td>가공 전의 원시 사실/값</td><td>데이터를 가공해 의미를 부여한 결과</td></tr>
+                            <tr><td>예시</td><td>"23, 25, 21" (기온 숫자)</td><td>"이번 주 평균 기온 23도, 어제보다 따뜻함"</td></tr>
+                            <tr><td>관계</td><td>입력</td><td>처리 결과(출력)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>가공 수준이 올라가면 데이터 → 정보 → <strong>지식(knowledge)</strong> → <strong>지혜(wisdom)</strong> 로 이어지는 DIKW 위계를 함께 기억하면 좋다.</p>
+
+                <h3>컴퓨터 시스템의 구성과 기능</h3>
+                <ul>
+                    <li>컴퓨터의 <strong>5대 기능: 입력 - 기억(저장) - 연산 - 제어 - 출력</strong>.</li>
+                    <li>하드웨어 구분: 중앙처리장치(CPU), 기억장치(주기억/보조기억), 입출력장치.</li>
+                    <li>기본 동작 사이클: 입력 → 처리(연산/제어) → 출력. 필요한 데이터는 기억장치에 저장.</li>
+                </ul>
+
+                <h3>컴퓨터의 종류</h3>
+                <ul>
+                    <li>규모/용도: 슈퍼컴퓨터, 메인프레임, 미니컴퓨터(중형), 마이크로컴퓨터(PC), 스마트폰/임베디드 기기.</li>
+                    <li>데이터 표현 방식: 디지털 컴퓨터(대부분), 아날로그 컴퓨터, 하이브리드 컴퓨터.</li>
+                </ul>
+                <p>언제 어디서나 컴퓨터와 네트워크를 쓸 수 있는 유비쿼터스 환경도 이 시대의 흐름이다(자세한 내용은 14장).</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">정보사회의 핵심 자원은?</div>
+                        <div class="back">정보와 지식 (과거: 토지/자본/노동)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">컴퓨터의 5대 기능</div>
+                        <div class="back">입력 - 기억 - 연산 - 제어 - 출력</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">DIKW 위계</div>
+                        <div class="back">데이터 → 정보 → 지식 → 지혜</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. "오늘 측정한 기온 23, 25, 21"은 데이터인가 정보인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">데이터. 가공 전의 원시 값이다. 이를 "평균 23도, 어제보다 따뜻함"처럼 의미를 부여하면 정보가 된다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch2">2. 컴퓨터와 통신산업의 발전</h2>
+        <details class="section">
+            <summary>계산도구의 역사, 프로그램 내장방식, 세대 구분</summary>
+            <div class="section__body">
+                <h3>계산도구의 역사</h3>
+                <ul>
+                    <li>초창기: 주판 → 파스칼의 기계식 계산기(덧셈/뺄셈) → 라이프니츠 계산기(곱셈/나눗셈) → 배비지의 해석기관(현대 컴퓨터의 개념적 원형).</li>
+                    <li>전자식: <strong>ENIAC</strong>(진공관 기반 최초의 대규모 전자식 컴퓨터). 단, ENIAC은 배선을 바꿔 프로그램했다.</li>
+                </ul>
+
+                <h3>프로그램 내장방식 (가장 중요한 개념)</h3>
+                <div class="callout warn">
+                    <p class="callout__title">폰 노이만 구조 / stored-program</p>
+                    <p>프로그램(명령어)을 데이터처럼 기억장치에 저장해 두고, CPU가 순차적으로 꺼내 실행하는 방식. 오늘날 거의 모든 컴퓨터의 기본 구조다. 배선 교체 없이 소프트웨어만 바꿔 다른 작업을 수행할 수 있어 범용 컴퓨터가 탄생했다.</p>
+                </div>
+
+                <h3>컴퓨터 산업의 발전 단계 (세대 구분)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>세대</th><th>핵심 소자</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1세대</td><td>진공관</td><td>크고 발열 많음, ENIAC</td></tr>
+                            <tr><td>2세대</td><td>트랜지스터</td><td>소형화, 신뢰성 향상</td></tr>
+                            <tr><td>3세대</td><td>집적회로(IC)</td><td>더 작고 빨라짐</td></tr>
+                            <tr><td>4세대</td><td>고밀도 집적회로(LSI/VLSI), 마이크로프로세서</td><td>PC 대중화</td></tr>
+                            <tr><td>5세대</td><td>인공지능/병렬처리 지향</td><td>지능형 컴퓨터</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>컴퓨터와 통신의 결합</h3>
+                <p>독립적으로 발전하던 컴퓨터 기술과 통신 기술이 만나 네트워크/인터넷 시대를 열었다. 산업의 미래는 AI, 클라우드, 모바일과의 융합 방향으로 나아간다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">프로그램 내장방식을 제안한 구조 이름은?</div>
+                        <div class="back">폰 노이만(von Neumann) 구조</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">2세대 컴퓨터의 핵심 소자</div>
+                        <div class="back">트랜지스터</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. ENIAC의 프로그래밍 방식과 폰 노이만 구조의 결정적 차이는?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">ENIAC은 배선을 직접 바꿔 프로그램했지만, 폰 노이만 구조는 프로그램을 데이터처럼 기억장치에 저장해 두고 꺼내 실행한다(소프트웨어 교체만으로 작업 변경 가능).</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch3">3. 처리장치와 데이터 처리</h2>
+        <details class="section">
+            <summary>CPU 구성, 2진수 표현, 명령어 사이클, RAM/ROM</summary>
+            <div class="section__body">
+                <h3>처리장치(CPU)의 구성</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구성요소</th><th>역할</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>제어장치(Control Unit)</td><td>명령어를 해석하고 각 장치에 제어 신호 전달</td></tr>
+                            <tr><td>연산장치(ALU)</td><td>사칙연산과 논리연산(AND/OR/NOT, 비교 등) 수행</td></tr>
+                            <tr><td>레지스터(Register)</td><td>CPU 내부의 초고속 임시 저장 공간</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>데이터의 저장과 표현 (2진수)</h3>
+                <ul>
+                    <li>컴퓨터는 모든 데이터를 <strong>0과 1(2진수)</strong> 로 표현한다(전기 신호 on/off에 대응).</li>
+                    <li><strong>비트(bit)</strong>: 0 또는 1, 정보의 최소 단위. <strong>바이트(byte)</strong>: 8비트, 문자 1개 표현 단위.</li>
+                    <li>단위 위계: bit &lt; byte &lt; KB &lt; MB &lt; GB &lt; TB.</li>
+                    <li>문자 표현: 아스키(ASCII, 영문 중심), 유니코드(Unicode, 한글 포함 전 세계 문자).</li>
+                    <li>음수/소수: 정수는 2의 보수, 실수는 부동소수점(floating point).</li>
+                </ul>
+
+                <h3>명령어 사이클</h3>
+                <p>한 개의 명령어는 <strong>인출(Fetch) → 해석(Decode) → 실행(Execute)</strong> 과정을 거친다. 주기억장치는 주소(address)로 저장 위치를 구분하고, CPU는 그 주소로 데이터/명령어를 읽고 쓴다.</p>
+
+                <h3>반도체기억장치</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>휘발성</th><th>용도</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>RAM (주기억)</td><td>휘발성(전원 꺼지면 소멸)</td><td>실행 중인 프로그램/데이터 임시 저장</td></tr>
+                            <tr><td>ROM</td><td>비휘발성(전원 꺼져도 유지)</td><td>부팅에 필요한 기본 프로그램 등 저장</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">명령어 사이클 3단계</div>
+                        <div class="back">인출(Fetch) → 해석(Decode) → 실행(Execute)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">1바이트는 몇 비트?</div>
+                        <div class="back">8비트 (문자 1개 표현 단위)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">한글까지 표현하는 문자 코드</div>
+                        <div class="back">유니코드(Unicode)</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 전원을 끄면 내용이 사라지는 휘발성 기억장치는 RAM과 ROM 중 무엇인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">RAM. 휘발성이라 실행 중인 데이터를 임시 저장한다. ROM은 비휘발성으로 전원이 꺼져도 내용이 유지된다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch4">4. 컴퓨터의 입출력</h2>
+        <details class="section">
+            <summary>입력/출력 장치 분류, soft/hard copy, 미래 인터페이스</summary>
+            <div class="section__body">
+                <div class="callout warn">
+                    <p class="callout__title">중간과제물 출제 이력 단원</p>
+                    <p>입출력장치 분류와 데이터 흐름을 정확히 정리해 둘 것. 입력 → 편집 → 처리 → 출력의 단계를 구분하는 것이 핵심이다.</p>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>방향</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>입력장치</td><td>사람 → 컴퓨터</td><td>키보드, 마우스, 터치스크린, 스캐너, 마이크, 카메라, 바코드/QR 리더, 센서</td></tr>
+                            <tr><td>출력장치</td><td>컴퓨터 → 사람</td><td>모니터(디스플레이), 프린터, 스피커, 프로젝터</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>입력 데이터 편집과 출력 정보</h3>
+                <ul>
+                    <li>입력된 원시 데이터는 오류 검사, 형식 변환 등의 <strong>편집</strong> 과정을 거쳐 처리된다.</li>
+                    <li>출력은 화면 출력(<strong>soft copy</strong>)과 인쇄 출력(<strong>hard copy</strong>)으로 나뉜다.</li>
+                </ul>
+
+                <h3>입출력의 미래</h3>
+                <p>음성 인식, 제스처 인식, VR/AR 인터페이스, 뇌-컴퓨터 인터페이스(BCI) 등 인간 친화적 입출력으로 발전 중이다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">soft copy vs hard copy</div>
+                        <div class="back">soft copy = 화면 출력 / hard copy = 인쇄 출력</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">스캐너는 입력장치? 출력장치?</div>
+                        <div class="back">입력장치 (사람 → 컴퓨터)</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 다음 중 출력장치만 모은 것은? (모니터, 마이크, 프린터, 스캐너, 스피커)</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">모니터, 프린터, 스피커. 마이크와 스캐너는 입력장치다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch5">5. 보조기억장치와 데이터 저장</h2>
+        <details class="section">
+            <summary>주기억 vs 보조기억, 저장장치 진화, 버퍼/캐시, 클라우드</summary>
+            <div class="section__body">
+                <h3>주기억장치 vs 보조기억장치</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>주기억장치(RAM)</th><th>보조기억장치(HDD/SSD 등)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>속도</td><td>빠름</td><td>느림(상대적)</td></tr>
+                            <tr><td>용량</td><td>작음</td><td>큼</td></tr>
+                            <tr><td>휘발성</td><td>휘발성(전원 끄면 소멸)</td><td>비휘발성(영구 보관)</td></tr>
+                            <tr><td>용도</td><td>실행 중 임시 저장</td><td>장기 보관</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>저장장치의 종류와 진화</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>자기테이프</td><td>순차 접근(앞에서부터 차례로), 백업용</td></tr>
+                            <tr><td>자기디스크(HDD)</td><td>회전 자기 원판, 임의 접근(random access)</td></tr>
+                            <tr><td>광디스크</td><td>CD, DVD, 블루레이. 레이저로 읽고 씀</td></tr>
+                            <tr><td>반도체(SSD, USB, SD카드)</td><td>플래시 메모리, 기계적 움직임 없어 빠르고 충격에 강함. HDD 대체 중</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>버퍼와 캐시</h3>
+                <ul>
+                    <li><strong>버퍼(buffer)</strong>: 속도 차이가 나는 두 장치 사이에서 데이터를 임시로 모아 두는 공간.</li>
+                    <li><strong>캐시(cache)</strong>: 자주 쓰는 데이터를 빠른 곳에 미리 두어 접근 속도를 높이는 기법.</li>
+                </ul>
+
+                <h3>클라우드 기반 저장</h3>
+                <p>데이터를 내 기기가 아닌 인터넷상의 서버에 저장·공유(구글 드라이브, OneDrive, iCloud). 어디서나 접근 가능하지만 보안/네트워크 의존이라는 양면성이 있다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">순차 접근만 가능한 저장장치는?</div>
+                        <div class="back">자기테이프 (백업용)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">버퍼 vs 캐시의 목적 차이</div>
+                        <div class="back">버퍼 = 속도 차 완충 / 캐시 = 자주 쓰는 데이터 미리 두어 속도 향상</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. SSD가 HDD보다 충격에 강한 이유는?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">SSD는 플래시 메모리(반도체) 기반이라 기계적으로 회전하는 부품이 없기 때문이다. HDD는 회전 자기 원판을 쓴다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch6">6. 소프트웨어와 정보 시스템</h2>
+        <details class="section">
+            <summary>시스템/응용 SW, OS, 생명주기, 라이선스, MIS/ERP</summary>
+            <div class="section__body">
+                <h3>소프트웨어의 종류</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>설명</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>시스템 소프트웨어</td><td>하드웨어를 관리/제어하고 응용 SW의 기반 제공</td><td>운영체제(Windows, macOS, Linux), 컴파일러, 유틸리티</td></tr>
+                            <tr><td>응용 소프트웨어</td><td>특정 업무/목적을 위한 SW</td><td>워드, 엑셀, 웹브라우저, 게임</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>운영체제(OS)</strong>는 가장 핵심적인 시스템 소프트웨어로, 자원 관리(CPU/메모리/입출력)와 사용자 인터페이스를 제공한다.</p>
+
+                <h3>소프트웨어 생명주기</h3>
+                <p>요구분석 → 설계 → 구현(코딩) → 테스트 → 유지보수.</p>
+
+                <h3>소프트웨어 사용권(라이선스)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>유형</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>상용 소프트웨어</td><td>돈을 내고 사용권 구매</td></tr>
+                            <tr><td>셰어웨어</td><td>일정 기간/기능 무료 체험 후 결제</td></tr>
+                            <tr><td>프리웨어</td><td>무료 사용, 저작권은 개발자에게</td></tr>
+                            <tr><td>오픈소스</td><td>소스코드 공개, 자유로운 사용/수정/배포 (예: 리눅스)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>기업활동과 정보 시스템</h3>
+                <p><strong>MIS(경영정보시스템)</strong>, <strong>ERP(전사적 자원관리)</strong>, <strong>DSS(의사결정지원시스템)</strong> 등 조직의 의사결정과 업무를 돕는 정보 시스템으로 발전해 왔다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">소스코드를 공개하는 라이선스</div>
+                        <div class="back">오픈소스(open source) - 예: 리눅스</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">전사적 자원관리 정보 시스템 약어</div>
+                        <div class="back">ERP</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 웹브라우저와 운영체제 중 시스템 소프트웨어는 무엇인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">운영체제. 웹브라우저는 특정 목적을 위한 응용 소프트웨어다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch7">7. 데이터베이스</h2>
+        <details class="section">
+            <summary>DB 개념, DBMS/SQL, 3단계 스키마, 데이터 웨어하우스</summary>
+            <div class="section__body">
+                <h3>데이터베이스의 개념</h3>
+                <p><strong>데이터베이스(DB)</strong>는 여러 사용자가 공유할 수 있도록 통합/저장해 둔 데이터의 집합으로, 중복을 줄이고 일관성을 유지하는 것이 목표다. 파일 시스템 방식의 문제(데이터 중복, 불일치, 의존성)를 해결하기 위해 등장했다.</p>
+
+                <h3>데이터베이스 관리 시스템(DBMS)</h3>
+                <p><strong>DBMS</strong>는 데이터베이스를 만들고 관리하며, 저장/검색/수정/삭제를 돕는 소프트웨어다(Oracle, MySQL, MS SQL Server). 사용자는 <strong>질의어(SQL)</strong>로 명령을 내린다.</p>
+
+                <h3>3단계 스키마 구조</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>단계</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>외부 스키마</td><td>사용자/응용 프로그램이 보는 부분적 관점(뷰)</td></tr>
+                            <tr><td>개념 스키마</td><td>전체 데이터베이스의 논리적 구조(조직 전체 관점)</td></tr>
+                            <tr><td>내부 스키마</td><td>실제 저장 방식(물리적 구조)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>이 구조 덕분에 <strong>데이터 독립성</strong>(저장 방식이 바뀌어도 응용 프로그램 영향 최소화)이 확보된다.</p>
+
+                <h3>장단점과 데이터 웨어하우스</h3>
+                <ul>
+                    <li>장점: 중복 최소화, 데이터 공유, 일관성/무결성 유지, 보안.</li>
+                    <li>단점: 시스템 구축/운영 비용, 복잡성, 장애 시 영향 큼.</li>
+                    <li><strong>데이터 웨어하우스</strong>: 의사결정 지원을 위해 여러 곳의 데이터를 모아 분석용으로 저장하는 대규모 저장소(빅데이터 분석의 기반).</li>
+                </ul>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">데이터베이스에 명령을 내리는 질의어</div>
+                        <div class="back">SQL</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">3단계 스키마 (위에서 아래로)</div>
+                        <div class="back">외부 스키마 → 개념 스키마 → 내부 스키마</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 실제 물리적 저장 방식을 정의하는 스키마는 무엇인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">내부 스키마. 외부 스키마는 사용자 관점(뷰), 개념 스키마는 조직 전체의 논리적 구조다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch8">8. 정보통신기술과 우리 사회</h2>
+        <details class="section">
+            <summary>ICT의 분야별 활용과 정보사회의 그림자</summary>
+            <div class="section__body">
+                <p><strong>정보통신기술(ICT, Information and Communication Technology)</strong>은 정보를 생산/처리/전달하는 기술 전반을 가리킨다.</p>
+
+                <h3>분야별 정보통신기술 활용</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>분야</th><th>활용 예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>행정/공공</td><td>전자정부(민원 온라인 처리), 전자투표</td></tr>
+                            <tr><td>교육</td><td>이러닝, 원격수업(방송대가 대표 사례)</td></tr>
+                            <tr><td>의료</td><td>원격진료, 전자의무기록(EMR)</td></tr>
+                            <tr><td>금융</td><td>인터넷/모바일 뱅킹, 핀테크, 간편결제</td></tr>
+                            <tr><td>상거래</td><td>전자상거래(e-commerce), 온라인 쇼핑</td></tr>
+                            <tr><td>가정</td><td>스마트홈, IoT 가전</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout warn">
+                    <p class="callout__title">정보사회의 그림자</p>
+                    <p>밝은 면뿐 아니라 <strong>정보격차(디지털 디바이드)</strong>, 사생활 침해, 정보 과부하 같은 사회적 그림자도 함께 이해해야 한다.</p>
+                </div>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 정보 접근/활용 능력의 차이로 생기는 사회 문제를 무엇이라 하나?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">정보격차(디지털 디바이드, digital divide).</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch9">9. 4차 산업혁명과 미래사회</h2>
+        <details class="section">
+            <summary>산업혁명 1~4차, AI/IoT/빅데이터/클라우드</summary>
+            <div class="section__body">
+                <div class="callout warn">
+                    <p class="callout__title">중간과제물 단골 단원</p>
+                    <p>사물인터넷(IoT) 적용 사례를 분야별로 4개 이상 구체적으로 적을 수 있어야 한다.</p>
+                </div>
+
+                <h3>산업혁명의 단계</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>핵심 동력</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1차</td><td>증기기관(기계화)</td></tr>
+                            <tr><td>2차</td><td>전기(대량생산)</td></tr>
+                            <tr><td>3차</td><td>컴퓨터/인터넷(정보화, 자동화)</td></tr>
+                            <tr><td>4차</td><td>AI, IoT, 빅데이터, 초연결/초지능(융합)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4차 산업혁명 핵심 기술</h3>
+                <ul>
+                    <li><strong>인공지능(AI)</strong>: 학습/추론/판단을 하는 시스템. 머신러닝, 딥러닝 포함.</li>
+                    <li><strong>사물인터넷(IoT)</strong>: 사물에 센서/통신 기능을 부여해 인터넷에 연결(스마트 냉장고, 웨어러블, 스마트 가로등, 커넥티드 카).</li>
+                    <li><strong>빅데이터</strong>: 방대하고 다양한 데이터를 빠르게 수집/분석해 가치를 뽑아냄. 3V(Volume, Variety, Velocity).</li>
+                    <li><strong>클라우드 컴퓨팅</strong>: 컴퓨팅 자원을 인터넷으로 빌려 씀.</li>
+                    <li>그 외: 로봇, 자율주행, 3D 프린팅, 블록체인, AR/VR.</li>
+                </ul>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">빅데이터의 3V</div>
+                        <div class="back">Volume(양), Variety(다양성), Velocity(속도)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">4차 산업혁명의 키워드</div>
+                        <div class="back">초연결/초지능, 융합 (AI·IoT·빅데이터)</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. IoT 적용 사례를 분야별로 4가지 들어 보세요.</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">예: 가정 - 스마트 냉장고/스마트홈, 건강 - 웨어러블 밴드, 도시 - 스마트 가로등/스마트 미터, 교통 - 커넥티드 카/자율주행. (분야별로 구체적 기기·서비스를 적는 것이 핵심)</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch10">10. 정보통신</h2>
+        <details class="section">
+            <summary>통신 기본 요소, 전송 방식, LAN/MAN/WAN, 프로토콜</summary>
+            <div class="section__body">
+                <h3>정보통신의 기본 요소</h3>
+                <p><strong>송신자 - 전송매체 - 수신자</strong>, 그리고 약속(프로토콜)이 필요하다. 데이터를 전기/광 신호로 바꿔 전송하고, 받는 쪽에서 다시 복원한다.</p>
+
+                <h3>정보통신 방식</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>분류 기준</th><th>종류</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>전송 방향</td><td>단방향(simplex), 반이중(half-duplex), 전이중(full-duplex)</td></tr>
+                            <tr><td>신호 형태</td><td>아날로그 전송, 디지털 전송</td></tr>
+                            <tr><td>전송 단위</td><td>직렬 전송, 병렬 전송</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>정보통신망(네트워크)의 유형</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>유형</th><th>범위</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>LAN</td><td>근거리(건물/사무실)</td><td>회사 내부망</td></tr>
+                            <tr><td>MAN</td><td>도시 규모</td><td>도시 통신망</td></tr>
+                            <tr><td>WAN</td><td>광역(국가/대륙)</td><td>인터넷 백본</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>토폴로지(망 구성 형태): 성형(star), 버스형(bus), 링형(ring), 망형(mesh).</p>
+
+                <h3>통신 프로토콜</h3>
+                <p><strong>프로토콜(protocol)</strong>은 통신을 위한 약속(규칙)으로, 대표적으로 인터넷의 <strong>TCP/IP</strong>가 있다. 계층 모델(OSI 7계층 / TCP/IP 4계층)로 역할을 나눈다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">양쪽이 동시에 송수신하는 전송 방향</div>
+                        <div class="back">전이중(full-duplex) - 예: 전화 통화</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">국가/대륙 규모의 광역 통신망</div>
+                        <div class="back">WAN</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 무전기(한쪽이 말할 때 다른 쪽은 듣기만)는 어떤 전송 방향인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">반이중(half-duplex). 양방향이지만 동시에는 불가능하다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch11">11. 인터넷</h2>
+        <details class="section">
+            <summary>네트워크의 네트워크, IP/도메인/DNS/URL, 주요 서비스</summary>
+            <div class="section__body">
+                <h3>인터넷의 개요</h3>
+                <p>수많은 네트워크가 TCP/IP 프로토콜로 연결된 "네트워크의 네트워크". 특정 주인이 없는 개방형 구조다.</p>
+
+                <h3>인터넷 주소</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>설명</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>IP 주소</td><td>인터넷에 연결된 각 기기의 숫자 주소</td><td>203.0.113.1 (IPv4), IPv6는 더 큰 주소공간</td></tr>
+                            <tr><td>도메인 이름</td><td>사람이 외우기 쉬운 문자 주소</td><td>www.knou.ac.kr</td></tr>
+                            <tr><td>DNS</td><td>도메인 이름과 IP 주소 변환 시스템</td><td>전화번호부 역할</td></tr>
+                            <tr><td>URL</td><td>인터넷 자원의 위치 주소</td><td>https://www.knou.ac.kr/page</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>인터넷 서비스와 응용</h3>
+                <ul>
+                    <li><strong>WWW(웹)</strong>: HTTP 프로토콜, 브라우저로 하이퍼텍스트 문서 열람.</li>
+                    <li><strong>이메일</strong>(SMTP/POP3/IMAP), <strong>FTP</strong>(파일 전송), 클라우드/스트리밍/SNS.</li>
+                    <li>응용: 전자상거래, 검색엔진, 소셜미디어, IoT, 웹 기반 서비스 전반.</li>
+                </ul>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">도메인 이름을 IP 주소로 바꿔 주는 시스템</div>
+                        <div class="back">DNS (전화번호부 역할)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">웹에서 쓰는 문서 전송 프로토콜</div>
+                        <div class="back">HTTP</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. www.knou.ac.kr 는 IP 주소인가 도메인 이름인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">도메인 이름. 사람이 외우기 쉬운 문자 주소이며, DNS가 이를 실제 IP 주소로 변환한다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch12">12. 정보보안</h2>
+        <details class="section">
+            <summary>CIA 3대 목표, 악성코드, 사회공학, 보안 강화</summary>
+            <div class="section__body">
+                <h3>정보보안의 3대 목표 (CIA)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>목표</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>기밀성(Confidentiality)</td><td>인가된 사람만 정보에 접근</td></tr>
+                            <tr><td>무결성(Integrity)</td><td>정보가 임의로 변조되지 않음</td></tr>
+                            <tr><td>가용성(Availability)</td><td>필요할 때 정보/서비스를 사용 가능</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>위협 요소</h3>
+                <ul>
+                    <li><strong>해킹</strong>: 시스템에 무단 침입해 정보를 빼내거나 파괴.</li>
+                    <li><strong>악성 프로그램(malware)</strong>: 바이러스(다른 파일에 기생), 웜(스스로 복제/전파), 트로이목마(정상 프로그램 위장), 랜섬웨어(파일 암호화 후 금전 요구), 스파이웨어.</li>
+                    <li>사회공학적 공격: 피싱(가짜 사이트/메일), 파밍, 스미싱(문자 이용).</li>
+                </ul>
+
+                <h3>보안 강화 방법</h3>
+                <ul>
+                    <li><strong>암호화(encryption)</strong>: 데이터를 알아볼 수 없게 변환. 대칭키/공개키 방식.</li>
+                    <li><strong>인증</strong>: 비밀번호, 생체인증, OTP, 2단계 인증(2FA).</li>
+                    <li>방화벽, 백신, 보안 패치 최신화, 백업.</li>
+                </ul>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">정보보안 3대 목표 (CIA)</div>
+                        <div class="back">기밀성 · 무결성 · 가용성</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">파일을 암호화한 뒤 금전을 요구하는 악성코드</div>
+                        <div class="back">랜섬웨어</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">문자메시지를 이용한 사기 공격</div>
+                        <div class="back">스미싱</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 스스로 복제해 네트워크로 퍼지는 악성코드는? (바이러스 / 웜 / 트로이목마)</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">웜(worm). 바이러스는 다른 파일에 기생하고, 트로이목마는 정상 프로그램으로 위장한다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch13">13. 멀티미디어</h2>
+        <details class="section">
+            <summary>멀티미디어 특징, 이미지/사운드/동영상 표현, 압축, A/D 변환</summary>
+            <div class="section__body">
+                <h3>멀티미디어란</h3>
+                <p>텍스트, 이미지, 사운드, 애니메이션, 동영상 등 두 가지 이상의 미디어를 디지털로 통합해 다루는 것. 특징은 <strong>디지털화, 통합성, 상호작용성(interactivity)</strong>.</p>
+
+                <h3>디지털 미디어의 표현</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>미디어</th><th>핵심 개념</th><th>대표 형식</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>이미지</td><td>비트맵(픽셀 기반) vs 벡터(수식 기반), 해상도, 색 깊이</td><td>JPEG, PNG, GIF, BMP</td></tr>
+                            <tr><td>사운드</td><td>샘플링(아날로그→디지털), 샘플링 비율</td><td>MP3, WAV</td></tr>
+                            <tr><td>동영상</td><td>프레임의 연속, 압축(코덱)</td><td>MP4, AVI</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><strong>압축</strong>: 데이터 크기를 줄이는 기술. 무손실(원본 완전 복원) vs 손실(일부 정보 버려 더 작게).</li>
+                    <li><strong>아날로그 → 디지털 변환</strong>: 표본화(sampling) → 양자화(quantization) → 부호화(encoding).</li>
+                </ul>
+
+                <h3>멀티미디어의 활용</h3>
+                <p>교육(이러닝), 게임, 영화/방송, 가상현실(VR)/증강현실(AR), 디지털 광고 등.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">확대해도 깨지지 않는 이미지 방식</div>
+                        <div class="back">벡터(수식 기반). 비트맵은 픽셀 기반이라 확대 시 계단현상</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">A/D 변환 3단계</div>
+                        <div class="back">표본화(sampling) → 양자화(quantization) → 부호화(encoding)</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 원본을 완전히 복원할 수 있는 압축 방식은 무손실인가 손실인가?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">무손실 압축. 손실 압축은 일부 정보를 버려 더 작게 만들지만 원본을 완전히 복원하지 못한다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch14">14. 유비쿼터스</h2>
+        <details class="section">
+            <summary>유비쿼터스 개념, RFID/NFC/IoT, 스마트시티</summary>
+            <div class="section__body">
+                <h3>유비쿼터스의 개념</h3>
+                <p><strong>유비쿼터스(ubiquitous)</strong>는 라틴어로 "어디에나 존재한다"는 뜻이다. 사용자가 의식하지 않아도 일상 곳곳에 컴퓨터가 스며들어 언제 어디서나 정보를 활용하는 환경을 말한다. 특성은 보이지 않음(invisible), 어디에나 있음, 자연스러운 상호작용, 네트워크 연결.</p>
+
+                <h3>관련 기술과 사물인터넷(IoT)</h3>
+                <ul>
+                    <li><strong>RFID/NFC</strong>(근거리 무선 인식), 센서, 무선 네트워크가 기반.</li>
+                    <li><strong>사물인터넷(IoT)</strong>: 사물들이 서로 연결되어 데이터를 주고받음. 유비쿼터스 비전을 실현하는 핵심.</li>
+                </ul>
+
+                <h3>스마트시티와 전망</h3>
+                <p>IoT, 빅데이터, AI를 도시 인프라(교통, 에너지, 안전, 환경)에 적용해 효율적이고 지속가능하게 운영하는 도시(스마트 교통 신호, 스마트 미터, 스마트 주차). 헬스케어, 스마트홈, 웨어러블, 자율주행 등으로 확장 중이다.</p>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">"어디에나 존재한다"는 뜻의 컴퓨팅 환경</div>
+                        <div class="back">유비쿼터스(ubiquitous)</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">유비쿼터스 비전을 실현하는 핵심 기술</div>
+                        <div class="back">사물인터넷(IoT)</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 교통/에너지/안전 인프라에 IoT·빅데이터·AI를 적용한 도시를 무엇이라 하나?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">스마트시티.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch15">15. 모바일 서비스</h2>
+        <details class="section">
+            <summary>이동통신 1G~5G, 모바일 OS, 서비스 사례, 웨어러블</summary>
+            <div class="section__body">
+                <h3>모바일 서비스의 개요</h3>
+                <p>이동 중에도 무선 네트워크를 통해 정보/서비스를 이용하는 것으로, 스마트폰 보급으로 폭발적으로 성장했다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>세대</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1G</td><td>아날로그 음성</td></tr>
+                            <tr><td>2G</td><td>디지털, 문자(SMS)</td></tr>
+                            <tr><td>3G</td><td>영상통화, 데이터</td></tr>
+                            <tr><td>4G</td><td>LTE, 고속 데이터</td></tr>
+                            <tr><td>5G</td><td>초고속/초저지연/초연결</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>모바일 운영체제</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>OS</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>안드로이드(Android)</td><td>구글, 오픈소스 기반, 다양한 제조사 채택, 점유율 높음</td></tr>
+                            <tr><td>iOS</td><td>애플, 폐쇄적/통합적, 자사 기기 전용</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>서비스 사례와 웨어러블</h3>
+                <ul>
+                    <li>모바일 앱 마켓(앱스토어, 플레이스토어), 모바일 결제/뱅킹, 위치기반 서비스(LBS), 모바일 메신저/SNS, O2O 서비스(배달/택시).</li>
+                    <li><strong>웨어러블 기기</strong>: 스마트워치, 스마트밴드(건강 측정), 스마트글래스, 무선 이어버드 등. 헬스케어/IoT와 결합해 성장 중.</li>
+                </ul>
+
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">초고속·초저지연·초연결을 특징으로 하는 이동통신 세대</div>
+                        <div class="back">5G</div>
+                    </div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner">
+                        <div class="front">오픈소스 기반 모바일 OS</div>
+                        <div class="back">안드로이드(Android) - 구글</div>
+                    </div></div></li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 안드로이드와 iOS의 가장 큰 개방성 차이는?</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">안드로이드는 오픈소스 기반으로 여러 제조사가 채택하는 개방형이고, iOS는 애플 자사 기기 전용의 폐쇄적/통합적 OS다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="review">16. 시험·과제 대비 핵심 정리</h2>
+        <details class="section">
+            <summary>자주 나오는 구분, 반드시 외울 구조, 시사 단원</summary>
+            <div class="section__body">
+                <div class="callout tip">
+                    <p class="callout__title">자주 나오는 개념 구분</p>
+                    <p>데이터 vs 정보 / 주기억 vs 보조기억(휘발성) / 시스템 SW vs 응용 SW / LAN vs WAN / 비트맵 vs 벡터 / 안드로이드 vs iOS.</p>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">반드시 외울 구조</p>
+                    <p>프로그램 내장방식(폰 노이만), 컴퓨터의 5대 기능, 명령어 사이클(인출-해석-실행), DB 3단계 스키마, 정보보안 CIA, 산업혁명 1~4차, 이동통신 1G~5G.</p>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">시사/응용 단원 (8, 9, 14, 15장)</p>
+                    <p>분야별 사례를 구체적으로 적을 수 있어야 한다. 특히 IoT 사례, 4차 산업혁명 기술은 중간과제물 단골이다.</p>
+                </div>
+                <h3>단답형 대비 포인트</h3>
+                <p>2진수, 비트/바이트 단위, ASCII/유니코드, 샘플링/압축 개념은 단답형으로 나올 수 있다.</p>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. (종합) 폰 노이만 구조의 핵심 아이디어를 한 문장으로 말해 보세요.</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">프로그램(명령어)을 데이터처럼 기억장치에 저장해 두고 CPU가 순차적으로 꺼내 실행하는 방식(stored-program). 배선 교체 없이 소프트웨어만 바꿔 다른 작업을 할 수 있어 범용 컴퓨터가 가능해졌다.</div></details>
+                </details>
+                <details class="quiz">
+                    <div class="quiz__q">Q. (종합) 주기억장치와 보조기억장치를 휘발성·속도·용도로 비교하세요.</div>
+                    <details class="quiz__a"><summary>정답 보기</summary><div class="quiz__a-body">주기억(RAM)은 휘발성·빠름·작은 용량으로 실행 중 임시 저장에, 보조기억(HDD/SSD)은 비휘발성·상대적으로 느림·큰 용량으로 장기 보관에 쓰인다.</div></details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="free">17. 무료 학습 자료</h2>
+        <details class="section">
+            <summary>공식 사이트, 위키, 공개강의</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>자료</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><a href="https://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920041730">KNOU 출판문화원 교재 페이지</a></td><td>지정 교재 서지·목차·eBook 구매 정보</td></tr>
+                            <tr><td><a href="https://lms.knou.ac.kr">KNOU 통합강의실(LMS)</a></td><td>강의계획서, 주차별 동영상 강의, 형성평가/과제 제출</td></tr>
+                            <tr><td><a href="https://cs.knou.ac.kr">KNOU 컴퓨터과학과 홈페이지</a></td><td>학과 공지, 과목 안내, 출석수업/시험 일정</td></tr>
+                            <tr><td><a href="https://www.knou.ac.kr">한국방송통신대학교 메인</a></td><td>학사일정, 성적평가 안내, 수강신청</td></tr>
+                            <tr><td><a href="https://terms.tta.or.kr">TTA 정보통신용어사전</a></td><td>정보통신/컴퓨터 용어를 한국어로 정확히 확인</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/컴퓨터">위키백과 "컴퓨터"</a></td><td>컴퓨터 구조·역사·구성요소 개괄</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/폰_노이만_구조">위키백과 "폰 노이만 구조"</a></td><td>프로그램 내장방식 핵심 개념 보충</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/사물인터넷">위키백과 "사물인터넷"</a></td><td>IoT 개념·사례(과제물 대비)</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/정보_보안">위키백과 "정보 보안"</a></td><td>CIA, 악성코드, 보안 기법 보충</td></tr>
+                            <tr><td><a href="http://www.kocw.net">KOCW 공개강의</a></td><td>"컴퓨터 개론/정보사회" 키워드로 대학 무료 강의 검색</td></tr>
+                            <tr><td><a href="http://www.kmooc.kr">K-MOOC</a></td><td>"컴퓨터", "정보사회", "4차 산업혁명" 무료 온라인 강좌</td></tr>
+                            <tr><td><a href="https://opentutorials.org">생활코딩(opentutorials)</a></td><td>인터넷/웹/소프트웨어 기초를 쉬운 한국어로 학습</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

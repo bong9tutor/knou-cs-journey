@@ -1,0 +1,1709 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>파이썬프로그래밍기초 - 1학년 1학기 학습 노트</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <style>
+        /* 페이지 전용 보강: Prism 토큰 색(공용 코드블록 변수에 맞춤) + 실행 플레이그라운드.
+           공용 컴포넌트 클래스(.code/.section/.callout 등)는 재정의하지 않는다. */
+        .code pre[class*="language-"],
+        .code code[class*="language-"] {
+            color: var(--codeblock-text);
+            background: transparent;
+            text-shadow: none;
+        }
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+            color: #8b94a0;
+            font-style: italic;
+        }
+        .token.punctuation {
+            color: #c0c6d0;
+        }
+        .token.keyword,
+        .token.boolean,
+        .token.important {
+            color: #c792ea;
+        }
+        .token.builtin,
+        .token.class-name {
+            color: #82d2ce;
+        }
+        .token.function {
+            color: #82aaff;
+        }
+        .token.number {
+            color: #f78c6c;
+        }
+        .token.string,
+        .token.char,
+        .token.triple-quoted-string {
+            color: #c3e88d;
+        }
+        .token.operator,
+        .token.entity,
+        .token.url {
+            color: #89ddff;
+        }
+        .token.decorator,
+        .token.annotation {
+            color: #ffcb6b;
+        }
+        .token.interpolation {
+            color: #e6e9ee;
+        }
+        .token.interpolation-punctuation {
+            color: #ff8fab;
+        }
+
+        /* 실행 플레이그라운드(Pyodide 지연 로드) */
+        .play {
+            margin: 1.2em 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-soft);
+            overflow: hidden;
+        }
+        .play__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .play__title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-soft);
+            letter-spacing: 0.02em;
+        }
+        .play__run {
+            flex: 0 0 auto;
+            min-height: 36px;
+            padding: 6px 16px;
+            border: 1px solid var(--accent);
+            border-radius: var(--radius-sm);
+            background: var(--accent);
+            color: #fff;
+            font-family: var(--font-sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: opacity 0.15s ease;
+        }
+        .play__run:hover {
+            opacity: 0.88;
+        }
+        .play__run:disabled {
+            opacity: 0.55;
+            cursor: progress;
+        }
+        .play__editor {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            border: 0;
+            padding: 14px 16px;
+            resize: vertical;
+            min-height: 120px;
+            background: var(--codeblock-bg);
+            color: var(--codeblock-text);
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            tab-size: 4;
+        }
+        .play__editor:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: -2px;
+        }
+        .play__out {
+            margin: 0;
+            padding: 12px 16px;
+            min-height: 1.6em;
+            background: var(--bg-sunken);
+            color: var(--text);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            word-break: break-word;
+            border-top: 1px solid var(--border-soft);
+        }
+        .play__out.is-error {
+            color: var(--warn);
+        }
+        .play__out:empty::before {
+            content: "실행 버튼을 누르면 결과가 여기에 표시됩니다.";
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#overview">0. 학습 지도</a>
+            <a href="#computer">1. 컴퓨터와 프로그래밍의 이해</a>
+            <a href="#env">2. 파이썬 환경과 첫 프로그램</a>
+            <a href="#variables">3. 변수, 자료형, 연산자</a>
+            <a href="#strings">4. 숫자와 문자열 다루기</a>
+            <a href="#collections">5. 자료구조: 리스트/튜플/딕셔너리/집합</a>
+            <a href="#conditionals">6. 조건문: 선택 구조</a>
+            <a href="#loops">7. 반복문: 반복 구조</a>
+            <a href="#comprehension">8. 컴프리헨션</a>
+            <a href="#functions">9. 함수와 스코프</a>
+            <a href="#fileio">10. 파일 입출력</a>
+            <a href="#exceptions">11. 예외처리</a>
+            <a href="#modules">12. 모듈과 패키지</a>
+            <a href="#oop">13. 클래스와 객체지향(OOP)</a>
+            <a href="#stdlib">14. 표준 라이브러리 둘러보기</a>
+            <a href="#projects">15. 미니 프로젝트</a>
+            <a href="#review">16. 용어 정리와 학습 팁</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>파이썬프로그래밍기초</h1>
+        <blockquote>방송통신대학교 컴퓨터과학과 1학년 1학기 과목입니다. KNOU 정규 강의(15강) 구성을 따르되 표준 파이썬 지식으로 깊이를 보강했고, 모든 코드는 Python 3 기준으로 실행할 수 있습니다. 일부 예제는 아래 실행 플레이그라운드에서 직접 돌려 볼 수 있습니다.</blockquote>
+
+        <div class="callout info">
+            <p class="callout__title">지정 교재</p>
+            <p>Y. 다니엘 리앙 저, 길준민/정재화 역, 『파이썬』, KNOU출판문화원. 강의와 시험 범위의 기준이 되는 공식 교재입니다.</p>
+        </div>
+
+        <h2 id="overview">0. 시작하기 전에: 학습 지도</h2>
+        <details class="section" open>
+            <summary>15강 구성과 이 노트의 단원 대응</summary>
+            <div class="section__body">
+                <p>KNOU 파이썬프로그래밍기초(정재화 교수)는 다음 15강으로 구성됩니다. 이 노트는 강 순서를 그대로 따르기보다 개념을 쌓아 올리기 좋은 논리적 순서로 재배열했습니다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>강</th><th>주제</th><th>대응 단원</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1강</td><td>컴퓨터의 이해</td><td>1</td></tr>
+                            <tr><td>2강</td><td>컴퓨터의 구성</td><td>1</td></tr>
+                            <tr><td>3강</td><td>파이썬의 이해 (Colab)</td><td>2</td></tr>
+                            <tr><td>4강</td><td>파이썬 기본 (자료형/변수/연산자)</td><td>3, 4</td></tr>
+                            <tr><td>5강</td><td>순차 구조 (숫자/문자열)</td><td>4, 5</td></tr>
+                            <tr><td>6강</td><td>선택 구조 (조건문)</td><td>6</td></tr>
+                            <tr><td>7강</td><td>반복 구조 (리스트/반복문)</td><td>5, 7</td></tr>
+                            <tr><td>8강</td><td>체크포인트 1 (복습)</td><td>1~7 종합</td></tr>
+                            <tr><td>9강</td><td>함수</td><td>9</td></tr>
+                            <tr><td>10강</td><td>모듈</td><td>12</td></tr>
+                            <tr><td>11강</td><td>객체 (OOP)</td><td>13</td></tr>
+                            <tr><td>12강</td><td>파일 입출력</td><td>10</td></tr>
+                            <tr><td>13~14강</td><td>실전 프로그래밍 (보드게임)</td><td>15</td></tr>
+                            <tr><td>15강</td><td>체크포인트 2 (복습)</td><td>전체 종합</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">학습 방법</p>
+                    <p>눈으로만 읽지 말고 직접 쳐서 실행하는 것이 가장 빠른 학습법입니다. KNOU 강의는 설치 없이 브라우저에서 쓰는 Google Colab을 권장하고, 이 페이지의 플레이그라운드로도 바로 실행해 볼 수 있습니다.</p>
+                </div>
+                <p>컴프리헨션, 예외처리, 집합, 상속 등은 정규 강의 비중이 작더라도 표준 파이썬 기초로서 함께 정리했습니다. 시험 비중이 낮은 보강 내용은 <span class="chip warn">심화/참고</span> 칩으로 표시합니다.</p>
+            </div>
+        </details>
+
+        <h2 id="computer">1. 컴퓨터와 프로그래밍의 이해</h2>
+        <details class="section">
+            <summary>데이터/정보/프로그램, 하드웨어와 소프트웨어, 인터프리터 vs 컴파일러</summary>
+            <div class="section__body">
+                <h3>데이터, 정보, 프로그램</h3>
+                <ul>
+                    <li><strong>데이터(data)</strong>: 가공되지 않은 원시 사실. 예) 숫자 23, 문자 'A'.</li>
+                    <li><strong>정보(information)</strong>: 데이터를 처리해 의미를 부여한 것. 예) "오늘 기온 23도".</li>
+                    <li><strong>프로그램(program)</strong>: 컴퓨터가 수행할 명령들의 모음. 프로그래밍은 그 명령을 작성하는 일.</li>
+                </ul>
+                <p>컴퓨터는 입력(input) -&gt; 처리(process) -&gt; 출력(output)의 흐름으로 동작합니다. 프로그래밍 언어는 사람이 이해하는 표현을 컴퓨터가 실행할 수 있는 형태로 옮기는 도구입니다.</p>
+
+                <h3>하드웨어와 소프트웨어</h3>
+                <ul>
+                    <li><strong>하드웨어</strong>: CPU(연산), 메모리(RAM, 임시 저장), 보조기억장치(SSD/HDD, 영구 저장), 입출력장치.</li>
+                    <li><strong>소프트웨어</strong>: 시스템 소프트웨어(운영체제 등)와 응용 소프트웨어(우리가 만드는 프로그램).</li>
+                </ul>
+
+                <h3>인터프리터 vs 컴파일러</h3>
+                <p>출석수업대체과제물의 단골 서술형 주제입니다. 둘 다 고급 언어 소스를 컴퓨터가 실행할 형태로 옮기는 <strong>번역기</strong>라는 점은 같습니다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>인터프리터</th><th>컴파일러</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>대표 언어</td><td>Python, JavaScript</td><td>C, C++, Java(바이트코드)</td></tr>
+                            <tr><td>변환 방식</td><td>소스를 한 줄씩 해석하며 즉시 실행</td><td>소스 전체를 기계어로 번역한 뒤 실행</td></tr>
+                            <tr><td>실행 파일</td><td>별도 산출물 없음(원본 + 인터프리터 필요)</td><td>실행 파일(예: .exe) 생성</td></tr>
+                            <tr><td>실행 속도</td><td>상대적으로 느림(매번 해석)</td><td>상대적으로 빠름(미리 번역)</td></tr>
+                            <tr><td>오류 발견 시점</td><td>실행 중 그 줄에 도달해야 발견</td><td>컴파일 단계에서 한꺼번에 발견</td></tr>
+                            <tr><td>작성-실행 사이클</td><td>짧음(바로 실행, 배우기 쉬움)</td><td>길음(컴파일 단계 필요)</td></tr>
+                            <tr><td>이식성</td><td>인터프리터만 있으면 어디서나 실행</td><td>플랫폼별로 다시 컴파일해야 함</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>핵심 차이</strong>: 인터프리터는 실행 시점에 한 줄씩 번역하고, 컴파일러는 실행 전에 전체를 한 번에 번역합니다. 이 차이에서 속도, 오류 발견 시점, 이식성이 갈립니다. 파이썬은 <strong>인터프리터 언어</strong>이므로 작성-실행 사이클이 짧고 배우기 쉽지만 실행 속도는 상대적으로 느립니다.</p>
+
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print("Hello, KNOU!")</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>Hello, KNOU!</pre>
+                </details>
+                <p><code>print()</code>는 화면에 값을 출력하는 내장 함수입니다. 이 한 줄이 가장 작은 완성된 파이썬 프로그램입니다.</p>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 파이썬은 인터프리터 언어인가 컴파일 언어인가? 그 선택이 가져오는 대표적 특성 한 가지를 말해 보자.</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">
+                            <p>파이썬은 인터프리터 언어다. 소스를 한 줄씩 해석하며 실행하므로 작성-실행 사이클이 짧아 배우기 쉽지만, 매번 해석하는 만큼 컴파일 언어보다 실행 속도가 느린 편이다.</p>
+                        </div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="env">2. 파이썬 환경과 첫 프로그램</h2>
+        <details class="section">
+            <summary>Colab/로컬, REPL과 스크립트, 주석/출력/입력</summary>
+            <div class="section__body">
+                <h3>실행 환경: Colab과 로컬</h3>
+                <p>KNOU 강의는 설치 없이 브라우저에서 바로 쓰는 <strong>Google Colab</strong>을 권장합니다. 셀 단위로 코드를 실행하며 결과를 즉시 확인할 수 있습니다. 로컬에서 학습하려면 python.org에서 파이썬을 설치하고 IDLE 또는 VS Code를 씁니다.</p>
+
+                <h3>REPL과 스크립트</h3>
+                <ul>
+                    <li><strong>REPL</strong>(Read-Eval-Print-Loop): 한 줄씩 입력하고 즉시 결과를 보는 대화형 모드. Colab 셀이 이에 가깝다.</li>
+                    <li><strong>스크립트(script)</strong>: <code>.py</code> 파일에 코드를 저장해 한꺼번에 실행.</li>
+                </ul>
+
+                <h3>주석과 출력</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># 한 줄 주석은 #으로 시작한다.
+"""
+여러 줄 주석(실제로는 문서 문자열)은
+삼중 따옴표로 감싼다.
+"""
+print("나이:", 23)             # 쉼표로 여러 값을 공백 구분 출력
+print("이름:", "홍길동", sep=" / ")  # sep로 구분자 변경
+print("끝없이", end="...\n")    # end로 줄바꿈 대체</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>나이: 23
+이름: / 홍길동
+끝없이...</pre>
+                </details>
+
+                <h3>입력 받기</h3>
+                <div class="callout warn">
+                    <p class="callout__title">input()은 항상 문자열</p>
+                    <p><code>input()</code>은 사용자 입력을 항상 문자열로 반환합니다. 숫자로 계산하려면 <code>int()</code>/<code>float()</code>로 형변환해야 합니다.</p>
+                </div>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">name = input("이름을 입력하세요: ")    # 예: 홍길동
+age = int(input("나이를 입력하세요: "))  # 문자열 "23" -> 정수 23
+print(f"{name}님은 내년에 {age + 1}살입니다.")</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기 (입력이 홍길동, 23일 때)</summary>
+                    <pre>홍길동님은 내년에 24살입니다.</pre>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="variables">3. 변수, 자료형, 연산자</h2>
+        <details class="section">
+            <summary>동적 타입 변수, 기본 자료형, 형변환, 산술/비교/논리/복합 연산자</summary>
+            <div class="section__body">
+                <h3>변수와 할당</h3>
+                <p>변수는 값을 담는 이름입니다. 파이썬은 <strong>동적 타입</strong>이라 선언 시 자료형을 명시하지 않고, 할당된 값에 따라 자료형이 정해집니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">x = 10          # 정수
+pi = 3.14       # 실수
+name = "파이썬"  # 문자열
+is_ok = True    # 불리언
+a = b = c = 0   # 다중 할당
+p, q = 1, 2     # 언패킹 할당
+p, q = q, p     # 두 값 교환 (임시변수 불필요)
+print(p, q)     # 2 1</code></pre>
+                </div>
+                <p>변수 이름 규칙: 영문/숫자/밑줄, 숫자로 시작 불가, 예약어(<code>if</code>, <code>for</code> 등) 사용 불가. 관례상 소문자와 밑줄을 씁니다(<code>student_count</code>).</p>
+
+                <h3>기본 자료형</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>자료형</th><th>예</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>int</code></td><td><code>42</code>, <code>-7</code></td><td>정수, 크기 제한 없음</td></tr>
+                            <tr><td><code>float</code></td><td><code>3.14</code>, <code>1e-3</code></td><td>실수</td></tr>
+                            <tr><td><code>str</code></td><td><code>"hi"</code></td><td>문자열</td></tr>
+                            <tr><td><code>bool</code></td><td><code>True</code>, <code>False</code></td><td>참/거짓</td></tr>
+                            <tr><td><code>NoneType</code></td><td><code>None</code></td><td>값 없음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print(type(42))      # &lt;class 'int'&gt;
+print(type(3.14))    # &lt;class 'float'&gt;
+print(type("hi"))    # &lt;class 'str'&gt;
+print(type(True))    # &lt;class 'bool'&gt;</code></pre>
+                </div>
+
+                <h3>형변환(type casting)</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print(int("100") + 1)   # 101  문자열 -> 정수
+print(float("3.5"))     # 3.5
+print(str(2026) + "년")  # 2026년  정수 -> 문자열
+print(int(3.9))         # 3  소수점 버림(내림 아님, 절단)
+print(int(-3.9))        # -3  음수도 0 방향으로 절단(내림 -4 아님!)
+print(bool(0), bool(""), bool(1), bool("x"))  # False False True True</code></pre>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">int()는 내림이 아니라 0 방향 절단</p>
+                    <p><code>int()</code>는 소수부를 잘라내 <strong>0 방향으로 절단(truncate)</strong>합니다. 항상 작은 쪽(음의 무한대 방향)으로 내리는 <code>math.floor()</code>와 다릅니다. 양수는 같지만 음수에서 갈립니다.</p>
+                </div>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import math
+print(int(3.9), math.floor(3.9))     # 3 3    양수는 동일
+print(int(-3.9), math.floor(-3.9))   # -3 -4  음수에서 차이!</code></pre>
+                </div>
+                <p><code>bool()</code>에서 <code>0</code>, <code>0.0</code>, <code>""</code>, <code>[]</code>, <code>{}</code>, <code>None</code>은 거짓으로 평가됩니다.</p>
+
+                <h3>산술 연산자</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print(7 + 3)   # 10
+print(7 - 3)   # 4
+print(7 * 3)   # 21
+print(7 / 3)   # 2.3333333333333335  실수 나눗셈
+print(7 // 3)  # 2  몫(정수 나눗셈, 내림)
+print(7 % 3)   # 1  나머지
+print(7 ** 3)  # 343  거듭제곱</code></pre>
+                </div>
+                <p><code>%</code>(나머지)는 짝수/홀수 판별, 자릿수 추출에 자주 씁니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">n = 1234
+print(n % 10)   # 4  (일의 자리)
+print(n // 10)  # 123 (일의 자리 제거)</code></pre>
+                </div>
+
+                <h3>비교/논리/복합 할당 연산자</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print(3 &lt; 5)        # True
+print(3 == 3.0)     # True  값이 같으면 True
+print(3 != 4)       # True
+print(1 &lt;= 2 &lt;= 3)  # True  연쇄 비교 가능
+print(True and False)  # False
+print(True or False)   # True
+print(not True)        # False
+
+score = 10
+score += 5   # score = score + 5
+score -= 2
+score *= 2
+print(score)  # 26</code></pre>
+                </div>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. <code>int(-3.9)</code>와 <code>math.floor(-3.9)</code>의 결과가 다른 이유는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">
+                            <p><code>int(-3.9)</code>는 0 방향으로 잘라내 <strong>-3</strong>, <code>math.floor(-3.9)</code>는 작은 쪽으로 내려 <strong>-4</strong>. 양수에서는 둘 다 같지만 음수에서 갈린다.</p>
+                        </div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="strings">4. 숫자와 문자열 다루기</h2>
+        <details class="section">
+            <summary>숫자 내장 함수, 인덱싱/슬라이싱, 문자열 메서드, f-string 포매팅</summary>
+            <div class="section__body">
+                <h3>숫자 관련 내장 함수</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">print(abs(-7))         # 7  절댓값
+print(round(3.567, 1)) # 3.6  반올림(자릿수 지정)
+print(max(3, 9, 1))    # 9
+print(min(3, 9, 1))    # 1
+print(pow(2, 10))      # 1024  2의 10제곱
+print(divmod(17, 5))   # (3, 2)  몫과 나머지를 한 번에</code></pre>
+                </div>
+
+                <h3>문자열 기본과 슬라이싱</h3>
+                <p>문자열은 문자들의 <strong>순서가 있는 불변(immutable)</strong> 시퀀스입니다. 슬라이싱은 <code>s[start:stop:step]</code> 형식으로 <code>start</code>는 포함, <code>stop</code>은 제외합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">s = "Python"
+print(len(s))     # 6  길이
+print(s[0])       # P  인덱싱(0부터)
+print(s[-1])      # n  음수 인덱스(뒤에서부터)
+print(s + "3")    # Python3  연결
+print(s * 2)      # PythonPython  반복
+print("y" in s)   # True  포함 여부
+
+t = "ABCDEFG"
+print(t[1:4])    # BCD
+print(t[:3])     # ABC  처음부터
+print(t[4:])     # EFG  끝까지
+print(t[::2])    # ACEG  2칸씩
+print(t[::-1])   # GFEDCBA  뒤집기</code></pre>
+                </div>
+
+                <h3>문자열 메서드</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">t = "  Hello, World  "
+print(t.strip())           # "Hello, World"  양끝 공백 제거
+print(t.strip().upper())   # "HELLO, WORLD"
+print("a,b,c".split(","))   # ['a', 'b', 'c']  분리 -> 리스트
+print("-".join(["2026", "06", "08"]))  # 2026-06-08  결합
+print("banana".replace("a", "o"))  # bonono
+print("banana".count("a"))  # 3
+print("banana".find("n"))   # 2  첫 위치(없으면 -1)
+print("Python".startswith("Py"))  # True
+print("file.txt".endswith(".txt")) # True</code></pre>
+                </div>
+                <p>문자열은 불변이므로 이런 메서드는 원본을 바꾸지 않고 <strong>새 문자열을 반환</strong>합니다.</p>
+
+                <h3>문자열 포매팅(f-string)</h3>
+                <p>가장 권장되는 방식은 <strong>f-string</strong>(파이썬 3.6+)입니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">name, score = "홍길동", 92.5
+print(f"{name}님 점수: {score}점")  # 홍길동님 점수: 92.5점
+print(f"{score:.1f}")               # 92.5  소수 첫째 자리
+print(f"{1234567:,}")               # 1,234,567  천 단위 콤마
+print(f"{255:b}, {255:x}")          # 11111111, ff  2진수/16진수
+print(f"{0.875:.1%}")               # 87.5%  백분율
+print(f"{name:&gt;10}|")               # "       홍길동|"  오른쪽 정렬</code></pre>
+                </div>
+
+                <div class="play" data-play>
+                    <div class="play__head">
+                        <span class="play__title">직접 실행: 문자열과 포매팅</span>
+                        <button class="play__run" type="button">실행</button>
+                    </div>
+                    <textarea class="play__editor" spellcheck="false" aria-label="파이썬 코드 편집기">s = "Python"
+print(s[::-1])           # 뒤집기
+print("-".join(["2026", "06", "08"]))
+name, score = "홍길동", 92.5
+print(f"{name}님 점수: {score:.1f}점")
+print(f"{1234567:,}")
+</textarea>
+                    <pre class="play__out" aria-live="polite"></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="collections">5. 자료구조: 리스트/튜플/딕셔너리/집합</h2>
+        <details class="section">
+            <summary>리스트(가변), 튜플(불변), 딕셔너리(키-값), 집합(중복 제거)</summary>
+            <div class="section__body">
+                <h3>리스트(list)</h3>
+                <p>순서가 있고 <strong>변경 가능(mutable)</strong>한 자료의 모음. 가장 많이 쓰는 컨테이너입니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">nums = [3, 1, 4, 1, 5]
+print(nums[0])        # 3
+print(nums[-1])       # 5
+print(nums[1:3])      # [1, 4]  리스트도 슬라이싱 가능
+
+nums.append(9)        # 끝에 추가 -> [3,1,4,1,5,9]
+nums.insert(0, 0)     # 0번 위치에 삽입 -> [0,3,1,4,1,5,9]
+nums.remove(1)        # 첫 1 제거 -> [0,3,4,1,5,9]
+last = nums.pop()     # 마지막 꺼내기, last=9
+nums.sort()           # 정렬 -> [0,1,3,4,5]
+nums.reverse()        # 뒤집기 -> [5,4,3,1,0]
+print(nums)           # [5, 4, 3, 1, 0]
+print(sum([1,2,3]), max([1,2,3]), min([1,2,3]))  # 6 3 1
+
+matrix = [[1, 2, 3], [4, 5, 6]]
+print(matrix[1][2])   # 6  중첩(2차원) 리스트</code></pre>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">리스트 별칭 함정</p>
+                    <p>리스트는 <strong>참조</strong>로 동작합니다. <code>b = a</code>는 복사가 아니라 같은 리스트를 가리키는 별칭이라, 한쪽을 바꾸면 둘 다 영향을 받습니다. 복사하려면 슬라이스 <code>a[:]</code>나 <code>a.copy()</code>를 씁니다.</p>
+                </div>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">a = [1, 2, 3]
+b = a            # 같은 리스트를 가리킴(별칭)
+b.append(4)
+print(a)         # [1, 2, 3, 4]  a도 변함!
+
+c = a[:]         # 얕은 복사
+c.append(5)
+print(a)         # [1, 2, 3, 4]  a는 그대로</code></pre>
+                </div>
+
+                <h3>튜플(tuple)</h3>
+                <p>순서가 있지만 <strong>변경 불가(immutable)</strong>한 모음. 변하면 안 되는 좌표/설정값에 씁니다. 함수가 여러 값을 반환할 때 내부적으로 튜플을 씁니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">point = (3, 4)
+x, y = point          # 언패킹
+print(x, y)           # 3 4
+single = (42,)        # 요소 1개 튜플은 쉼표 필수
+# point[0] = 5        # TypeError! 변경 불가
+
+def min_max(data):
+    return min(data), max(data)   # 튜플 반환
+
+lo, hi = min_max([3, 7, 1])
+print(lo, hi)          # 1 7</code></pre>
+                </div>
+
+                <h3>딕셔너리(dict)</h3>
+                <p><strong>키(key) -&gt; 값(value)</strong> 쌍의 모음. 키로 빠르게 값을 찾습니다. 순서가 보장됩니다(3.7+).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">student = {"name": "홍길동", "age": 23, "major": "CS"}
+print(student["name"])               # 홍길동
+print(student.get("phone", "없음"))   # 없음  (키 없으면 기본값)
+
+student["age"] = 24           # 값 수정
+student["gpa"] = 4.2          # 새 키 추가
+del student["major"]          # 키 삭제
+
+for key, value in student.items():
+    print(f"{key}: {value}")</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>name: 홍길동
+age: 24
+gpa: 4.2</pre>
+                </details>
+                <p>빈도 세기에 딕셔너리가 유용합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">text = "banana"
+count = {}
+for ch in text:
+    count[ch] = count.get(ch, 0) + 1
+print(count)   # {'b': 1, 'a': 3, 'n': 2}</code></pre>
+                </div>
+
+                <h3>집합(set)</h3>
+                <p><strong>중복 없는</strong> 순서 없는 모음. 중복 제거와 집합 연산에 씁니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">a = {1, 2, 3, 3, 2}
+print(a)              # {1, 2, 3}  중복 자동 제거
+b = {3, 4, 5}
+print(a | b)          # {1,2,3,4,5}  합집합
+print(a &amp; b)          # {3}  교집합
+print(a - b)          # {1, 2}  차집합
+print(2 in a)         # True  멤버십 검사(매우 빠름)
+
+nums = [1, 1, 2, 3, 3, 3]
+print(list(set(nums)))  # [1, 2, 3]  리스트 중복 제거</code></pre>
+                </div>
+
+                <h3>네 자료구조 비교</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>자료구조</th><th>표기</th><th>순서</th><th>변경</th><th>중복</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>리스트</td><td><code>[ ]</code></td><td>있음</td><td>가능</td><td>허용</td></tr>
+                            <tr><td>튜플</td><td><code>( )</code></td><td>있음</td><td>불가</td><td>허용</td></tr>
+                            <tr><td>딕셔너리</td><td><code>{k: v}</code></td><td>있음(3.7+)</td><td>가능</td><td>키 중복 불가</td></tr>
+                            <tr><td>집합</td><td><code>{ }</code></td><td>없음</td><td>가능</td><td>불가</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="conditionals">6. 조건문: 선택 구조</h2>
+        <details class="section">
+            <summary>제어구조 3분류, if/elif/else, 중첩과 논리 결합, 삼항 표현식, match-case</summary>
+            <div class="section__body">
+                <h3>제어구조의 3분류: 순차 / 선택 / 반복</h3>
+                <p>구조적 프로그래밍에서 모든 프로그램의 흐름은 다음 <strong>세 가지 제어구조</strong>의 조합으로 표현됩니다. KNOU 정규 강의도 5강 순차, 6강 선택, 7강 반복으로 이 분류를 그대로 따릅니다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>제어구조</th><th>의미</th><th>파이썬 문법</th><th>대응 강</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>순차(sequence)</td><td>위에서 아래로 한 문장씩 차례로 실행</td><td>줄 단위 실행(키워드 없음)</td><td>5강</td></tr>
+                            <tr><td>선택(selection)</td><td>조건에 따라 실행할 블록을 고름</td><td><code>if</code>/<code>elif</code>/<code>else</code>, <code>match</code></td><td>6강</td></tr>
+                            <tr><td>반복(iteration)</td><td>조건/횟수만큼 같은 블록 되풀이</td><td><code>for</code>, <code>while</code></td><td>7강</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>if / elif / else</h3>
+                <p>조건이 참일 때만 들여쓴 블록을 실행합니다. 파이썬은 <strong>들여쓰기(보통 스페이스 4칸)</strong>로 블록을 구분합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">score = 85
+if score &gt;= 90:
+    grade = "A"
+elif score &gt;= 80:
+    grade = "B"
+elif score &gt;= 70:
+    grade = "C"
+else:
+    grade = "F"
+print(grade)   # B</code></pre>
+                </div>
+
+                <h3>중첩 조건과 논리 결합</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">age = 20
+has_ticket = True
+
+# 중첩 방식
+if age &gt;= 19:
+    if has_ticket:
+        print("입장 가능")
+    else:
+        print("티켓이 없습니다")
+else:
+    print("미성년자 입장 불가")
+
+# and로 평평하게
+if age &gt;= 19 and has_ticket:
+    print("입장 가능")</code></pre>
+                </div>
+
+                <h3>삼항 표현식과 진리값</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">n = 7
+parity = "짝수" if n % 2 == 0 else "홀수"
+print(parity)   # 홀수
+
+items = []          # 빈 컨테이너/0/None은 거짓으로 평가
+if items:
+    print("내용 있음")
+else:
+    print("비어 있음")   # 이게 출력됨</code></pre>
+                </div>
+
+                <h3>match-case <span class="chip warn">심화/참고 - 시험 비중 낮음</span></h3>
+                <blockquote>정규 강의 범위를 넘는 보강 내용입니다. 같은 분기를 <code>if</code>/<code>elif</code>로도 쓸 수 있으므로 시험에서는 <code>if</code> 계열이 핵심이고 <code>match</code>(3.10+)는 참고만 해도 됩니다.</blockquote>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">command = "start"
+match command:
+    case "start":
+        print("시작합니다")
+    case "stop":
+        print("멈춥니다")
+    case _:
+        print("알 수 없는 명령")
+# 출력: 시작합니다</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="loops">7. 반복문: 반복 구조</h2>
+        <details class="section">
+            <summary>for/range, enumerate/zip, while, break/continue, 중첩 반복, for-else</summary>
+            <div class="section__body">
+                <h3>for 문과 range</h3>
+                <p><code>for</code>는 시퀀스의 각 요소를 순회하고, <code>range()</code>는 정수 수열을 만듭니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">for i in range(5):        # 0, 1, 2, 3, 4
+    print(i, end=" ")
+print()                   # 줄바꿈
+
+for i in range(2, 11, 2): # 2부터 10까지 2씩
+    print(i, end=" ")     # 2 4 6 8 10
+print()
+
+total = 0
+for n in [10, 20, 30]:
+    total += n
+print(total)              # 60</code></pre>
+                </div>
+
+                <h3>enumerate와 zip</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">fruits = ["사과", "배", "감"]
+for idx, fruit in enumerate(fruits, start=1):
+    print(f"{idx}번: {fruit}")
+
+names = ["A", "B", "C"]
+scores = [90, 85, 95]
+for name, score in zip(names, scores):
+    print(f"{name}: {score}")</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>1번: 사과
+2번: 배
+3번: 감
+A: 90
+B: 85
+C: 95</pre>
+                </details>
+
+                <h3>while 문</h3>
+                <p>조건이 참인 동안 반복합니다. 조건이 언젠가 거짓이 되도록 해야 무한루프를 피합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">n = 1
+total = 0
+while n &lt;= 100:
+    total += n
+    n += 1
+print(total)   # 5050</code></pre>
+                </div>
+
+                <h3>break와 continue</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># break: 반복 즉시 종료
+for n in range(1, 100):
+    if n * n &gt; 50:
+        print(f"제곱이 50을 넘는 첫 수: {n}")  # 8
+        break
+
+# continue: 이번 회차만 건너뜀
+for n in range(1, 11):
+    if n % 2 == 0:
+        continue          # 짝수는 건너뜀
+    print(n, end=" ")     # 1 3 5 7 9
+print()</code></pre>
+                </div>
+
+                <h3>중첩 반복과 for-else</h3>
+                <p>반복이 <code>break</code> 없이 끝나면 <code>else</code>가 실행됩니다(검색 성공/실패 판별에 유용).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># 구구단(중첩 반복)
+for dan in range(2, 5):
+    for i in range(1, 10):
+        print(f"{dan}x{i}={dan*i}", end="  ")
+    print()
+
+# for-else
+target = 7
+for n in [2, 4, 6, 8]:
+    if n == target:
+        print("찾음")
+        break
+else:
+    print("못 찾음")   # 이게 출력됨</code></pre>
+                </div>
+
+                <div class="play" data-play>
+                    <div class="play__head">
+                        <span class="play__title">직접 실행: 1부터 100까지 합과 구구단 2단</span>
+                        <button class="play__run" type="button">실행</button>
+                    </div>
+                    <textarea class="play__editor" spellcheck="false" aria-label="파이썬 코드 편집기">total = 0
+for n in range(1, 101):
+    total += n
+print("1~100 합:", total)
+
+for i in range(1, 10):
+    print(f"2x{i}={2*i}", end="  ")
+print()
+</textarea>
+                    <pre class="play__out" aria-live="polite"></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="comprehension">8. 컴프리헨션 <span class="chip warn">심화/참고</span></h2>
+        <details class="section">
+            <summary>리스트/딕셔너리/집합 컴프리헨션, 중첩 컴프리헨션</summary>
+            <div class="section__body">
+                <blockquote>정규 강의 비중을 넘는 보강 단원입니다. 모든 컴프리헨션은 일반 <code>for</code> 반복문으로 똑같이 쓸 수 있으므로, 시험 대비로는 7단원의 기본 반복문이 핵심이고 이 단원은 코드를 짧게 쓰는 관용 표현으로 익혀 두면 충분합니다.</blockquote>
+
+                <h3>리스트 컴프리헨션</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># 기본형: [식 for 변수 in 반복가능]
+squares = [n ** 2 for n in range(1, 6)]
+print(squares)   # [1, 4, 9, 16, 25]
+
+# 조건 필터: [식 for 변수 in 반복 if 조건]
+evens = [n for n in range(1, 11) if n % 2 == 0]
+print(evens)     # [2, 4, 6, 8, 10]
+
+words = ["apple", "Banana", "cherry"]
+upper = [w.upper() for w in words if len(w) &gt; 5]
+print(upper)     # ['BANANA', 'CHERRY']</code></pre>
+                </div>
+                <p>같은 결과를 일반 반복문으로 쓰면 다음과 같습니다(컴프리헨션이 더 짧습니다).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">squares = []
+for n in range(1, 6):
+    squares.append(n ** 2)</code></pre>
+                </div>
+
+                <h3>딕셔너리/집합/중첩 컴프리헨션</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">sq_map = {n: n ** 2 for n in range(1, 5)}
+print(sq_map)    # {1: 1, 2: 4, 3: 9, 4: 16}
+
+unique_lengths = {len(w) for w in ["a", "bb", "cc", "ddd"]}
+print(unique_lengths)  # {1, 2, 3}
+
+matrix = [[row * 3 + col for col in range(3)] for row in range(3)]
+print(matrix)    # [[0,1,2],[3,4,5],[6,7,8]]</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="functions">9. 함수와 스코프</h2>
+        <details class="section">
+            <summary>def/return, 매개변수 형태, 여러 값 반환, 지역/전역 스코프, lambda</summary>
+            <div class="section__body">
+                <h3>함수 정의와 호출</h3>
+                <p>함수는 코드를 묶어 재사용하는 단위입니다. <code>def</code>로 정의하고 <code>return</code>으로 값을 돌려줍니다. <code>return</code>이 없으면 <code>None</code>을 반환합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">def add(a, b):
+    """두 수의 합을 반환한다."""  # docstring
+    return a + b
+
+print(add(3, 4))   # 7
+help(add)          # docstring 출력</code></pre>
+                </div>
+
+                <h3>매개변수의 여러 형태</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># 기본값 매개변수
+def greet(name, greeting="안녕"):
+    return f"{greeting}, {name}!"
+
+print(greet("철수"))              # 안녕, 철수!
+print(greet("영희", "반가워"))    # 반가워, 영희!
+print(greet(greeting="하이", name="민수"))  # 하이, 민수! (키워드 인자)
+
+# 가변 위치 인자 *args
+def total(*nums):
+    return sum(nums)
+print(total(1, 2, 3, 4))   # 10
+
+# 가변 키워드 인자 **kwargs
+def info(**kwargs):
+    for k, v in kwargs.items():
+        print(f"{k}={v}")
+info(name="홍길동", age=23)</code></pre>
+                </div>
+
+                <h3>여러 값 반환</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">def stats(data):
+    return sum(data), len(data), sum(data) / len(data)
+
+s, n, avg = stats([10, 20, 30])
+print(f"합={s}, 개수={n}, 평균={avg:.1f}")  # 합=60, 개수=3, 평균=20.0</code></pre>
+                </div>
+
+                <h3>스코프: 지역과 전역</h3>
+                <p>함수 안에서 만든 변수는 <strong>지역 변수</strong>라 함수 밖에서 보이지 않습니다. 함수는 바깥의 <strong>전역 변수</strong>를 읽을 수 있지만, 값을 바꾸려면 <code>global</code> 선언이 필요합니다(가급적 피하고 반환값을 쓰는 편이 좋습니다).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">count = 0   # 전역
+
+def increase():
+    global count    # 전역 변수를 수정하겠다고 선언
+    count += 1
+
+increase()
+increase()
+print(count)   # 2</code></pre>
+                </div>
+
+                <h3>람다(lambda) 함수</h3>
+                <p>이름 없는 짧은 함수. 정렬 키 등에 씁니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">square = lambda x: x ** 2
+print(square(5))   # 25
+
+people = [("홍길동", 23), ("김철수", 19), ("이영희", 31)]
+people.sort(key=lambda p: p[1])   # 나이 기준 정렬
+print(people)   # [('김철수', 19), ('홍길동', 23), ('이영희', 31)]</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="fileio">10. 파일 입출력</h2>
+        <details class="section">
+            <summary>open과 모드, with 문, 읽기/쓰기, 단어 빈도 세기, CSV</summary>
+            <div class="section__body">
+                <h3>파일 쓰기</h3>
+                <p><code>open(파일명, 모드, encoding=...)</code>로 파일을 엽니다. 한글이 깨지지 않게 <code>encoding="utf-8"</code>을 지정합니다. <code>with</code> 문을 쓰면 블록이 끝날 때 파일이 자동으로 닫힙니다(권장).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">with open("memo.txt", "w", encoding="utf-8") as f:
+    f.write("첫 번째 줄\n")
+    f.write("두 번째 줄\n")
+# with 블록을 벗어나면 자동으로 close()</code></pre>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>모드</th><th>의미</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>"r"</code></td><td>읽기(기본)</td></tr>
+                            <tr><td><code>"w"</code></td><td>쓰기(기존 내용 삭제)</td></tr>
+                            <tr><td><code>"a"</code></td><td>이어쓰기</td></tr>
+                            <tr><td><code>"x"</code></td><td>새 파일 생성</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>파일 읽기</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">with open("memo.txt", "r", encoding="utf-8") as f:
+    content = f.read()        # 전체를 한 문자열로
+print(content)
+
+with open("memo.txt", "r", encoding="utf-8") as f:
+    for line in f:            # 한 줄씩(메모리 효율적)
+        print(line.strip())   # strip으로 끝의 \n 제거
+
+with open("memo.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()     # 줄들의 리스트
+print(lines)   # ['첫 번째 줄\n', '두 번째 줄\n']</code></pre>
+                </div>
+
+                <h3>실전: 단어 빈도 세기</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">text = "the cat sat on the mat the cat ran"
+with open("words.txt", "w", encoding="utf-8") as f:
+    f.write(text)
+
+count = {}
+with open("words.txt", "r", encoding="utf-8") as f:
+    for word in f.read().split():
+        count[word] = count.get(word, 0) + 1
+
+for word, c in sorted(count.items(), key=lambda x: -x[1]):
+    print(f"{word}: {c}")</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>the: 3
+cat: 2
+sat: 1
+on: 1
+mat: 1
+ran: 1</pre>
+                </details>
+
+                <h3>CSV 다루기</h3>
+                <p>표 형태 데이터는 <code>csv</code> 모듈이 편합니다(쉼표/따옴표 처리 자동).</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import csv
+
+rows = [["이름", "점수"], ["홍길동", 90], ["김철수", 85]]
+with open("scores.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(rows)
+
+with open("scores.csv", "r", encoding="utf-8") as f:
+    for row in csv.reader(f):
+        print(row)</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>['이름', '점수']
+['홍길동', '90']
+['김철수', '85']</pre>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="exceptions">11. 예외처리</h2>
+        <details class="section">
+            <summary>try/except/else/finally, 자주 보는 예외, 안전한 입력 패턴, raise</summary>
+            <div class="section__body">
+                <p>실행 중 발생하는 오류(예외)를 잡아 프로그램이 멈추지 않게 합니다.</p>
+                <h3>try / except / else / finally</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">try:
+    n = int(input("숫자: "))   # 숫자가 아니면 ValueError
+    result = 100 / n           # 0이면 ZeroDivisionError
+except ValueError:
+    print("숫자를 입력하세요")
+except ZeroDivisionError:
+    print("0으로 나눌 수 없습니다")
+else:
+    print(f"결과: {result}")   # 예외가 없을 때만 실행
+finally:
+    print("끝")                 # 예외 여부와 무관하게 항상 실행</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기 (입력이 0일 때)</summary>
+                    <pre>0으로 나눌 수 없습니다
+끝</pre>
+                </details>
+
+                <h3>자주 보는 예외</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>예외</th><th>발생 상황</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>ValueError</code></td><td><code>int("abc")</code>처럼 변환 실패</td></tr>
+                            <tr><td><code>ZeroDivisionError</code></td><td>0으로 나누기</td></tr>
+                            <tr><td><code>IndexError</code></td><td>리스트 범위 밖 인덱스</td></tr>
+                            <tr><td><code>KeyError</code></td><td>딕셔너리에 없는 키 접근</td></tr>
+                            <tr><td><code>FileNotFoundError</code></td><td>없는 파일 열기</td></tr>
+                            <tr><td><code>TypeError</code></td><td>자료형이 맞지 않는 연산</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>안전한 입력 받기 + 예외 일으키기</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">def read_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("정수만 입력하세요. 다시 시도하세요.")
+
+def set_age(age):
+    if age &lt; 0:
+        raise ValueError("나이는 음수일 수 없습니다")
+    return age
+
+try:
+    set_age(-5)
+except ValueError as e:
+    print("오류:", e)   # 오류: 나이는 음수일 수 없습니다</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="modules">12. 모듈과 패키지</h2>
+        <details class="section">
+            <summary>import 방식, 표준 모듈, 직접 만든 모듈, __main__, 패키지</summary>
+            <div class="section__body">
+                <h3>모듈 import</h3>
+                <p>모듈은 함수/변수를 모아둔 <code>.py</code> 파일입니다. 표준 라이브러리 모듈을 가져다 쓸 수 있습니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import math
+print(math.sqrt(16))     # 4.0
+print(math.pi)           # 3.141592653589793
+print(math.factorial(5)) # 120
+
+from math import sqrt, pi  # 필요한 것만 가져오기
+print(sqrt(25))          # 5.0
+
+import math as m          # 별칭
+print(m.ceil(3.2))       # 4</code></pre>
+                </div>
+
+                <h3>자주 쓰는 표준 모듈</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import random
+print(random.randint(1, 6))      # 1~6 주사위
+print(random.choice(["가위","바위","보"]))
+nums = [1, 2, 3, 4, 5]
+random.shuffle(nums)             # 리스트를 섞음
+
+import datetime
+print(datetime.date.today())     # 2026-06-08 형식
+
+import os
+print(os.path.exists("memo.txt"))  # 파일 존재 확인</code></pre>
+                </div>
+
+                <h3>직접 만든 모듈과 <code>if __name__ == "__main__"</code></h3>
+                <p><code>mymath.py</code>를 만들고 다른 파일에서 가져다 씁니다. <code>if __name__ == "__main__"</code> 블록은 모듈이 직접 실행될 때만 동작하고, import될 때는 실행되지 않습니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># mymath.py
+def add(a, b):
+    return a + b
+
+PI = 3.14159
+
+# main.py
+import mymath
+print(mymath.add(2, 3))   # 5
+print(mymath.PI)          # 3.14159
+
+def main():
+    print("프로그램 시작")
+
+if __name__ == "__main__":
+    main()   # 이 파일을 직접 실행할 때만 호출됨</code></pre>
+                </div>
+                <p><strong>패키지(package)</strong>: 여러 모듈을 폴더로 묶은 것. 폴더에 <code>__init__.py</code>(빈 파일이어도 됨)를 두면 패키지가 됩니다. <code>pip install 패키지명</code>으로 외부 패키지(예: numpy, pandas)를 설치할 수 있습니다.</p>
+            </div>
+        </details>
+
+        <h2 id="oop">13. 클래스와 객체지향(OOP)</h2>
+        <details class="section">
+            <summary>클래스/객체 개념, 생성자/메서드, 클래스/인스턴스 변수, 특수 메서드, 상속, 캡슐화</summary>
+            <div class="section__body">
+                <h3>객체지향의 개념</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>용어</th><th>비유/의미</th></tr></thead>
+                        <tbody>
+                            <tr><td>클래스(class)</td><td>객체를 만들기 위한 설계도(붕어빵 틀)</td></tr>
+                            <tr><td>객체/인스턴스</td><td>설계도로 만든 실체(붕어빵)</td></tr>
+                            <tr><td>속성(attribute)</td><td>객체가 가진 데이터</td></tr>
+                            <tr><td>메서드(method)</td><td>객체가 할 수 있는 동작(함수)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>클래스 정의</h3>
+                <p><code>self</code>는 "이 객체 자신"을 가리키며, 메서드의 첫 매개변수로 자동 전달됩니다. <code>__init__</code>은 객체를 만들 때 호출되는 생성자입니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">class Dog:
+    def __init__(self, name, age):   # 생성자
+        self.name = name             # 인스턴스 속성
+        self.age = age
+
+    def bark(self):                  # 메서드, 첫 인자는 항상 self
+        return f"{self.name}: 멍멍!"
+
+    def birthday(self):
+        self.age += 1
+
+d = Dog("바둑이", 3)        # 객체 생성 -> __init__ 호출
+print(d.name)              # 바둑이
+print(d.bark())            # 바둑이: 멍멍!
+d.birthday()
+print(d.age)               # 4</code></pre>
+                </div>
+
+                <h3>클래스 변수와 인스턴스 변수</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">class Counter:
+    total = 0              # 클래스 변수(모든 객체 공유)
+
+    def __init__(self):
+        Counter.total += 1
+        self.id = Counter.total  # 인스턴스 변수(객체마다 별도)
+
+a = Counter()
+b = Counter()
+print(a.id, b.id, Counter.total)   # 1 2 2</code></pre>
+                </div>
+
+                <h3>특수 메서드와 연산자 오버로딩 <span class="chip warn">__add__ 심화/참고</span></h3>
+                <p><code>__str__</code>은 <code>print()</code>나 <code>str()</code>이 쓰는 사람이 읽기 좋은 표현을 정의합니다. <code>__add__</code>처럼 <code>+</code> 같은 연산자에 대한 동작을 클래스가 직접 정의하는 것을 <strong>연산자 오버로딩</strong>이라 합니다. 시험에서는 <code>__init__</code>과 <code>__str__</code>, 일반 메서드 정의가 핵심입니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def __add__(self, other):           # + 연산자 재정의(오버로딩)
+        return Point(self.x + other.x, self.y + other.y)
+
+p = Point(1, 2)
+q = Point(3, 4)
+print(p)         # (1, 2)
+print(p + q)     # (4, 6)</code></pre>
+                </div>
+
+                <h3>상속(inheritance)과 다형성</h3>
+                <p>기존 클래스(부모)의 기능을 물려받아 확장합니다. 같은 <code>info()</code> 호출이 객체에 따라 다르게 동작하는 것을 <strong>다형성(polymorphism)</strong>이라 합니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "..."
+
+    def info(self):
+        return f"{self.name}: {self.speak()}"
+
+class Cat(Animal):              # Animal을 상속
+    def speak(self):           # 메서드 오버라이딩(재정의)
+        return "야옹"
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # 부모 생성자 호출
+        self.breed = breed
+
+    def speak(self):
+        return "멍멍"
+
+c = Cat("나비")
+d = Dog("바둑이", "진돗개")
+print(c.info())   # 나비: 야옹
+print(d.info())   # 바둑이: 멍멍
+print(d.breed)    # 진돗개</code></pre>
+                </div>
+
+                <h3>캡슐화 관례</h3>
+                <p>파이썬은 강제 접근 제어가 없지만 밑줄로 의도를 표시합니다. <code>_name</code>은 "내부용", <code>__name</code>은 이름 맹글링으로 약한 보호를 받습니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">class Account:
+    def __init__(self, balance):
+        self.__balance = balance     # 외부 직접 접근 비권장
+
+    def deposit(self, amount):
+        if amount &gt; 0:
+            self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+acc = Account(1000)
+acc.deposit(500)
+print(acc.get_balance())   # 1500</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="stdlib">14. 표준 라이브러리 둘러보기</h2>
+        <details class="section">
+            <summary>math, random, datetime, statistics, collections.Counter, json</summary>
+            <div class="section__body">
+                <p>설치 없이 바로 쓰는 유용한 모듈들입니다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># math: 수학 함수
+import math
+print(math.gcd(12, 18))   # 6  최대공약수
+print(math.log(math.e))   # 1.0
+
+# random: 난수
+import random
+print(random.sample(range(1, 46), 6))  # 로또 번호 6개(중복 없음)
+
+# datetime: 날짜/시간
+import datetime
+now = datetime.datetime.now()
+print(now.strftime("%Y-%m-%d %H:%M"))  # 2026-06-08 09:30
+
+# statistics: 통계
+import statistics
+data = [2, 4, 4, 4, 5, 5, 7, 9]
+print(statistics.mean(data))    # 5
+print(statistics.median(data))  # 4.5</code></pre>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">collections.Counter, json은 심화/참고 (시험 비중 낮음)</p>
+                    <p>빈도 세기는 <code>dict.get()</code>, 데이터 저장은 파일 입출력이 시험 핵심이고, 아래 <code>Counter</code>/<code>json</code>은 같은 일을 더 간편히 해 주는 도구로 참고만 해도 됩니다.</p>
+                </div>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python"># collections: 편리한 자료구조
+from collections import Counter
+print(Counter("banana"))   # Counter({'a': 3, 'n': 2, 'b': 1})
+
+# json: JSON 직렬화
+import json
+data = {"name": "홍길동", "scores": [90, 85]}
+text = json.dumps(data, ensure_ascii=False)
+print(text)                      # {"name": "홍길동", "scores": [90, 85]}
+print(json.loads(text)["name"])  # 홍길동</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="projects">15. 미니 프로젝트</h2>
+        <details class="section">
+            <summary>숫자 맞히기 게임, 학생 성적 관리, 가위바위보(클래스)</summary>
+            <div class="section__body">
+                <p>KNOU 13~14강은 보드게임을 직접 만듭니다. 여기서는 그 흐름(문제 분석 -&gt; 설계 -&gt; 구현 -&gt; 테스트)을 따라가는 작은 프로젝트 세 개를 정리합니다.</p>
+
+                <h3>프로젝트 A: 숫자 맞히기 게임</h3>
+                <p>컴퓨터가 1~100 중 하나를 고르고, 사용자는 시도할 때마다 "더 큼/더 작음" 힌트를 받아 정답을 맞힙니다. 핵심 요소: <code>while</code> 반복, <code>if/elif/else</code> 분기, 예외처리, <code>random</code> 모듈.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import random
+
+def number_game():
+    answer = random.randint(1, 100)
+    tries = 0
+    print("1~100 사이 숫자를 맞혀 보세요!")
+    while True:
+        try:
+            guess = int(input("추측: "))
+        except ValueError:
+            print("정수를 입력하세요.")
+            continue
+        tries += 1
+        if guess &lt; answer:
+            print("더 큰 수입니다.")
+        elif guess &gt; answer:
+            print("더 작은 수입니다.")
+        else:
+            print(f"정답! {tries}번 만에 맞혔습니다.")
+            break
+
+# number_game()  # 실행하면 대화형으로 진행</code></pre>
+                </div>
+
+                <h3>프로젝트 B: 학생 성적 관리</h3>
+                <p>학생 점수를 딕셔너리로 관리하고, 평균/최고/최저를 계산해 파일에 저장합니다. 핵심 요소: 딕셔너리, 함수, 컴프리헨션, <code>max/min</code>의 <code>key</code> 인자, 파일 쓰기.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">def make_report(scores):
+    """scores: {이름: 점수} 딕셔너리를 받아 요약 문자열을 반환."""
+    if not scores:
+        return "데이터가 없습니다."
+    values = list(scores.values())
+    avg = sum(values) / len(values)
+    top = max(scores, key=scores.get)
+    bottom = min(scores, key=scores.get)
+    lines = [f"{name}: {score}" for name, score in scores.items()]
+    lines.append(f"평균: {avg:.1f}")
+    lines.append(f"최고: {top}({scores[top]})")
+    lines.append(f"최저: {bottom}({scores[bottom]})")
+    return "\n".join(lines)
+
+scores = {"홍길동": 90, "김철수": 75, "이영희": 88}
+print(make_report(scores))</code></pre>
+                </div>
+                <details class="output">
+                    <summary>예상 출력 보기</summary>
+                    <pre>홍길동: 90
+김철수: 75
+이영희: 88
+평균: 84.3
+최고: 홍길동(90)
+최저: 김철수(75)</pre>
+                </details>
+
+                <div class="play" data-play>
+                    <div class="play__head">
+                        <span class="play__title">직접 실행: 성적 리포트 만들기</span>
+                        <button class="play__run" type="button">실행</button>
+                    </div>
+                    <textarea class="play__editor" spellcheck="false" aria-label="파이썬 코드 편집기">def make_report(scores):
+    values = list(scores.values())
+    avg = sum(values) / len(values)
+    top = max(scores, key=scores.get)
+    bottom = min(scores, key=scores.get)
+    lines = [f"{n}: {s}" for n, s in scores.items()]
+    lines.append(f"평균: {avg:.1f}")
+    lines.append(f"최고: {top}({scores[top]})")
+    lines.append(f"최저: {bottom}({scores[bottom]})")
+    return "\n".join(lines)
+
+scores = {"홍길동": 90, "김철수": 75, "이영희": 88}
+print(make_report(scores))
+</textarea>
+                    <pre class="play__out" aria-live="polite"></pre>
+                </div>
+
+                <h3>프로젝트 C(도전): 가위바위보를 클래스로</h3>
+                <p>핵심 요소: 클래스/객체, 클래스 변수, 딕셔너리로 규칙 표현, 상태 관리.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import random
+
+class RockPaperScissors:
+    HANDS = ["가위", "바위", "보"]
+    WINS = {"가위": "보", "바위": "가위", "보": "바위"}  # 키가 값을 이김
+
+    def __init__(self):
+        self.user_win = 0
+        self.comp_win = 0
+
+    def play(self, user_hand):
+        comp_hand = random.choice(self.HANDS)
+        if user_hand == comp_hand:
+            result = "무승부"
+        elif self.WINS[user_hand] == comp_hand:
+            result = "승리"
+            self.user_win += 1
+        else:
+            result = "패배"
+            self.comp_win += 1
+        return f"나:{user_hand} vs 컴퓨터:{comp_hand} -> {result}"
+
+game = RockPaperScissors()
+print(game.play("바위"))
+print(f"전적: {game.user_win}승 {game.comp_win}패")</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="review">16. 용어 정리와 학습 팁</h2>
+        <details class="section">
+            <summary>핵심 용어 플래시카드, 흔한 실수, 학습 자료</summary>
+            <div class="section__body">
+                <h3>핵심 용어 플래시카드</h3>
+                <p>기말 4지선다와 O/X 대비용 핵심 용어입니다. 카드를 눌러 정의를 확인하세요.</p>
+                <ul class="vocab">
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">REPL</div>
+                            <div class="back">Read-Eval-Print-Loop. 한 줄씩 입력하면 즉시 평가해 결과를 보여 주는 대화형 실행 방식. Colab 셀, 파이썬 대화형 셸이 해당.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">인터프리터</div>
+                            <div class="back">소스를 한 줄씩 해석하며 실행하는 번역기. 파이썬이 채택. 컴파일러는 전체를 한 번에 번역.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">동적 타입</div>
+                            <div class="back">변수의 자료형을 미리 선언하지 않고 할당된 값에 따라 실행 중에 자료형이 정해지는 방식. C/Java의 정적 타입과 대비.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">가변(mutable)</div>
+                            <div class="back">생성 후 내용을 바꿀 수 있는 객체. 리스트, 딕셔너리, 집합.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">불변(immutable)</div>
+                            <div class="back">생성 후 내용을 바꿀 수 없는 객체. 수정하려는 연산은 새 객체를 반환. 정수, 실수, 문자열, 튜플.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">객체(object)</div>
+                            <div class="back">데이터(값)와 그 데이터를 다루는 동작(메서드)을 함께 묶은 단위. 파이썬의 모든 값은 객체.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">참조(reference)</div>
+                            <div class="back">변수가 값 자체가 아니라 객체가 있는 위치를 가리키는 것. b = a 후 한쪽을 바꾸면 가변 객체는 둘 다 영향.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">스코프(scope)</div>
+                            <div class="back">이름(변수)이 유효한 범위. 함수 안 지역 이름은 밖에서 안 보이고, 전역 이름은 안에서 읽힘. 전역 수정은 global 선언 필요.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">f-string</div>
+                            <div class="back">f"..." 형식의 문자열 포매팅. 중괄호 {} 안에 식을 직접 넣어 값을 끼워 넣음(3.6+).</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">슬라이싱</div>
+                            <div class="back">[start:stop:step]으로 시퀀스의 일부를 잘라내는 연산. start 포함, stop 제외. s[::-1]은 뒤집기.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">예외(exception)</div>
+                            <div class="back">실행 중 발생하는 오류. try/except로 잡아 처리. ValueError, ZeroDivisionError 등.</div>
+                        </div></div>
+                    </li>
+                </ul>
+
+                <h3>흔한 실수와 학습 팁</h3>
+                <div class="callout warn">
+                    <p class="callout__title">자주 틀리는 부분</p>
+                    <p>탭과 스페이스를 섞지 말 것(IndentationError). <code>=</code>은 할당, <code>==</code>은 비교. <code>b = a</code>는 복사가 아니라 같은 객체 공유(복사는 <code>a[:]</code>/<code>a.copy()</code>). <code>input()</code>은 문자열이라 계산 전에 <code>int()</code>/<code>float()</code> 변환 필요. 인덱스는 0부터이고 <code>len(s)</code>번째 인덱스는 없음(IndexError).</p>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">가장 빠른 학습법</p>
+                    <p>눈으로 읽지 말고 Colab(또는 이 페이지 플레이그라운드)에서 직접 실행하며 값을 출력해 보는 것이 가장 빠릅니다.</p>
+                </div>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 다음 중 불변(immutable) 객체가 아닌 것은? 리스트 / 문자열 / 튜플 / 정수</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">
+                            <p><strong>리스트</strong>. 리스트는 가변(mutable)이라 생성 후 내용을 바꿀 수 있다. 문자열/튜플/정수는 불변이다.</p>
+                        </div>
+                    </details>
+                </details>
+
+                <h3>학습 자료</h3>
+                <ul>
+                    <li><strong>지정 교재</strong>: Y. 다니엘 리앙 저, 길준민/정재화 역, 『파이썬』, KNOU출판문화원 - 강의/시험 범위의 기준</li>
+                    <li>파이썬 공식 문서(한국어) - <a href="https://docs.python.org/ko/3/">docs.python.org/ko/3</a> - 표준 라이브러리와 문법의 가장 정확한 출처</li>
+                    <li>파이썬 공식 튜토리얼(한국어) - <a href="https://docs.python.org/ko/3/tutorial/index.html">docs.python.org/ko/3/tutorial</a> - 입문자용 단계별 공식 안내서</li>
+                    <li>점프 투 파이썬(위키독스) - <a href="https://wikidocs.net/book/1">wikidocs.net/book/1</a> - 한국어 무료 파이썬 입문서의 표준</li>
+                    <li>Google Colab - <a href="https://colab.research.google.com/">colab.research.google.com</a> - 설치 없이 브라우저에서 파이썬 실행(KNOU 권장 환경)</li>
+                    <li>생활코딩 Python - <a href="https://opentutorials.org/course/4769">opentutorials.org/course/4769</a> - 한국어 무료 영상/텍스트 강좌</li>
+                    <li>정재화 교수 강의용 GitHub - <a href="https://github.com/jaehwachung/Python-Programming">github.com/jaehwachung/Python-Programming</a> - KNOU 강의 실습 노트북 원본</li>
+                    <li>Python Tutor(코드 시각화) - <a href="https://pythontutor.com/">pythontutor.com</a> - 코드 실행을 한 단계씩 시각화해 변수 변화 관찰</li>
+                    <li>W3Schools Python - <a href="https://www.w3schools.com/python/">w3schools.com/python</a> - 짧은 예제로 문법 빠르게 확인(영어)</li>
+                </ul>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+
+    <!-- 페이지 전용: Prism 구문 강조(지연 로드) + Pyodide 실행 플레이그라운드 -->
+    <script>
+        (function () {
+            "use strict";
+
+            /* 1) Prism 1.29.0 지연 로드 (cdn.jsdelivr.net, python) */
+            function loadCss(href) {
+                var l = document.createElement("link");
+                l.rel = "stylesheet";
+                l.href = href;
+                document.head.appendChild(l);
+            }
+            function loadScript(src) {
+                return new Promise(function (resolve, reject) {
+                    var s = document.createElement("script");
+                    s.src = src;
+                    s.async = true;
+                    s.onload = resolve;
+                    s.onerror = reject;
+                    document.head.appendChild(s);
+                });
+            }
+
+            var PRISM = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/";
+            function highlight() {
+                if (window.Prism && window.Prism.highlightAll) {
+                    window.Prism.highlightAll();
+                }
+            }
+            loadScript(PRISM + "components/prism-core.min.js")
+                .then(function () {
+                    return loadScript(PRISM + "components/prism-python.min.js");
+                })
+                .then(highlight)
+                .catch(function () {
+                    /* CDN 실패 시 일반 텍스트로 표시(우아한 저하) */
+                });
+
+            /* 2) Pyodide 실행 플레이그라운드 (지연 로드 + 첫 실행 시 초기화) */
+            var PYODIDE_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/";
+            var pyodidePromise = null;
+
+            function loadPyodideOnce() {
+                if (pyodidePromise) return pyodidePromise;
+                pyodidePromise = loadScript(PYODIDE_URL + "pyodide.js").then(
+                    function () {
+                        return window.loadPyodide({ indexURL: PYODIDE_URL });
+                    }
+                );
+                return pyodidePromise;
+            }
+
+            function setOut(outEl, text, isError) {
+                outEl.textContent = text;
+                if (isError) {
+                    outEl.classList.add("is-error");
+                } else {
+                    outEl.classList.remove("is-error");
+                }
+            }
+
+            function runPlay(play) {
+                var btn = play.querySelector(".play__run");
+                var editor = play.querySelector(".play__editor");
+                var out = play.querySelector(".play__out");
+                if (!btn || !editor || !out) return;
+
+                btn.disabled = true;
+                var label = btn.textContent;
+                btn.textContent = "실행 중...";
+                setOut(out, "파이썬 실행 환경을 준비하는 중입니다(첫 실행은 수십 초 걸릴 수 있습니다)...", false);
+
+                loadPyodideOnce()
+                    .then(function (py) {
+                        var code = editor.value;
+                        // print() 출력을 가로채 결과 영역에 모은다
+                        py.runPython(
+                            "import sys, io\n_buf = io.StringIO()\nsys.stdout = _buf\nsys.stderr = _buf\n"
+                        );
+                        var result = py.runPythonAsync
+                            ? py.runPythonAsync(code)
+                            : Promise.resolve(py.runPython(code));
+                        return Promise.resolve(result).then(function () {
+                            var captured = py.runPython("_buf.getvalue()");
+                            setOut(out, captured || "(출력 없음)", false);
+                        });
+                    })
+                    .catch(function (err) {
+                        setOut(out, String(err), true);
+                    })
+                    .then(function () {
+                        btn.disabled = false;
+                        btn.textContent = label;
+                    });
+            }
+
+            document.addEventListener("click", function (e) {
+                var btn = e.target.closest && e.target.closest(".play__run");
+                if (!btn) return;
+                var play = btn.closest(".play");
+                if (play) runPlay(play);
+            });
+        })();
+    </script>
+</body>
+</html>

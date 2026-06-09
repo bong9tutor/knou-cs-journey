@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>AI리터러시 - AI 문해력의 이해와 비판적 활용</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#overview">0. 이 과목을 보는 눈</a>
+            <a href="#definition">1. AI란 무엇인가: 정의와 역사</a>
+            <a href="#ani-agi">2. 약인공지능과 강인공지능</a>
+            <a href="#data">3. 데이터와 학습</a>
+            <a href="#ml">4. 머신러닝 기초: 학습의 세 방식</a>
+            <a href="#deeplearning">5. 신경망과 딥러닝</a>
+            <a href="#genai">6. 생성형 AI와 거대언어모델(LLM)</a>
+            <a href="#prompt">7. 프롬프트 작성 기초</a>
+            <a href="#tools">8. 일상과 업무에서 AI 활용</a>
+            <a href="#agent">9. AI Agent와 멀티모달 AI</a>
+            <a href="#bias">10. 편향과 공정성</a>
+            <a href="#ethics">11. AI 윤리</a>
+            <a href="#privacy">12. 프라이버시와 정보 보호</a>
+            <a href="#jobs">13. AI와 일자리, 사회</a>
+            <a href="#limits">14. 한계와 비판적 활용</a>
+            <a href="#future">15. 미래 전망</a>
+            <a href="#resources">16. 무료 학습 자료</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>AI리터러시 (AI Literacy)</h1>
+        <blockquote>AI를 단순히 "쓰는 법"이 아니라 "어떻게 작동하고, 무엇을 믿고, 어디까지 의심해야 하는가"를 배우는 과목이다. 원리(The Mind) - 활용(The Skill) - 비판적 사고와 윤리(The Soul) 세 축으로 정리한다.</blockquote>
+
+        <div class="callout warn">
+            <p class="callout__title">선행 정리 안내</p>
+            <p>AI리터러시는 2026학년도 2학기 KNOU 컴퓨터과학과에 처음 개설되는 신규 과목(과목코드 34103)이다. 현시점에는 공식 강의계획서와 지정 교재(제목/저자/장 구성)가 공개되지 않았다. 이 노트는 표준 AI 리터러시 프레임워크(이해-활용-비판적 사고의 3축)를 기준으로 미리 정리한 선행 학습 자료이며, 개강 후 공식 강의계획서가 공개되면 단원 순서와 용어를 교재 장 구성에 맞춰 재대조해야 한다.</p>
+        </div>
+
+        <h2 id="overview">0. 이 과목을 보는 눈</h2>
+        <details class="section" open>
+            <summary>AI 문해력의 세 축과 5가지 핵심 역량</summary>
+            <div class="section__body">
+                <p>AI리터러시(AI Literacy)는 "AI 문해력"이다. 글을 읽고 쓰는 능력이 문해력이듯, AI 시대의 문해력은 다음 세 가지를 할 줄 아는 것이다.</p>
+                <ol>
+                    <li><strong>이해한다</strong> - AI가 무엇이고 어떻게 학습하며 왜 그런 답을 내는지 원리를 안다.</li>
+                    <li><strong>활용한다</strong> - 목적에 맞는 AI 도구를 골라 일과 공부에 쓴다.</li>
+                    <li><strong>판단한다</strong> - AI의 답이 틀릴 수 있음을 알고, 편향/윤리/프라이버시 관점에서 비판적으로 검증한다.</li>
+                </ol>
+                <p>이 과목은 코딩 실습 과목이 아니다(이론 과목). 수학식을 외우기보다 <strong>개념과 직관, 그리고 책임 있는 사용 태도</strong>를 기르는 것이 목표다. 컴퓨터과학과 전공자에게는 이후 인공지능, 머신러닝, 딥러닝 같은 심화 과목으로 가는 입구 역할을 한다.</p>
+
+                <h3>AI 리터러시의 5가지 핵심 역량</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>역량</th><th>핵심 질문</th><th>대응 단원</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AI 개념 이해</td><td>AI는 무엇이고 어떻게 작동하는가?</td><td>1, 2, 4, 5</td></tr>
+                            <tr><td>AI 도구 활용</td><td>목적에 맞는 도구를 고르고 쓸 수 있는가?</td><td>7, 8, 9</td></tr>
+                            <tr><td>데이터 해석</td><td>학습 데이터와 결과를 읽을 수 있는가?</td><td>3, 6</td></tr>
+                            <tr><td>문제 해결</td><td>AI로 실제 문제를 풀 수 있는가?</td><td>8, 9</td></tr>
+                            <tr><td>윤리 판단</td><td>편향/프라이버시/공정성을 평가할 수 있는가?</td><td>10, 11, 12, 13</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="definition">1. AI란 무엇인가: 정의와 역사</h2>
+        <details class="section">
+            <summary>AI의 정의, 흔한 오해, 그리고 역사의 흐름</summary>
+            <div class="section__body">
+                <h3>1.1 AI의 정의</h3>
+                <p><strong>인공지능(Artificial Intelligence, AI)</strong>은 "인간의 지능적 행동(학습, 추론, 인식, 판단, 언어 이해 등)을 기계가 흉내 내도록 만든 기술과 그 연구 분야"다. 중요한 것은 AI가 "생각하는 기계"라기보다 <strong>"특정 작업을 잘 해내도록 학습된 계산 시스템"</strong>이라는 점이다.</p>
+                <div class="callout info">
+                    <p class="callout__title">흔한 오해 깨기</p>
+                    <p>AI는 사람처럼 "이해"하지 않는다(통계적 패턴을 계산할 뿐). "정답"을 아는 게 아니라 "가장 그럴듯한 답"을 확률로 고른다. 의식이나 감정도 없다 - SF 영화의 로봇과 현실의 AI는 다르다.</p>
+                </div>
+
+                <h3>1.2 AI의 역사 (한눈에 보기)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>시기</th><th>사건</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1950</td><td>튜링 테스트 제안 (앨런 튜링)</td><td>"기계가 생각할 수 있는가"를 처음 따짐</td></tr>
+                            <tr><td>1956</td><td>다트머스 회의</td><td>"Artificial Intelligence" 용어 탄생, AI의 공식 출발</td></tr>
+                            <tr><td>1960~70년대</td><td>규칙 기반 시스템, 첫 황금기</td><td>사람이 규칙을 일일이 코딩</td></tr>
+                            <tr><td>1970~80년대</td><td>1차 AI 겨울</td><td>기대에 못 미쳐 투자 위축</td></tr>
+                            <tr><td>1980년대</td><td>전문가 시스템 부흥</td><td>의료/진단 등 특정 분야 규칙 시스템</td></tr>
+                            <tr><td>1990년대</td><td>머신러닝 부상</td><td>데이터로 "스스로 학습"하는 방향 전환</td></tr>
+                            <tr><td>1997</td><td>딥블루, 체스 챔피언 격파</td><td>탐색 기반 AI의 위력</td></tr>
+                            <tr><td>2012</td><td>AlexNet, 이미지 인식 혁명</td><td>딥러닝 시대 개막</td></tr>
+                            <tr><td>2016</td><td>알파고, 이세돌 격파</td><td>강화학습 + 딥러닝의 충격</td></tr>
+                            <tr><td>2017</td><td>트랜스포머 논문 발표</td><td>오늘날 LLM의 기반 구조</td></tr>
+                            <tr><td>2022~</td><td>ChatGPT 등 생성형 AI 대중화</td><td>누구나 AI를 일상에서 쓰는 시대</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>핵심 흐름: <strong>"사람이 규칙을 짜주던 AI" → "데이터로 스스로 패턴을 배우는 AI(머신러닝)" → "거대 신경망(딥러닝)" → "무엇이든 만들어내는 생성형 AI"</strong>로 진화해 왔다.</p>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. "Artificial Intelligence"라는 용어가 공식적으로 탄생한 1956년의 학술 모임은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">다트머스 회의(Dartmouth Conference). 이 회의를 AI의 공식 출발점으로 본다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ani-agi">2. 약인공지능과 강인공지능</h2>
+        <details class="section">
+            <summary>지능의 범위로 나누는 ANI / AGI / ASI</summary>
+            <div class="section__body">
+                <p>AI를 "지능의 범위"로 나누면 다음과 같다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>영어</th><th>설명</th><th>현재 존재?</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>약인공지능</td><td>ANI (Artificial Narrow Intelligence)</td><td>한 가지 작업만 잘함 (번역, 추천, 얼굴인식)</td><td>있음 (지금 쓰는 모든 AI)</td></tr>
+                            <tr><td>강인공지능</td><td>AGI (Artificial General Intelligence)</td><td>사람처럼 어떤 문제든 두루 해결</td><td>아직 없음 (연구 단계)</td></tr>
+                            <tr><td>초인공지능</td><td>ASI (Artificial Super Intelligence)</td><td>모든 면에서 인간을 초월</td><td>가설/상상 단계</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">기억할 점</p>
+                    <p>ChatGPT처럼 똑똑해 보이는 AI도 결국 "언어 생성"이라는 좁은 작업에 특화된 약인공지능(ANI)이다. 여러 작업을 잘한다고 해서 사람처럼 "범용적으로 이해"하는 것은 아니다. AGI는 아직 실현되지 않은 목표다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 현재 우리가 사용하는 ChatGPT, 번역기, 추천 시스템은 ANI/AGI/ASI 중 무엇인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">모두 약인공지능(ANI)이다. 사람 수준의 범용 지능(AGI)이나 초지능(ASI)은 아직 실현되지 않았다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="data">3. 데이터와 학습: AI는 무엇으로 배우는가</h2>
+        <details class="section">
+            <summary>데이터의 형태, 학습 과정, 과적합과 과소적합</summary>
+            <div class="section__body">
+                <p>AI, 특히 머신러닝의 핵심 연료는 <strong>데이터</strong>다. "Garbage In, Garbage Out(쓰레기를 넣으면 쓰레기가 나온다)"이라는 말처럼, 데이터의 질이 AI의 성능을 좌우한다.</p>
+
+                <h3>3.1 데이터의 형태</h3>
+                <ul>
+                    <li><strong>정형 데이터</strong>: 표(엑셀)처럼 행과 열로 정리된 데이터 (예: 키, 몸무게, 나이)</li>
+                    <li><strong>비정형 데이터</strong>: 텍스트, 이미지, 음성, 영상처럼 정해진 틀이 없는 데이터</li>
+                    <li><strong>레이블(정답표)</strong>: 지도학습에 필요한 "이 사진은 고양이"라는 정답 표시</li>
+                </ul>
+
+                <h3>3.2 학습 과정 (전형적 흐름)</h3>
+                <ol>
+                    <li><strong>데이터 수집</strong> - 문제와 관련된 예시를 모은다.</li>
+                    <li><strong>전처리</strong> - 결측치 제거, 정규화, 중복 정리 등 데이터를 깨끗하게 다듬는다.</li>
+                    <li><strong>학습/훈련(training)</strong> - 모델이 데이터의 패턴을 찾아 내부 값(파라미터)을 조정한다.</li>
+                    <li><strong>검증(validation)</strong> - 학습에 쓰지 않은 데이터로 성능을 점검하고 설정을 조정한다.</li>
+                    <li><strong>평가/테스트(test)</strong> - 완전히 새로운 데이터로 최종 성능을 잰다.</li>
+                    <li><strong>배포 및 모니터링</strong> - 실제로 쓰면서 성능 저하를 감시한다.</li>
+                </ol>
+
+                <h3>3.3 과적합과 과소적합 (꼭 이해할 개념)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>문제</th><th>비유</th><th>증상</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>과적합(overfitting)</td><td>시험 문제를 통째로 외운 학생</td><td>학습 데이터는 잘 맞히는데 새 문제는 틀림</td></tr>
+                            <tr><td>과소적합(underfitting)</td><td>공부를 너무 안 한 학생</td><td>학습 데이터조차 잘 못 맞힘</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>좋은 모델은 <strong>"외우지 않고 일반화(generalization)"</strong>하는 모델이다. 그래서 학습/검증/테스트 데이터를 나누어 쓰는 것이다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 학습 데이터는 거의 완벽하게 맞히는데 새로운 데이터에서 성능이 뚝 떨어진다면 무슨 문제인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">과적합(overfitting). 모델이 일반화하지 못하고 학습 데이터를 통째로 "외운" 상태다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ml">4. 머신러닝 기초: 학습의 세 가지 방식</h2>
+        <details class="section">
+            <summary>지도학습 / 비지도학습 / 강화학습 비교</summary>
+            <div class="section__body">
+                <p><strong>머신러닝(Machine Learning, ML)</strong>은 "사람이 규칙을 일일이 짜주지 않아도, 데이터에서 규칙을 스스로 찾아내는 AI 기법"이다. 학습 방식에 따라 크게 세 가지로 나뉜다.</p>
+
+                <h3>4.1 지도학습 (Supervised Learning)</h3>
+                <ul>
+                    <li><strong>정의</strong>: 입력과 정답(레이블)을 함께 주고 둘의 관계를 배우게 한다.</li>
+                    <li><strong>비유</strong>: 정답지를 보며 문제를 푸는 학생.</li>
+                    <li><strong>두 갈래</strong>: 분류(Classification, 스팸/정상 메일, 개/고양이), 회귀(Regression, 집값, 내일 기온).</li>
+                    <li><strong>예시</strong>: 사진 1만 장에 "고양이/강아지" 라벨을 붙여 학습한 뒤 새 사진을 분류.</li>
+                </ul>
+
+                <h3>4.2 비지도학습 (Unsupervised Learning)</h3>
+                <ul>
+                    <li><strong>정의</strong>: 정답 없이 데이터의 숨은 구조나 패턴을 스스로 찾는다.</li>
+                    <li><strong>비유</strong>: 정답지 없이 비슷한 것끼리 묶어보는 학생.</li>
+                    <li><strong>대표 작업</strong>: 군집화(Clustering, 고객 세분화), 차원 축소(Dimensionality Reduction).</li>
+                    <li><strong>예시</strong>: 쇼핑몰 고객을 구매 패턴에 따라 자동으로 몇 개 그룹으로 나누기.</li>
+                </ul>
+
+                <h3>4.3 강화학습 (Reinforcement Learning)</h3>
+                <ul>
+                    <li><strong>정의</strong>: 행동에 보상/벌점을 주어, 보상을 최대화하는 전략을 시행착오로 배운다.</li>
+                    <li><strong>비유</strong>: 게임을 반복하며 점수를 올리는 법을 터득하는 플레이어.</li>
+                    <li><strong>구성 요소</strong>: 에이전트(agent), 환경(environment), 상태(state), 행동(action), 보상(reward).</li>
+                    <li><strong>예시</strong>: 알파고가 수많은 대국을 두며 이기는 수를 학습. 로봇 보행, 자율주행.</li>
+                </ul>
+
+                <h3>세 방식 비교표</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>정답(레이블)</th><th>핵심 목표</th><th>대표 예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>지도학습</td><td>있음</td><td>입력 → 정답 예측</td><td>스팸 분류, 집값 예측</td></tr>
+                            <tr><td>비지도학습</td><td>없음</td><td>숨은 구조 발견</td><td>고객 군집화</td></tr>
+                            <tr><td>강화학습</td><td>없음 (보상으로 대체)</td><td>보상 최대화 전략</td><td>알파고, 자율주행</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>개념 플래시카드</h3>
+                <ul class="vocab">
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">분류 vs 회귀</div>
+                            <div class="back">분류는 카테고리(스팸/정상)를 맞히고, 회귀는 연속 수치(집값, 기온)를 예측한다. 둘 다 지도학습.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">군집화(Clustering)</div>
+                            <div class="back">정답 없이 비슷한 데이터끼리 자동으로 묶는 비지도학습 작업. 예: 고객 세분화.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">강화학습의 보상</div>
+                            <div class="back">에이전트가 행동(action)에 따라 받는 점수. 보상을 최대화하는 전략을 시행착오로 학습한다.</div>
+                        </div></div>
+                    </li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 쇼핑몰 고객을 구매 패턴에 따라 정답 없이 자동으로 그룹으로 나누는 작업은 어떤 학습 방식인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">비지도학습, 그중에서도 군집화(Clustering)다. 정답 레이블 없이 데이터의 숨은 구조를 찾는다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="deeplearning">5. 신경망과 딥러닝</h2>
+        <details class="section">
+            <summary>인공신경망의 구조, 딥러닝, AI-ML-DL 포함 관계</summary>
+            <div class="section__body">
+                <h3>5.1 인공신경망 (Artificial Neural Network, ANN)</h3>
+                <p>뇌의 뉴런 구조에서 영감을 받은 모델이다. 기본 단위는 <strong>노드(뉴런)</strong>이고, 이들이 <strong>층(layer)</strong>을 이루어 연결된다.</p>
+                <ul>
+                    <li><strong>입력층(input layer)</strong>: 데이터가 들어오는 곳</li>
+                    <li><strong>은닉층(hidden layer)</strong>: 패턴을 추출하는 중간 계산층</li>
+                    <li><strong>출력층(output layer)</strong>: 최종 결과가 나오는 곳</li>
+                </ul>
+                <p>각 연결에는 <strong>가중치(weight)</strong>가 있고, 학습이란 결국 "오차를 줄이도록 이 가중치들을 조금씩 조정하는 과정"이다. 이때 쓰이는 핵심 알고리즘이 <strong>역전파(backpropagation)</strong>와 <strong>경사하강법(gradient descent)</strong>이다(이름만 알아두자: 오차를 거꾸로 전파해 가중치를 수정하고, 비탈을 내려가듯 오차를 줄인다).</p>
+
+                <h3>5.2 딥러닝 (Deep Learning)</h3>
+                <p><strong>딥러닝</strong>은 은닉층이 여러 개로 "깊은(deep)" 신경망을 쓰는 머신러닝의 한 갈래다. 층이 깊을수록 더 복잡하고 추상적인 특징을 스스로 뽑아낸다.</p>
+                <ul>
+                    <li>기존 머신러닝: 사람이 "어떤 특징을 볼지(feature)" 직접 골라줘야 했다.</li>
+                    <li>딥러닝: <strong>특징 추출까지 스스로 학습</strong>한다(예: 사진에서 "귀 모양", "수염" 같은 특징을 사람이 안 알려줘도 발견).</li>
+                </ul>
+                <div class="callout info">
+                    <p class="callout__title">딥러닝이 2012년 이후 폭발한 세 가지 이유</p>
+                    <p>1) 빅데이터 - 인터넷에 학습용 데이터가 넘쳐남. 2) GPU - 대규모 병렬 계산이 가능한 하드웨어 보급. 3) 알고리즘 발전 - 더 깊은 망을 안정적으로 학습시키는 기법 등장.</p>
+                </div>
+
+                <h3>5.3 AI - 머신러닝 - 딥러닝의 포함 관계</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>개념</th><th>범위</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AI (인공지능)</td><td>가장 넓음</td><td>규칙 기반까지 포함하는 최상위 개념</td></tr>
+                            <tr><td>머신러닝(ML)</td><td>AI의 부분집합</td><td>데이터로 스스로 학습하는 AI</td></tr>
+                            <tr><td>딥러닝(DL)</td><td>ML의 부분집합</td><td>깊은 신경망을 쓰는 머신러닝</td></tr>
+                            <tr><td>생성형 AI</td><td>대부분 DL 기반</td><td>오늘날 화제의 콘텐츠 생성 AI</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>관계를 한 줄로: AI &#8835; 머신러닝(ML) &#8835; 딥러닝(DL), 그리고 생성형 AI 다수가 딥러닝 위에 있다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 사람이 특징(feature)을 골라주지 않아도 데이터에서 특징 추출까지 스스로 학습하는 것은 머신러닝의 어떤 갈래인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">딥러닝(Deep Learning). 깊은 은닉층이 특징을 자동으로 추출한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="genai">6. 생성형 AI와 거대언어모델(LLM)</h2>
+        <details class="section">
+            <summary>생성형 AI, LLM의 원리, 그리고 환각(Hallucination)</summary>
+            <div class="section__body">
+                <h3>6.1 생성형 AI (Generative AI)</h3>
+                <p>기존 AI가 주로 "분류/예측(이건 스팸이야, 집값은 5억이야)"을 했다면, <strong>생성형 AI</strong>는 새로운 콘텐츠(텍스트, 이미지, 음성, 코드, 영상)를 <strong>만들어낸다</strong>.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>분야</th><th>대표 작업</th><th>예시 도구</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>텍스트</td><td>글쓰기, 요약, 번역, 대화</td><td>ChatGPT, Claude, Gemini</td></tr>
+                            <tr><td>이미지</td><td>그림 생성/편집</td><td>DALL-E, Midjourney, Stable Diffusion</td></tr>
+                            <tr><td>음성</td><td>음성 합성, 더빙</td><td>다양한 TTS 서비스</td></tr>
+                            <tr><td>코드</td><td>코드 작성/설명</td><td>GitHub Copilot 등</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>6.2 거대언어모델 (Large Language Model, LLM)</h3>
+                <p><strong>LLM</strong>은 방대한 텍스트로 학습해 "다음에 올 단어를 확률로 예측"하는 거대한 신경망이다. ChatGPT, Claude, Gemini가 모두 LLM 기반이다.</p>
+                <ul>
+                    <li><strong>핵심 원리</strong>: 문장을 보고 "다음 토큰(단어 조각)을 가장 그럴듯하게 예측"하는 일을 엄청난 규모로 반복한다.</li>
+                    <li><strong>기반 구조</strong>: 2017년 발표된 트랜스포머(Transformer) 구조와 그 핵심인 어텐션(Attention, 문맥에서 중요한 부분에 집중) 메커니즘.</li>
+                    <li><strong>학습 단계(개념만)</strong>: 사전학습(pre-training, 인터넷 규모 텍스트로 언어 패턴 습득) → 미세조정/정렬(fine-tuning, RLHF, 사람 피드백으로 더 유용하고 안전하게 조정).</li>
+                </ul>
+
+                <h3>6.3 환각(Hallucination): 반드시 알아야 할 한계</h3>
+                <p>LLM은 "사실"이 아니라 <strong>"그럴듯함"</strong>을 생성한다. 그래서 존재하지 않는 정보를 자신 있게 지어내는 현상이 생기는데 이를 <strong>환각(hallucination)</strong>이라 한다.</p>
+                <div class="callout warn">
+                    <p class="callout__title">환각 대응 원칙</p>
+                    <p>예: 없는 논문, 가짜 인용, 틀린 날짜를 진짜처럼 말함. 중요한 사실은 반드시 1차 출처로 교차 확인하고, AI의 답은 "초안"으로 보고 사람이 검증한다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. LLM이 존재하지 않는 논문이나 가짜 인용을 자신 있게 지어내는 현상을 무엇이라 부르는가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">환각(Hallucination). LLM은 사실이 아니라 "그럴듯함"을 확률로 생성하기 때문이다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="prompt">7. 프롬프트 작성 기초 (Prompt Engineering)</h2>
+        <details class="section">
+            <summary>좋은 프롬프트의 4요소(CRTF)와 실전 기법</summary>
+            <div class="section__body">
+                <p><strong>프롬프트(prompt)</strong>는 AI에게 주는 지시문이다. 같은 AI라도 프롬프트에 따라 답의 질이 크게 달라진다. 프롬프트를 잘 쓰는 기술을 <strong>프롬프트 엔지니어링</strong>이라 한다.</p>
+
+                <h3>7.1 좋은 프롬프트의 4요소 (CRTF로 기억)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>요소</th><th>영어</th><th>설명</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>맥락</td><td>Context</td><td>배경/상황을 준다</td><td>"나는 방통대 1학년 학생이야"</td></tr>
+                            <tr><td>역할</td><td>Role</td><td>AI에게 역할을 부여</td><td>"너는 친절한 컴퓨터과학 튜터야"</td></tr>
+                            <tr><td>작업</td><td>Task</td><td>무엇을 원하는지 명확히</td><td>"이 개념을 3문장으로 설명해줘"</td></tr>
+                            <tr><td>형식</td><td>Format</td><td>출력 형식을 지정</td><td>"표로 정리해줘", "초등학생도 알게"</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>7.2 실전 기법</h3>
+                <ul>
+                    <li><strong>단계적 사고 유도</strong>: "차근차근 단계별로 설명해줘"라고 하면 더 논리적인 답이 나온다.</li>
+                    <li><strong>예시 제공(few-shot)</strong>: 원하는 답의 예를 1~2개 보여주면 형식을 잘 따른다.</li>
+                    <li><strong>반복 개선(iteration)</strong>: 한 번에 완벽을 기대하지 말고 "더 짧게", "더 쉽게"로 다듬는다.</li>
+                    <li><strong>출력 제약</strong>: "300자 이내", "불릿 5개"처럼 분량/형식을 못 박는다.</li>
+                </ul>
+
+                <h3>7.3 나쁜 프롬프트 vs 좋은 프롬프트</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>나쁜 예</th><th>좋은 예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>"AI 설명해줘"</td><td>"AI를 컴퓨터를 처음 배우는 60대 부모님께 비유를 들어 5문장으로 설명해줘"</td></tr>
+                            <tr><td>"코드 짜줘"</td><td>"파이썬으로 1~100 합을 구하는 코드를 주석과 함께 짜고, 동작 원리를 설명해줘"</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. CRTF는 무엇의 약자인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">Context(맥락), Role(역할), Task(작업), Format(형식). 좋은 프롬프트의 4요소다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="tools">8. 일상과 업무에서 AI 도구 활용하기</h2>
+        <details class="section">
+            <summary>일상 속 AI, 공부/업무 효율화, 남용 방지 원칙</summary>
+            <div class="section__body">
+                <p>AI는 이미 우리 일상 곳곳에 있다. "특별한 기술"이 아니라 "잘 쓰는 도구"로 보는 관점이 중요하다.</p>
+
+                <h3>8.1 일상 속 AI (이미 쓰고 있는 것들)</h3>
+                <ul>
+                    <li>추천 시스템 (유튜브/넷플릭스 영상 추천, 쇼핑몰 상품 추천)</li>
+                    <li>음성 비서 (스마트폰 음성 명령)</li>
+                    <li>스팸 필터, 자동 번역, 지도 길 안내, 얼굴 인식 잠금</li>
+                </ul>
+
+                <h3>8.2 공부와 업무 효율화 (학생에게 유용한 활용)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>목적</th><th>활용 예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>학습</td><td>어려운 개념 쉬운 비유로 설명받기, 모의 문제 만들기, 요약</td></tr>
+                            <tr><td>글쓰기</td><td>보고서 초안, 문장 다듬기, 맞춤법 점검</td></tr>
+                            <tr><td>정리</td><td>긴 자료 요약, 표/개요 만들기</td></tr>
+                            <tr><td>외국어</td><td>번역, 영작 첨삭, 회화 연습 상대</td></tr>
+                            <tr><td>코딩</td><td>코드 설명, 오류 원인 찾기(이후 전공 과목에서)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>8.3 활용 원칙 (남용 방지)</h3>
+                <div class="callout tip">
+                    <p class="callout__title">조수이지 대리인이 아니다</p>
+                    <p>AI는 조수이지 대리인이 아니다 - 최종 책임과 판단은 사람이 진다. 과제/시험에서는 학교의 AI 사용 규정을 반드시 확인한다(표절/부정행위 주의). AI에게 시켜 얻은 결과도 스스로 이해하고 검증해야 진짜 내 실력이 된다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="agent">9. AI Agent와 멀티모달 AI (확장 개념)</h2>
+        <details class="section">
+            <summary>여러 형태를 다루는 멀티모달 AI와 스스로 일하는 에이전트</summary>
+            <div class="section__body">
+                <h3>9.1 멀티모달 AI</h3>
+                <p>텍스트뿐 아니라 <strong>이미지, 음성, 영상 등 여러 형태(modality)</strong>를 함께 이해/생성하는 AI다. 예: 사진을 올리면 설명해주고, 그래프를 읽어 해석해주는 기능.</p>
+
+                <h3>9.2 AI 에이전트 (Agent)</h3>
+                <p>단순히 한 번 답하는 것을 넘어, <strong>목표를 받아 스스로 여러 단계를 계획하고 도구를 써가며 작업을 수행</strong>하는 AI다. 예: "이 주제로 자료 조사해서 보고서 초안 만들어"를 받으면 검색-정리-작성을 연쇄로 처리한다. 앞으로 활용이 빠르게 늘어나는 분야다.</p>
+                <div class="callout info">
+                    <p class="callout__title">한 줄 구분</p>
+                    <p>멀티모달 = "여러 형태(텍스트+이미지+음성)를 함께 다룸". 에이전트 = "목표를 받아 스스로 여러 단계를 계획하고 실행함".</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="bias">10. 편향과 공정성</h2>
+        <details class="section">
+            <summary>편향이 생기는 이유, 실제 사례, 공정성을 위한 노력</summary>
+            <div class="section__body">
+                <p>AI는 <strong>학습 데이터를 닮는다.</strong> 데이터에 사회의 편견이 담겨 있으면 AI도 그 편견을 학습하고 <strong>증폭</strong>시킬 수 있다.</p>
+
+                <h3>10.1 편향(bias)이 생기는 이유</h3>
+                <ul>
+                    <li><strong>데이터 편향</strong>: 특정 집단의 데이터가 적거나 왜곡됨 (예: 한쪽 인종 얼굴 데이터만 많음 → 다른 인종 인식률 저하)</li>
+                    <li><strong>표본 편향</strong>: 수집 과정에서 특정 집단이 과대/과소 대표됨</li>
+                    <li><strong>역사적 편향</strong>: 과거의 차별적 관행이 데이터에 그대로 녹아 있음</li>
+                </ul>
+
+                <h3>10.2 실제 사례 유형</h3>
+                <ul>
+                    <li>채용 AI가 과거 데이터를 학습해 특정 성별을 불리하게 평가</li>
+                    <li>얼굴 인식이 특정 피부색에서 오류율이 더 높음</li>
+                    <li>번역기가 직업에 성별 고정관념을 자동으로 부여</li>
+                </ul>
+
+                <h3>10.3 공정성을 위한 노력</h3>
+                <ul>
+                    <li>다양하고 대표성 있는 데이터 수집</li>
+                    <li>결과를 집단별로 나누어 성능 차이 점검</li>
+                    <li>사람의 최종 검토(human-in-the-loop)와 설명가능성 확보</li>
+                </ul>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 과거의 차별적 관행이 데이터에 그대로 녹아 있어 AI가 그것을 학습하는 편향은 무엇인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">역사적 편향(historical bias). 데이터 자체가 과거 사회의 편견을 담고 있어 AI가 이를 답습/증폭한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ethics">11. AI 윤리</h2>
+        <details class="section">
+            <summary>핵심 윤리 쟁점과 국내외 공통 원칙</summary>
+            <div class="section__body">
+                <p>AI 윤리는 "기술이 사람과 사회에 해를 끼치지 않도록 하는 원칙과 책임"이다. 이 과목의 'The Soul' 영역에 해당한다.</p>
+
+                <h3>11.1 핵심 윤리 쟁점</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>쟁점</th><th>내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>책임성</td><td>AI가 잘못 판단하면 누가 책임지는가? (개발사? 사용자?)</td></tr>
+                            <tr><td>투명성/설명가능성</td><td>왜 그런 결정을 내렸는지 설명할 수 있는가?</td></tr>
+                            <tr><td>공정성</td><td>특정 집단을 차별하지 않는가? (10장 참고)</td></tr>
+                            <tr><td>저작권/소유권</td><td>AI 생성물의 저작권은 누구 것인가? 학습 데이터의 권리는?</td></tr>
+                            <tr><td>안전성</td><td>악용(딥페이크, 가짜뉴스, 사기)을 막을 수 있는가?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>11.2 주요 원칙 (국내외 공통 흐름)</h3>
+                <ul>
+                    <li>인간 존엄과 인권 존중, 인간의 통제 가능성 유지</li>
+                    <li>투명성과 설명 책임</li>
+                    <li>안전성과 견고함</li>
+                    <li>프라이버시 보호</li>
+                    <li>공정성과 차별 금지</li>
+                </ul>
+                <p>세계적으로 EU의 AI 법(AI Act), 유네스코 AI 윤리 권고, 국내의 AI 윤리기준 등 <strong>규범 정비가 빠르게 진행 중</strong>이다.</p>
+            </div>
+        </details>
+
+        <h2 id="privacy">12. 프라이버시와 정보 보호</h2>
+        <details class="section">
+            <summary>입력 정보의 위험, 안전한 사용 수칙, 딥페이크</summary>
+            <div class="section__body">
+                <h3>12.1 왜 중요한가</h3>
+                <p>AI, 특히 생성형 AI에 입력한 내용은 <strong>서비스 제공자의 서버로 전송</strong>될 수 있다. 부주의하면 개인정보나 회사 기밀이 새어 나간다.</p>
+
+                <h3>12.2 안전한 사용 수칙</h3>
+                <div class="callout warn">
+                    <p class="callout__title">민감정보는 입력 금지</p>
+                    <p>민감정보(주민번호, 비밀번호, 의료/금융 정보, 회사 기밀)는 입력하지 않는다. 회사/학교의 데이터 정책과 보안 규정을 따르고, 가능하면 익명화/가명화한 데이터를 쓴다. AI가 만든 결과에 타인의 개인정보가 들어가지 않았는지 확인한다.</p>
+                </div>
+
+                <h3>12.3 딥페이크와 합성 미디어</h3>
+                <p>실제 같은 가짜 영상/음성을 만드는 기술이다. 사기, 명예훼손, 가짜뉴스에 악용될 수 있어 <strong>"보는 것을 다 믿지 않는"</strong> 미디어 리터러시가 함께 필요하다.</p>
+            </div>
+        </details>
+
+        <h2 id="jobs">13. AI와 일자리, 사회</h2>
+        <details class="section">
+            <summary>일자리 변화와 사회적 쟁점</summary>
+            <div class="section__body">
+                <h3>13.1 일자리 변화</h3>
+                <ul>
+                    <li><strong>사라지거나 줄어드는 일</strong>: 반복적/정형적 업무 (단순 데이터 입력, 일부 번역/요약).</li>
+                    <li><strong>늘어나거나 새로 생기는 일</strong>: AI를 만들고 다루고 감독하는 일 (데이터 엔지니어, 프롬프트 설계, AI 윤리 검토 등).</li>
+                </ul>
+                <div class="callout tip">
+                    <p class="callout__title">핵심 메시지</p>
+                    <p>"AI가 사람을 대체한다"기보다 "AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다"에 가깝다. 그래서 AI리터러시 자체가 경쟁력이다.</p>
+                </div>
+
+                <h3>13.2 사회적 쟁점</h3>
+                <ul>
+                    <li><strong>디지털 격차(AI divide)</strong>: AI를 잘 쓰는 사람/집단/국가와 그렇지 못한 쪽의 격차 확대.</li>
+                    <li><strong>정보 신뢰 위기</strong>: 가짜뉴스, 합성 콘텐츠 범람.</li>
+                    <li><strong>교육과 노동의 재편</strong>: 평생학습과 재교육의 중요성 증가.</li>
+                </ul>
+            </div>
+        </details>
+
+        <h2 id="limits">14. 한계와 비판적 활용</h2>
+        <details class="section">
+            <summary>현재 AI의 한계와 비판적 활용 체크리스트</summary>
+            <div class="section__body">
+                <p>AI를 잘 쓰는 사람의 가장 큰 특징은 <strong>"AI를 의심할 줄 안다"</strong>는 것이다.</p>
+
+                <h3>14.1 현재 AI의 분명한 한계</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>한계</th><th>내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>환각</td><td>사실이 아닌 것을 그럴듯하게 지어냄</td></tr>
+                            <tr><td>최신성 한계</td><td>학습 시점 이후의 정보를 모를 수 있음</td></tr>
+                            <tr><td>추론의 한계</td><td>복잡한 논리/수학에서 틀리기 쉬움</td></tr>
+                            <tr><td>맥락 이해 부족</td><td>진짜로 "이해"하는 게 아니라 패턴을 흉내 냄</td></tr>
+                            <tr><td>편향</td><td>학습 데이터의 편견을 반영</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>14.2 비판적 활용 체크리스트</h3>
+                <ol>
+                    <li>이 답의 <strong>출처</strong>는 무엇인가? 확인 가능한가?</li>
+                    <li><strong>사실</strong>과 <strong>추정</strong>이 섞여 있지 않은가?</li>
+                    <li>다른 도구나 1차 자료로 <strong>교차 검증</strong>했는가?</li>
+                    <li>내가 결과를 <strong>이해하고 설명</strong>할 수 있는가?</li>
+                    <li>윤리/프라이버시 문제는 없는가?</li>
+                </ol>
+                <details class="quiz">
+                    <div class="quiz__q">Q. AI가 "학습 시점 이후의 최신 정보를 모를 수 있다"는 것은 어떤 한계인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">최신성 한계. 모델은 특정 시점까지의 데이터로 학습되므로 그 이후 사건은 알지 못할 수 있다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="future">15. 미래 전망</h2>
+        <details class="section">
+            <summary>멀티모달/에이전트의 보편화와 사람의 역할 변화</summary>
+            <div class="section__body">
+                <ul>
+                    <li><strong>멀티모달과 에이전트의 보편화</strong>: 텍스트를 넘어 보고 듣고 행동하는 AI, 스스로 작업을 수행하는 AI가 일상화될 전망.</li>
+                    <li><strong>개인화와 온디바이스 AI</strong>: 내 기기 안에서 작동하는 더 작고 안전한 모델 확산.</li>
+                    <li><strong>규범과 신뢰의 시대</strong>: 성능 경쟁만큼 안전성/투명성/규제 정비가 중요해짐.</li>
+                    <li><strong>사람의 역할 변화</strong>: AI가 못 하는 질문 설계, 판단, 책임, 창의적 종합이 인간의 핵심 가치로 남는다.</li>
+                </ul>
+                <div class="callout tip">
+                    <p class="callout__title">이 과목의 한 줄 메시지</p>
+                    <p>"AI를 두려워하지도, 맹신하지도 말고, 이해하고 비판적으로 다루는 사람이 되자."</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="resources">16. 무료 학습 자료</h2>
+        <details class="section">
+            <summary>입문 강의부터 윤리 권고까지 신뢰할 수 있는 무료 자료</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>자료</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><a href="https://www.elementsofai.com/">Elements of AI (한국어 지원)</a></td><td>비전공자도 무료로 듣는 세계적 AI 입문 강의, 수료증 제공</td></tr>
+                            <tr><td><a href="https://ai.google/education/">Google AI Essentials / Google for Education AI</a></td><td>구글이 제공하는 무료 AI 기초 학습 자료 모음</td></tr>
+                            <tr><td><a href="https://microsoft.github.io/AI-For-Beginners/">Microsoft AI for Beginners</a></td><td>마이크로소프트의 12주 무료 AI 입문 커리큘럼</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/인공지능">위키백과 '인공지능'</a></td><td>AI 전반의 정의/역사/분야를 빠르게 훑기 좋은 한국어 백과</td></tr>
+                            <tr><td><a href="https://ko.wikipedia.org/wiki/AI_리터러시">위키백과 'AI 리터러시'</a></td><td>AI 리터러시 개념 정리</td></tr>
+                            <tr><td><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3Blue1Brown - Neural Networks</a></td><td>신경망/딥러닝 원리를 시각적으로 설명하는 명강의(영어, 자막)</td></tr>
+                            <tr><td><a href="https://developers.google.com/machine-learning/crash-course">Google ML Crash Course</a></td><td>머신러닝 핵심 개념을 무료로 배우는 구글 공식 강의</td></tr>
+                            <tr><td><a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI Prompt Engineering Guide</a></td><td>프롬프트 작성 공식 가이드(영어)</td></tr>
+                            <tr><td><a href="https://learnprompting.org/">Learn Prompting</a></td><td>프롬프트 엔지니어링을 단계별로 배우는 무료 오픈 강좌</td></tr>
+                            <tr><td><a href="https://www.msit.go.kr/">과학기술정보통신부 'AI 윤리기준'</a></td><td>국내 인공지능 윤리기준 등 정책 자료(검색으로 최신 문서 확인)</td></tr>
+                            <tr><td><a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics">UNESCO AI Ethics Recommendation</a></td><td>유네스코의 국제 AI 윤리 권고 원문</td></tr>
+                            <tr><td><a href="http://www.kocw.net/">KOCW 무료 공개강의</a></td><td>국내 대학 인공지능 관련 무료 공개강의 모음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

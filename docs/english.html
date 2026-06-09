@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>대학영어 - 문법과 어휘 핵심 정리</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-tts="en">
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#overview">0. 한눈에 보기</a>
+            <a href="#course-info">1. 과목 정보</a>
+            <a href="#grammar">2. 필수 문법</a>
+            <a href="#reading">3. 교재 본문 독해 (Unit 1-15)</a>
+            <a href="#vocab-core">4. 핵심 어휘 (동사·형용사·부사)</a>
+            <a href="#vocab-topic">5. 주제별 어휘와 숙어</a>
+            <a href="#strategy">6. 학습 전략과 자료</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>대학영어 (College English)</h1>
+        <blockquote>방송통신대학교 컴퓨터과학과 1학년 2학기 교양 과목 '대학영어'의 학습 노트다. 필수 문법, 핵심 어휘, 주제별 표현과 숙어를 정리하고 효과적인 학습 전략을 함께 다룬다. 표·플래시카드·예문의 영어에는 발음 듣기(🔊) 버튼이 붙으니 눈과 귀로 함께 익혀라.</blockquote>
+
+        <h2 id="overview">0. 한눈에 보기</h2>
+        <details class="section" open>
+            <summary>학습 지도와 권장 순서</summary>
+            <div class="section__body">
+                <p>대학영어는 <strong>독해 중심 교양 과목</strong>으로, 기말시험이 본문 내용 이해를 주로 묻는다. 따라서 문법 토대를 다진 뒤 본문 정독과 어휘 암기를 병행하는 흐름이 효율적이다.</p>
+                <div class="callout tip">
+                    <p class="callout__title">권장 학습 순서</p>
+                    <p>1) 과목 정보로 평가 방식과 범위 파악 -&gt; 2) 필수 문법으로 문장 구조의 토대 마련 -&gt; 3) Unit 1-15 본문 독해(기말 핵심) -&gt; 4) 핵심 어휘 품사별 암기 -&gt; 5) 주제별 어휘·숙어 확장 -&gt; 6) 학습 전략과 자료로 복습 루틴 체화.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>과목명 / 학기</td><td>대학영어 / 1학년 2학기 (학기코드 1-2)</td></tr>
+                            <tr><td>성격</td><td>1학년 기초·교양. 전공 학습을 위한 영어독해능력 함양</td></tr>
+                            <tr><td>교재</td><td>대학영어 (손향숙·신현욱, KNOU출판문화원, 2024 개편)</td></tr>
+                            <tr><td>강의 구성</td><td>총 15강 (교재 Unit 1~15와 1:1 대응)</td></tr>
+                            <tr><td>평가</td><td>중간 과제물(30점) + 기말 객관식(25문항·25분) + 형성평가</td></tr>
+                            <tr><td>출제 경향</td><td>문법 단답보다 본문 내용 이해 중심, 후반부(Unit 9~15) 비중 높음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">교재 개편 유의</p>
+                    <p>2024년부터 교재가 바뀌었다. 오래된 기출·요약 자료는 본문이 다를 수 있으니 반드시 최신 강의·교재 기준으로 준비한다. 평가 합산 배점(형성평가 포함 여부)은 학기·과목별로 다를 수 있어 강좌 공지를 확인한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="course-info">1. 과목 정보</h2>
+        <details class="section">
+            <summary>개요 · 교재 구성</summary>
+            <div class="section__body">
+                <p>아래는 확인된 사실 위주로 정리했고, 단일 후기 기반이거나 교차검증이 부족한 항목은 "불확실"로 표시했다. 출처: KNOU출판문화원 교재 페이지, 본교 성적평가 안내, 영어영문학과 자료, 수강 후기 및 중간과제물 자료.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>항목</th><th>내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>과목 성격</td><td>1학년 기초·교양. 2학년부터 시작되는 전공과정 학습을 준비하기 위한 영어독해능력 함양 및 영문법 기초 (영어영문학과 안내 기준, 타 학과 편성 차이는 불확실)</td></tr>
+                            <tr><td>출석수업</td><td>출석수업 없이 중간과제물 제출형으로 운영(2025-2학기 자료 기준). 학기별 편성은 변동 가능(불확실)</td></tr>
+                            <tr><td>교재 제목 / 저자</td><td>대학영어 / 손향숙, 신현욱</td></tr>
+                            <tr><td>출판 / 연도</td><td>한국방송통신대학교출판문화원 / 2024년 발행 (개편판)</td></tr>
+                            <tr><td>ISBN</td><td>인쇄본 9788920050121(176쪽) / eBook 9788920051111</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>교재는 각주로 단어·숙어·주요 표현을 설명하며, Part I에서 어휘 -&gt; 구문 학습으로 확장하고 Part II에서 긴 지문 독해로 연결되도록 설계되었다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>Unit</th><th>주제</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Part I</td><td>1</td><td>Virus</td></tr>
+                            <tr><td>Part I</td><td>2</td><td>Ancient Egypt</td></tr>
+                            <tr><td>Part I</td><td>3</td><td>Witches</td></tr>
+                            <tr><td>Part I</td><td>4</td><td>Fear</td></tr>
+                            <tr><td>Part I</td><td>5</td><td>Banff</td></tr>
+                            <tr><td>Part I</td><td>6</td><td>Activists Challenge Harvard's Legacy Admissions</td></tr>
+                            <tr><td>Part I</td><td>7</td><td>Artists Fight Back against AI Using Their Work</td></tr>
+                            <tr><td>Part I</td><td>8</td><td>Babies Born in Britain Using Genetic Material from Three People</td></tr>
+                            <tr><td>Part II</td><td>9</td><td>Forecasting Trends: A Closer Look at the Top Keywords</td></tr>
+                            <tr><td>Part II</td><td>10</td><td>Navigating the Decade Ahead: Key Themes and Trends</td></tr>
+                            <tr><td>Part II</td><td>11</td><td>The Village of Harmony Haven: 7 Concepts</td></tr>
+                            <tr><td>Part II</td><td>12</td><td>A Journey Beyond Common Sense</td></tr>
+                            <tr><td>Part II</td><td>13</td><td>The Canvas of Creativity</td></tr>
+                            <tr><td>Part II</td><td>14</td><td>Noa's Digital Odyssey</td></tr>
+                            <tr><td>Part II</td><td>15</td><td>Harmony's Forge: A Tale of Ethical Innovation</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>평가 방식 · 출제 경향 · 수강 팁</summary>
+            <div class="section__body">
+                <p>방송대 일반 배점 체계(본교 성적평가 안내)다. 출석수업 미실시 과목은 출석 배점이 과제물·기말로 배분되는 것이 일반적이나 구체 배분은 불확실하다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>평가</th><th>배점</th><th>형태</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>중간평가</td><td>30점</td><td>출석수업 맞춤형평가 또는 과제물(리포트). 대학영어는 과제물로 운영</td></tr>
+                            <tr><td>기말시험</td><td>50~70점</td><td>객관식 (과목당 25문항, 25분)</td></tr>
+                            <tr><td>형성평가</td><td>20점</td><td>학습진도율 + 연습문제</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">중간과제물 구성 (2025-2학기 예시, 총 30점)</p>
+                    <p>A-1 (3점): Unit 1과 멀티강의 1·2강에서 지정 표현(consist of, lead to, feed on, mount attacks, be comprised of, respond to)이 쓰인 문장 찾기 + 우리말 번역.<br>
+                    A-2 (6점): 관계대명사가 쓰인 문장 모두 찾고 문법 설명.<br>
+                    A-3 (6점): to부정사가 쓰인 문장 모두 찾고 역할 설명.<br>
+                    B (15점): Part 2 Unit 9~10 키워드 10개 선정 -&gt; 교재 내 정의 한글 해석 + 교재 외 영어 예문 각 2개.</p>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">수강 팁 (후기 정리)</p>
+                    <p>워크북·강의 중 연습문제를 반드시 숙지한다. 본문은 해석본과 영문을 대조하며 꼼꼼히 읽으면 문제 풀이가 수월하다. 기말은 후반부 비중이 높으니 뒷부분을 소홀히 하지 않는다. 중간과제는 관계대명사·to부정사 분석이 필요하므로 해당 문법을 미리 정리해 둔다.</p>
+                </div>
+                <p>난이도는 2024년 개편으로 기출이 없었으나 "생각보다 어렵지 않게 출제됨"으로 평가된다(주관적 1인 후기, 불확실). 기말은 교재 후반부 내용에서 다수 출제되는 경향이다.</p>
+            </div>
+        </details>
+        <details class="section">
+            <summary>핵심 표현 예문 (중간과제 지정 표현)</summary>
+            <div class="section__body">
+                <p>중간과제 A-1에서 지정된 구동사·숙어의 의미와 용법을 예문으로 정리했다. 예문의 영어 부분만 발음 버튼으로 들을 수 있다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>표현</th><th>뜻</th><th>예문(영어)</th><th>예문 해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>consist of</td><td>~로 구성되다</td><td>The committee consists of five members.</td><td>그 위원회는 다섯 명으로 구성된다.</td></tr>
+                            <tr><td>be comprised of</td><td>~로 구성되다</td><td>The course is comprised of ten units.</td><td>그 과정은 열 개의 단원으로 구성된다.</td></tr>
+                            <tr><td>lead to</td><td>~로 이어지다, ~을 초래하다</td><td>Poor hygiene can lead to the spread of viruses.</td><td>위생 불량은 바이러스 확산으로 이어질 수 있다.</td></tr>
+                            <tr><td>feed on</td><td>~을 먹고 살다</td><td>Some viruses feed on living host cells to reproduce.</td><td>일부 바이러스는 번식하기 위해 살아 있는 숙주 세포를 먹고 산다.</td></tr>
+                            <tr><td>mount attacks</td><td>공격을 가하다, 공격을 개시하다</td><td>The immune system mounts attacks against invading pathogens.</td><td>면역계는 침입하는 병원체에 맞서 공격을 가한다.</td></tr>
+                            <tr><td>respond to</td><td>~에 반응하다, ~에 대응하다</td><td>The body responds to infection by producing antibodies.</td><td>몸은 항체를 생성함으로써 감염에 대응한다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">consist of vs be comprised of</p>
+                    <p>뜻은 같지만 consist는 수동태로 쓰지 않는다(O: consists of / X: is consisted of). comprise는 능동(comprise)과 수동(be comprised of) 모두 가능하다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="grammar">2. 필수 문법</h2>
+        <details class="section">
+            <summary>2-1. 품사·문장 성분 · 5형식</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>품사</th><th>영어</th><th>역할</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>명사</td><td>Noun</td><td>사람·사물·개념의 이름</td><td>book, love, Korea</td></tr>
+                            <tr><td>대명사</td><td>Pronoun</td><td>명사를 대신함</td><td>I, you, it, this</td></tr>
+                            <tr><td>동사</td><td>Verb</td><td>동작·상태를 나타냄</td><td>run, is, have</td></tr>
+                            <tr><td>형용사</td><td>Adjective</td><td>명사를 수식</td><td>happy, tall, red</td></tr>
+                            <tr><td>부사</td><td>Adverb</td><td>동사·형용사·부사 수식</td><td>quickly, very, here</td></tr>
+                            <tr><td>전치사</td><td>Preposition</td><td>명사 앞에서 관계 표시</td><td>in, on, at, with</td></tr>
+                            <tr><td>접속사</td><td>Conjunction</td><td>단어·구·절을 연결</td><td>and, but, because</td></tr>
+                            <tr><td>감탄사</td><td>Interjection</td><td>감정을 표현</td><td>oh, wow, alas</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>문장은 주어(S)·동사(V)·목적어(O)·보어(C)·수식어(M)로 구성된다. 주어는 동작의 주체, 동사는 서술어, 목적어는 동작의 대상, 보어는 주어·목적어를 보충, 수식어는 다른 성분을 꾸민다.</p>
+                <blockquote><span class="en">The diligent student read the book carefully.</span><br>그 부지런한 학생은 그 책을 주의 깊게 읽었다. (주어 / 동사 / 목적어 / 수식어)</blockquote>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>형식</th><th>구조</th><th>동사 종류</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1형식</td><td>S + V</td><td>완전자동사</td><td>The sun rises in the east.</td><td>해는 동쪽에서 뜬다.</td></tr>
+                            <tr><td>2형식</td><td>S + V + C</td><td>불완전자동사</td><td>She became a doctor.</td><td>그녀는 의사가 되었다.</td></tr>
+                            <tr><td>3형식</td><td>S + V + O</td><td>완전타동사</td><td>He bought a new car.</td><td>그는 새 차를 샀다.</td></tr>
+                            <tr><td>4형식</td><td>S + V + IO + DO</td><td>수여동사</td><td>My father gave me a watch.</td><td>아버지는 나에게 시계를 주셨다.</td></tr>
+                            <tr><td>5형식</td><td>S + V + O + OC</td><td>불완전타동사</td><td>We call him a genius.</td><td>우리는 그를 천재라고 부른다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">4형식 -&gt; 3형식 전환</p>
+                    <p><span class="en">He gave me a book.</span> = <span class="en">He gave a book to me.</span> 수여동사에 따라 전치사 to / for / of 를 쓴다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-2. 12시제</summary>
+            <div class="section__body">
+                <p>시제는 시점(과거·현재·미래) × 상(단순·진행·완료·완료진행)의 조합으로 12가지가 된다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th></th><th>단순</th><th>진행</th><th>완료</th><th>완료진행</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>현재</td><td>study</td><td>am/is/are studying</td><td>have/has studied</td><td>have/has been studying</td></tr>
+                            <tr><td>과거</td><td>studied</td><td>was/were studying</td><td>had studied</td><td>had been studying</td></tr>
+                            <tr><td>미래</td><td>will study</td><td>will be studying</td><td>will have studied</td><td>will have been studying</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>시제</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>현재</td><td>I study English every day.</td><td>나는 매일 영어를 공부한다.</td></tr>
+                            <tr><td>현재진행</td><td>I am studying English now.</td><td>나는 지금 영어를 공부하고 있다.</td></tr>
+                            <tr><td>현재완료</td><td>I have studied English for five years.</td><td>나는 5년 동안 영어를 공부해 왔다.</td></tr>
+                            <tr><td>현재완료진행</td><td>I have been studying English since 2020.</td><td>나는 2020년부터 영어를 계속 공부해 오고 있다.</td></tr>
+                            <tr><td>과거</td><td>I studied English yesterday.</td><td>나는 어제 영어를 공부했다.</td></tr>
+                            <tr><td>과거진행</td><td>I was studying when he called.</td><td>그가 전화했을 때 나는 공부하고 있었다.</td></tr>
+                            <tr><td>과거완료</td><td>I had studied English before I moved.</td><td>나는 이사하기 전에 영어를 공부했었다.</td></tr>
+                            <tr><td>과거완료진행</td><td>I had been studying for two hours when she arrived.</td><td>그녀가 도착했을 때 나는 두 시간째 공부하고 있었다.</td></tr>
+                            <tr><td>미래</td><td>I will study English tomorrow.</td><td>나는 내일 영어를 공부할 것이다.</td></tr>
+                            <tr><td>미래진행</td><td>I will be studying at this time tomorrow.</td><td>내일 이 시간이면 나는 공부하고 있을 것이다.</td></tr>
+                            <tr><td>미래완료</td><td>I will have studied English for ten years by 2030.</td><td>2030년이면 나는 영어를 10년간 공부한 셈이 될 것이다.</td></tr>
+                            <tr><td>미래완료진행</td><td>By next month, I will have been studying for a year.</td><td>다음 달이면 나는 1년째 계속 공부하고 있는 것이 된다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-3. 조동사</summary>
+            <div class="section__body">
+                <p>조동사는 동사원형 앞에 와서 능력·허가·의무·추측 등의 의미를 더한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>조동사</th><th>주요 의미</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>can</td><td>능력, 가능</td><td>She can swim.</td><td>그녀는 수영할 수 있다.</td></tr>
+                            <tr><td>could</td><td>과거의 능력, 정중한 요청</td><td>Could you help me?</td><td>도와주시겠어요?</td></tr>
+                            <tr><td>may / might</td><td>허가, 약한 추측</td><td>It may rain.</td><td>비가 올지도 모른다.</td></tr>
+                            <tr><td>must</td><td>강한 의무, 강한 추측</td><td>You must wear a seatbelt.</td><td>안전벨트를 매야 한다.</td></tr>
+                            <tr><td>have to</td><td>의무 (외적 강제)</td><td>I have to go now.</td><td>나는 지금 가야 한다.</td></tr>
+                            <tr><td>should / ought to</td><td>충고, 당연</td><td>You should rest.</td><td>너는 쉬어야 한다.</td></tr>
+                            <tr><td>will / would</td><td>의지, 미래, 정중함</td><td>I would like some tea.</td><td>차 좀 주세요.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">조동사 + have + p.p. (과거 추측·후회)</p>
+                    <p><span class="en">He must have been tired.</span> 그는 틀림없이 피곤했을 것이다. (강한 추측)<br>
+                    <span class="en">She may have left already.</span> 그녀는 이미 떠났을지도 모른다. (약한 추측)<br>
+                    <span class="en">You should have studied harder.</span> 너는 더 열심히 공부했어야 했다. (후회)<br>
+                    <span class="en">He cannot have said that.</span> 그가 그런 말을 했을 리 없다. (강한 부정 추측)</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-4. 수동태</summary>
+            <div class="section__body">
+                <p>수동태는 「be동사 + 과거분사(p.p.)」 형태로 행위의 대상을 주어로 삼는다. 행위자는 by + 목적격으로 표시한다. 능동태의 목적어 -&gt; 수동태 주어, 동사 -&gt; be + p.p., 주어 -&gt; by + 목적격으로 전환한다.</p>
+                <blockquote>능동: <span class="en">Shakespeare wrote Hamlet.</span> 셰익스피어가 햄릿을 썼다.<br>
+                수동: <span class="en">Hamlet was written by Shakespeare.</span> 햄릿은 셰익스피어에 의해 쓰였다.</blockquote>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>시제</th><th>형태</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>현재</td><td>am/is/are + p.p.</td><td>The room is cleaned daily.</td><td>방은 매일 청소된다.</td></tr>
+                            <tr><td>과거</td><td>was/were + p.p.</td><td>The window was broken.</td><td>창문이 깨졌다.</td></tr>
+                            <tr><td>미래</td><td>will be + p.p.</td><td>It will be done soon.</td><td>그것은 곧 처리될 것이다.</td></tr>
+                            <tr><td>현재완료</td><td>have/has been + p.p.</td><td>The work has been finished.</td><td>그 일은 끝났다.</td></tr>
+                            <tr><td>진행</td><td>be + being + p.p.</td><td>The bridge is being built.</td><td>다리가 건설되고 있다.</td></tr>
+                            <tr><td>조동사</td><td>조동사 + be + p.p.</td><td>It can be solved.</td><td>그것은 해결될 수 있다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">by 이외의 전치사</p>
+                    <p>be interested in (~에 관심 있다), be surprised at (~에 놀라다), be made of/from (~로 만들어지다), be covered with (~로 덮이다).</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-5. to부정사 · 동명사 · 분사</summary>
+            <div class="section__body">
+                <p>동사가 명사·형용사·부사 역할을 하도록 변형한 준동사다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>용법</th><th>역할</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>명사적</td><td>주어·목적어·보어</td><td>To learn is important.</td><td>배우는 것은 중요하다.</td></tr>
+                            <tr><td>형용사적</td><td>명사 수식</td><td>I have work to do.</td><td>나는 할 일이 있다.</td></tr>
+                            <tr><td>부사적</td><td>목적·원인·결과</td><td>I came to see you.</td><td>나는 너를 보러 왔다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>동명사(동사원형 + -ing)는 명사 역할을 한다. <span class="en">Reading books is my hobby.</span> 책 읽기는 내 취미다. / <span class="en">I enjoy swimming.</span> 나는 수영을 즐긴다.</p>
+                <div class="callout info">
+                    <p class="callout__title">목적어 형태 구분</p>
+                    <p>동명사만: enjoy, finish, mind, avoid, give up, keep.<br>
+                    to부정사만: want, hope, decide, plan, promise, expect.<br>
+                    의미 차이: remember to lock(잠글 것을 기억·미래) vs remember locking(잠근 것을 기억·과거).</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>형태</th><th>의미</th><th>예시(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>현재분사</td><td>-ing</td><td>능동·진행 (~하는)</td><td>a crying baby</td><td>우는 아기</td></tr>
+                            <tr><td>과거분사</td><td>p.p.</td><td>수동·완료 (~된)</td><td>a broken window</td><td>깨진 창문</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <blockquote>분사구문: 부사절을 분사로 줄인 형태.<br><span class="en">When she saw me, she smiled.</span> -&gt; <span class="en">Seeing me, she smiled.</span> 나를 보자 그녀는 미소 지었다.</blockquote>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-6. 관계사</summary>
+            <div class="section__body">
+                <p>관계사는 두 문장을 연결하며 앞의 선행사를 수식하는 절을 이끈다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>선행사</th><th>주격</th><th>소유격</th><th>목적격</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>사람</td><td>who</td><td>whose</td><td>whom(who)</td></tr>
+                            <tr><td>사물·동물</td><td>which</td><td>whose / of which</td><td>which</td></tr>
+                            <tr><td>사람·사물 공통</td><td>that</td><td>-</td><td>that</td></tr>
+                            <tr><td>선행사 포함</td><td colspan="3">what (= the thing which)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">관계대명사 예문</p>
+                    <p><span class="en">I know the man who lives next door.</span> 옆집에 사는 남자를 안다. (주격)<br>
+                    <span class="en">This is the book which I bought.</span> 이것은 내가 산 책이다. (목적격)<br>
+                    <span class="en">She has a friend whose father is a doctor.</span> 아버지가 의사인 친구가 있다. (소유격)<br>
+                    <span class="en">Tell me what you want.</span> 네가 원하는 것을 말해라. (선행사 포함)</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>관계부사</th><th>선행사</th><th>대체 표현</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>where</td><td>장소</td><td>in/at which</td><td>the house where I live</td><td>내가 사는 집</td></tr>
+                            <tr><td>when</td><td>시간</td><td>in/on which</td><td>the day when we met</td><td>우리가 만난 날</td></tr>
+                            <tr><td>why</td><td>이유</td><td>for which</td><td>the reason why he left</td><td>그가 떠난 이유</td></tr>
+                            <tr><td>how</td><td>방법</td><td>the way / in which</td><td>how he speaks</td><td>그가 말하는 방식</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">주의</p>
+                    <p>방법의 선행사 the way와 관계부사 how는 함께 쓰지 않는다. the way he speaks, the way that he speaks, the way in which he speaks, 또는 how he speaks 중 하나만 쓴다(the way how ~ 는 비표준).<br>
+                    계속적 용법: 콤마(,)가 있으면 선행사에 보충 설명을 더한다. <span class="en">He has two sons, who are doctors.</span> 그에게는 아들이 둘 있는데 의사다(아들이 둘뿐임).</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-7. 가정법</summary>
+            <div class="section__body">
+                <p>사실과 반대되거나 실현 가능성이 낮은 상황을 가정한다. 시제를 한 단계 과거로 낮추는 것이 핵심이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>if절</th><th>주절</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>가정법 과거</td><td>과거동사 (were)</td><td>would/could/might + 동사원형</td><td>현재 사실의 반대</td></tr>
+                            <tr><td>가정법 과거완료</td><td>had + p.p.</td><td>would/could/might + have + p.p.</td><td>과거 사실의 반대</td></tr>
+                            <tr><td>혼합 가정법</td><td>had + p.p.</td><td>would + 동사원형</td><td>과거 가정 -&gt; 현재 결과</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">예문</p>
+                    <p>가정법 과거: <span class="en">If I were rich, I would buy a house.</span> 내가 부자라면 집을 살 텐데.<br>
+                    가정법 과거완료: <span class="en">If I had studied harder, I would have passed.</span> 더 열심히 공부했다면 합격했을 텐데.<br>
+                    혼합 가정법: <span class="en">If I had taken the medicine, I would not be sick now.</span> 그때 약을 먹었다면 지금 아프지 않을 텐데.<br>
+                    I wish: <span class="en">I wish I knew her name.</span> 그녀의 이름을 안다면 좋을 텐데.<br>
+                    as if: <span class="en">He talks as if he were an expert.</span> 그는 마치 전문가인 것처럼 말한다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-8. 비교</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>규칙</th><th>예시(영어)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>짧은 단어</td><td>-er / -est</td><td>tall - taller - tallest</td></tr>
+                            <tr><td>긴 단어</td><td>more / most</td><td>useful - more useful - most useful</td></tr>
+                            <tr><td>불규칙</td><td>별도 형태</td><td>good - better - best, bad - worse - worst</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">비교 구문</p>
+                    <p>원급: <span class="en">She is as tall as her brother.</span> 그녀는 오빠만큼 키가 크다.<br>
+                    비교급: <span class="en">This book is more interesting than that one.</span> 이 책이 저 책보다 더 재미있다.<br>
+                    최상급: <span class="en">He is the tallest student in the class.</span> 그는 반에서 가장 키가 크다.</p>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">주요 비교 표현</p>
+                    <p>the + 비교급, the + 비교급: <span class="en">The more you read, the wiser you become.</span> 많이 읽을수록 더 현명해진다.<br>
+                    비교급 + and + 비교급: <span class="en">It is getting colder and colder.</span> 점점 더 추워진다.<br>
+                    최상급 = 원급·비교급: <span class="en">No other student is as tall as he.</span> = <span class="en">He is taller than any other student.</span></p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-9. 접속사 · 전치사</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>예시</th><th>기능</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>등위접속사</td><td>and, but, or, so, for</td><td>대등한 요소 연결</td></tr>
+                            <tr><td>상관접속사</td><td>both A and B, either A or B, not only A but also B</td><td>짝을 이뤄 연결</td></tr>
+                            <tr><td>종속접속사 (명사절)</td><td>that, whether, if</td><td>절이 주어·목적어 역할</td></tr>
+                            <tr><td>종속접속사 (부사절)</td><td>when, because, although, while, since</td><td>시간·이유·양보·조건</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">접속사 예문</p>
+                    <p><span class="en">He is poor, but he is happy.</span> 그는 가난하지만 행복하다.<br>
+                    <span class="en">Both Tom and Jane passed.</span> 톰과 제인 둘 다 합격했다.<br>
+                    <span class="en">I know that he is honest.</span> 나는 그가 정직하다는 것을 안다.<br>
+                    <span class="en">Although it was cold, we went out.</span> 추웠지만 우리는 나갔다.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>종류</th><th>전치사</th><th>예시(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>시간 (점)</td><td>at</td><td>at 7 o'clock</td><td>7시에</td></tr>
+                            <tr><td>시간 (날)</td><td>on</td><td>on Monday</td><td>월요일에</td></tr>
+                            <tr><td>시간 (기간)</td><td>in</td><td>in summer</td><td>여름에</td></tr>
+                            <tr><td>장소 (지점)</td><td>at</td><td>at the station</td><td>역에서</td></tr>
+                            <tr><td>장소 (표면)</td><td>on</td><td>on the wall</td><td>벽에</td></tr>
+                            <tr><td>장소 (공간 내부)</td><td>in</td><td>in the room</td><td>방 안에</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">by vs until</p>
+                    <p>by(완료 시점, ~까지는): <span class="en">Finish it by 5.</span> / until(계속 동작, ~까지 줄곧): <span class="en">Wait until 5.</span></p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-10. 주어-동사 수일치</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>규칙</th><th>설명</th><th>예문(영어)</th><th>해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>기본</td><td>단수 주어 -&gt; 단수 동사</td><td>He works hard.</td><td>그는 열심히 일한다.</td></tr>
+                            <tr><td>동명사·to부정사 주어</td><td>단수 취급</td><td>Swimming is fun.</td><td>수영은 재미있다.</td></tr>
+                            <tr><td>학문명·국가명</td><td>단수 취급</td><td>Mathematics is difficult.</td><td>수학은 어렵다.</td></tr>
+                            <tr><td>every/each + 명사</td><td>단수 취급</td><td>Every student has a book.</td><td>모든 학생이 책을 가지고 있다.</td></tr>
+                            <tr><td>A and B</td><td>복수 취급</td><td>Tom and Jane are friends.</td><td>톰과 제인은 친구다.</td></tr>
+                            <tr><td>부분 표현 (most of)</td><td>of 뒤 명사에 일치</td><td>Most of the water is gone.</td><td>물 대부분이 사라졌다.</td></tr>
+                            <tr><td>The number of ~</td><td>단수</td><td>The number of cars is rising.</td><td>차의 수가 증가한다.</td></tr>
+                            <tr><td>A number of ~</td><td>복수 (많은 ~)</td><td>A number of cars are parked.</td><td>많은 차가 주차되어 있다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">주의</p>
+                    <p>주어와 동사 사이에 수식어구가 끼어들어도 동사는 진짜 주어에 일치시킨다. <span class="en">The box of apples is heavy.</span> 사과 한 상자는 무겁다. (주어 = box, 단수)</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-11. 화법</summary>
+            <div class="section__body">
+                <p>다른 사람의 말을 전달하는 방식이다. 직접화법(따옴표로 그대로 인용)과 간접화법(전달자 입장으로 바꿈)이 있다.</p>
+                <div class="callout info">
+                    <p class="callout__title">전환 규칙</p>
+                    <p>1) 전달동사 조정(say -&gt; say / say to -&gt; tell). 2) 접속사 추가(평서문 that, 의문문 if/whether 또는 의문사). 3) 인칭대명사를 전달자 기준으로 변경. 4) 시제 일치(전달동사가 과거면 한 단계 과거로). 5) 시간·장소 부사 변경(now -&gt; then, today -&gt; that day, here -&gt; there).</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>유형</th><th>직접화법(영어)</th><th>간접화법(영어)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>평서문</td><td>He said, "I am tired."</td><td>He said that he was tired.</td></tr>
+                            <tr><td>의문문(일반)</td><td>She asked, "Do you like coffee?"</td><td>She asked if I liked coffee.</td></tr>
+                            <tr><td>의문문(의문사)</td><td>He asked, "Where do you live?"</td><td>He asked where I lived.</td></tr>
+                            <tr><td>명령문</td><td>She said to me, "Open the door."</td><td>She told me to open the door.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>부정 명령은 not to: <span class="en">He told me not to be late.</span> 그는 나에게 늦지 말라고 했다.</p>
+                <div class="callout tip">
+                    <p class="callout__title">독해 팁</p>
+                    <p>긴 문장은 (1) 동사를 먼저 찾아 형식을 파악하고, (2) 관계사·접속사로 연결된 절의 경계를 나누며, (3) 준동사(to부정사·동명사·분사)의 역할을 구분하는 순서로 분석하면 정확히 해석할 수 있다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>2-12. 문법 자가 점검 퀴즈</summary>
+            <div class="section__body">
+                <details class="quiz">
+                    <div class="quiz__q">Q1. "the way"와 "how"를 함께 쓴 the way how he speaks 는 표준 표현인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">아니다(비표준). the way he speaks, the way that he speaks, the way in which he speaks, how he speaks 중 하나만 쓴다.</div>
+                    </details>
+                </details>
+                <details class="quiz">
+                    <div class="quiz__q">Q2. "그가 그런 말을 했을 리 없다"를 조동사 + have + p.p.로 옮기면?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body"><span class="en">He cannot have said that.</span> (과거에 대한 강한 부정 추측)</div>
+                    </details>
+                </details>
+                <details class="quiz">
+                    <div class="quiz__q">Q3. "The number of cars ___ rising." 빈칸의 동사는 is인가 are인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">is. The number of ~ 는 단수 취급한다. 반대로 A number of ~(많은 ~)는 복수 취급한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="reading">3. 교재 본문 독해 (Unit 1-15)</h2>
+        <details class="section">
+            <summary>독해 학습 개요 · Part I (Unit 1-8)</summary>
+            <div class="section__body">
+                <div class="callout warn">
+                    <p class="callout__title">학습 가이드 성격 안내</p>
+                    <p>아래는 KNOU Press 공식 단원 제목(손향숙·신현욱, 2024)을 근거로 한 주제 기반 학습 가이드다. 교재 원문은 옮기지 않았으므로 예상 핵심 어휘·구문 포인트는 학습 방향 제시용이며, 정확한 본문 내용·정의·표현은 반드시 교재로 직접 확인해야 한다. 기말은 본문 내용 이해를 주로 묻고 후반부(Unit 9~15) 비중이 높다.</p>
+                </div>
+                <p>Part I은 비교적 짧은 지문으로 단어 -&gt; 구문 학습을 단계적으로 익히도록 구성된다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Unit</th><th>제목</th><th>주제·학습 초점</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Virus</td><td>바이러스의 구조·전파·면역 반응. 중간과제 지정 표현(consist of, be comprised of, lead to, feed on, mount attacks, respond to)의 출처 단원</td></tr>
+                            <tr><td>2</td><td>Ancient Egypt</td><td>고대 이집트 문명·유물. 과거 시제와 수동태(was built, were buried 등)에 주목</td></tr>
+                            <tr><td>3</td><td>Witches</td><td>마녀 사냥의 역사·사회적 배경. 인과·시대 배경 서술 표현</td></tr>
+                            <tr><td>4</td><td>Fear</td><td>공포라는 감정의 심리·생리적 메커니즘. 추상명사와 원인·결과 구문</td></tr>
+                            <tr><td>5</td><td>Banff</td><td>캐나다 밴프 국립공원 등 자연·관광. 장소·묘사 형용사</td></tr>
+                            <tr><td>6</td><td>Activists Challenge Harvard's Legacy Admissions</td><td>하버드 동문 자녀 우대(레거시) 입학 문제 제기. 시사·논증 어휘</td></tr>
+                            <tr><td>7</td><td>Artists Fight Back against AI Using Their Work</td><td>예술가들의 AI 저작권 대응. 저작권·기술 윤리 어휘</td></tr>
+                            <tr><td>8</td><td>Babies Born in Britain Using Genetic Material from Three People</td><td>세 사람의 유전물질을 이용한 출생(미토콘드리아 기증). 생명윤리·의학 어휘</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>Part II (Unit 9-15) - 기말 핵심</summary>
+            <div class="section__body">
+                <p>Part II는 더 길고 추상적인 지문으로, 현대 트렌드 분석과 윤리·혁신·창의성을 다루는 서사형 글이 포함된다. 기말 출제 비중이 높은 구간이다.</p>
+
+                <h3>Unit 9 · Forecasting Trends: A Closer Look at the Top Keywords</h3>
+                <p>상위 키워드를 분석해 사회·기술·소비의 흐름(트렌드)을 예측·전망하는 글. 중간과제 B의 키워드 정의 과제와 직접 연결된다.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">forecast</div><div class="back">예측하다</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">trend</div><div class="back">추세</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">keyword</div><div class="back">핵심어</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">emerge</div><div class="back">부상하다</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">insight</div><div class="back">통찰</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">shift</div><div class="back">변화</div></div></div></li>
+                </ul>
+                <p>대표 구문: 미래·전망 표현(be expected to, be likely to, will continue to), 비교·증감 표현(a rise in, a growing number of).</p>
+
+                <h3>Unit 10 · Navigating the Decade Ahead: Key Themes and Trends</h3>
+                <p>앞으로 다가올 10년의 주요 테마와 흐름을 짚으며 변화에 어떻게 대응할지(navigate) 전망하는 글. Unit 9와 함께 중간과제 B의 출제 범위.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">navigate</div><div class="back">헤쳐 나가다</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">decade</div><div class="back">10년</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">theme</div><div class="back">주제</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">opportunity</div><div class="back">기회</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">transformation</div><div class="back">변혁</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">adapt</div><div class="back">적응하다</div></div></div></li>
+                </ul>
+                <p>대표 구문: 동명사·전치사구 제목(Navigating ...), 조건·전망의 분사구문, the + 비교급 ... the + 비교급 구문.</p>
+
+                <h3>Unit 11 · The Village of Harmony Haven: 7 Concepts</h3>
+                <p>가상의 마을 'Harmony Haven'을 통해 공동체·조화 등 일곱 가지 핵심 개념을 우화적으로 소개하는 서사형 글.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">harmony</div><div class="back">조화</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">haven</div><div class="back">안식처</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">concept</div><div class="back">개념</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">community</div><div class="back">공동체</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">coexist</div><div class="back">공존하다</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">principle</div><div class="back">원칙</div></div></div></li>
+                </ul>
+                <p>대표 구문: 정의·열거 구문(refers to, is defined as, the first/second concept is ...), 관계대명사로 개념을 부연 설명하는 문장.</p>
+
+                <h3>Unit 12 · A Journey Beyond Common Sense</h3>
+                <p>통념(common sense)을 넘어서는 사고와 발상의 전환을 '여정'에 빗대어 풀어내는 글.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">journey</div><div class="back">여정</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">common sense</div><div class="back">상식·통념</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">assumption</div><div class="back">가정</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">perspective</div><div class="back">관점</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">boundary</div><div class="back">경계</div></div></div></li>
+                </ul>
+                <p>대표 구문: 비교·대조 연결어(however, on the contrary, rather than), 가정·반사실 표현(if ... were, what if). 지시어(this, such)가 가리키는 대상 파악이 중요.</p>
+
+                <h3>Unit 13 · The Canvas of Creativity</h3>
+                <p>창의성(creativity)을 '캔버스'에 비유해 발상과 표현이 어떻게 펼쳐지는지 설명하는 글.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">canvas</div><div class="back">캔버스</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">creativity</div><div class="back">창의성</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">imagination</div><div class="back">상상력</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">inspire</div><div class="back">영감을 주다</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">original</div><div class="back">독창적인</div></div></div></li>
+                </ul>
+                <p>대표 구문: 비유·은유 표현(like a canvas, serve as a metaphor for), to부정사의 명사적·부사적 용법(to create, to express).</p>
+
+                <h3>Unit 14 · Noa's Digital Odyssey</h3>
+                <p>'Noa'라는 인물이 디지털 세계를 헤쳐 나가는 여정(odyssey)을 통해 기술 시대의 삶과 적응을 그린 서사.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">digital</div><div class="back">디지털의</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">odyssey</div><div class="back">긴 모험·여정</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">virtual</div><div class="back">가상의</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">platform</div><div class="back">플랫폼</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">immerse</div><div class="back">몰입시키다</div></div></div></li>
+                </ul>
+                <p>대표 구문: 인물 중심 서사이므로 시간 순서 표현(at first, then, eventually)과 과거 시제 흐름이 핵심. Noa의 행동·변화 추적이 내용 이해 문제의 관건.</p>
+
+                <h3>Unit 15 · Harmony's Forge: A Tale of Ethical Innovation</h3>
+                <p>윤리적 혁신(ethical innovation)을 'Harmony의 대장간(forge)'이라는 비유로 풀어낸 이야기. 기술·혁신과 윤리의 균형을 다룬다. 교재 마지막 단원이라 후반부 출제 비중상 특히 꼼꼼히 정리한다.</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">forge</div><div class="back">만들어 내다·대장간</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">ethical</div><div class="back">윤리적인</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">innovation</div><div class="back">혁신</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">dilemma</div><div class="back">딜레마</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">sustainable</div><div class="back">지속 가능한</div></div></div></li>
+                </ul>
+                <p>대표 구문: 의무·당위 표현(should, must, ought to, be responsible for), 양보·조건 접속사(although, even if, as long as).</p>
+
+                <div class="callout tip">
+                    <p class="callout__title">활용법</p>
+                    <p>위 어휘·구문은 본문을 읽기 전 예열용 체크리스트로 쓰고, 실제 교재 본문을 읽으며 각주(footnote)에 제시된 단어·숙어·표현 정의를 우선해 정리한다. 중간과제 B처럼 단원 키워드를 정의·예문으로 묶는 과제, 기말의 내용 이해 문제 모두 본문 정독이 토대가 된다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="vocab-core">4. 핵심 어휘 (동사·형용사·부사)</h2>
+        <details class="section">
+            <summary>4-1. 빈출 동사</summary>
+            <div class="section__body">
+                <p>문장 이해의 핵심인 빈출 동사를 예문과 함께 정리했다. 영단어와 예문(영어) 열의 영어를 발음 버튼으로 들을 수 있다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영단어</th><th>한국어 뜻</th><th>예문(영어)</th><th>예문 해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>achieve</td><td>달성하다, 이루다</td><td>She worked hard to achieve her goals.</td><td>그녀는 목표를 이루기 위해 열심히 일했다.</td></tr>
+                            <tr><td>acquire</td><td>습득하다, 얻다</td><td>He acquired fluent English while living abroad.</td><td>그는 해외에 사는 동안 유창한 영어를 습득했다.</td></tr>
+                            <tr><td>adapt</td><td>적응하다, 조정하다</td><td>Animals adapt to their environment over time.</td><td>동물들은 시간이 지나면서 환경에 적응한다.</td></tr>
+                            <tr><td>admit</td><td>인정하다, 시인하다</td><td>He admitted that he had made a mistake.</td><td>그는 자신이 실수했음을 인정했다.</td></tr>
+                            <tr><td>affect</td><td>영향을 미치다</td><td>The weather can affect our mood.</td><td>날씨는 우리의 기분에 영향을 미칠 수 있다.</td></tr>
+                            <tr><td>announce</td><td>발표하다, 알리다</td><td>The company announced a new product yesterday.</td><td>그 회사는 어제 신제품을 발표했다.</td></tr>
+                            <tr><td>appreciate</td><td>감사하다, 진가를 알아보다</td><td>I really appreciate your help.</td><td>당신의 도움에 정말 감사합니다.</td></tr>
+                            <tr><td>approve</td><td>승인하다, 찬성하다</td><td>The board approved the new budget.</td><td>이사회는 새 예산을 승인했다.</td></tr>
+                            <tr><td>argue</td><td>논쟁하다, 주장하다</td><td>They often argue about politics.</td><td>그들은 자주 정치에 대해 논쟁한다.</td></tr>
+                            <tr><td>arrange</td><td>준비하다, 정리하다</td><td>She arranged the meeting for Monday.</td><td>그녀는 월요일에 회의를 잡았다.</td></tr>
+                            <tr><td>assume</td><td>가정하다, 추정하다</td><td>I assume you have read the report.</td><td>나는 당신이 그 보고서를 읽었다고 가정한다.</td></tr>
+                            <tr><td>attend</td><td>참석하다</td><td>Many students attend the lecture every week.</td><td>많은 학생이 매주 그 강의에 참석한다.</td></tr>
+                            <tr><td>avoid</td><td>피하다</td><td>Try to avoid making the same mistake.</td><td>같은 실수를 하지 않도록 노력해라.</td></tr>
+                            <tr><td>cause</td><td>야기하다, 일으키다</td><td>Heavy rain caused the flood.</td><td>폭우가 홍수를 일으켰다.</td></tr>
+                            <tr><td>compare</td><td>비교하다</td><td>Let's compare the two plans carefully.</td><td>두 계획을 신중히 비교해 보자.</td></tr>
+                            <tr><td>complain</td><td>불평하다</td><td>Customers complained about the slow service.</td><td>고객들은 느린 서비스에 대해 불평했다.</td></tr>
+                            <tr><td>complete</td><td>완료하다, 끝마치다</td><td>She completed the project on time.</td><td>그녀는 그 프로젝트를 제때 완료했다.</td></tr>
+                            <tr><td>consider</td><td>고려하다, 여기다</td><td>We should consider all the options.</td><td>우리는 모든 선택지를 고려해야 한다.</td></tr>
+                            <tr><td>contain</td><td>포함하다, 담고 있다</td><td>This box contains old photographs.</td><td>이 상자에는 오래된 사진들이 들어 있다.</td></tr>
+                            <tr><td>continue</td><td>계속하다</td><td>They continued working after lunch.</td><td>그들은 점심 식사 후에도 계속 일했다.</td></tr>
+                            <tr><td>contribute</td><td>기여하다, 기부하다</td><td>Everyone contributed to the success.</td><td>모두가 그 성공에 기여했다.</td></tr>
+                            <tr><td>create</td><td>창조하다, 만들다</td><td>The artist created a beautiful painting.</td><td>그 화가는 아름다운 그림을 만들었다.</td></tr>
+                            <tr><td>decide</td><td>결정하다</td><td>She decided to study abroad.</td><td>그녀는 해외에서 공부하기로 결정했다.</td></tr>
+                            <tr><td>decrease</td><td>감소하다, 줄이다</td><td>Sales decreased during the winter.</td><td>매출은 겨울 동안 감소했다.</td></tr>
+                            <tr><td>deliver</td><td>배달하다, 전달하다</td><td>The package was delivered this morning.</td><td>그 소포는 오늘 아침에 배달되었다.</td></tr>
+                            <tr><td>describe</td><td>묘사하다, 설명하다</td><td>Can you describe what happened?</td><td>무슨 일이 있었는지 설명해 줄 수 있나요?</td></tr>
+                            <tr><td>develop</td><td>개발하다, 발전시키다</td><td>The team developed a new method.</td><td>그 팀은 새로운 방법을 개발했다.</td></tr>
+                            <tr><td>discover</td><td>발견하다</td><td>Scientists discovered a new species.</td><td>과학자들은 새로운 종을 발견했다.</td></tr>
+                            <tr><td>discuss</td><td>논의하다</td><td>We will discuss the plan tomorrow.</td><td>우리는 내일 그 계획을 논의할 것이다.</td></tr>
+                            <tr><td>encourage</td><td>격려하다, 장려하다</td><td>Teachers encourage students to ask questions.</td><td>교사들은 학생들이 질문하도록 격려한다.</td></tr>
+                            <tr><td>establish</td><td>설립하다, 확립하다</td><td>The university was established in 1972.</td><td>그 대학은 1972년에 설립되었다.</td></tr>
+                            <tr><td>examine</td><td>조사하다, 검토하다</td><td>The doctor examined the patient carefully.</td><td>의사는 환자를 주의 깊게 진찰했다.</td></tr>
+                            <tr><td>expect</td><td>기대하다, 예상하다</td><td>We expect good results this year.</td><td>우리는 올해 좋은 결과를 기대한다.</td></tr>
+                            <tr><td>explain</td><td>설명하다</td><td>Please explain the rules again.</td><td>규칙을 다시 한번 설명해 주세요.</td></tr>
+                            <tr><td>express</td><td>표현하다</td><td>She expressed her opinion clearly.</td><td>그녀는 자신의 의견을 분명히 표현했다.</td></tr>
+                            <tr><td>improve</td><td>향상시키다, 개선하다</td><td>He wants to improve his writing skills.</td><td>그는 자신의 작문 실력을 향상시키고 싶어 한다.</td></tr>
+                            <tr><td>include</td><td>포함하다</td><td>The price includes breakfast.</td><td>그 가격에는 아침 식사가 포함되어 있다.</td></tr>
+                            <tr><td>increase</td><td>증가하다, 늘리다</td><td>The population continues to increase.</td><td>인구는 계속 증가하고 있다.</td></tr>
+                            <tr><td>introduce</td><td>소개하다, 도입하다</td><td>Let me introduce my colleague.</td><td>제 동료를 소개하겠습니다.</td></tr>
+                            <tr><td>maintain</td><td>유지하다, 주장하다</td><td>It is important to maintain good health.</td><td>좋은 건강을 유지하는 것은 중요하다.</td></tr>
+                            <tr><td>measure</td><td>측정하다</td><td>They measured the length of the room.</td><td>그들은 방의 길이를 측정했다.</td></tr>
+                            <tr><td>mention</td><td>언급하다</td><td>He mentioned your name in the meeting.</td><td>그는 회의에서 당신의 이름을 언급했다.</td></tr>
+                            <tr><td>obtain</td><td>얻다, 획득하다</td><td>She obtained a scholarship for college.</td><td>그녀는 대학 장학금을 받았다.</td></tr>
+                            <tr><td>occur</td><td>발생하다, 일어나다</td><td>The accident occurred late at night.</td><td>그 사고는 밤늦게 발생했다.</td></tr>
+                            <tr><td>offer</td><td>제공하다, 제안하다</td><td>They offered me a new job.</td><td>그들은 나에게 새 일자리를 제안했다.</td></tr>
+                            <tr><td>prefer</td><td>선호하다</td><td>I prefer tea to coffee.</td><td>나는 커피보다 차를 선호한다.</td></tr>
+                            <tr><td>prepare</td><td>준비하다</td><td>She prepared dinner for the guests.</td><td>그녀는 손님들을 위해 저녁을 준비했다.</td></tr>
+                            <tr><td>prevent</td><td>막다, 예방하다</td><td>Exercise can prevent many diseases.</td><td>운동은 많은 질병을 예방할 수 있다.</td></tr>
+                            <tr><td>produce</td><td>생산하다</td><td>This factory produces cars.</td><td>이 공장은 자동차를 생산한다.</td></tr>
+                            <tr><td>provide</td><td>제공하다</td><td>The hotel provides free Wi-Fi.</td><td>그 호텔은 무료 와이파이를 제공한다.</td></tr>
+                            <tr><td>realize</td><td>깨닫다, 실현하다</td><td>I suddenly realized my mistake.</td><td>나는 갑자기 내 실수를 깨달았다.</td></tr>
+                            <tr><td>receive</td><td>받다</td><td>She received a letter from her friend.</td><td>그녀는 친구로부터 편지를 받았다.</td></tr>
+                            <tr><td>recognize</td><td>알아보다, 인정하다</td><td>I didn't recognize you with short hair.</td><td>짧은 머리라서 너를 못 알아봤다.</td></tr>
+                            <tr><td>reduce</td><td>줄이다</td><td>We must reduce our energy use.</td><td>우리는 에너지 사용을 줄여야 한다.</td></tr>
+                            <tr><td>refuse</td><td>거절하다</td><td>He refused to answer the question.</td><td>그는 그 질문에 답하기를 거부했다.</td></tr>
+                            <tr><td>remain</td><td>남다, 여전히 ~이다</td><td>Few people remained in the building.</td><td>건물에 남은 사람은 거의 없었다.</td></tr>
+                            <tr><td>remind</td><td>상기시키다</td><td>This song reminds me of my childhood.</td><td>이 노래는 나에게 어린 시절을 떠올리게 한다.</td></tr>
+                            <tr><td>replace</td><td>대체하다, 교체하다</td><td>We replaced the old computer with a new one.</td><td>우리는 오래된 컴퓨터를 새것으로 교체했다.</td></tr>
+                            <tr><td>represent</td><td>대표하다, 나타내다</td><td>She represents our company abroad.</td><td>그녀는 해외에서 우리 회사를 대표한다.</td></tr>
+                            <tr><td>require</td><td>요구하다, 필요로 하다</td><td>This job requires patience.</td><td>이 일은 인내심을 필요로 한다.</td></tr>
+                            <tr><td>respond</td><td>응답하다, 반응하다</td><td>He responded quickly to the email.</td><td>그는 그 이메일에 빠르게 답했다.</td></tr>
+                            <tr><td>succeed</td><td>성공하다</td><td>She succeeded in passing the exam.</td><td>그녀는 시험에 합격하는 데 성공했다.</td></tr>
+                            <tr><td>suggest</td><td>제안하다</td><td>I suggest taking a short break.</td><td>나는 잠깐 쉬는 것을 제안한다.</td></tr>
+                            <tr><td>support</td><td>지지하다, 부양하다</td><td>Many people support the new policy.</td><td>많은 사람이 새 정책을 지지한다.</td></tr>
+                            <tr><td>suppose</td><td>추측하다, 가정하다</td><td>I suppose he is right.</td><td>나는 그가 옳다고 생각한다.</td></tr>
+                            <tr><td>survive</td><td>살아남다, 생존하다</td><td>Only a few plants survived the cold.</td><td>몇몇 식물만이 추위에서 살아남았다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>4-2. 빈출 형용사</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영단어</th><th>한국어 뜻</th><th>예문(영어)</th><th>예문 해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>absent</td><td>결석한, 부재중인</td><td>Three students were absent today.</td><td>오늘 세 명의 학생이 결석했다.</td></tr>
+                            <tr><td>accurate</td><td>정확한</td><td>Her report was clear and accurate.</td><td>그녀의 보고서는 명확하고 정확했다.</td></tr>
+                            <tr><td>ancient</td><td>고대의, 아주 오래된</td><td>We visited an ancient temple in Greece.</td><td>우리는 그리스에서 고대 사원을 방문했다.</td></tr>
+                            <tr><td>anxious</td><td>불안한, 걱정하는</td><td>She felt anxious before the interview.</td><td>그녀는 면접 전에 불안함을 느꼈다.</td></tr>
+                            <tr><td>available</td><td>이용 가능한</td><td>The doctor is not available right now.</td><td>의사 선생님은 지금 진료가 어렵습니다.</td></tr>
+                            <tr><td>aware</td><td>알고 있는, 인식하는</td><td>He is aware of the risks involved.</td><td>그는 관련된 위험을 알고 있다.</td></tr>
+                            <tr><td>brief</td><td>간단한, 짧은</td><td>She gave a brief explanation.</td><td>그녀는 간단한 설명을 했다.</td></tr>
+                            <tr><td>common</td><td>흔한, 공통의</td><td>Smith is a common surname in England.</td><td>스미스는 영국에서 흔한 성이다.</td></tr>
+                            <tr><td>complex</td><td>복잡한</td><td>The problem is more complex than it seems.</td><td>그 문제는 보이는 것보다 더 복잡하다.</td></tr>
+                            <tr><td>confident</td><td>자신감 있는</td><td>She is confident about the result.</td><td>그녀는 그 결과에 대해 자신감이 있다.</td></tr>
+                            <tr><td>convenient</td><td>편리한</td><td>This location is very convenient for shopping.</td><td>이 위치는 쇼핑하기에 매우 편리하다.</td></tr>
+                            <tr><td>crucial</td><td>결정적인, 중대한</td><td>Sleep is crucial for good health.</td><td>수면은 좋은 건강에 매우 중요하다.</td></tr>
+                            <tr><td>curious</td><td>호기심 많은</td><td>Children are naturally curious.</td><td>아이들은 천성적으로 호기심이 많다.</td></tr>
+                            <tr><td>dangerous</td><td>위험한</td><td>It is dangerous to drive too fast.</td><td>너무 빨리 운전하는 것은 위험하다.</td></tr>
+                            <tr><td>difficult</td><td>어려운</td><td>The exam was quite difficult.</td><td>그 시험은 꽤 어려웠다.</td></tr>
+                            <tr><td>efficient</td><td>효율적인</td><td>The new system is more efficient.</td><td>새 시스템은 더 효율적이다.</td></tr>
+                            <tr><td>empty</td><td>비어 있는</td><td>The room was completely empty.</td><td>그 방은 완전히 비어 있었다.</td></tr>
+                            <tr><td>essential</td><td>필수적인</td><td>Water is essential for life.</td><td>물은 생명에 필수적이다.</td></tr>
+                            <tr><td>familiar</td><td>익숙한, 친숙한</td><td>This street looks familiar to me.</td><td>이 거리는 나에게 익숙해 보인다.</td></tr>
+                            <tr><td>foreign</td><td>외국의</td><td>She speaks three foreign languages.</td><td>그녀는 세 개의 외국어를 한다.</td></tr>
+                            <tr><td>general</td><td>일반적인, 전반적인</td><td>This is a book for general readers.</td><td>이것은 일반 독자를 위한 책이다.</td></tr>
+                            <tr><td>huge</td><td>거대한</td><td>They live in a huge house.</td><td>그들은 거대한 집에 산다.</td></tr>
+                            <tr><td>ideal</td><td>이상적인</td><td>This is the ideal place for a holiday.</td><td>이곳은 휴가를 보내기에 이상적인 장소다.</td></tr>
+                            <tr><td>important</td><td>중요한</td><td>Education is important for the future.</td><td>교육은 미래를 위해 중요하다.</td></tr>
+                            <tr><td>necessary</td><td>필요한</td><td>It is necessary to book in advance.</td><td>미리 예약하는 것이 필요하다.</td></tr>
+                            <tr><td>obvious</td><td>명백한</td><td>The answer was obvious to everyone.</td><td>그 답은 모두에게 명백했다.</td></tr>
+                            <tr><td>ordinary</td><td>평범한, 보통의</td><td>He led an ordinary life.</td><td>그는 평범한 삶을 살았다.</td></tr>
+                            <tr><td>particular</td><td>특정한, 특별한</td><td>Is there a particular reason for this?</td><td>이것에 대한 특별한 이유가 있나요?</td></tr>
+                            <tr><td>popular</td><td>인기 있는</td><td>This song is very popular among teenagers.</td><td>이 노래는 십 대들 사이에서 매우 인기가 있다.</td></tr>
+                            <tr><td>possible</td><td>가능한</td><td>Is it possible to change the date?</td><td>날짜를 변경하는 것이 가능한가요?</td></tr>
+                            <tr><td>practical</td><td>실용적인</td><td>She gave me some practical advice.</td><td>그녀는 나에게 몇 가지 실용적인 조언을 해 주었다.</td></tr>
+                            <tr><td>previous</td><td>이전의</td><td>He failed in his previous attempt.</td><td>그는 이전 시도에서 실패했다.</td></tr>
+                            <tr><td>rare</td><td>드문, 희귀한</td><td>It is rare to see snow here.</td><td>이곳에서 눈을 보는 것은 드문 일이다.</td></tr>
+                            <tr><td>recent</td><td>최근의</td><td>I read about it in a recent article.</td><td>나는 최근 기사에서 그것에 관해 읽었다.</td></tr>
+                            <tr><td>reliable</td><td>믿을 만한</td><td>He is a reliable employee.</td><td>그는 믿을 만한 직원이다.</td></tr>
+                            <tr><td>serious</td><td>심각한, 진지한</td><td>This is a serious problem.</td><td>이것은 심각한 문제다.</td></tr>
+                            <tr><td>similar</td><td>비슷한</td><td>The two paintings are very similar.</td><td>그 두 그림은 매우 비슷하다.</td></tr>
+                            <tr><td>specific</td><td>구체적인, 특정한</td><td>Please give me a specific example.</td><td>구체적인 예를 하나 들어 주세요.</td></tr>
+                            <tr><td>sufficient</td><td>충분한</td><td>We have sufficient time to finish.</td><td>우리는 끝낼 충분한 시간이 있다.</td></tr>
+                            <tr><td>typical</td><td>전형적인</td><td>This is a typical winter day in Seoul.</td><td>이것은 서울의 전형적인 겨울날이다.</td></tr>
+                            <tr><td>useful</td><td>유용한</td><td>This dictionary is very useful.</td><td>이 사전은 매우 유용하다.</td></tr>
+                            <tr><td>various</td><td>다양한</td><td>The store sells various kinds of fruit.</td><td>그 가게는 다양한 종류의 과일을 판다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>4-3. 빈출 부사</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영단어</th><th>한국어 뜻</th><th>예문(영어)</th><th>예문 해석</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>actually</td><td>실제로, 사실은</td><td>Actually, I have never been to Paris.</td><td>사실, 나는 파리에 가 본 적이 없다.</td></tr>
+                            <tr><td>almost</td><td>거의</td><td>We are almost finished with the work.</td><td>우리는 그 일을 거의 끝냈다.</td></tr>
+                            <tr><td>barely</td><td>간신히, 거의 ~않다</td><td>He could barely walk after the accident.</td><td>그는 사고 후 간신히 걸을 수 있었다.</td></tr>
+                            <tr><td>carefully</td><td>주의 깊게, 신중히</td><td>She read the contract carefully.</td><td>그녀는 계약서를 주의 깊게 읽었다.</td></tr>
+                            <tr><td>certainly</td><td>확실히, 분명히</td><td>This is certainly the best choice.</td><td>이것은 확실히 최선의 선택이다.</td></tr>
+                            <tr><td>clearly</td><td>분명하게, 명확히</td><td>Please speak more clearly.</td><td>좀 더 분명하게 말해 주세요.</td></tr>
+                            <tr><td>completely</td><td>완전히</td><td>I completely forgot about the meeting.</td><td>나는 그 회의를 완전히 잊어버렸다.</td></tr>
+                            <tr><td>eventually</td><td>결국, 마침내</td><td>He eventually found a good job.</td><td>그는 결국 좋은 직장을 구했다.</td></tr>
+                            <tr><td>exactly</td><td>정확히</td><td>That is exactly what I meant.</td><td>그것이 바로 내가 말하려던 것이다.</td></tr>
+                            <tr><td>frequently</td><td>자주, 빈번히</td><td>She frequently travels for work.</td><td>그녀는 일 때문에 자주 출장을 간다.</td></tr>
+                            <tr><td>gradually</td><td>점차, 서서히</td><td>The weather is gradually getting warmer.</td><td>날씨가 점차 따뜻해지고 있다.</td></tr>
+                            <tr><td>immediately</td><td>즉시</td><td>He answered the phone immediately.</td><td>그는 즉시 전화를 받았다.</td></tr>
+                            <tr><td>nearly</td><td>거의</td><td>The bottle is nearly empty.</td><td>그 병은 거의 비어 있다.</td></tr>
+                            <tr><td>obviously</td><td>명백히, 분명히</td><td>She was obviously upset by the news.</td><td>그녀는 그 소식에 분명히 화가 나 있었다.</td></tr>
+                            <tr><td>particularly</td><td>특히</td><td>I am particularly interested in history.</td><td>나는 특히 역사에 관심이 있다.</td></tr>
+                            <tr><td>probably</td><td>아마도</td><td>He will probably arrive late.</td><td>그는 아마 늦게 도착할 것이다.</td></tr>
+                            <tr><td>quickly</td><td>빨리, 신속히</td><td>She finished her homework quickly.</td><td>그녀는 숙제를 빨리 끝냈다.</td></tr>
+                            <tr><td>rarely</td><td>드물게, 좀처럼 ~않다</td><td>He rarely watches television.</td><td>그는 좀처럼 텔레비전을 보지 않는다.</td></tr>
+                            <tr><td>recently</td><td>최근에</td><td>I recently moved to a new city.</td><td>나는 최근에 새로운 도시로 이사했다.</td></tr>
+                            <tr><td>seriously</td><td>심각하게, 진지하게</td><td>We need to take this matter seriously.</td><td>우리는 이 문제를 진지하게 받아들여야 한다.</td></tr>
+                            <tr><td>suddenly</td><td>갑자기</td><td>Suddenly, the lights went out.</td><td>갑자기 불이 꺼졌다.</td></tr>
+                            <tr><td>usually</td><td>보통, 대개</td><td>I usually wake up at seven.</td><td>나는 보통 일곱 시에 일어난다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="vocab-topic">5. 주제별 어휘와 숙어</h2>
+        <details class="section">
+            <summary>5-1. 주제별 명사 어휘</summary>
+            <div class="section__body">
+                <p>학술영어에서 자주 등장하는 명사를 5개 주제로 묶었다. 비고 열에는 연어·복수형 등 주의점을 적었다(비고는 발음 대상이 아니다).</p>
+                <h3>학업 · 교육</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영어</th><th>품사</th><th>뜻</th><th>비고</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>curriculum</td><td>n.</td><td>교육과정</td><td>복수형 curricula</td></tr>
+                            <tr><td>lecture</td><td>n.</td><td>강의</td><td>give/attend a lecture</td></tr>
+                            <tr><td>assignment</td><td>n.</td><td>과제, 배정</td><td>hand in an assignment</td></tr>
+                            <tr><td>tuition</td><td>n.</td><td>수업료, 교습</td><td>tuition fee</td></tr>
+                            <tr><td>scholarship</td><td>n.</td><td>장학금, 학식</td><td>win a scholarship</td></tr>
+                            <tr><td>semester</td><td>n.</td><td>학기</td><td>= term</td></tr>
+                            <tr><td>thesis</td><td>n.</td><td>학위논문, 논제</td><td>복수형 theses</td></tr>
+                            <tr><td>discipline</td><td>n.</td><td>학문 분야, 규율</td><td>academic discipline</td></tr>
+                            <tr><td>literacy</td><td>n.</td><td>읽고 쓰는 능력, 소양</td><td>digital literacy</td></tr>
+                            <tr><td>competence</td><td>n.</td><td>역량, 능숙함</td><td>language competence</td></tr>
+                            <tr><td>enrollment</td><td>n.</td><td>등록, 입학</td><td>enrollment rate</td></tr>
+                            <tr><td>credential</td><td>n.</td><td>자격(증)</td><td>academic credentials</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>사회 · 문화</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영어</th><th>품사</th><th>뜻</th><th>비고</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>diversity</td><td>n.</td><td>다양성</td><td>cultural diversity</td></tr>
+                            <tr><td>heritage</td><td>n.</td><td>유산</td><td>cultural heritage</td></tr>
+                            <tr><td>tradition</td><td>n.</td><td>전통</td><td>oral tradition</td></tr>
+                            <tr><td>custom</td><td>n.</td><td>관습, 풍습</td><td>local customs</td></tr>
+                            <tr><td>identity</td><td>n.</td><td>정체성</td><td>national identity</td></tr>
+                            <tr><td>community</td><td>n.</td><td>공동체, 지역사회</td><td>local community</td></tr>
+                            <tr><td>prejudice</td><td>n.</td><td>편견</td><td>racial prejudice</td></tr>
+                            <tr><td>discrimination</td><td>n.</td><td>차별</td><td>gender discrimination</td></tr>
+                            <tr><td>generation</td><td>n.</td><td>세대</td><td>younger generation</td></tr>
+                            <tr><td>welfare</td><td>n.</td><td>복지</td><td>social welfare</td></tr>
+                            <tr><td>migration</td><td>n.</td><td>이주, 이동</td><td>mass migration</td></tr>
+                            <tr><td>inequality</td><td>n.</td><td>불평등</td><td>income inequality</td></tr>
+                            <tr><td>stereotype</td><td>n.</td><td>고정관념</td><td>cultural stereotype</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>경제 · 비즈니스</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영어</th><th>품사</th><th>뜻</th><th>비고</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>economy</td><td>n.</td><td>경제</td><td>market economy</td></tr>
+                            <tr><td>revenue</td><td>n.</td><td>수익, 세입</td><td>annual revenue</td></tr>
+                            <tr><td>profit</td><td>n.</td><td>이윤</td><td>net profit</td></tr>
+                            <tr><td>budget</td><td>n.</td><td>예산</td><td>on a tight budget</td></tr>
+                            <tr><td>investment</td><td>n.</td><td>투자</td><td>foreign investment</td></tr>
+                            <tr><td>inflation</td><td>n.</td><td>인플레이션, 물가 상승</td><td>rising inflation</td></tr>
+                            <tr><td>recession</td><td>n.</td><td>경기 침체</td><td>economic recession</td></tr>
+                            <tr><td>demand</td><td>n.</td><td>수요</td><td>supply and demand</td></tr>
+                            <tr><td>supply</td><td>n.</td><td>공급</td><td>supply chain</td></tr>
+                            <tr><td>corporation</td><td>n.</td><td>(대)기업</td><td>multinational corporation</td></tr>
+                            <tr><td>entrepreneur</td><td>n.</td><td>기업가, 창업자</td><td>발음 [ˌɑːntrəprəˈnɜːr]</td></tr>
+                            <tr><td>stakeholder</td><td>n.</td><td>이해관계자</td><td>key stakeholders</td></tr>
+                            <tr><td>asset</td><td>n.</td><td>자산</td><td>fixed assets</td></tr>
+                            <tr><td>liability</td><td>n.</td><td>부채, 책임</td><td>limited liability</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>과학 · 기술</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영어</th><th>품사</th><th>뜻</th><th>비고</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>hypothesis</td><td>n.</td><td>가설</td><td>복수형 hypotheses</td></tr>
+                            <tr><td>experiment</td><td>n.</td><td>실험</td><td>conduct an experiment</td></tr>
+                            <tr><td>analysis</td><td>n.</td><td>분석</td><td>복수형 analyses</td></tr>
+                            <tr><td>data</td><td>n.</td><td>자료, 데이터</td><td>단수 datum</td></tr>
+                            <tr><td>algorithm</td><td>n.</td><td>알고리즘</td><td>search algorithm</td></tr>
+                            <tr><td>innovation</td><td>n.</td><td>혁신</td><td>technological innovation</td></tr>
+                            <tr><td>device</td><td>n.</td><td>장치, 기기</td><td>mobile device</td></tr>
+                            <tr><td>network</td><td>n.</td><td>네트워크, 망</td><td>neural network</td></tr>
+                            <tr><td>variable</td><td>n.</td><td>변수</td><td>independent variable</td></tr>
+                            <tr><td>evidence</td><td>n.</td><td>증거</td><td>scientific evidence</td></tr>
+                            <tr><td>phenomenon</td><td>n.</td><td>현상</td><td>복수형 phenomena</td></tr>
+                            <tr><td>research</td><td>n.</td><td>연구</td><td>불가산명사</td></tr>
+                            <tr><td>breakthrough</td><td>n.</td><td>돌파구, 큰 발전</td><td>a major breakthrough</td></tr>
+                            <tr><td>sustainability</td><td>n.</td><td>지속 가능성</td><td>environmental sustainability</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>일상생활</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>영어</th><th>품사</th><th>뜻</th><th>비고</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>routine</td><td>n.</td><td>일과, 일상</td><td>daily routine</td></tr>
+                            <tr><td>appointment</td><td>n.</td><td>약속, 예약</td><td>make an appointment</td></tr>
+                            <tr><td>neighborhood</td><td>n.</td><td>동네, 이웃</td><td>quiet neighborhood</td></tr>
+                            <tr><td>chore</td><td>n.</td><td>집안일, 허드렛일</td><td>household chores</td></tr>
+                            <tr><td>commute</td><td>n.</td><td>통근</td><td>a long commute</td></tr>
+                            <tr><td>schedule</td><td>n.</td><td>일정, 시간표</td><td>a busy schedule</td></tr>
+                            <tr><td>errand</td><td>n.</td><td>심부름, 볼일</td><td>run errands</td></tr>
+                            <tr><td>grocery</td><td>n.</td><td>식료품</td><td>grocery shopping</td></tr>
+                            <tr><td>furniture</td><td>n.</td><td>가구</td><td>불가산명사</td></tr>
+                            <tr><td>luggage</td><td>n.</td><td>짐, 수하물</td><td>불가산명사</td></tr>
+                            <tr><td>leisure</td><td>n.</td><td>여가</td><td>leisure activities</td></tr>
+                            <tr><td>household</td><td>n.</td><td>가구, 가정</td><td>a household of four</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">불가산명사 주의</p>
+                    <p>furniture, luggage, research 등은 불가산명사이므로 a/an을 붙이거나 복수형으로 쓰지 않는다. data는 본래 datum의 복수형이지만, 현대 영어에서는 불가산명사처럼 단수 취급(The data is clear.)하는 용법도 널리 쓰인다. 학술 글쓰기에서는 불규칙 복수형(thesis/theses, phenomenon/phenomena)에 특히 주의한다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>5-2. 자주 쓰는 구동사 (Phrasal Verbs)</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>표현</th><th>뜻</th><th>예문(영어)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>account for</td><td>~을 설명하다, 차지하다</td><td>The new model accounts for half of our sales.</td></tr>
+                            <tr><td>break down</td><td>고장 나다, 무너지다</td><td>The car broke down on the highway.</td></tr>
+                            <tr><td>bring up</td><td>(화제를) 꺼내다, 기르다</td><td>She brought up an interesting point in class.</td></tr>
+                            <tr><td>call off</td><td>취소하다</td><td>They called off the meeting due to the storm.</td></tr>
+                            <tr><td>carry out</td><td>수행하다, 실행하다</td><td>Researchers carried out a series of tests.</td></tr>
+                            <tr><td>come up with</td><td>(생각을) 떠올리다, 내놓다</td><td>He came up with a creative solution.</td></tr>
+                            <tr><td>cut down on</td><td>~을 줄이다</td><td>I need to cut down on coffee.</td></tr>
+                            <tr><td>deal with</td><td>~을 다루다, 처리하다</td><td>We must deal with the problem now.</td></tr>
+                            <tr><td>figure out</td><td>알아내다, 이해하다</td><td>I finally figured out how it works.</td></tr>
+                            <tr><td>fill out</td><td>(서식을) 작성하다</td><td>Please fill out this application form.</td></tr>
+                            <tr><td>find out</td><td>알아내다</td><td>I found out the truth yesterday.</td></tr>
+                            <tr><td>get along with</td><td>~와 잘 지내다</td><td>She gets along with her coworkers.</td></tr>
+                            <tr><td>get over</td><td>(어려움을) 극복하다, 회복하다</td><td>It took him weeks to get over the flu.</td></tr>
+                            <tr><td>give up</td><td>포기하다</td><td>Don't give up on your dream.</td></tr>
+                            <tr><td>go over</td><td>검토하다, 살펴보다</td><td>Let's go over the report together.</td></tr>
+                            <tr><td>hand in</td><td>제출하다</td><td>Hand in your essay by Friday.</td></tr>
+                            <tr><td>keep up with</td><td>~에 뒤지지 않다, 따라가다</td><td>It's hard to keep up with new technology.</td></tr>
+                            <tr><td>look into</td><td>조사하다</td><td>The police are looking into the case.</td></tr>
+                            <tr><td>look up</td><td>(정보를) 찾아보다</td><td>Look up the word in a dictionary.</td></tr>
+                            <tr><td>make up</td><td>지어내다, 화해하다, 구성하다</td><td>He made up an excuse for being late.</td></tr>
+                            <tr><td>pay off</td><td>성과를 내다, (빚을) 갚다</td><td>Her hard work finally paid off.</td></tr>
+                            <tr><td>point out</td><td>지적하다, 가리키다</td><td>The teacher pointed out my mistakes.</td></tr>
+                            <tr><td>put off</td><td>미루다, 연기하다</td><td>Don't put off your homework.</td></tr>
+                            <tr><td>rely on</td><td>~에 의존하다</td><td>Many people rely on smartphones daily.</td></tr>
+                            <tr><td>run out of</td><td>~이 다 떨어지다</td><td>We ran out of milk this morning.</td></tr>
+                            <tr><td>set up</td><td>설치하다, 설립하다</td><td>They set up a new company last year.</td></tr>
+                            <tr><td>sort out</td><td>정리하다, 해결하다</td><td>Let me sort out these documents.</td></tr>
+                            <tr><td>take over</td><td>인수하다, 떠맡다</td><td>A larger firm took over the startup.</td></tr>
+                            <tr><td>turn down</td><td>거절하다, (소리를) 줄이다</td><td>She turned down the job offer.</td></tr>
+                            <tr><td>turn out</td><td>결국 ~로 판명되다</td><td>The rumor turned out to be false.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">분리 가능 구동사</p>
+                    <p>일부 구동사는 분리 가능(separable)하여 목적어가 대명사이면 동사와 부사 사이에 넣는다(turn it down, fill it out). 사용 시 분리 가능 여부를 확인한다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>5-3. 자주 쓰는 관용어 (Idioms)</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>표현</th><th>뜻</th><th>예문(영어)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>a piece of cake</td><td>식은 죽 먹기, 아주 쉬운 일</td><td>The exam was a piece of cake.</td></tr>
+                            <tr><td>break the ice</td><td>어색한 분위기를 깨다</td><td>He told a joke to break the ice.</td></tr>
+                            <tr><td>call it a day</td><td>그만하고 마치다</td><td>Let's call it a day and go home.</td></tr>
+                            <tr><td>cost an arm and a leg</td><td>엄청나게 비싸다</td><td>That new phone costs an arm and a leg.</td></tr>
+                            <tr><td>get the hang of</td><td>~에 익숙해지다, 요령을 터득하다</td><td>You'll soon get the hang of it.</td></tr>
+                            <tr><td>hit the books</td><td>열심히 공부하다</td><td>I have to hit the books tonight.</td></tr>
+                            <tr><td>in a nutshell</td><td>요컨대, 간단히 말해</td><td>In a nutshell, the plan failed.</td></tr>
+                            <tr><td>keep an eye on</td><td>~을 주시하다, 지켜보다</td><td>Please keep an eye on my bag.</td></tr>
+                            <tr><td>on the same page</td><td>같은 생각[입장]이다</td><td>Let's make sure we're on the same page.</td></tr>
+                            <tr><td>once in a blue moon</td><td>아주 드물게</td><td>He visits us once in a blue moon.</td></tr>
+                            <tr><td>out of the blue</td><td>난데없이, 갑자기</td><td>She called me out of the blue.</td></tr>
+                            <tr><td>peace of mind</td><td>마음의 평안</td><td>Insurance gives me peace of mind.</td></tr>
+                            <tr><td>under the weather</td><td>몸이 좀 안 좋은</td><td>I'm feeling a little under the weather today.</td></tr>
+                            <tr><td>the ball is in your court</td><td>결정[행동]은 네게 달렸다</td><td>I've done my part; now the ball is in your court.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">철자 주의: peace of mind</p>
+                    <p>"peace of mind"(마음의 평안)를 흔히 "piece of mind"로 잘못 쓰는데 이는 비표준이다. 상대를 강하게 나무란다는 뜻의 표현은 "give someone a piece of one's mind"이니 구분해 기억한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="strategy">6. 학습 전략과 자료</h2>
+        <details class="section">
+            <summary>6-1. 문법서 · 어휘 암기 앱</summary>
+            <div class="section__body">
+                <p>독학 비중이 큰 과목이므로 매일 짧게라도 꾸준히 하는 습관과 검증된 무료 자료를 조합하는 것이 핵심이다. 아래는 실제 존재하는 자료만 정리했다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>문법서</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Grammar in Use (Cambridge, Raymond Murphy)</td><td>전 세계 표준 문법서. 미국식은 Basic Grammar in Use / Grammar in Use Intermediate, 영국식은 Essential / English Grammar in Use 단계로 나뉜다. 유튜브에 한국인 강사 무료 해설 강의 다수</td></tr>
+                            <tr><td>Azar 시리즈 (Betty Azar)</td><td>표 중심 설명으로 시각적 정리에 강함. 입문용 Basic English Grammar, 중급 Fundamentals of English Grammar, 상급 Understanding and Using English Grammar로 단계가 나뉜다</td></tr>
+                            <tr><td>EBS English의 Grammar in Use 강좌</td><td>위 교재를 따라가는 인강(일부 무료/유료 혼재). 한국어 해설 기반</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>어휘 앱</th><th>플랫폼</th><th>핵심 기능</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Anki / AnkiMobile</td><td>PC·Android 무료, iOS 유료, 웹 무료</td><td>간격 반복(SRS) 알고리즘의 사실상 표준. 기기 간 동기화</td></tr>
+                            <tr><td>Quizlet</td><td>웹·iOS·Android</td><td>낱말카드 직접 제작 또는 공유 세트 활용, 시험 모드</td></tr>
+                            <tr><td>암기고래</td><td>Android·iOS</td><td>음성으로 읽어주는 단어장, 무료 단어 리스트 풍부</td></tr>
+                            <tr><td>메모리워드</td><td>Android</td><td>영단어 암기 + 회화 + 단어장 학습</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">추천</p>
+                    <p>시험 단어·본문 핵심어는 본인이 직접 카드로 만들어 Anki나 Quizlet에 넣고 SRS로 복습하는 방식이 가장 효율적이다.</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>6-2. 무료 학습 사이트 · 유튜브 강의</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>사이트</th><th>강점</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>BBC Learning English</td><td>영국식. 6 Minute English, The English We Speak 등 음성·스크립트·영상 제공 (bbc.co.uk/learningenglish)</td></tr>
+                            <tr><td>VOA Learning English</td><td>미국식. 발음 속도가 느려 초보 청취에 적합. 레벨별 기사 (learningenglish.voanews.com)</td></tr>
+                            <tr><td>Breaking News English</td><td>시사 영어. 한 기사를 여러 단계 난이도로 제공, mp3·핸드아웃 무료 (breakingnewsenglish.com)</td></tr>
+                            <tr><td>News in Levels</td><td>같은 뉴스를 3단계 난이도로 제공, 읽기+듣기 (newsinlevels.com)</td></tr>
+                            <tr><td>Duolingo</td><td>게임형 무료 학습. 가벼운 일일 습관 만들기에 적합 (duolingo.com)</td></tr>
+                            <tr><td>TED</td><td>자막을 모국어/영어로 켜고 따라 읽기. 고급 청취·독해 (ted.com)</td></tr>
+                            <tr><td>Cambridge Dictionary</td><td>영영·영한 사전, 예문·발음 (dictionary.cambridge.org)</td></tr>
+                            <tr><td>EBS English</td><td>한국어 해설 기반 영어 강좌(무료/유료 혼재) (ebse.co.kr)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>한국인 학습자 대상 무료 유튜브 강의로는 해커스톡(왕초보 기초 회화), 구슬쌤(실전 표현·발음), 라이브아카데미(실전 회화), 영어독립(기초 말문 트기), 캘리쌤 브이로그 영어(원어민 실전 표현), TED 공식 채널(고급 청취) 등이 있다.</p>
+                <div class="callout info">
+                    <p class="callout__title">레벨업 동선 예시</p>
+                    <p>영어독립(말문 트기) -&gt; 구슬쌤(발음) -&gt; 라이브아카데미(실전 표현) -&gt; TED(고급 청취).</p>
+                </div>
+            </div>
+        </details>
+        <details class="section">
+            <summary>6-3. 단어 암기법 · 독해 연습법</summary>
+            <div class="section__body">
+                <p><strong>단어 암기법 (간격 반복 + 어원 + 감각 활용):</strong></p>
+                <ol>
+                    <li>간격 반복(Spaced Repetition): 새 단어를 학습 직후 -&gt; 1시간 후 -&gt; 하루 뒤 -&gt; 3일 -&gt; 1주 -&gt; 2주로 복습 간격을 점점 늘린다(Anki가 자동 관리).</li>
+                    <li>어원(Etymology) 묶음 암기: 어근 단위로 외운다. 예) bene-(라틴어 '좋은/잘') -&gt; benefit, benevolent, benefactor를 한 덩어리로.</li>
+                    <li>소리 내어 외우기: 발음·억양·리듬까지 입으로 따라 한다(이 페이지의 🔊 발음 버튼 활용).</li>
+                    <li>이미지 연상: 뜻을 장면으로 떠올린다. 예) glacier(빙하) -&gt; 천천히 흘러내리는 거대한 얼음 덩어리.</li>
+                    <li>예문·연어와 함께: 단어 단독이 아니라 문장·연어(collocation) 단위로 저장한다. 예) make a decision, heavy rain.</li>
+                </ol>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>방식</th><th>목적</th><th>방법</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>정독(Intensive Reading)</td><td>새 문법·구문·어휘 습득</td><td>본문을 한 문장씩 정확히 분석, 모르는 단어 정리 후 반복 학습</td></tr>
+                            <tr><td>다독(Extensive Reading)</td><td>속도·유창성·문맥 추론력</td><td>쉽고 재미있는 글을 사전 없이 빠르게, 문맥으로 의미 추론</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>다독용으로는 News in Levels, Breaking News English처럼 난이도가 조절된 자료가 입문에 좋다. 모르는 단어·표현은 어휘장으로 따로 관리해 반복한다(다독 중에는 표시만, 정독 시 정리).</p>
+            </div>
+        </details>
+        <details class="section">
+            <summary>6-4. 방통대 대학영어 대비 팁</summary>
+            <div class="section__body">
+                <div class="callout tip">
+                    <p class="callout__title">핵심 대비 포인트</p>
+                    <p>1) 본문 정독이 1순위: 해석본과 영문을 대조하며 내용을 이해한다(문법 단답보다 내용 이해 문제가 많음).<br>
+                    2) 워크북·수업 연습문제 필수.<br>
+                    3) 출제 경향: 기말은 교재 후반부 비중이 높다.<br>
+                    4) 교재 변경 유의: 2024년부터 교재가 바뀌었으니 최신 강의·교재 기준으로 준비한다.<br>
+                    5) 평가 구조 확인: 중간평가(과제물)와 기말시험으로 나뉜다. 수강 학기의 성적평가 안내와 강좌 공지를 확인한다.<br>
+                    6) 기출 활용: KNOU 기출문제·OMR 자동채점 서비스로 문제 유형과 시간 배분을 미리 연습한다.</p>
+                </div>
+                <blockquote>추천 루틴(예시): 매일 단어 앱 SRS 10분 + 본문 1단락 정독 + 난이도 조절 뉴스 1편 다독, 주말에 기출 1회분 풀이.</blockquote>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 대학영어 기말시험에서 상대적으로 출제 비중이 높은 구간은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">교재 후반부(Part II, Unit 9~15). 문법 단답보다 본문 내용 이해를 묻는 문제가 많으므로 후반부 본문 정독이 가장 중요하다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

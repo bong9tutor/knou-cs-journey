@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>유비쿼터스컴퓨팅개론 - 어디에나 스며든 컴퓨팅</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#intro">1. 유비쿼터스 컴퓨팅이란</a>
+            <a href="#weiser">2. 마크 와이저와 캄 테크놀로지</a>
+            <a href="#space">3. 유비쿼터스 공간과 5C·5Any</a>
+            <a href="#xr">4. VR·AR·메타버스</a>
+            <a href="#soc">5. 디바이스 기술 1: SoC와 MEMS</a>
+            <a href="#nano">6. 디바이스 기술 2: 나노와 전지</a>
+            <a href="#iot">7. 유비쿼터스 네트워크와 IoT</a>
+            <a href="#blockchain">8. 블록체인과 핀테크</a>
+            <a href="#cloud">9. 클라우드 컴퓨팅</a>
+            <a href="#usn">10. 유비쿼터스 센서 네트워크(USN)</a>
+            <a href="#context">11. 상황인식 처리 기술</a>
+            <a href="#hci">12. HCI와 HRI</a>
+            <a href="#security">13. 정보보호와 프라이버시</a>
+            <a href="#car">14. 스마트 자동차와 자율주행</a>
+            <a href="#bigdata">15. 빅데이터</a>
+            <a href="#ai">16. 인공지능</a>
+            <a href="#future">17. 응용 분야와 미래 전망</a>
+            <a href="#glossary">18. 핵심 용어 빠른 정리</a>
+            <a href="#resources">19. 무료 학습 자료</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>유비쿼터스컴퓨팅개론</h1>
+        <blockquote>컴퓨터가 일상 곳곳에 "보이지 않게" 스며들어 우리를 돕는 세상을 다루는 과목이다. 센서, 네트워크, IoT, 상황인식, 인공지능까지 미래 컴퓨팅의 큰 그림을 표·예시·플래시카드·퀴즈로 훑어보자.</blockquote>
+
+        <div class="callout info">
+            <p class="callout__title">교재 서지</p>
+            <p>정광식·김성석·양순옥, 『유비쿼터스컴퓨팅개론』, 한국방송통신대학교출판문화원, 2024, 292쪽, 전 15장. ISBN 9788920047480. 이 페이지는 교재 흐름을 따르되 표준 컴퓨터과학 지식으로 개념을 보강했다.</p>
+        </div>
+
+        <h2 id="intro">1. 유비쿼터스 컴퓨팅이란</h2>
+        <details class="section" open>
+            <summary>개념과 패러다임 변화</summary>
+            <div class="section__body">
+                <p>"유비쿼터스(ubiquitous)"는 라틴어로 "어디에나 존재하는"이라는 뜻이다. 유비쿼터스 컴퓨팅(Ubiquitous Computing, 줄여서 Ubicomp 또는 유비컴)은 컴퓨터가 책상 위 한 대의 PC에 갇혀 있지 않고, 우리 주변의 모든 사물과 공간 속에 녹아들어 언제 어디서나 자연스럽게 정보 서비스를 제공하는 환경이다.</p>
+                <div class="callout tip">
+                    <p class="callout__title">핵심 한 줄</p>
+                    <p>"사람이 컴퓨터를 의식하지 않고도 컴퓨터의 도움을 받는 세상." PC 시대가 "사람이 컴퓨터 앞으로 간다"였다면, 유비쿼터스 시대는 "컴퓨터가 사람을 따라온다"로 바뀐다.</p>
+                </div>
+                <p>마크 와이저(Mark Weiser)가 정리한 컴퓨팅 패러다임의 세 단계 변화가 출발점이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>시대</th><th>사람 : 컴퓨터</th><th>대표 기기</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>메인프레임 시대</td><td>다(多) : 1</td><td>대형 컴퓨터</td><td>여러 사람이 한 대를 나눠 씀</td></tr>
+                            <tr><td>PC 시대</td><td>1 : 1</td><td>데스크톱, 노트북</td><td>한 사람이 한 대를 독점</td></tr>
+                            <tr><td>유비쿼터스 시대</td><td>1 : 다(多)</td><td>스마트폰, 센서, 웨어러블, IoT</td><td>한 사람이 수많은 컴퓨터에 둘러싸임</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 한 사람이 수많은 컴퓨터에 둘러싸이는(1:다) 시대는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">유비쿼터스 시대. 메인프레임(다:1) -> PC(1:1) -> 유비쿼터스(1:다)로 비율이 역전된다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="weiser">2. 마크 와이저와 캄 테크놀로지</h2>
+        <details class="section">
+            <summary>와이저의 비전과 차분한 기술</summary>
+            <div class="section__body">
+                <p>마크 와이저(Mark Weiser)는 미국 제록스 PARC(Xerox Palo Alto Research Center) 연구소의 과학자로, 1988년 무렵 "유비쿼터스 컴퓨팅"이라는 용어를 처음 만들었다. 1991년 논문 "The Computer for the 21st Century"(21세기를 위한 컴퓨터)에 그 비전이 담겨 있다.</p>
+                <blockquote>"가장 심오한 기술은 사라지는 기술이다. 그것은 일상의 직물 속에 스며들어 마침내 일상과 구별할 수 없게 된다." (The most profound technologies are those that disappear.)</blockquote>
+                <p>여기서 "사라진다"는 물리적으로 없어진다는 뜻이 아니라, 사용자가 그 존재를 의식하지 못할 만큼 자연스러워진다는 뜻이다. 글씨를 쓸 때 "지금 문자라는 기술을 쓴다"고 의식하지 않듯, 컴퓨터도 그렇게 되어야 한다는 것이다.</p>
+                <p><strong>캄 테크놀로지(Calm Technology, 차분한 기술)</strong>는 와이저와 존 실리 브라운(John Seely Brown)이 1995년 제시한 개념이다. 기술이 사용자의 주의(attention)를 한가운데로 끌어당겨 정신없게 만들지 않고, 평소엔 배경(주변부, periphery)에 머물다가 필요할 때만 살짝 중심으로 들어와야 한다는 디자인 철학이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>나쁜 예</td><td>1분마다 알림이 울려 일을 방해하는 앱</td></tr>
+                            <tr><td>좋은 예</td><td>주전자가 끓으면 소리로 알려주기 (평소엔 의식 안 함, 필요 순간만 알림)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">캄 테크놀로지 핵심 원칙</p>
+                    <p>정보는 주변부(periphery)와 중심부(center)를 자연스럽게 오갈 수 있어야 한다. 인지 부담을 늘리지 말고 줄여야 하며, 기술은 사람을 안심시켜야지 불안하게 만들면 안 된다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. "가장 심오한 기술은 사라지는 기술"이라고 말한 사람은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">마크 와이저(Mark Weiser). 제록스 PARC 소속, 1991년 논문에서 유비쿼터스 컴퓨팅 비전을 제시했다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="space">3. 유비쿼터스 공간과 5C·5Any</h2>
+        <details class="section">
+            <summary>세 가지 공간, 5C, 5Any</summary>
+            <div class="section__body">
+                <p>교재는 유비쿼터스 컴퓨팅을 "공간의 융합"으로 설명한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>공간</th><th>의미</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>물리 공간(Physical Space)</td><td>우리가 사는 현실 세계</td><td>방, 거리, 사물</td></tr>
+                            <tr><td>전자 공간(Electronic Space)</td><td>인터넷, 가상 세계</td><td>웹사이트, 데이터베이스</td></tr>
+                            <tr><td>유비쿼터스 공간(Ubiquitous Space)</td><td>물리 공간 + 전자 공간의 융합</td><td>스마트홈, 스마트시티</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>유비쿼터스 공간은 현실의 사물에 컴퓨터/센서/통신 기능을 심어, 물리 공간 자체가 똑똑해진 세계다.</p>
+                <p>요약하면 유비쿼터스 컴퓨팅은 <strong>"5C를 5Any화한 것"</strong>이다. 즉 5가지 기능을 시간/장소/망/기기/서비스의 제약 없이 누리게 하는 것이다. 아래 플래시카드를 눌러 뜻을 확인해 보자.</p>
+                <p class="toc__title">5C: 5가지 기능 요소</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Computing</div><div class="back">컴퓨팅 - 정보를 처리하는 능력</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Communication</div><div class="back">통신 - 기기끼리 데이터를 주고받는 능력</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Connectivity</div><div class="back">접속성 - 언제든 네트워크에 연결되는 능력</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Contents</div><div class="back">콘텐츠 - 사용자에게 제공되는 정보/서비스</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Calm</div><div class="back">고요함 - 사용자를 방해하지 않는 차분한 동작</div></div></div></li>
+                </ul>
+                <p class="toc__title">5Any: 5가지 "무엇이든"</p>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Anytime</div><div class="back">언제나</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Anywhere</div><div class="back">어디서나</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Anynetwork</div><div class="back">어떤 망으로든</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Anydevice</div><div class="back">어떤 기기로든</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Anyservice</div><div class="back">어떤 서비스든</div></div></div></li>
+                </ul>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 5C 중 "사용자를 방해하지 않는 차분한 동작"을 뜻하는 요소는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">Calm(고요함). 와이저의 캄 테크놀로지 철학이 5C 안에도 들어가 있다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="xr">4. VR·AR·메타버스</h2>
+        <details class="section">
+            <summary>가상현실, 증강현실, 메타버스</summary>
+            <div class="section__body">
+                <p>유비쿼터스 공간을 체험하는 인터페이스로 가상/증강현실과 메타버스가 자주 등장한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>용어</th><th>의미</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>VR(가상현실, Virtual Reality)</td><td>100% 디지털로 만든 가상 세계에 몰입</td><td>VR 헤드셋으로 즐기는 게임</td></tr>
+                            <tr><td>AR(증강현실, Augmented Reality)</td><td>현실 위에 디지털 정보를 겹쳐 보여줌</td><td>포켓몬 GO, 카메라 번역</td></tr>
+                            <tr><td>MR(혼합현실, Mixed Reality)</td><td>현실과 가상 객체가 상호작용</td><td>마이크로소프트 홀로렌즈</td></tr>
+                            <tr><td>메타버스(Metaverse)</td><td>현실과 연결된 3D 가상 사회/경제 공간</td><td>제페토, 로블록스</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li>메타버스는 "메타(meta, 초월) + 유니버스(universe, 세계)"의 합성어다.</li>
+                    <li>단순 게임을 넘어 사회 활동, 경제 활동(아이템 거래, 가상 부동산)까지 이뤄지는 점이 특징이다.</li>
+                    <li>유비쿼터스 관점에서 메타버스는 물리 공간과 전자 공간을 잇는 대표적 응용이다.</li>
+                </ul>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 현실 위에 디지털 정보를 겹쳐 보여주는 기술은? (예: 포켓몬 GO)</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">AR(증강현실). 완전히 가상 세계에 몰입하는 VR과 구분한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="soc">5. 디바이스 기술 1: SoC와 MEMS</h2>
+        <details class="section">
+            <summary>작고 값싼 컴퓨터를 만드는 소자 기술</summary>
+            <div class="section__body">
+                <p>유비쿼터스가 가능하려면 컴퓨터가 작고 값싸고 어디에나 심을 수 있어야 한다. 그 바탕이 반도체/소자 기술이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>기술</th><th>무엇인가</th><th>특징/예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>SoC(System on Chip)</td><td>CPU·메모리·그래픽·통신 모뎀 등 여러 기능을 하나의 칩에 집적</td><td>작고 저전력·저가 -> 스마트폰/IoT 필수. 예: 스마트폰 AP</td></tr>
+                            <tr><td>MEMS(Micro Electro Mechanical Systems)</td><td>반도체 공정으로 만든 아주 작은 기계 장치(센서/액추에이터)</td><td>기계적 움직임(기울기·진동·압력)을 전기 신호로 변환. 예: 가속도·자이로 센서, 마이크, 에어백 충격 센서</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">기억 포인트</p>
+                    <p>SoC는 "기능을 한 칩에 모은 것", MEMS는 "손톱보다 작은 기계(마이크로 머신)". MEMS 덕분에 스마트폰이 기울기·움직임을 안다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 스마트폰의 화면 자동 회전을 담당하는, 움직임을 전기 신호로 바꾸는 미세 기계 소자는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">MEMS(가속도/자이로 센서). 미세전자기계시스템이다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="nano">6. 디바이스 기술 2: 나노와 전지</h2>
+        <details class="section">
+            <summary>나노 기술과 차세대 배터리</summary>
+            <div class="section__body">
+                <p><strong>나노 기술(Nanotechnology)</strong>: 1나노미터(nm)는 10억분의 1미터다. 원자/분자 수준에서 물질을 다루는 기술로, 더 작고 강하고 효율적인 소자를 만들 수 있게 한다. 예: 나노 소재 센서, 그래핀(graphene) 같은 신소재, 초소형 반도체 공정.</p>
+                <p><strong>차세대 전지(배터리)</strong>: 유비쿼터스 기기는 늘 켜져 있어야 하므로 전원 문제가 핵심이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>전지/기술</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>리튬이온 전지</td><td>현재 가장 널리 쓰이는 충전 전지</td></tr>
+                            <tr><td>전고체 전지</td><td>고체 전해질로 안전성/용량 향상</td></tr>
+                            <tr><td>연료전지</td><td>화학 반응으로 전기를 생산</td></tr>
+                            <tr><td>에너지 하베스팅</td><td>빛/진동/열에서 전기를 모음. 배터리 교체 없이 작동하는 초저전력 센서에 특히 중요</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 배터리 교체 없이 빛·진동·열에서 전기를 모아 초저전력 센서를 돌리는 기술은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">에너지 하베스팅(Energy Harvesting).</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="iot">7. 유비쿼터스 네트워크와 IoT</h2>
+        <details class="section">
+            <summary>무선 통신, RFID/NFC, 사물인터넷, 기반 기술</summary>
+            <div class="section__body">
+                <p>기기들이 연결되려면 다양한 무선 통신이 필요하다. 거리/속도/전력에 따라 골라 쓴다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>기술</th><th>통신 거리</th><th>특징/용도</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>RFID</td><td>수 cm ~ 수 m</td><td>태그를 읽어 사물 식별, 전원 없이 동작 가능</td></tr>
+                            <tr><td>NFC</td><td>약 10cm</td><td>가까이 대면 통신, 모바일 결제/교통카드</td></tr>
+                            <tr><td>블루투스(BLE)</td><td>~10m</td><td>이어폰, 웨어러블, 저전력</td></tr>
+                            <tr><td>와이파이(Wi-Fi)</td><td>~100m</td><td>빠른 인터넷 접속</td></tr>
+                            <tr><td>Zigbee</td><td>실내 약 10~20m (메시로 확장)</td><td>저전력 메시 네트워크, 스마트홈 센서</td></tr>
+                            <tr><td>UWB(초광대역)</td><td>수 m ~ 수십 m</td><td>넓은 대역으로 고속·정밀 측위, 스마트키/실내 위치 추적</td></tr>
+                            <tr><td>LoRa/NB-IoT</td><td>수 km</td><td>저전력 광역, 도시 단위 IoT</td></tr>
+                            <tr><td>5G</td><td>광역</td><td>초고속/초저지연, 자율주행/실시간 IoT</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">RFID vs NFC</p>
+                    <p>RFID(Radio Frequency Identification)는 무선 주파수로 태그의 정보를 읽는다. 태그 + 리더로 구성하며 물류 추적·도서 관리·하이패스에 쓴다. 배터리 없는 "수동형(passive)" 태그가 많다. NFC(Near Field Communication)는 RFID의 한 갈래로 약 10cm 이내 초근거리 양방향 통신이라 스마트폰 결제·교통카드·기기 페어링에 쓴다.</p>
+                </div>
+                <p><strong>사물인터넷(IoT, Internet of Things)</strong>은 사물(things)에 센서와 통신 기능을 넣어 인터넷에 연결하고, 사람의 개입을 최소화해 사물끼리 데이터를 주고받게 하는 기술/환경이다.</p>
+                <ul>
+                    <li>유비쿼터스와 목표는 거의 같지만, IoT는 "사물 연결"이라는 실제 구현 기술에 초점이 있고, 유비쿼터스는 "환경/비전"에 가깝다.</li>
+                    <li>IoT 4단계 구조: (1) 센싱 -> (2) 네트워크 전송 -> (3) 데이터 처리/분석 -> (4) 서비스 제공.</li>
+                    <li>예: 스마트 냉장고가 우유 떨어진 걸 감지해 자동 주문, 스마트 가로등이 사람 없을 때 밝기를 낮춤.</li>
+                </ul>
+                <p class="toc__title">유비쿼터스 네트워크를 떠받치는 기반 기술</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>기술</th><th>역할</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>무선LAN(Wi-Fi, IEEE 802.11)</td><td>건물·가정 규모 근거리 무선 인터넷 접속, 유선 없이 다수 기기 연결</td></tr>
+                            <tr><td>UWB(초광대역)</td><td>매우 넓은 대역으로 고속 전송과 cm급 정밀 측위 -> 실내 위치 추적·스마트키</td></tr>
+                            <tr><td>IPv6</td><td>약 128비트 주소 체계로 IPv4(32비트) 고갈 해결, 수많은 사물에 고유 주소 부여</td></tr>
+                            <tr><td>이동통신 2G~5G</td><td>2G(음성·문자) -> 3G(영상통화·모바일 인터넷) -> 4G/LTE(고속 데이터) -> 5G(초고속·초저지연·초연결)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 32비트 주소 고갈 문제를 약 128비트 주소로 해결해 사물마다 고유 주소를 부여하는 것은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">IPv6. IoT의 대규모 연결을 가능하게 한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="blockchain">8. 블록체인과 핀테크</h2>
+        <details class="section">
+            <summary>분산 원장과 금융 기술</summary>
+            <div class="section__body">
+                <p><strong>블록체인(Blockchain)</strong>은 거래 기록(데이터)을 "블록"에 담고, 블록을 사슬(chain)처럼 연결해 여러 참여자가 똑같은 장부를 나눠 갖는 분산 원장(distributed ledger) 기술이다.</p>
+                <ul>
+                    <li><strong>분산</strong>: 중앙 관리자 없이 모든 참여자가 장부 사본을 가진다.</li>
+                    <li><strong>위변조 어려움</strong>: 각 블록은 앞 블록의 해시(hash) 값을 담아 연결되므로, 하나를 고치면 뒤가 다 깨진다.</li>
+                    <li><strong>투명성</strong>: 거래가 모두에게 공개되어 신뢰를 만든다.</li>
+                    <li><strong>응용</strong>: 암호화폐(비트코인), 스마트 계약(자동 실행 계약), 공급망 추적, NFT.</li>
+                </ul>
+                <p><strong>핀테크(FinTech)</strong>는 "금융(Finance) + 기술(Technology)"의 합성어로, IT로 금융 서비스를 혁신하는 것이다. 예: 모바일 간편 송금, 간편결제(QR/NFC), 인터넷 전문은행, 로보어드바이저(자동 투자 자문). 유비쿼터스 환경에서 결제/금융이 시간·장소 제약 없이 이뤄지는 모습이다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 블록체인에서 한 블록을 고치면 뒤 블록이 모두 깨지게 만드는, 앞 블록에서 가져와 담는 값은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">해시(hash) 값. 이 연결 때문에 위변조가 어렵다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="cloud">9. 클라우드 컴퓨팅</h2>
+        <details class="section">
+            <summary>서비스 모델, 배포 모델, 엣지 컴퓨팅</summary>
+            <div class="section__body">
+                <p>클라우드 컴퓨팅(Cloud Computing)은 내 컴퓨터가 아니라 인터넷 너머의 데이터센터 자원(서버, 저장장치, 소프트웨어)을 필요한 만큼 빌려 쓰는 방식이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>모델</th><th>빌려 쓰는 것</th><th>비유</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>IaaS(Infrastructure as a Service)</td><td>서버/저장장치 같은 인프라</td><td>빈 땅을 빌림</td><td>AWS EC2</td></tr>
+                            <tr><td>PaaS(Platform as a Service)</td><td>개발/실행 플랫폼</td><td>집의 골조까지 빌림</td><td>Google App Engine</td></tr>
+                            <tr><td>SaaS(Software as a Service)</td><td>완성된 소프트웨어</td><td>다 지어진 집에 입주</td><td>Gmail, 구글 문서</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>배포 모델</strong>: 퍼블릭 클라우드(누구나 인터넷으로 사용, AWS·Azure), 프라이빗 클라우드(한 조직 전용), 하이브리드 클라우드(둘을 섞어 씀).</p>
+                <p>유비쿼터스 기기는 처리 능력이 약하므로 무거운 연산과 저장을 클라우드에 맡긴다. 그러나 모든 데이터를 클라우드까지 보내면 지연(latency)이 생기므로, 데이터가 생기는 현장 가까이에서 먼저 처리하는 <strong>엣지 컴퓨팅(Edge Computing)</strong>이 보완책으로 쓰인다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>클라우드 컴퓨팅</th><th>엣지 컴퓨팅</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>처리 위치</td><td>멀리 있는 데이터센터</td><td>기기/현장 가까이</td></tr>
+                            <tr><td>지연 시간</td><td>상대적으로 큼</td><td>매우 작음</td></tr>
+                            <tr><td>적합한 일</td><td>대용량 분석, 장기 저장</td><td>실시간 반응(자율주행, 공장)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. Gmail처럼 완성된 소프트웨어를 빌려 쓰는 클라우드 서비스 모델은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">SaaS(Software as a Service). "다 지어진 집에 입주"에 비유한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="usn">10. 유비쿼터스 센서 네트워크(USN)</h2>
+        <details class="section">
+            <summary>계층 구조, 미들웨어, 센서 노드</summary>
+            <div class="section__body">
+                <p>USN(Ubiquitous Sensor Network)은 여러 곳에 뿌려진 센서들이 데이터를 감지해, 네트워크로 모으고, 미들웨어가 지능적으로 분석해 서비스로 제공하는 구조다. 무선 센서 네트워크(WSN, Wireless Sensor Network)를 유비쿼터스 환경으로 확장한 개념이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>계층</th><th>하는 일</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>센서 네트워크 계층</td><td>센서/RFID가 환경을 감지해 싱크 노드로 전달</td></tr>
+                            <tr><td>접속 네트워크 계층</td><td>게이트웨이가 센서망을 외부망에 연결</td></tr>
+                            <tr><td>미들웨어 계층</td><td>여러 종류 센서 데이터를 모으고 가공</td></tr>
+                            <tr><td>응용 서비스 계층</td><td>물류, 재난 감시, 농업, 시설 관리 등 실제 서비스</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">미들웨어(Middleware)란</p>
+                    <p>응용 프로그램과 하드웨어(센서/네트워크) 사이에 끼어 둘을 매끄럽게 연결하는 중간 소프트웨어다. 서로 다른 언어를 쓰는 센서들과 응용 사이의 "통역사"에 비유한다. 서로 다른 센서의 데이터 형식을 통일하고, 데이터를 필터링/통합하며, 응용에 표준 인터페이스를 제공한다.</p>
+                </div>
+                <p><strong>센서 노드의 구성</strong>: 하나의 센서 노드는 보통 (1) 센서, (2) 처리부(MCU), (3) 통신 모듈, (4) 전원으로 이뤄진다. 배터리로 오래 동작해야 하므로 저전력 설계가 핵심이다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 서로 다른 센서의 데이터 형식을 통일하고 응용에 표준 인터페이스를 주는 "통역사" 소프트웨어는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">미들웨어(Middleware). USN 미들웨어 계층의 핵심이다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="context">11. 상황인식 처리 기술</h2>
+        <details class="section">
+            <summary>컨텍스트(5W1H), 동작 흐름, 예시</summary>
+            <div class="section__body">
+                <p>상황인식 컴퓨팅(Context-Aware Computing)은 컴퓨터가 사용자의 "상황(context)"을 스스로 파악해, 시키지 않아도 알맞은 서비스를 제공하는 기술이다. 유비쿼터스의 "지능"을 담당하는 핵심이다. 컨텍스트(맥락)는 사용자나 환경에 관한 모든 정보이며 흔히 "5W1H"로 설명한다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>요소</th><th>의미</th><th>예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Who(누가)</td><td>사용자 신원</td><td>김철수</td></tr>
+                            <tr><td>What(무엇을)</td><td>무슨 활동/객체</td><td>회의 중</td></tr>
+                            <tr><td>Where(어디서)</td><td>위치</td><td>회의실</td></tr>
+                            <tr><td>When(언제)</td><td>시간</td><td>오후 2시</td></tr>
+                            <tr><td>Why(왜)</td><td>의도/목적</td><td>발표 준비</td></tr>
+                            <tr><td>How(어떻게)</td><td>방법/상태</td><td>조용히</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>동작 흐름</strong>: (1) 컨텍스트 수집(센서/GPS/일정에서 정보를 모음) -> (2) 컨텍스트 해석/추론("지금 회의 중"이라고 판단) -> (3) 적응 행동(자동으로 휴대폰을 무음으로 바꿈).</p>
+                <ul>
+                    <li>위치를 인식해 "집에 도착하면 조명을 켠다".</li>
+                    <li>운전 중임을 인식해 메시지를 음성으로 읽어준다.</li>
+                    <li>사용자가 잠든 것을 감지해 음악을 끈다.</li>
+                </ul>
+                <div class="callout warn">
+                    <p class="callout__title">주의</p>
+                    <p>상황인식이 정확하려면 센서 데이터의 불확실성을 다루고, 사용자의 프라이버시를 지키는 일이 중요하다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 컨텍스트를 설명하는 6가지 요소 "5W1H"에서 1H는 무엇인가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">How(어떻게) - 방법/상태. 나머지 5W는 Who/What/Where/When/Why.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="hci">12. HCI와 HRI</h2>
+        <details class="section">
+            <summary>사람-컴퓨터·사람-로봇 상호작용</summary>
+            <div class="section__body">
+                <p><strong>HCI(Human-Computer Interaction)</strong>는 사람이 컴퓨터를 더 쉽고 자연스럽게 쓰도록 인터페이스를 연구하는 분야다.</p>
+                <ul>
+                    <li>발전 흐름: 명령어 입력(CLI) -> 그래픽 UI(GUI, 마우스) -> 자연스러운 인터페이스(NUI: 터치, 음성, 제스처).</li>
+                    <li>유비쿼터스 시대엔 키보드 없이도 말/동작/시선으로 컴퓨터를 다루는 NUI가 중요하다.</li>
+                    <li>예: 음성비서(시리, 빅스비), 동작 인식, 시선 추적.</li>
+                </ul>
+                <p><strong>HRI(Human-Robot Interaction)</strong>는 사람과 로봇이 협력/소통하는 방법을 다룬다. 예: 안내 로봇, 돌봄 로봇, 협동 로봇(코봇, cobot). 로봇이 사람의 표정/말/동작을 이해하고 적절히 반응하도록 만드는 것이 목표다.</p>
+                <div class="callout tip">
+                    <p class="callout__title">좋은 상호작용 설계 원칙</p>
+                    <p>직관성(쉽게 알 수 있게), 일관성(같은 동작은 같은 결과), 피드백(반응을 즉시 알려줌), 오류 관용(실수해도 복구 가능).</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 터치·음성·제스처처럼 키보드 없이 자연스럽게 다루는 인터페이스를 뜻하는 약어는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">NUI(Natural User Interface). CLI -> GUI -> NUI 순으로 발전했다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="security">13. 정보보호와 프라이버시</h2>
+        <details class="section">
+            <summary>CIA 3대 목표, 특수 위협, 대응 기술</summary>
+            <div class="section__body">
+                <p>기기와 센서가 어디에나 있다는 건, 내 정보가 어디서나 수집될 수 있다는 뜻이기도 하다. 그래서 보안과 프라이버시가 유비쿼터스의 가장 큰 숙제다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>목표</th><th>의미</th><th>위협 예</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>기밀성(Confidentiality)</td><td>허락된 사람만 본다</td><td>도청, 정보 유출</td></tr>
+                            <tr><td>무결성(Integrity)</td><td>데이터가 위변조되지 않는다</td><td>데이터 변조</td></tr>
+                            <tr><td>가용성(Availability)</td><td>필요할 때 쓸 수 있다</td><td>서비스 마비(DDoS)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>유비쿼터스 환경의 특수한 위협</strong>: 추적(tracking, RFID/위치로 동선 노출), 프라이버시 침해(동의 없는 행동/생체 정보 수집), 기기 취약점(작고 값싼 IoT 기기는 보안이 약해 해킹 통로).</p>
+                <p><strong>대응 기술과 원칙</strong>: 암호화(데이터를 잠금), 인증(누구인지 확인), 접근 제어(권한 관리), 프라이버시 보호 설계(Privacy by Design, 처음부터 개인정보 최소 수집), 익명화/가명화로 개인 식별 어렵게 하기.</p>
+                <div class="callout info">
+                    <p class="callout__title">RFID/USN 특화 보안과 추가 보호 기술</p>
+                    <p>무선으로 동작하는 RFID 태그와 USN 센서 노드는 세 가지 위협에 노출된다. (1) 태그 인증이 없으면 위조 태그가 정품 행세를 하므로 태그-리더 간 상호 인증이 필요하다. (2) 무선 신호는 도청(스니핑)에 취약하다. (3) 태그 정보를 베껴 같은 태그를 만드는 복제(클로닝) 위협이 있어 비화(암호화) 통신과 일회성 응답으로 막는다. 사용자 식별에는 위변조가 어려운 생체인식(지문·홍채·얼굴)이 비밀번호보다 널리 쓰이고, 콘텐츠 저작권은 DRM(Digital Rights Management)으로 무단 복제·배포를 제어한다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 정보보안의 3대 목표(CIA)는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">기밀성(Confidentiality), 무결성(Integrity), 가용성(Availability).</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="car">14. 스마트 자동차와 자율주행</h2>
+        <details class="section">
+            <summary>핵심 기술과 자율주행 단계(SAE 0~5)</summary>
+            <div class="section__body">
+                <p>스마트 자동차(Smart Car)는 IT 기술을 결합해 더 안전하고 편리하게 만든 차다. 그 정점이 자율주행차다.</p>
+                <ul>
+                    <li><strong>센서</strong>: 카메라, 레이더(전파로 거리 측정), 라이다(LiDAR, 레이저로 3D 지도 생성).</li>
+                    <li><strong>V2X(Vehicle to Everything) 통신</strong>: 차가 다른 차(V2V), 도로 인프라(V2I), 보행자와 통신.</li>
+                    <li><strong>ADAS(첨단 운전자 보조 시스템)</strong>: 차선 이탈 경고, 자동 긴급 제동, 스마트 크루즈.</li>
+                </ul>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>단계</th><th>이름</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0</td><td>비자동화</td><td>사람이 모두 운전</td></tr>
+                            <tr><td>1</td><td>운전자 보조</td><td>차선 유지 또는 속도 중 하나 보조</td></tr>
+                            <tr><td>2</td><td>부분 자동화</td><td>조향+속도 동시 보조(운전자 감시 필수)</td></tr>
+                            <tr><td>3</td><td>조건부 자동화</td><td>특정 조건에서 차가 운전, 요청 시 사람 개입</td></tr>
+                            <tr><td>4</td><td>고도 자동화</td><td>특정 구역에선 사람 없이 운전</td></tr>
+                            <tr><td>5</td><td>완전 자동화</td><td>모든 상황을 차가 운전</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>스마트 자동차는 센서 + 네트워크 + 실시간 처리(엣지) + AI가 모두 결합된 유비쿼터스의 대표 응용이다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 레이저로 주변을 스캔해 3D 지도를 만드는 자율주행 핵심 센서는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">라이다(LiDAR). 전파를 쓰는 레이더와 구분한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="bigdata">15. 빅데이터</h2>
+        <details class="section">
+            <summary>3V(확장 5V)와 처리 기술</summary>
+            <div class="section__body">
+                <p>빅데이터(Big Data)는 너무 크고 빠르고 다양해서 기존 방법으로 다루기 어려운 데이터, 그리고 그것을 처리/분석하는 기술이다. 유비쿼터스 기기들이 쏟아내는 데이터가 빅데이터의 원천이다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>특성</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Volume(규모)</td><td>데이터의 양이 매우 큼</td></tr>
+                            <tr><td>Velocity(속도)</td><td>데이터가 빠르게 생성/처리됨</td></tr>
+                            <tr><td>Variety(다양성)</td><td>정형/비정형 등 형태가 다양함</td></tr>
+                            <tr><td>(확장) Veracity(정확성)</td><td>데이터의 신뢰도</td></tr>
+                            <tr><td>(확장) Value(가치)</td><td>분석으로 얻는 가치</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>처리 기술과 활용</strong>: 분산 처리(하둡 Hadoop = HDFS+맵리듀스, 스파크 Spark로 여러 컴퓨터가 나눠 처리), 데이터 종류(정형 = 표/DB, 비정형 = 텍스트·이미지·영상·SNS), 활용(추천 시스템, 수요 예측, 질병 예측, 교통 흐름 분석).</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 빅데이터의 기본 3V는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">Volume(규모), Velocity(속도), Variety(다양성). 확장하면 Veracity(정확성), Value(가치)를 더한 5V.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ai">16. 인공지능</h2>
+        <details class="section">
+            <summary>AI/ML/DL 관계와 학습 방식</summary>
+            <div class="section__body">
+                <p>인공지능(Artificial Intelligence)은 사람처럼 학습/추론/판단하는 능력을 컴퓨터로 구현하는 기술이다. 유비쿼터스 환경의 "두뇌" 역할을 하며, 수집한 데이터로 똑똑한 서비스를 만든다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>용어</th><th>의미</th><th>관계</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>인공지능(AI)</td><td>지능을 흉내내는 모든 기술</td><td>가장 넓음</td></tr>
+                            <tr><td>머신러닝(ML)</td><td>데이터로 스스로 규칙을 학습</td><td>AI의 한 갈래</td></tr>
+                            <tr><td>딥러닝(DL)</td><td>인공신경망을 깊게 쌓아 학습</td><td>ML의 한 갈래</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>머신러닝 학습 방식</strong>: 지도학습(Supervised, 정답 있는 데이터로 학습 - 스팸 분류·가격 예측), 비지도학습(Unsupervised, 정답 없이 패턴/군집 발견 - 고객 분류), 강화학습(Reinforcement, 보상으로 시행착오 학습 - 게임·로봇 제어).</p>
+                <p>상황인식 추론, 음성/영상 인식, 자율주행, 추천이 모두 AI 덕분에 가능하다. 미래에는 점점 더 많은 기기에 AI가 들어가는 "온디바이스 AI", 그리고 생성형 AI의 결합이 전망된다.</p>
+                <details class="quiz">
+                    <div class="quiz__q">Q. AI > ML > DL 순서로 포함 관계를 적으면, 가장 좁은 개념은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">딥러닝(DL). 인공신경망을 깊게 쌓는 머신러닝의 한 갈래다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="future">17. 응용 분야와 미래 전망</h2>
+        <details class="section">
+            <summary>u-서비스 응용과 빛·그림자</summary>
+            <div class="section__body">
+                <p>지금까지 배운 기술들이 합쳐지면 다음과 같은 서비스가 된다. 교재는 이를 'u-' 접두 용어로도 부르는데, 'u-'는 ubiquitous의 머리글자다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>분야</th><th>모습</th><th>결합 기술</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>스마트홈</td><td>음성으로 조명/난방 제어, 자동화</td><td>IoT, 음성인식, 상황인식</td></tr>
+                            <tr><td>스마트시티(u-시티)</td><td>교통/에너지/방범 자동 관리</td><td>센서, 빅데이터, AI</td></tr>
+                            <tr><td>웨어러블/헬스케어(u-헬스, u-의료)</td><td>스마트워치로 건강 모니터링</td><td>센서, 저전력, 클라우드</td></tr>
+                            <tr><td>스마트교육(u-러닝)</td><td>시간·장소 제약 없는 맞춤형 원격 학습</td><td>네트워크, 콘텐츠, 상황인식</td></tr>
+                            <tr><td>스마트팩토리</td><td>공장 자동화, 예지 정비</td><td>IoT, 엣지, AI</td></tr>
+                            <tr><td>스마트팜</td><td>온습도 자동 관리 농업</td><td>USN, 클라우드</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>빛</th><th>그림자</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>편리함, 안전, 효율, 새로운 산업과 일자리</td><td>프라이버시 침해, 보안 위협, 디지털 격차(기술 소외), 기술 의존, 일자리 변화</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">균형 잡힌 시각</p>
+                    <p>기술 발전과 함께 윤리, 법·제도, 보안 대책을 함께 마련해야 한다. 와이저가 말한 "차분하고 사라지는 기술"의 정신은, 기술이 사람을 압도하지 않고 사람을 위해 조용히 봉사해야 한다는 가치로 이어진다.</p>
+                </div>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 교재에서 스마트교육을 가리키는 'u-' 용어는?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">u-러닝(u-learning). 스마트시티는 u-시티, 헬스케어는 u-헬스/u-의료로 병기한다.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="glossary">18. 핵심 용어 빠른 정리</h2>
+        <details class="section">
+            <summary>한 줄 정의 모음</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>용어</th><th>한 줄 정의</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ubicomp</td><td>컴퓨터가 환경에 스며든 컴퓨팅</td></tr>
+                            <tr><td>Calm Technology</td><td>주의를 끌지 않는 차분한 기술</td></tr>
+                            <tr><td>RFID/NFC</td><td>무선으로 사물을 식별/근거리 통신</td></tr>
+                            <tr><td>IoT</td><td>사물을 인터넷에 연결한 환경</td></tr>
+                            <tr><td>USN</td><td>센서+네트워크+미들웨어 구조</td></tr>
+                            <tr><td>Middleware</td><td>응용과 하드웨어 사이 연결 SW</td></tr>
+                            <tr><td>Context-Aware</td><td>상황을 인식해 알맞게 반응</td></tr>
+                            <tr><td>Edge Computing</td><td>현장 가까이서 처리</td></tr>
+                            <tr><td>HCI/HRI</td><td>사람-컴퓨터/로봇 상호작용</td></tr>
+                            <tr><td>Blockchain</td><td>분산 위변조 방지 장부</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="vocab">
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">USN</div><div class="back">유비쿼터스 센서 네트워크 - 센서+네트워크+미들웨어 구조</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Edge Computing</div><div class="back">엣지 컴퓨팅 - 현장 가까이서 먼저 처리해 지연을 줄임</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Context-Aware</div><div class="back">상황인식 - 시키지 않아도 상황을 파악해 알맞게 반응</div></div></div></li>
+                    <li class="vocab__item"><div class="flashcard"><div class="flashcard__inner"><div class="front">Calm Technology</div><div class="back">캄 테크놀로지 - 주의를 끌지 않고 배경에 머무는 차분한 기술</div></div></div></li>
+                </ul>
+            </div>
+        </details>
+
+        <h2 id="resources">19. 무료 학습 자료</h2>
+        <details class="section">
+            <summary>공식 문서·강의·사전 링크</summary>
+            <div class="section__body">
+                <ul>
+                    <li><a href="https://www.lri.fr/~mbl/Stanford/CS477/papers/Weiser-SciAm.pdf">Mark Weiser - The Computer for the 21st Century</a> - 유비쿼터스 컴퓨팅의 출발점이 된 1991년 원논문(영문).</li>
+                    <li><a href="https://calmtech.com/">Calm Technology</a> - 캄 테크놀로지의 원칙과 와이저 논문을 정리한 공식 사이트.</li>
+                    <li><a href="https://ko.wikipedia.org/wiki/유비쿼터스_컴퓨팅">유비쿼터스 컴퓨팅 - 한국어 위키백과</a> - 개념·역사·특징을 한국어로 개관.</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ubiquitous_computing">Ubiquitous computing - English Wikipedia</a> - 영문으로 더 깊이 있는 개념과 연구사.</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Internet_of_things">Internet of things - Wikipedia</a> - IoT 구조·기술·응용·보안 종합 정리.</li>
+                    <li><a href="https://www.itu.int/dms_pub/itu-t/oth/23/01/t23010000040001pdfe.pdf">ITU-T USN 표준 문서</a> - 유비쿼터스 센서 네트워크의 국제 표준 설명(영문 PDF).</li>
+                    <li><a href="https://www.ibm.com/topics/cloud-computing">IBM - What is cloud computing?</a> - 클라우드 IaaS/PaaS/SaaS를 쉽게 설명.</li>
+                    <li><a href="http://terms.tta.or.kr/">한국정보통신기술협회 정보통신용어사전(TTA)</a> - IT 용어를 한국어로 정확히 찾아보는 공식 사전.</li>
+                    <li><a href="http://www.ktword.co.kr/">ktword 정보통신기술 용어해설</a> - 유비쿼터스/네트워크 용어를 한국어로 풀이.</li>
+                    <li><a href="https://developers.google.com/machine-learning/crash-course">Google AI - Machine Learning Crash Course</a> - 머신러닝 기초를 무료로 배우는 구글 공식 강의.</li>
+                    <li><a href="https://ko.wikipedia.org/wiki/블록체인">위키백과 - 블록체인</a> - 블록체인 구조와 동작 원리를 한국어로 정리.</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Context_awareness">위키백과 - 상황 인식(Context awareness)</a> - 상황인식 컴퓨팅의 정의와 응용.</li>
+                </ul>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>

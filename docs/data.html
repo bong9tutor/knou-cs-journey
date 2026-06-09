@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>데이터정보처리입문 - KOSIS 실데이터로 익히는 엑셀/R/Python</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <style>
+        /* 페이지 전용 보강: Prism 토큰 색(공용 변수 기반) + Pyodide 플레이그라운드.
+           공용 컴포넌트 클래스(.code/.section/.callout 등)는 재정의하지 않는다. */
+        .code pre code .token.comment,
+        .code pre code .token.prolog,
+        .code pre code .token.doctype,
+        .code pre code .token.cdata { color: #7c8696; font-style: italic; }
+        .code pre code .token.punctuation { color: #c2c9d3; }
+        .code pre code .token.property,
+        .code pre code .token.tag,
+        .code pre code .token.boolean,
+        .code pre code .token.number,
+        .code pre code .token.constant,
+        .code pre code .token.symbol { color: #e5a05a; }
+        .code pre code .token.selector,
+        .code pre code .token.attr-name,
+        .code pre code .token.string,
+        .code pre code .token.char,
+        .code pre code .token.builtin { color: #9ad08a; }
+        .code pre code .token.operator,
+        .code pre code .token.entity,
+        .code pre code .token.url { color: #d9e0ea; }
+        .code pre code .token.keyword,
+        .code pre code .token.atrule,
+        .code pre code .token.attr-value { color: #79b4ff; }
+        .code pre code .token.function,
+        .code pre code .token.class-name { color: #f0c674; }
+        .code pre code .token.regex,
+        .code pre code .token.important,
+        .code pre code .token.variable { color: #e09b9b; }
+
+        /* 실행 플레이그라운드 */
+        .play {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin: var(--gap) 0;
+            background: var(--codeblock-bg);
+        }
+        .play__bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--bg-soft);
+            border-bottom: 1px solid var(--border);
+        }
+        .play__label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-soft);
+        }
+        .play__run {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-height: 36px;
+            padding: 6px 16px;
+            color: #fff;
+            background: var(--accent);
+            border: 0;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+        }
+        .play__run:disabled { opacity: 0.6; cursor: progress; }
+        .play__run:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .play__editor {
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            resize: vertical;
+            min-height: 7.5em;
+            padding: 12px;
+            color: var(--codeblock-text);
+            background: var(--codeblock-bg);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            tab-size: 4;
+        }
+        .play__editor:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+        .play__out {
+            margin: 0;
+            padding: 12px;
+            border-top: 1px solid var(--border);
+            color: var(--codeblock-text);
+            background: var(--bg-sunken);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 18em;
+            overflow: auto;
+        }
+        .play__out:empty { display: none; }
+    </style>
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#intro">0. 학습 방향과 우선순위</a>
+            <a href="#ch1">1. 데이터 분석과 컴퓨터</a>
+            <a href="#ch2">2. 데이터의 입력과 점검</a>
+            <a href="#ch3">3. 통계정보 검색 및 활용</a>
+            <a href="#ch4">4. 문서작성</a>
+            <a href="#ch5">5. 엑셀 데이터 처리</a>
+            <a href="#ch6">6. 엑셀 그래프 그리기</a>
+            <a href="#ch7">7. 엑셀 활용</a>
+            <a href="#ch8">8. R을 활용한 자료분석</a>
+            <a href="#ch9">9. 파이썬을 활용한 자료분석</a>
+            <a href="#quiz">10. 종합 퀴즈와 플래시카드</a>
+            <a href="#resources">11. 무료 학습 자료</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>데이터정보처리입문</h1>
+        <blockquote>KOSIS 국가통계포털의 실제 데이터를 직접 받아 엑셀, R, Python으로 정리-요약-시각화하는 흐름을 반복하는 1학년 1학기 실습 과목이다. 교재 9개 장에 1:1로 대응하며, 검색-다운로드-기술통계-시각화 흐름이 중간과제와 직결된다.</blockquote>
+
+        <h2 id="intro">0. 학습 방향과 우선순위</h2>
+        <details class="section" open>
+            <summary>개요 - 무엇을, 어떤 순서로</summary>
+            <div class="section__body">
+                <p>이 과목은 도구(엑셀/R/Python)가 바뀌어도 "원본 데이터 → 가공 → 요약 → 해석"이라는 분석 사고는 같다는 감각을 기르는 것이 핵심이다. 각 장은 개요(왜 배우나) - 핵심 개념 - 단계별 실습 - 무료 자료 - 미션으로 구성된다.</p>
+                <div class="callout tip">
+                    <p class="callout__title">중급자 기준 공략 순서</p>
+                    <p>이미 기초 컴퓨터 활용 경험이 있다면 순서대로가 아니라 투자 대비 효과가 큰 장부터 공략하는 편이 효율적이다.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>우선</th><th>장</th><th>왜 먼저인가</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>3장 통계정보 검색 및 활용</td><td>중간과제와 직결. KOSIS 검색-다운로드-기술통계-시각화 흐름을 먼저 손에 익힌다.</td></tr>
+                            <tr><td>2</td><td>9장 파이썬 + pandas</td><td>오픈소스기반데이터분석, 머신러닝, 딥러닝으로 그대로 이어진다. 투자가치 최고.</td></tr>
+                            <tr><td>3</td><td>8장 R</td><td>통계/시각화 전용 언어. 파이썬과 함께 다뤄 "도구가 바뀌어도 분석 사고는 같다"를 굳힌다.</td></tr>
+                            <tr><td>4</td><td>5-7장 엑셀</td><td>익숙하면 복습 위주로. 절대참조/피벗/조건집계/재무함수만 점검.</td></tr>
+                            <tr><td>5</td><td>1-2장 개념/데이터 위생</td><td>척도 구분, 결측치/이상치, Tidy Data는 빠르게 읽되 실습은 꼭 한 번 따라 한다.</td></tr>
+                            <tr><td>6</td><td>4장 문서작성</td><td>분석 결과를 보고서로 엮는 마지막 단계. 표/수식/구조는 제출 직전에 정리.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">실습 데이터원은 항상 둘</p>
+                    <p>KOSIS 국가통계포털(kosis.kr)과 공공데이터포털(data.go.kr). 둘 다 로그인 없이 EXCEL/CSV를 받을 수 있다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch1">1. 데이터 분석과 컴퓨터</h2>
+        <details class="section">
+            <summary>척도 4단계, 모집단/표본, 분석 워크플로우</summary>
+            <div class="section__body">
+                <p>1장은 도구 실습에 앞서 "그 도구로 무엇을 다루는지"를 정리하는 단계다. 데이터 타입(척도)을 알아야 어떤 통계량/그래프를 쓸지 정하고, 모집단과 표본을 구분해야 "내 데이터로 어디까지 말할 수 있는가"를 판단한다. 1장은 이후 모든 장의 공통 문법이다.</p>
+                <p>핵심 질문 세 가지: (1) 계산해도 되는 숫자인가, 이름표일 뿐인 숫자인가? (2) 전체인가, 일부인가(모집단 vs 표본)? (3) 무엇을 거쳐 결론에 도달하는가(워크플로우)?</p>
+
+                <h3>측정 척도 4가지 수준</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>척도</th><th>특징</th><th>예시</th><th>의미 있는 요약</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>명목(nominal)</td><td>순서 없는 분류</td><td>성별, 혈액형, 지역코드</td><td>최빈값</td></tr>
+                            <tr><td>순서(ordinal)</td><td>순서는 있으나 간격 불일정</td><td>만족도(상/중/하), 학점, 선호 순위</td><td>중앙값까지</td></tr>
+                            <tr><td>등간(interval)</td><td>간격 일정, 절대 0 없음</td><td>섭씨 온도, 연도</td><td>덧셈/뺄셈(배수는 무의미)</td></tr>
+                            <tr><td>비율(ratio)</td><td>절대 0 있음, 배수 비교 가능</td><td>키, 몸무게, 소득, 나이</td><td>모든 사칙연산</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">암기 팁</p>
+                    <p>명목 &lt; 순서 &lt; 등간 &lt; 비율 순으로 "정보량"이 커진다. 위 단계 연산은 아래 단계에서도 항상 가능하다(비율은 다 됨).</p>
+                </div>
+
+                <h3>꼭 구분할 짝</h3>
+                <ul>
+                    <li><strong>변수 vs 관측치</strong>: 변수는 측정 항목(키, 성별), 관측치는 한 개체의 측정값 묶음(한 사람 = 한 행).</li>
+                    <li><strong>범주형 vs 연속형</strong>: 범주형은 빈도/비율로 요약, 연속형은 평균/표준편차로 요약.</li>
+                    <li><strong>모수 vs 통계량</strong>: 모집단 특성치는 모수(parameter), 표본 특성치는 통계량(statistic).</li>
+                    <li><strong>기술통계 vs 추론통계</strong>: 기술통계는 가진 데이터를 요약/묘사, 추론통계는 표본으로 모집단을 추정/검정.</li>
+                </ul>
+
+                <h3>분석 워크플로우 7단계</h3>
+                <blockquote>문제 정의 → 데이터 수집 → 정제(전처리) → 탐색(EDA) → 분석/모형화 → 해석/시각화 → 보고</blockquote>
+
+                <h3>실습 C: pandas로 워크플로우 1바퀴</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv('파일명.csv', encoding='cp949')  # 한글 깨지면 'utf-8'
+df.head()                  # 앞부분(탐색)
+df.shape                   # (행 수, 열 수)
+df.dtypes                  # 각 열 타입(전처리)
+df.describe()              # 연속형 기술통계
+df['시도명'].value_counts()  # 범주형 빈도
+df.isnull().sum()          # 결측치 확인</code></pre>
+                </div>
+
+                <div class="callout info">
+                    <p class="callout__title">엑셀로 손 기술통계(실습 B)</p>
+                    <p>연속형 열에는 <code>=AVERAGE</code>/<code>=MEDIAN</code>/<code>=STDEV.S</code>/<code>=COUNT</code>를, 명목형 열에는 <code>=COUNTA</code>로 개수만 센다. 범주형 = 막대그래프, 연속형 분포 = 히스토그램이라는 짝을 기억한다.</p>
+                </div>
+
+                <h3>척도 분류 퀴즈</h3>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 다음을 명목/순서/등간/비율로 분류하라 - 학번, 시험 점수(0~100), 학년(1~4), 우편번호, 섭씨 기온.</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">학번 = 명목(식별용 이름표), 시험 점수 = 비율(절대 0과 배수 의미), 학년 = 순서(간격 불일정), 우편번호 = 명목(연산 무의미), 섭씨 기온 = 등간(절대 0 없음, 20도가 10도의 두 배 아님).</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch2">2. 데이터의 입력과 점검</h2>
+        <details class="section">
+            <summary>결측치/이상치 처리와 Tidy Data</summary>
+            <div class="section__body">
+                <p>"쓰레기를 넣으면 쓰레기가 나온다(Garbage In, Garbage Out)." 분석가 시간의 60~80%는 모델링이 아니라 데이터를 읽어 들이고 결측치/이상치를 점검하고 정제(cleaning)하는 데 들어간다(정확한 수치라기보다 정제 비중이 그만큼 크다는 통념). 2장은 분석 전 단계의 기초 체력이다.</p>
+
+                <h3>핵심 개념</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>개념</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>정형 데이터 구조</td><td>행 = 관측 단위 1건, 열 = 변수 1개, 셀 = 하나의 값. 모든 분석 도구의 전제.</td></tr>
+                            <tr><td>결측치 표기</td><td>엑셀 빈 칸, R의 <code>NA</code>, pandas의 <code>NaN</code>/<code>None</code>. 빈칸/0/"모름" 문자열을 반드시 구분.</td></tr>
+                            <tr><td>결측치 처리</td><td>행/열 삭제(<code>dropna</code>, <code>na.omit</code>), 대치(수치형 평균/중앙값, 범주형 최빈값, 모델 예측).</td></tr>
+                            <tr><td>이상치(outlier)</td><td>분포에서 비정상적으로 먼 값. 탐지: 상자그림, IQR 규칙, Z-점수.</td></tr>
+                            <tr><td>IQR 규칙</td><td>Q1 - 1.5×IQR 미만 또는 Q3 + 1.5×IQR 초과를 이상치 후보로 본다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">Tidy Data 3원칙 (Hadley Wickham)</p>
+                    <p>(1) 각 변수는 하나의 열, (2) 각 관측치는 하나의 행, (3) 각 값은 하나의 셀. "넓은 형식(wide)"을 "긴 형식(long)"으로 바꾸는 것이 핵심 변환이다.</p>
+                </div>
+
+                <h3>실습 C: pandas로 점검/정제</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import pandas as pd
+df = pd.read_csv("data.csv", encoding="utf-8")  # 깨지면 "cp949"
+
+# 첫 점검 3종 세트
+df.shape; df.head(); df.info(); df.describe()
+
+# 결측치 처리
+df.isnull().sum()                              # 열별 결측 개수
+df2 = df.dropna()                              # 결측 행 삭제
+df["소득"] = df["소득"].fillna(df["소득"].median())  # 중앙값 대치
+
+# 중복 제거 + IQR 이상치 필터
+df = df.drop_duplicates()
+q1, q3 = df["소득"].quantile([0.25, 0.75])
+iqr = q3 - q1
+mask = (df["소득"] >= q1 - 1.5*iqr) & (df["소득"] <= q3 + 1.5*iqr)
+df_clean = df[mask]</code></pre>
+                </div>
+
+                <h3>실습 D: R로 점검 + Tidy 변환</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">r</span><button class="copy">복사</button></div>
+                    <pre><code class="language-r">df <- read.csv("data.csv", fileEncoding = "UTF-8")
+str(df); summary(df); colSums(is.na(df))
+
+df2 <- na.omit(df)                                   # 결측 행 제거
+df$소득[is.na(df$소득)] <- median(df$소득, na.rm = TRUE)  # 중앙값 대치
+
+library(tidyr)
+long <- pivot_longer(df, cols = starts_with("y20"),
+                     names_to = "연도", values_to = "값")  # 넓은 -> 긴</code></pre>
+                </div>
+
+                <div class="callout warn">
+                    <p class="callout__title">엑셀 점검 팁</p>
+                    <p>빈 칸 개수는 <code>=COUNTBLANK(범위)</code>, 중복 행은 [데이터 → 중복된 항목 제거], 이상치는 [삽입 → 차트 → 상자 수염 그림]으로 점으로 튀어나온 값을 본다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch3">3. 통계정보 검색 및 활용</h2>
+        <details class="section">
+            <summary>KOSIS 검색-다운로드-기술통계-시각화 (중간과제 직결)</summary>
+            <div class="section__body">
+                <div class="callout warn">
+                    <p class="callout__title">중간과제와 직결되는 장</p>
+                    <p>과제는 보통 "KOSIS에서 특정 통계표를 받아 기술통계 값을 구하고 그래프로 해석하라" 형태다. 검색-다운로드-요약-시각화 흐름을 반드시 손에 익힌다.</p>
+                </div>
+
+                <h3>기술통계 핵심값</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>구분</th><th>지표</th><th>메모</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>중심 경향</td><td>평균, 중앙값, 최빈값</td><td>평균은 이상치에 민감, 중앙값은 강건.</td></tr>
+                            <tr><td>산포</td><td>범위, 분산, 표준편차, IQR</td><td>IQR = Q3 - Q1.</td></tr>
+                            <tr><td>분포 시각화</td><td>히스토그램, 상자그림, 시계열 선그래프</td><td>모양/사분위/추세를 각각 본다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">표본 vs 모집단 분산 (시험 단골)</p>
+                    <p>나누는 값이 n-1(표본)인지 n(모집단)인지에 따라 다르다. 엑셀 <code>VAR.S</code>/<code>STDEV.S</code>(표본) vs <code>VAR.P</code>/<code>STDEV.P</code>(모집단), R <code>var()</code>/<code>sd()</code>(표본 기준), pandas <code>.var()</code>/<code>.std()</code>(기본 ddof=1 = 표본).</p>
+                </div>
+
+                <h3>KOSIS 다운로드 한도</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>셀 개수</th><th>방법</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>20,000 이하</td><td>조회 화면에서 바로 다운로드</td></tr>
+                            <tr><td>20,000 초과</td><td>조회 버튼이 다운로드 버튼으로 바뀜</td></tr>
+                            <tr><td>200,000 초과</td><td>통계목록의 "파일다운로드" 사용</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>실습 B: 엑셀 기술통계 함수</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">text</span><button class="copy">복사</button></div>
+                    <pre><code class="language-text">=AVERAGE(B2:B11)          평균
+=MEDIAN(B2:B11)           중앙값
+=STDEV.S(B2:B11)          표본 표준편차
+=VAR.S(B2:B11)            표본 분산
+=QUARTILE.INC(B2:B11,1)   Q1
+=QUARTILE.INC(B2:B11,3)   Q3</code></pre>
+                </div>
+                <p>한 번에 보려면 [데이터 → 데이터 분석 → 기술 통계법]. 안 보이면 [파일 → 옵션 → 추가 기능 → Excel 추가 기능 → 분석 도구]를 체크한다.</p>
+
+                <h3>실습 C: pandas로 한 줄 요약</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import pandas as pd
+df = pd.read_csv("kosis.csv")
+df["인구"].describe()        # count/mean/std/min/사분위/max 한 번에
+df["인구"].plot(kind="hist") # 분포
+df.boxplot()                 # 상자그림
+df["인구"].plot()            # 시계열</code></pre>
+                </div>
+
+                <div class="callout info">
+                    <p class="callout__title">중간과제 미니 보고서 형식</p>
+                    <p>"데이터 출처(KOSIS 통계표명) - 기간 - 주요 기술통계값 - 그래프 1장 - 3줄 해석" 순서. 이 형식이 제출 형식과 거의 같다. 예: "평균보다 중앙값이 낮다 = 오른쪽으로 꼬리가 긴 분포".</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch4">4. 문서작성</h2>
+        <details class="section">
+            <summary>한글/워드 표/수식/보고서 구조 (서론-분석-결론)</summary>
+            <div class="section__body">
+                <p>분석은 "남이 읽고 판단할 수 있는 문서"로 전달될 때 가치가 생긴다. 표가 어그러지거나 수식이 깨져 보이거나 흐름이 뒤죽박죽이면 독자는 결론을 신뢰하지 않는다. 4장은 정확한 표, 올바른 수식, 논리적 보고서 구조를 다룬다. (교재 화면은 한글 2018 기준이며 최신 버전은 메뉴 위치/명칭이 조금 다를 수 있다.)</p>
+
+                <h3>핵심 기능</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>기능</th><th>요점</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>표 편집</td><td>셀 병합/분할, 제목 행 음영, 숫자 오른쪽 정렬+소수점 통일. 표 안 계산식 <code>=SUM(A1:A5)</code>.</td></tr>
+                            <tr><td>캡션 관행</td><td>표 제목은 표 <strong>위</strong>, 그림 제목은 그림 <strong>아래</strong>. 일련번호(&lt;표 1&gt;, [그림 1])와 출처 표기.</td></tr>
+                            <tr><td>시계열 차트</td><td>연도가 가로축인 시계열은 분산형(X,Y) "직선 및 표식" 차트. 꺾은선과 달리 X축 간격이 실제 수치 간격으로 반영.</td></tr>
+                            <tr><td>수식 편집기</td><td>한글: 입력 → 수식, 단축키 <code>Ctrl+N, M</code>. 분수/첨자/루트/시그마/적분/행렬.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">분석 보고서 구조</p>
+                    <p>서론(주제/배경/목적/데이터 출처) → 분석(데이터 설명 → 방법 → 표/그래프 → 해석) → 결론(핵심 발견 + 시사점 + 한계/향후 과제). 표/그림에는 일련번호와 캡션, 출처를 반드시 단다.</p>
+                </div>
+
+                <h3>실습 C: 수식 편집기로 평균/표준편차</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">text</span><button class="copy">복사</button></div>
+                    <pre><code class="language-text">평균:    bar x = {1 over n} sum_{i=1}^{n} x_i
+표준편차: s = sqrt{ {1 over {n-1}} sum (x_i - bar x)^2 }</code></pre>
+                </div>
+                <p>표 안 합계는 빈 셀에 커서를 두고 <code>=SUM(B2:B4)</code>처럼 범위를 지정한다. 원본 숫자를 바꾸면 다시 계산해 값이 갱신되는지 확인한다.</p>
+
+                <div class="callout info">
+                    <p class="callout__title">미션 핵심</p>
+                    <p>수식은 그림 붙여넣기가 아니라 반드시 수식 객체로 삽입한다. 완성한 보고서는 PDF로 내보내 표/그림 레이아웃이 깨지지 않는지 확인한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch5">5. 엑셀 데이터 처리</h2>
+        <details class="section">
+            <summary>참조, 조회/조건 집계 함수, 정렬/필터/피벗</summary>
+            <div class="section__body">
+                <p>데이터 분석의 출발점은 거창한 언어가 아니라 엑셀이다. 절대/상대 참조, 조건부 집계, 피벗테이블은 이후 R의 <code>dplyr</code>이나 Python <code>pandas</code>의 <code>groupby</code>로 그대로 이어진다.</p>
+
+                <h3>셀 참조</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>형태</th><th>의미</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>A1</code></td><td>상대 참조 - 복사하면 참조가 함께 이동</td></tr>
+                            <tr><td><code>$A$1</code></td><td>절대 참조 - 행/열 모두 고정</td></tr>
+                            <tr><td><code>$A1</code>, <code>A$1</code></td><td>혼합 참조 - 행 또는 열만 고정</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout tip">
+                    <p class="callout__title">F4 순환</p>
+                    <p><code>F4</code>를 반복하면 <code>A1</code> → <code>$A$1</code> → <code>A$1</code> → <code>$A1</code> 순으로 전환된다. VLOOKUP 범위는 <code>F4</code>로 절대 참조 고정이 필수(고정 안 하면 범위가 밀려 <code>#N/A</code>).</p>
+                </div>
+
+                <h3>주요 함수</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>함수</th><th>역할</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>VLOOKUP(찾을값, 범위, 열번호, FALSE)</code></td><td>첫 열에서 찾아 같은 행 다른 열 값. 실무는 거의 항상 FALSE(정확 일치).</td></tr>
+                            <tr><td><code>IF(조건, 참, 거짓)</code></td><td>조건 분기</td></tr>
+                            <tr><td><code>COUNTIF / SUMIF / AVERAGEIF</code></td><td>조건 만족 개수 / 합계 / 평균 (다중조건은 <code>...IFS</code>)</td></tr>
+                            <tr><td><code>CORREL(범위1, 범위2)</code></td><td>두 변수의 상관계수(-1 ~ +1)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">표본 vs 모집단 외우기</p>
+                    <p><code>STDEV</code> = <code>STDEV.S</code> = 표본(n-1), <code>STDEVP</code> = <code>STDEV.P</code> = 모집단(n). 이름 끝 <code>P</code>(Population)가 모집단 신호다. 분산도 동일: <code>VAR</code>/<code>VAR.S</code> = 표본, <code>VARP</code>/<code>VAR.P</code> = 모집단.</p>
+                </div>
+
+                <h3>실습 A: 조건 함수</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">text</span><button class="copy">복사</button></div>
+                    <pre><code class="language-text">C2: =IF(B2>=60, "합격", "불합격")     점수 분기
+    =COUNTIF(B2:B11, ">=60")          합격자 수
+    =SUMIF(B2:B11, ">=60")            합격자 점수 합
+    =AVERAGE(B2:B11)  =MEDIAN(B2:B11)  =STDEV.S(B2:B11)</code></pre>
+                </div>
+                <p>피벗테이블은 [삽입 → 피벗 테이블]로 행 영역에 <code>등급</code>, 값 영역에 <code>점수</code>를 넣고 "값 필드 설정"에서 합계를 평균으로 바꾼다. 같은 결과를 <code>AVERAGEIF</code>로도 구해 일치를 확인한다.</p>
+            </div>
+        </details>
+
+        <h2 id="ch6">6. 엑셀 그래프 그리기</h2>
+        <details class="section">
+            <summary>차트 선택 기준, 산점도/추세선, 단순선형회귀</summary>
+            <div class="section__body">
+                <p>그래프는 숫자 덩어리를 시각 신호(길이/위치/기울기/흩어짐)로 바꿔 "무엇이 크고 어떻게 변하고 관계가 있는가"를 한눈에 보이게 한다. 데이터 성격에 맞는 차트를 고르는 판단력이 핵심이다(잘못된 차트는 데이터를 왜곡한다).</p>
+
+                <h3>차트 종류 = 데이터 성격</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>차트</th><th>언제 쓰나</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>원형(파이)</td><td>전체에 대한 구성비. 합이 100%, 항목 5개 이내일 때.</td></tr>
+                            <tr><td>막대(세로/가로)</td><td>여러 항목 간 값 크기 비교. 이름이 길면 가로막대.</td></tr>
+                            <tr><td>꺾은선</td><td>시간 흐름에 따른 추세(시계열의 기본).</td></tr>
+                            <tr><td>히스토그램</td><td>한 수치형 변수의 구간별 분포. 막대 사이가 붙어 있다.</td></tr>
+                            <tr><td>산점도(분산형)</td><td>두 수치형 변수 사이의 관계.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">차트 왜곡 주의</p>
+                    <p>세로축 시작값을 0이 아닌 곳에서 끊으면 작은 차이가 과장된다. 상관관계는 인과관계가 아니다(상관이 있어도 원인-결과로 단정 금지).</p>
+                </div>
+
+                <h3>단순선형회귀 (추세선의 정체)</h3>
+                <p>산점도의 "선형 추세선"이 곧 단순선형회귀의 결과다. 회귀식은 <code>y = a + bx</code>: 기울기 <code>b</code>는 x가 1 늘 때 y의 평균 변화량(방향/세기), 절편 <code>a</code>는 직선이 세로축과 만나는 위치. <strong>R제곱(결정계수)</strong>은 회귀직선이 y의 분산 중 몇 %를 설명하는지를 0~1로 나타내며, 단순선형회귀에서는 상관계수 r의 제곱과 같다.</p>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">text</span><button class="copy">복사</button></div>
+                    <pre><code class="language-text">=SLOPE(y범위, x범위)      기울기 b
+=INTERCEPT(y범위, x범위)  절편 a
+=RSQ(y범위, x범위)        R제곱</code></pre>
+                </div>
+                <p>엑셀 추세선에서 [추세선 추가 → 선형] 후 "수식을 차트에 표시"와 "R-제곱 값을 차트에 표시"를 체크하면 차트에 회귀식과 R²가 함께 나온다.</p>
+
+                <h3>R로 한 줄 회귀</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">r</span><button class="copy">복사</button></div>
+                    <pre><code class="language-r">fit <- lm(y ~ x, data = df)  # y를 x로 설명하는 단순선형회귀
+summary(fit)                 # (Intercept)=a, x=기울기 b, Multiple R-squared=R제곱</code></pre>
+                </div>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. 다음 네 상황에 가장 적절한 차트는? (1) 연도별 출생아 수 변화, (2) 17개 시도 인구 비교, (3) 한 반 30명의 키 분포, (4) 가구 소비지출 항목별 구성비.</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">(1) 꺾은선 - 시간 추세, (2) 막대 - 항목 비교, (3) 히스토그램 - 분포, (4) 원형 - 구성비(합 100%).</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="ch7">7. 엑셀 활용</h2>
+        <details class="section">
+            <summary>날짜/문자열 함수, 재무함수(원리합계), 해 찾기</summary>
+            <div class="section__body">
+                <p>현실 데이터는 날짜가 <code>20240315</code>나 텍스트로 들어오고, 이름/주소가 한 칸에 섞여 있으며, "월 적립 30만원을 3년 부으면 만기에 얼마인가" 같은 의사결정 질문이 따른다. 7장은 엑셀을 전처리 + 의사결정 + 시각화 도구로 쓴다.</p>
+
+                <h3>날짜/문자열 함수</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>함수</th><th>역할</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>YEAR/MONTH/DAY(날짜)</code></td><td>연/월/일 추출 (시계열 집계의 기초)</td></tr>
+                            <tr><td><code>DATEDIF(시작, 끝, "Y"/"M"/"D")</code></td><td>두 날짜 사이 햇수/개월/일수 (나이/근속)</td></tr>
+                            <tr><td><code>EOMONTH(시작일, 개월)</code></td><td>해당 월의 말일</td></tr>
+                            <tr><td><code>LEFT/MID/RIGHT + FIND</code></td><td>구분자 기준으로 길이가 제각각인 셀 자르기</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">날짜의 정체</p>
+                    <p>엑셀에서 날짜는 1900-01-01을 1로 세는 일련번호(숫자)다. 그래서 <code>날짜 - 날짜 = 일수</code>가 그냥 뺄셈으로 된다.</p>
+                </div>
+
+                <h3>재무함수(원리합계, 복리)</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">text</span><button class="copy">복사</button></div>
+                    <pre><code class="language-text">=FV(A1/12, A2*12, -A3)   적금 만기금액(미래가치)
+=PV(이율, 기간, 정기납입)  현재가치
+=PMT(C1/12, C2*12, C3)   대출 월상환금</code></pre>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">부호와 단위 규칙</p>
+                    <p>내가 내는 돈은 음수(-), 받는 돈은 양수(+). 월 단위면 이율은 <code>연이율/12</code>, 기간은 <code>년수*12</code>.</p>
+                </div>
+
+                <h3>해 찾기 / 목표값 찾기</h3>
+                <ul>
+                    <li><strong>목표값 찾기(Goal Seek)</strong>: 변수 1개를 바꿔 수식 결과를 특정 값으로 (예: 목표 만기를 맞추는 월 납입액). [데이터 → 가상 분석 → 목표값 찾기].</li>
+                    <li><strong>해 찾기(Solver)</strong>: 변수 여러 개 + 제약조건 하에서 목표를 최대/최소/특정값으로 만드는 최적화. 추가 기능이라 별도 로드 필요. 구성: 목표 셀 / 변수 셀 / 제한 조건.</li>
+                </ul>
+            </div>
+        </details>
+
+        <h2 id="ch8">8. R을 활용한 자료분석</h2>
+        <details class="section">
+            <summary>R/RStudio, 벡터/데이터프레임, 기본 통계와 시각화</summary>
+            <div class="section__body">
+                <p>R은 통계 분석과 시각화를 위한 무료 오픈소스 언어로, 코드 한 줄로 수천 행을 처리하고 분석 과정을 그대로 재현한다. R은 계산 엔진(언어), RStudio는 작성/실행/그래프를 한 화면에서 돕는 IDE다. 보통 R을 먼저, RStudio를 나중에 설치한다(설치가 번거로우면 posit.cloud 무료 플랜 월 25시간).</p>
+
+                <h3>핵심 구조와 함수</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>요소</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>&lt;-</code></td><td>할당 연산자. <code>x &lt;- 10</code> (R의 관행)</td></tr>
+                            <tr><td>벡터</td><td>같은 자료형 1차원 묶음. <code>c(1, 2, 3)</code></td></tr>
+                            <tr><td>데이터프레임</td><td>행/열 표 구조(엑셀 시트와 가장 닮음). 열마다 자료형이 다를 수 있다.</td></tr>
+                            <tr><td>통계 함수</td><td><code>mean/median/sd/min/max/sum/summary/table</code></td></tr>
+                            <tr><td>시각화</td><td><code>plot/hist/boxplot/barplot</code></td></tr>
+                            <tr><td>패키지</td><td><code>install.packages("이름")</code> 설치, <code>library(이름)</code> 로드</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>실습 B/C: 벡터와 데이터프레임</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">r</span><button class="copy">복사</button></div>
+                    <pre><code class="language-r">scores <- c(85, 90, 78, 92, 88)
+mean(scores); sd(scores); summary(scores)
+
+df <- data.frame(name = c("가","나","다"), score = c(85, 90, 78))
+str(df)                  # 각 열 자료형
+df$score                 # 특정 열
+df[df$score >= 85, ]     # 조건 필터링
+mean(df$score)</code></pre>
+                </div>
+
+                <h3>실습 D: 시각화 + 실데이터 읽기</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">r</span><button class="copy">복사</button></div>
+                    <pre><code class="language-r">hist(scores)                              # 히스토그램
+boxplot(scores)                           # 상자그림
+barplot(df$score, names.arg = df$name)    # 막대그래프
+
+data <- read.csv("파일.csv", fileEncoding = "EUC-KR")  # 깨지면 "UTF-8"
+str(data); summary(data)</code></pre>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">도움말</p>
+                    <p><code>?mean</code> 또는 <code>help(mean)</code>으로 함수 사용법을 즉시 확인한다.</p>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="ch9">9. 파이썬을 활용한 자료분석</h2>
+        <details class="section" open>
+            <summary>pandas + matplotlib, 직접 실행해 보기</summary>
+            <div class="section__body">
+                <p>엑셀은 수천 행엔 편하지만 수십만 행, 반복 작업, 재현 가능한 분석엔 한계가 있다. 파이썬 + pandas는 대용량 처리, 재현성(같은 코드 = 같은 결과), 자동화, 무료 개방 생태계를 제공한다. 후속 과목(오픈소스기반데이터분석/머신러닝/딥러닝)으로 그대로 이어지므로 투자가치가 가장 높다.</p>
+
+                <div class="callout tip">
+                    <p class="callout__title">실행 환경 두 가지</p>
+                    <p><strong>Google Colab</strong>: 설치 없이 브라우저에서 바로 실행(입문 1순위). <strong>Anaconda</strong>: 내 PC에 파이썬+pandas+matplotlib+Jupyter를 한 번에 설치하는 배포판(오프라인/로컬 파일에 좋음).</p>
+                </div>
+
+                <h3>pandas 핵심</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>범주</th><th>도구</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>자료구조</td><td>Series(1차원, 한 열) / DataFrame(2차원 표)</td></tr>
+                            <tr><td>입출력</td><td><code>read_csv</code>, <code>read_excel</code>, <code>to_csv</code></td></tr>
+                            <tr><td>탐색/요약</td><td><code>head/tail/info/describe/shape/columns</code></td></tr>
+                            <tr><td>선택/필터</td><td><code>df['열']</code>, <code>df[df['열']&gt;값]</code>, <code>loc</code>, <code>iloc</code></td></tr>
+                            <tr><td>집계</td><td><code>groupby/mean/sum/count/sort_values/value_counts</code></td></tr>
+                            <tr><td>결측치</td><td><code>isnull/dropna/fillna</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>실습 C: 작은 DataFrame 직접 다루기</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import pandas as pd
+data = {
+    "지역": ["서울", "부산", "대구", "인천", "광주"],
+    "인구": [940, 330, 240, 295, 145],   # 단위: 만 명(예시)
+}
+df = pd.DataFrame(data)
+print(df.describe())                      # 숫자 열 요약
+print(df[df["인구"] >= 300])              # 인구 300만 이상
+print(df.sort_values("인구", ascending=False))  # 많은 순</code></pre>
+                </div>
+                <p>아래 플레이그라운드에서 직접 실행해 본다. "실행" 버튼을 누르면 브라우저에서 Pyodide(파이썬+pandas)를 지연 로드한 뒤 결과를 보여 준다(첫 실행은 다운로드로 시간이 걸린다).</p>
+                <div class="play">
+                    <div class="play__bar">
+                        <span class="play__label">Python 실행 (Pyodide)</span>
+                        <button class="play__run" type="button">실행</button>
+                    </div>
+                    <textarea class="play__editor" spellcheck="false" aria-label="파이썬 코드 편집기">import pandas as pd
+
+data = {
+    "지역": ["서울", "부산", "대구", "인천", "광주"],
+    "인구": [940, 330, 240, 295, 145],
+}
+df = pd.DataFrame(data)
+
+print(df)
+print()
+print("인구 300만 이상")
+print(df[df["인구"] >= 300])
+print()
+print(df["인구"].describe())</textarea>
+                    <pre class="play__out" aria-live="polite"></pre>
+                </div>
+
+                <h3>실습 D: 집계(groupby)</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">df = pd.read_csv("파일이름.csv", encoding="cp949")  # 깨지면 "utf-8"
+df.columns      # 열 이름 확인
+df.shape        # (행 수, 열 수)
+df.groupby("시도")["인구수"].sum().sort_values(ascending=False)</code></pre>
+                </div>
+                <p>아래는 groupby 집계를 직접 돌려 보는 플레이그라운드다. 숫자를 바꿔 결과가 어떻게 달라지는지 관찰한다.</p>
+                <div class="play">
+                    <div class="play__bar">
+                        <span class="play__label">Python 실행 (Pyodide)</span>
+                        <button class="play__run" type="button">실행</button>
+                    </div>
+                    <textarea class="play__editor" spellcheck="false" aria-label="파이썬 코드 편집기">import pandas as pd
+
+df = pd.DataFrame({
+    "권역": ["수도권", "수도권", "영남", "영남", "호남"],
+    "시도": ["서울", "인천", "부산", "대구", "광주"],
+    "인구": [940, 295, 330, 240, 145],
+})
+
+집계 = df.groupby("권역")["인구"].sum().sort_values(ascending=False)
+print(집계)
+print()
+print("평균:", round(df["인구"].mean(), 1))
+print("표준편차:", round(df["인구"].std(), 1))</textarea>
+                    <pre class="play__out" aria-live="polite"></pre>
+                </div>
+
+                <h3>실습 E: matplotlib (한글 깨짐 처리 포함)</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">import matplotlib.pyplot as plt
+plt.rcParams["font.family"] = "Malgun Gothic"  # Windows
+plt.rcParams["axes.unicode_minus"] = False     # 마이너스 부호 깨짐 방지
+
+plt.bar(df["지역"], df["인구"])
+plt.title("지역별 인구"); plt.xlabel("지역"); plt.ylabel("인구(만 명)")
+plt.show()</code></pre>
+                </div>
+                <div class="callout warn">
+                    <p class="callout__title">한글 폰트</p>
+                    <p>폰트 설정이 없으면 그래프 한글이 네모로 깨진다. Colab에서는 <code>!apt -qq install fonts-nanum</code> 실행 후 폰트를 <code>NanumGothic</code>으로 지정한다.</p>
+                </div>
+
+                <h3>실습 D 확장: 결측치 처리</h3>
+                <div class="code">
+                    <div class="code__head"><span class="code__lang">python</span><button class="copy">복사</button></div>
+                    <pre><code class="language-python">df.isnull().sum()    # 빈 칸(NaN) 확인
+df.dropna()          # 결측 행 삭제
+df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre>
+                </div>
+            </div>
+        </details>
+
+        <h2 id="quiz">10. 종합 퀴즈와 플래시카드</h2>
+        <details class="section">
+            <summary>핵심 개념 점검 (탭하면 뒤집힘)</summary>
+            <div class="section__body">
+                <ul class="vocab">
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">비율척도 vs 등간척도</div>
+                            <div class="back">비율은 절대 0이 있어 배수 비교 가능(키/소득). 등간은 절대 0이 없어 배수 무의미(섭씨/연도).</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">IQR 이상치 규칙</div>
+                            <div class="back">Q1 - 1.5×IQR 미만 또는 Q3 + 1.5×IQR 초과를 이상치 후보로 본다. (IQR = Q3 - Q1)</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">Tidy Data 3원칙</div>
+                            <div class="back">변수 = 하나의 열, 관측치 = 하나의 행, 값 = 하나의 셀. 넓은 형식을 긴 형식으로.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">STDEV.S vs STDEV.P</div>
+                            <div class="back">S = 표본(n-1), P(Population) = 모집단(n). pandas .std()는 기본 ddof=1 = 표본.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">R제곱(결정계수)</div>
+                            <div class="back">회귀직선이 y의 분산 중 몇 %를 설명하는지(0~1). 단순회귀에선 상관계수 r의 제곱. 높아도 인과는 아님.</div>
+                        </div></div>
+                    </li>
+                    <li class="vocab__item">
+                        <div class="flashcard"><div class="flashcard__inner">
+                            <div class="front">VLOOKUP의 #N/A 원인</div>
+                            <div class="back">범위를 F4로 절대 참조 고정하지 않으면 복사 시 범위가 밀려 못 찾는다.</div>
+                        </div></div>
+                    </li>
+                </ul>
+
+                <details class="quiz">
+                    <div class="quiz__q">Q. KOSIS 통계표가 25,000셀이다. 어떻게 받나?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">20,000 초과이므로 조회 버튼이 다운로드 버튼으로 바뀐다. 200,000 초과면 통계목록의 "파일다운로드"를 쓴다.</div>
+                    </details>
+                </details>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 적금 월 30만원을 연 3% 3년 부었을 때 만기금액을 구하는 엑셀 수식은?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body"><code>=FV(0.03/12, 3*12, -300000)</code>. 월 단위라 이율은 /12, 기간은 ×12, 내 돈은 음수(-).</div>
+                    </details>
+                </details>
+                <details class="quiz">
+                    <div class="quiz__q">Q. 평균보다 중앙값이 낮으면 분포는 어느 쪽으로 꼬리가 긴가?</div>
+                    <details class="quiz__a">
+                        <summary>정답 보기</summary>
+                        <div class="quiz__a-body">오른쪽(고액 이상치 쪽)으로 꼬리가 길다. 평균이 큰 값에 끌려 올라간 것.</div>
+                    </details>
+                </details>
+            </div>
+        </details>
+
+        <h2 id="resources">11. 무료 학습 자료</h2>
+        <details class="section">
+            <summary>데이터원, 강의, 공식 문서</summary>
+            <div class="section__body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>유형</th><th>이름</th><th>제공처</th><th>한줄 설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>데이터원</td><td>KOSIS 국가통계포털</td><td>통계청 (kosis.kr)</td><td>실습용 한국 통계 무료 EXCEL/CSV 다운로드, 이용가이드 PDF.</td></tr>
+                            <tr><td>데이터원</td><td>공공데이터포털</td><td>행정안전부 (data.go.kr)</td><td>파일데이터는 로그인 없이 CSV 다운로드.</td></tr>
+                            <tr><td>Python 강좌</td><td>Learn Pandas (마이크로코스)</td><td>Kaggle Learn (kaggle.com/learn/pandas)</td><td>무료 핸즈온, 브라우저에서 바로 실행 + 수료증.</td></tr>
+                            <tr><td>Python 문서</td><td>10 minutes to pandas</td><td>pandas.pydata.org</td><td>pandas 핵심 기능 압축 공식 튜토리얼.</td></tr>
+                            <tr><td>Python 입문(한국어)</td><td>점프 투 파이썬</td><td>WikiDocs (wikidocs.net/book/1)</td><td>파이썬 문법 무료 전자책.</td></tr>
+                            <tr><td>R 소프트웨어</td><td>R (CRAN) + RStudio/Posit Cloud</td><td>R Foundation / Posit</td><td>R 엔진과 IDE 무료, 클라우드는 월 25시간 무료.</td></tr>
+                            <tr><td>R 강좌(한국어)</td><td>R 데이터 분석 입문</td><td>K-MOOC (kmooc.kr)</td><td>기초 문법~시각화~데이터마이닝 무료 강좌.</td></tr>
+                            <tr><td>데이터 정제</td><td>Data Cleaning (4시간)</td><td>Kaggle Learn (kaggle.com/learn/data-cleaning)</td><td>결측치/날짜형/인코딩/오타 정제 실습.</td></tr>
+                            <tr><td>Tidy Data 원전</td><td>R for Data Science (2e) - Data tidying</td><td>Hadley Wickham (r4ds.hadley.nz)</td><td>tidyr 실습, 온라인 전문 무료 공개.</td></tr>
+                            <tr><td>엑셀 강의(한국어)</td><td>VLOOKUP/SUMIF/피벗/차트</td><td>오빠두엑셀 (oppadu.com, @Oppadu)</td><td>함수/피벗/시각화 한국어 무료 강의.</td></tr>
+                            <tr><td>엑셀 함수 사전</td><td>CORREL/STDEV/FV/PMT</td><td>엑셀웍스 (xlworks.net)</td><td>통계/재무 함수 정의와 예제, 표본 vs 모집단 설명.</td></tr>
+                            <tr><td>통계 개념(한국어)</td><td>평균/분산/상관/회귀</td><td>칸아카데미 (ko.khanacademy.org)</td><td>기술통계와 상관 개념을 무료 영상+연습문제로.</td></tr>
+                            <tr><td>시각화 문서</td><td>Pyplot tutorial</td><td>matplotlib.org</td><td>matplotlib 시각화 기본기(영문).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout info">
+                    <p class="callout__title">링크 참고</p>
+                    <p>세부 페이지 주소는 사이트 개편으로 바뀔 수 있으니, 사이트 내 검색으로 제목을 찾는 것을 권한다.</p>
+                </div>
+            </div>
+        </details>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+    <script>
+        /* 페이지 전용: Prism 1.29.0(python, r) 지연 로드 + Pyodide 실행 플레이그라운드.
+           공용 app.js는 그대로 두고, 이 과목 페이지에서만 동작한다. */
+        (function () {
+            "use strict";
+
+            var PRISM_CSS = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css";
+            var PRISM_CORE = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js";
+            var PRISM_LANGS = [
+                "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js",
+                "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js",
+                "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-r.min.js"
+            ];
+            var PYODIDE_SRC = "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js";
+
+            function loadScript(src) {
+                return new Promise(function (resolve, reject) {
+                    var s = document.createElement("script");
+                    s.src = src;
+                    s.onload = resolve;
+                    s.onerror = function () { reject(new Error("load fail: " + src)); };
+                    document.head.appendChild(s);
+                });
+            }
+
+            /* ----- Prism: 코드 블록이 화면에 들어올 때 한 번만 로드 ----- */
+            var prismLoaded = false;
+            function loadPrism() {
+                if (prismLoaded) return Promise.resolve();
+                prismLoaded = true;
+                var link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = PRISM_CSS;
+                document.head.appendChild(link);
+                return loadScript(PRISM_CORE)
+                    .then(function () {
+                        return PRISM_LANGS.reduce(function (p, src) {
+                            return p.then(function () { return loadScript(src); });
+                        }, Promise.resolve());
+                    })
+                    .then(function () {
+                        if (window.Prism) { window.Prism.highlightAll(); }
+                    })
+                    .catch(function () { /* CDN 실패 시 평문으로 둔다 */ });
+            }
+
+            if ("IntersectionObserver" in window) {
+                var io = new IntersectionObserver(function (entries, obs) {
+                    for (var i = 0; i < entries.length; i++) {
+                        if (entries[i].isIntersecting) { loadPrism(); obs.disconnect(); break; }
+                    }
+                }, { rootMargin: "200px" });
+                var firstCode = document.querySelector(".code");
+                if (firstCode) { io.observe(firstCode); } else { loadPrism(); }
+            } else {
+                loadPrism();
+            }
+
+            /* ----- Pyodide 플레이그라운드 ----- */
+            var pyodidePromise = null;
+            function getPyodide(onStatus) {
+                if (pyodidePromise) return pyodidePromise;
+                onStatus("파이썬 런타임 다운로드 중...");
+                pyodidePromise = loadScript(PYODIDE_SRC)
+                    .then(function () { return window.loadPyodide(); })
+                    .then(function (py) {
+                        onStatus("pandas 불러오는 중...");
+                        return py.loadPackage(["pandas"]).then(function () { return py; });
+                    });
+                return pyodidePromise;
+            }
+
+            var plays = document.querySelectorAll(".play");
+            Array.prototype.forEach.call(plays, function (play) {
+                var btn = play.querySelector(".play__run");
+                var editor = play.querySelector(".play__editor");
+                var out = play.querySelector(".play__out");
+                if (!btn || !editor || !out) return;
+
+                btn.addEventListener("click", function () {
+                    btn.disabled = true;
+                    var setStatus = function (msg) { out.textContent = msg; };
+                    setStatus("실행 준비 중...");
+                    getPyodide(setStatus).then(function (py) {
+                        setStatus("실행 중...");
+                        py.runPython(
+                            "import sys, io\n" +
+                            "sys.stdout = io.StringIO()\n" +
+                            "sys.stderr = sys.stdout\n"
+                        );
+                        var ok = true;
+                        try {
+                            py.runPython(editor.value);
+                        } catch (e) {
+                            ok = false;
+                            var captured = "";
+                            try { captured = py.runPython("sys.stdout.getvalue()"); } catch (ignore) {}
+                            out.textContent = (captured ? captured + "\n" : "") + String(e.message || e);
+                        }
+                        if (ok) {
+                            var result = py.runPython("sys.stdout.getvalue()");
+                            out.textContent = result || "(출력 없음)";
+                        }
+                    }).catch(function (err) {
+                        out.textContent = "실행 환경을 불러오지 못했습니다: " + String(err.message || err);
+                    }).then(function () {
+                        btn.disabled = false;
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
