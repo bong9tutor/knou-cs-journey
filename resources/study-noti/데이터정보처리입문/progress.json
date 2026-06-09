@@ -7,6 +7,6 @@
   "completedSteps": [],
   "lastTelegramUpdateId": 976349975,
   "active": false,
-  "notionUrl": "https://app.notion.com/p/376fe77d525681abbd52ca99bfe2fa41",
+  "notionUrl": "https://app.notion.com/p/37afe77d525681a2a039d07d4da93074",
   "note": "active=true일 때만 노티 발송(학습 시작 시 true로). currentStep=발송할 단계 번호. 21단계 실습. 진도 전진=텔레그램에 '다음 데이터정보처리입문'(활성 1개면 '다음') 텍스트를 보내면 currentStep+1. 회차(같은 단계 반복 학습)는 노션 회차 토글로 사용자가 직접 관리(텔레그램은 회차를 세지 않고 버튼도 없음). 상세는 학습 노트(year1/1-1_데이터정보처리입문/notes/데이터정보처리입문_학습노트.md) 참조."
 }
