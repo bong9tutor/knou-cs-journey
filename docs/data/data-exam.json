@@ -1,0 +1,3979 @@
+{
+  "subject": "데이터정보처리입문",
+  "version": 1,
+  "config": {
+    "passPct": 60,
+    "secPerQuestion": 60,
+    "shuffle": true
+  },
+  "questions": [
+    {
+      "id": "data-001",
+      "type": "single",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "측정 척도 중 '절대 0이 존재하여 배수(비율) 비교가 가능한' 척도는 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "명목척도(nominal)"
+        },
+        {
+          "id": "b",
+          "text": "순서척도(ordinal)"
+        },
+        {
+          "id": "c",
+          "text": "등간척도(interval)"
+        },
+        {
+          "id": "d",
+          "text": "비율척도(ratio)"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "비율척도(ratio)는 절대 0이 있어 '2배' 같은 배수 비교가 가능하다. 예) 키, 몸무게, 소득, 나이. 등간척도는 간격은 일정하지만 절대 0이 없어 배수 비교가 무의미하다."
+    },
+    {
+      "id": "data-002",
+      "type": "single",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 '등간척도(interval)'에 해당하는 변수로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "혈액형"
+        },
+        {
+          "id": "b",
+          "text": "섭씨 온도"
+        },
+        {
+          "id": "c",
+          "text": "소득"
+        },
+        {
+          "id": "d",
+          "text": "영화 별점(상/중/하 만족도)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "섭씨 온도는 간격이 일정하지만 0도가 '온도 없음'을 뜻하지 않아 절대 0이 없으므로 등간척도다. 혈액형은 명목, 소득은 비율, 만족도는 순서척도에 해당한다."
+    },
+    {
+      "id": "data-003",
+      "type": "multi",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 변수 중 '명목척도(nominal)'로 분류되는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "성별"
+        },
+        {
+          "id": "b",
+          "text": "지역코드"
+        },
+        {
+          "id": "c",
+          "text": "키(cm)"
+        },
+        {
+          "id": "d",
+          "text": "우편번호"
+        },
+        {
+          "id": "e",
+          "text": "학점(만족도 상/중/하 형태의 등급)"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explanation": "명목척도는 순서 없는 분류로, 숫자처럼 보여도 이름표일 뿐이다. 성별, 지역코드, 우편번호가 이에 해당한다. 키(cm)는 비율척도, 등급(상/중/하)은 순서척도다."
+    },
+    {
+      "id": "data-004",
+      "type": "ox",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "모집단의 특성치는 '통계량(statistic)'이라 부르고, 표본의 특성치는 '모수(parameter)'라 부른다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "반대다. 모집단의 특성치가 모수(parameter), 표본의 특성치가 통계량(statistic)이다."
+    },
+    {
+      "id": "data-005",
+      "type": "ox",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "척도의 정보량은 '명목 < 순서 < 등간 < 비율' 순으로 커지며, 위 단계에서 가능한 연산은 아래 단계에서도 항상 가능하다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트의 암기 팁대로 명목 < 순서 < 등간 < 비율 순으로 정보량이 커지고, 상위 단계(비율)는 하위 단계의 모든 연산을 포함한다(비율은 다 됨)."
+    },
+    {
+      "id": "data-006",
+      "type": "short",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "한 개체에 대한 측정값의 묶음(예: 한 사람의 한 행)을 부르는 용어를 한 단어로 쓰시오. (변수와 짝이 되는 개념)",
+      "answer": [
+        "관측치",
+        "관측값",
+        "케이스",
+        "case",
+        "observation"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "변수(variable)는 측정 항목이고, 관측치(observation/case)는 한 개체에 대한 측정값의 묶음, 즉 표의 한 행에 해당한다."
+    },
+    {
+      "id": "data-007",
+      "type": "short",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "순서척도(ordinal) 데이터를 요약할 때 의미 있게 사용할 수 있는 대표값 중 '중심 위치'를 나타내는 것을 한 단어로 쓰시오.",
+      "answer": [
+        "중앙값",
+        "median",
+        "메디안"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "명목척도는 최빈값까지, 순서척도는 중앙값까지 의미가 있다. 순서는 있으나 간격이 일정치 않으므로 평균은 부적절하고 중앙값이 적절하다."
+    },
+    {
+      "id": "data-008",
+      "type": "cloze",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "데이터 타입의 큰 분류에서, 분류·이름을 나타내며 빈도·비율로 요약하는 데이터를 {{1}}이라 하고, 수량을 나타내며 평균·표준편차로 요약하는 데이터를 {{2}}이라 한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "범주형",
+            "categorical",
+            "qualitative",
+            "질적"
+          ]
+        },
+        {
+          "accept": [
+            "연속형",
+            "numerical",
+            "quantitative",
+            "양적",
+            "수치형"
+          ]
+        }
+      ],
+      "explanation": "범주형(categorical/qualitative)은 분류·이름을 나타내 빈도·비율로 요약하고, 연속형(numerical/quantitative)은 수량을 나타내 평균·표준편차로 요약한다."
+    },
+    {
+      "id": "data-009",
+      "type": "single",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "'표본으로 모집단을 추정/검정하는' 통계 분야를 가리키는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "기술통계(descriptive statistics)"
+        },
+        {
+          "id": "b",
+          "text": "추론통계(inferential statistics)"
+        },
+        {
+          "id": "c",
+          "text": "명목척도"
+        },
+        {
+          "id": "d",
+          "text": "전처리(cleaning)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "기술통계는 가진 데이터를 요약/묘사하고, 추론통계는 표본으로 모집단을 추정/검정한다."
+    },
+    {
+      "id": "data-010",
+      "type": "order",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "데이터 분석 워크플로우의 올바른 순서를 나열하시오.",
+      "answer": [],
+      "items": [
+        "문제 정의",
+        "데이터 수집",
+        "정제(전처리)",
+        "탐색(EDA)",
+        "분석/모형화",
+        "해석/시각화",
+        "보고"
+      ],
+      "explanation": "노트의 분석 워크플로우 7단계: 문제 정의 → 데이터 수집 → 정제(전처리) → 탐색(EDA) → 분석/모형화 → 해석/시각화 → 보고."
+    },
+    {
+      "id": "data-011",
+      "type": "match",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "각 변수와 그에 알맞은 측정 척도를 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "성별",
+          "right": "명목척도"
+        },
+        {
+          "left": "만족도(상/중/하)",
+          "right": "순서척도"
+        },
+        {
+          "left": "연도",
+          "right": "등간척도"
+        },
+        {
+          "left": "나이",
+          "right": "비율척도"
+        }
+      ],
+      "explanation": "성별=명목(순서 없는 분류), 만족도=순서(순서는 있으나 간격 불일정), 연도=등간(간격 일정·절대 0 없음), 나이=비율(절대 0 있어 배수 비교 가능)."
+    },
+    {
+      "id": "data-012",
+      "type": "code-output",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 '시도명'처럼 명목형(범주형) 열의 데이터 개수(빈 셀 제외)를 세려 한다. 가장 적절한 함수는?",
+      "stemCode": "=____(A2:A10)   ' 시도명 열에서 비어있지 않은 셀의 개수를 센다",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=AVERAGE(A2:A10)"
+        },
+        {
+          "id": "b",
+          "text": "=MEDIAN(A2:A10)"
+        },
+        {
+          "id": "c",
+          "text": "=COUNTA(A2:A10)"
+        },
+        {
+          "id": "d",
+          "text": "=STDEV.S(A2:A10)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "명목형 텍스트 열에는 평균(AVERAGE)이 무의미하다. 노트 실습 B대로 COUNTA(범위)로 비어있지 않은 셀의 개수를 센다. COUNT는 숫자만 세므로 텍스트에는 COUNTA가 적절하다."
+    },
+    {
+      "id": "data-013",
+      "type": "code-output",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 pandas 코드에서 마지막 줄이 출력하는 것으로 가장 알맞은 설명은?",
+      "stemCode": "import pandas as pd\ndf = pd.read_csv('pop.csv', encoding='cp949')\nprint(df['시도명'].value_counts())",
+      "choices": [
+        {
+          "id": "a",
+          "text": "'시도명' 열 값들의 평균"
+        },
+        {
+          "id": "b",
+          "text": "'시도명' 열에 등장한 각 범주(값)별 빈도(개수)"
+        },
+        {
+          "id": "c",
+          "text": "데이터프레임의 행·열 크기 (행 수, 열 수)"
+        },
+        {
+          "id": "d",
+          "text": "각 열의 결측치 개수"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "value_counts()는 범주형(명목) 열의 각 값이 몇 번 나오는지 빈도를 세어 준다(노트 실습 C). 행·열 크기는 df.shape, 결측치 개수는 df.isnull().sum()이다."
+    },
+    {
+      "id": "data-014",
+      "type": "single",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 pandas 코드에는 '척도를 잘못 본' 오류가 있다. 어떤 점이 부적절한가?",
+      "stemCode": "import pandas as pd\ndf = pd.read_csv('pop.csv')\n# '우편번호' 열은 숫자로 저장되어 있다\nprint(df['우편번호'].mean())   # 평균 계산",
+      "choices": [
+        {
+          "id": "a",
+          "text": "read_csv에 encoding 인자가 없어 항상 에러가 난다"
+        },
+        {
+          "id": "b",
+          "text": "우편번호는 명목척도(이름표 숫자)이므로 평균을 내는 것이 무의미하다"
+        },
+        {
+          "id": "c",
+          "text": "mean() 대신 반드시 median()을 써야 숫자가 출력된다"
+        },
+        {
+          "id": "d",
+          "text": "value_counts()로만 평균을 구할 수 있다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "우편번호는 숫자로 저장돼 있어도 순서·간격이 의미 없는 명목척도(이름표일 뿐인 숫자)다. 명목 데이터에 평균을 내면 무의미하다는 것이 노트의 핵심 경고다. encoding이 없어도 기본값으로 읽히므로 항상 에러가 나는 것은 아니다."
+    },
+    {
+      "id": "data-015",
+      "type": "single",
+      "unit": "1. 데이터 분석과 컴퓨터",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "'전국 대학생의 평균 공부 시간'을 알고 싶어 일부 대학생만 조사했다. 이때 '전국 대학생 전체'와 '조사한 일부'를 각각 무엇이라 하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "전체=표본, 일부=모집단"
+        },
+        {
+          "id": "b",
+          "text": "전체=모집단, 일부=표본"
+        },
+        {
+          "id": "c",
+          "text": "전체=통계량, 일부=모수"
+        },
+        {
+          "id": "d",
+          "text": "전체=기술통계, 일부=추론통계"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "모집단(population)은 관심 대상 전체(전국 대학생), 표본(sample)은 거기서 뽑은 일부(조사한 학생들)다."
+    },
+    {
+      "id": "data-016",
+      "type": "single",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "정형 데이터의 구조에 대한 설명으로 가장 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "행(row)은 변수 1개, 열(column)은 관측치 1건을 나타낸다."
+        },
+        {
+          "id": "b",
+          "text": "행(row)은 관측 단위 1건, 열(column)은 변수 1개를 나타낸다."
+        },
+        {
+          "id": "c",
+          "text": "셀(cell)은 하나의 행 전체를 의미한다."
+        },
+        {
+          "id": "d",
+          "text": "행과 열의 구분 없이 모든 값을 한 칸에 모아 둔 것이다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 정형 데이터에서 행=관측 단위 1건(예: 사람 1명, 하루), 열=변수 1개(예: 키, 소득), 셀=하나의 값이며 이 약속이 모든 분석 도구의 전제다."
+    },
+    {
+      "id": "data-017",
+      "type": "single",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "결측치(missing value)의 표기 방법을 도구별로 짝지은 것으로 옳지 않은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "엑셀 - 빈 칸"
+        },
+        {
+          "id": "b",
+          "text": "R - NA"
+        },
+        {
+          "id": "c",
+          "text": "pandas - NaN 또는 None"
+        },
+        {
+          "id": "d",
+          "text": "pandas - 항상 0으로 표기"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "결측치는 엑셀에서 빈 칸, R에서 NA, pandas에서 NaN/None으로 표기한다. 0은 결측치가 아니며, 빈칸인지 0인지 '모름' 문자열인지 반드시 구분해야 한다."
+    },
+    {
+      "id": "data-018",
+      "type": "ox",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "'쓰레기를 넣으면 쓰레기가 나온다(Garbage In, Garbage Out)'는 원칙은, 아무리 좋은 분석 기법을 써도 입력 원자료가 더러우면 결론이 틀린다는 뜻이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트의 개요에서 데이터 분석은 GIGO 원칙이 지배하며, 좋은 분석 기법이나 멋진 그래프를 써도 입력 원자료가 더럽다면 결론은 틀린다고 설명한다."
+    },
+    {
+      "id": "data-019",
+      "type": "ox",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "이상치(outlier)는 반드시 입력 오류이므로 발견하면 무조건 삭제해야 한다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트에 따르면 이상치는 입력 오류일 수도 있고 진짜 극단값일 수도 있다. 따라서 무조건 삭제 대상은 아니며 판단이 필요하다."
+    },
+    {
+      "id": "data-020",
+      "type": "single",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "IQR 규칙으로 이상치를 판정할 때, 이상치로 보는 값의 범위로 옳은 것은? (단 IQR = Q3 - Q1)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Q1 - 1.5×IQR 미만 또는 Q3 + 1.5×IQR 초과"
+        },
+        {
+          "id": "b",
+          "text": "Q1 - 1.0×IQR 미만 또는 Q3 + 1.0×IQR 초과"
+        },
+        {
+          "id": "c",
+          "text": "Q2 - 1.5×IQR 미만 또는 Q2 + 1.5×IQR 초과"
+        },
+        {
+          "id": "d",
+          "text": "평균 - 1.5×표준편차 미만 또는 평균 + 1.5×표준편차 초과"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 IQR 규칙은 'Q1-1.5×IQR 미만 또는 Q3+1.5×IQR 초과'를 이상치로 본다. d는 Z-점수와 혼동한 보기다."
+    },
+    {
+      "id": "data-021",
+      "type": "multi",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 언급한 이상치(outlier) 탐지법을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "상자그림(boxplot)"
+        },
+        {
+          "id": "b",
+          "text": "IQR 규칙"
+        },
+        {
+          "id": "c",
+          "text": "Z-점수"
+        },
+        {
+          "id": "d",
+          "text": "최빈값 대치"
+        },
+        {
+          "id": "e",
+          "text": "원-핫 인코딩"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트에 명시된 이상치 탐지법은 상자그림(boxplot), IQR 규칙, Z-점수 세 가지다. 최빈값 대치는 결측치 처리 전략이고, 원-핫 인코딩은 노트에 없다."
+    },
+    {
+      "id": "data-022",
+      "type": "single",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "결측치 대치(imputation) 전략으로 노트가 제시한 내용과 다른 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "수치형은 평균이나 중앙값으로 채운다."
+        },
+        {
+          "id": "b",
+          "text": "범주형은 최빈값으로 채운다."
+        },
+        {
+          "id": "c",
+          "text": "모델 예측으로 채운다."
+        },
+        {
+          "id": "d",
+          "text": "범주형은 항상 평균값으로 채운다."
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "노트는 수치형을 평균·중앙값으로, 범주형을 최빈값으로 채우거나 모델 예측으로 채우는 대치 전략을 든다. 범주형에 평균값을 쓰는 것은 옳지 않다."
+    },
+    {
+      "id": "data-023",
+      "type": "code-output",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 pandas 코드 중 '열별 결측 개수'를 세는 명령으로 옳은 것은?",
+      "stemCode": "import pandas as pd\ndf = pd.read_csv(\"data.csv\", encoding=\"utf-8\")\n# 각 열에 결측치가 몇 개인지 알고 싶다\n???",
+      "choices": [
+        {
+          "id": "a",
+          "text": "df.isnull().sum()"
+        },
+        {
+          "id": "b",
+          "text": "df.shape()"
+        },
+        {
+          "id": "c",
+          "text": "df.dropna()"
+        },
+        {
+          "id": "d",
+          "text": "df.describe()"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 C에서 df.isnull().sum()이 열별 결측 개수를 센다. df.shape는 (행, 열) 크기, df.dropna()는 결측 행 삭제, df.describe()는 수치형 요약통계다."
+    },
+    {
+      "id": "data-024",
+      "type": "code-output",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 pandas 코드에서 IQR 규칙을 적용해 이상치가 아닌(정상 범위) 행만 남기는 mask로 빈칸에 들어갈 식으로 옳은 것은?",
+      "stemCode": "q1, q3 = df[\"소득\"].quantile([0.25, 0.75])\niqr = q3 - q1\nmask = ???\ndf_clean = df[mask]",
+      "choices": [
+        {
+          "id": "a",
+          "text": "(df[\"소득\"] >= q1 - 1.5*iqr) & (df[\"소득\"] <= q3 + 1.5*iqr)"
+        },
+        {
+          "id": "b",
+          "text": "(df[\"소득\"] < q1 - 1.5*iqr) | (df[\"소득\"] > q3 + 1.5*iqr)"
+        },
+        {
+          "id": "c",
+          "text": "(df[\"소득\"] >= q1) & (df[\"소득\"] <= q3)"
+        },
+        {
+          "id": "d",
+          "text": "(df[\"소득\"] == df[\"소득\"].mean())"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 C의 IQR 필터링에서 정상 범위는 'Q1-1.5×IQR 이상이고 Q3+1.5×IQR 이하'다. b는 반대로 이상치만 고르는 조건이다."
+    },
+    {
+      "id": "data-025",
+      "type": "cloze",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 pandas 코드의 빈칸을 채우시오. 결측 있는 행을 삭제하려면 df2 = df.{{1}}() 를 쓰고, '소득' 열의 결측을 중앙값으로 대치하려면 df[\"소득\"] = df[\"소득\"].{{2}}(df[\"소득\"].median()) 을 쓴다.",
+      "choices": [],
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "dropna"
+          ]
+        },
+        {
+          "accept": [
+            "fillna"
+          ]
+        }
+      ],
+      "explanation": "노트 실습 C에 따르면 결측 행 삭제는 dropna(), 결측 대치는 fillna()를 사용한다."
+    },
+    {
+      "id": "data-026",
+      "type": "cloze",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 빈 칸 개수를 세는 함수는 ={{1}}(범위)이고, 한 수치 열의 평균을 구해 평균 대치에 쓰는 함수는 ={{2}}(범위)이다.",
+      "choices": [],
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "COUNTBLANK",
+            "countblank"
+          ]
+        },
+        {
+          "accept": [
+            "AVERAGE",
+            "average"
+          ]
+        }
+      ],
+      "explanation": "노트 실습 B에서 빈 칸 개수는 =COUNTBLANK(범위)로 세고, 평균 대치를 위해 =AVERAGE(범위)로 평균을 구한다."
+    },
+    {
+      "id": "data-027",
+      "type": "short",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "분석 도구가 곧바로 처리할 수 있도록 '각 변수=하나의 열, 각 관측치=하나의 행, 각 값=하나의 셀'로 정돈한 깔끔한 데이터를 무엇이라 부르는가? (영문 표기)",
+      "choices": [],
+      "answer": [
+        "Tidy Data",
+        "Tidy",
+        "타이디 데이터",
+        "tidy data",
+        "TidyData"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "Hadley Wickham의 Tidy Data 3원칙(각 변수=한 열, 각 관측치=한 행, 각 값=한 셀)을 만족하는 깔끔한 데이터를 Tidy Data라 한다."
+    },
+    {
+      "id": "data-028",
+      "type": "short",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R의 tidyr에서 '연도별 열로 흩어진 넓은 형식 표'를 '긴 형식'으로 바꿀 때 쓰는 함수 이름은 무엇인가?",
+      "choices": [],
+      "answer": [
+        "pivot_longer",
+        "pivot_longer()",
+        "pivotlonger"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 실습 D에서 tidyr의 pivot_longer()를 사용해 넓은 형식을 긴 형식으로 변환한다. (pandas에서는 melt에 해당)"
+    },
+    {
+      "id": "data-029",
+      "type": "match",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 기능과 그 역할을 알맞게 짝지으시오.",
+      "choices": [],
+      "answer": [],
+      "pairs": [
+        {
+          "left": "df.shape",
+          "right": "(행 수, 열 수) 확인"
+        },
+        {
+          "left": "df.head()",
+          "right": "앞 5줄 미리보기"
+        },
+        {
+          "left": "df.info()",
+          "right": "자료형과 결측(non-null) 현황"
+        },
+        {
+          "left": "df.describe()",
+          "right": "수치형 요약통계(min/max로 이상치 감지)"
+        },
+        {
+          "left": "df.drop_duplicates()",
+          "right": "중복 행 제거"
+        }
+      ],
+      "explanation": "노트 실습 C의 첫 점검 3종 세트와 정제 명령에 따른 짝이다. shape=크기, head=앞부분 미리보기, info=자료형/결측, describe=요약통계, drop_duplicates=중복 제거."
+    },
+    {
+      "id": "data-030",
+      "type": "order",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트의 '데이터 첫 점검 루틴' 순서를 올바르게 배열하시오.",
+      "choices": [],
+      "answer": [],
+      "items": [
+        "행·열 개수 확인",
+        "앞/뒤 몇 줄 미리보기(head/tail)",
+        "자료형과 결측 현황 요약(info/describe, str/summary)"
+      ],
+      "explanation": "노트의 데이터 첫 점검 루틴은 '행·열 개수 확인 -> 앞/뒤 몇 줄 미리보기 -> 자료형과 결측 현황 요약' 순서다."
+    },
+    {
+      "id": "data-031",
+      "type": "single",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "CSV를 메모장으로 열었더니 한글이 깨져 보였다. 노트가 제시한 해결 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "엑셀에서 '데이터 -> 텍스트/CSV 가져오기'로 UTF-8 인코딩을 지정해 다시 연다."
+        },
+        {
+          "id": "b",
+          "text": "파일 확장자를 .txt로 바꾸면 자동으로 복구된다."
+        },
+        {
+          "id": "c",
+          "text": "결측치를 모두 0으로 채우면 인코딩이 복구된다."
+        },
+        {
+          "id": "d",
+          "text": "중복 행을 제거하면 한글 깨짐이 사라진다."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 A 4단계에서 한글이 깨지면 엑셀의 '데이터 -> 텍스트/CSV 가져오기'로 UTF-8 인코딩을 지정해 다시 열라고 안내한다. 인코딩 문제는 확장자 변경이나 결측/중복 처리와 무관하다."
+    },
+    {
+      "id": "data-032",
+      "type": "code-output",
+      "unit": "2. 데이터의 입력과 점검",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 R 코드는 '소득' 열의 결측치를 중앙값으로 대치하려는 의도다. 빈칸 (가)에 들어갈 표현으로 옳은 것은?",
+      "stemCode": "df$소득[is.na(df$소득)] <- median(df$소득, (가))",
+      "choices": [
+        {
+          "id": "a",
+          "text": "na.rm = TRUE"
+        },
+        {
+          "id": "b",
+          "text": "na.rm = FALSE"
+        },
+        {
+          "id": "c",
+          "text": "encoding = \"UTF-8\""
+        },
+        {
+          "id": "d",
+          "text": "ddof = 1"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 D에서 median(df$소득, na.rm = TRUE)로 결측을 제외하고 중앙값을 구한다. na.rm=TRUE가 아니면 NA가 포함돼 median이 NA가 된다. ddof는 pandas/Python 인자다."
+    },
+    {
+      "id": "data-033",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "이 단원에서 신뢰할 수 있는 공공 데이터의 1차 공급처로 소개하며, 통계표 검색-다운로드-기술통계·시각화 실습의 중심이 되는 사이트는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "KOSIS(국가통계포털, kosis.kr)"
+        },
+        {
+          "id": "b",
+          "text": "공공데이터포털(data.go.kr)"
+        },
+        {
+          "id": "c",
+          "text": "칸아카데미 한국어(ko.khanacademy.org)"
+        },
+        {
+          "id": "d",
+          "text": "Kaggle Learn(kaggle.com/learn)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 KOSIS(국가통계포털, kosis.kr)를 신뢰할 수 있는 공공 데이터의 1차 공급처이자 실습의 중심으로 명시한다. 공공데이터포털은 KOSIS 외 다양한 공공 데이터/오픈API를 제공하는 별도 출처로 소개된다."
+    },
+    {
+      "id": "data-034",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "중심 경향(대표값)과 산포(퍼짐)에 대한 노트의 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "평균은 이상치에 강건하고 중앙값은 이상치에 민감하다."
+        },
+        {
+          "id": "b",
+          "text": "평균은 이상치에 민감하고 중앙값은 강건하다."
+        },
+        {
+          "id": "c",
+          "text": "사분위범위(IQR)는 Q1 - Q3로 계산한다."
+        },
+        {
+          "id": "d",
+          "text": "최빈값은 산포(퍼짐)를 나타내는 대표적인 지표다."
+        },
+        {
+          "id": "e",
+          "text": "범위(range)는 중심 경향을 나타내는 대표값이다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 평균은 이상치에 민감하고 중앙값은 강건하다. IQR = Q3 - Q1이며, 최빈값은 중심 경향(대표값), 범위는 산포에 해당한다."
+    },
+    {
+      "id": "data-035",
+      "type": "ox",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀 함수 VAR.P / STDEV.P는 모집단 기준(나누는 값 n), VAR.S / STDEV.S는 표본 기준(나누는 값 n-1)이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 모집단 vs 표본 분산을 구분하며 VAR.P/STDEV.P를 모집단, VAR.S/STDEV.S를 표본 기준으로 명시한다. 모집단은 n, 표본은 n-1로 나눈다."
+    },
+    {
+      "id": "data-036",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R의 var()/sd()와 pandas의 .var()/.std()(기본값)는 각각 모집단·표본 중 어느 기준으로 계산하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "둘 다 모집단(n) 기준"
+        },
+        {
+          "id": "b",
+          "text": "둘 다 표본(n-1) 기준"
+        },
+        {
+          "id": "c",
+          "text": "R은 모집단, pandas는 표본 기준"
+        },
+        {
+          "id": "d",
+          "text": "R은 표본, pandas는 모집단 기준"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 R var()/sd()는 표본 기준이고, pandas .var()/.std()는 기본 ddof=1로 표본 기준이다. 따라서 둘 다 표본(n-1) 기준이다."
+    },
+    {
+      "id": "data-037",
+      "type": "code-output",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "pandas로 KOSIS 데이터를 요약할 때, 아래 코드의 describe()가 한 번에 출력하는 통계 항목으로 노트에 명시된 것을 가장 잘 나타낸 것은?",
+      "stemCode": "import pandas as pd\ndf = pd.read_csv(\"kosis.csv\")\nprint(df[\"인구\"].describe())",
+      "choices": [
+        {
+          "id": "a",
+          "text": "count, mean, std, min, 사분위(25%/50%/75%), max"
+        },
+        {
+          "id": "b",
+          "text": "sum, product, mode, range, IQR"
+        },
+        {
+          "id": "c",
+          "text": "히스토그램과 상자그림 이미지"
+        },
+        {
+          "id": "d",
+          "text": "최빈값, 왜도, 첨도, 상관계수"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 df[\"인구\"].describe() 한 줄로 count·mean·std·min·사분위·max를 한꺼번에 본다고 설명한다. describe()는 그래프가 아니라 요약 통계 수치를 출력한다."
+    },
+    {
+      "id": "data-038",
+      "type": "cloze",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 B2:B11 범위의 대표값을 구하는 함수다. 평균은 {{1}}(B2:B11), 중앙값은 {{2}}(B2:B11) 함수를 쓴다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "=AVERAGE",
+            "AVERAGE",
+            "average"
+          ]
+        },
+        {
+          "accept": [
+            "=MEDIAN",
+            "MEDIAN",
+            "median"
+          ]
+        }
+      ],
+      "explanation": "노트 실습 B에서 평균은 =AVERAGE(B2:B11), 중앙값은 =MEDIAN(B2:B11)로 구한다."
+    },
+    {
+      "id": "data-039",
+      "type": "cloze",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 B2:B11의 1사분위수(Q1)는 ={{1}}(B2:B11,1), 표본 표준편차는 ={{2}}(B2:B11) 함수로 구한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "QUARTILE.INC",
+            "quartile.inc"
+          ]
+        },
+        {
+          "accept": [
+            "STDEV.S",
+            "stdev.s"
+          ]
+        }
+      ],
+      "explanation": "노트 실습 B에서 사분위는 =QUARTILE.INC(B2:B11,1)로 Q1을, 표본 표준편차는 =STDEV.S(B2:B11)로 구한다고 명시한다."
+    },
+    {
+      "id": "data-040",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "한 학생이 엑셀에서 표본 분산을 구하려고 =VAR.P(B2:B11)를 입력했는데, R의 var()와 값이 미세하게 달랐다. 노트 내용에 비추어 원인과 올바른 수정으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "VAR.P는 모집단(n) 기준이라 표본(n-1) 기준인 R var()와 다르다. =VAR.S(B2:B11)로 바꿔야 한다."
+        },
+        {
+          "id": "b",
+          "text": "VAR.P는 표본 기준이라 맞으므로 R 쪽을 모집단 기준으로 바꿔야 한다."
+        },
+        {
+          "id": "c",
+          "text": "엑셀 함수명을 =VARIANCE(B2:B11)로 바꿔야 한다."
+        },
+        {
+          "id": "d",
+          "text": "범위 B2:B11이 잘못되었으므로 B1:B11로 머리글을 포함해야 한다."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "VAR.P는 모집단(n) 기준이고 R var()는 표본(n-1) 기준이라 값이 미세하게 다르다. 표본 분산을 원하면 =VAR.S(B2:B11)를 써야 한다. =VARIANCE는 노트에 없는 함수이고, 머리글을 범위에 포함하면 안 된다."
+    },
+    {
+      "id": "data-041",
+      "type": "code-output",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R에서 KOSIS CSV를 불러와 요약하는 코드다. summary()와 함께 노트에 제시된, 데이터를 시각화하는 함수 호출만 올바르게 묶은 것은?",
+      "stemCode": "data <- read.csv(\"kosis.csv\")\nsummary(data$인구)\n# 시각화: ____",
+      "choices": [
+        {
+          "id": "a",
+          "text": "hist(data$인구), boxplot(data$인구), plot(data$인구, type=\"l\")"
+        },
+        {
+          "id": "b",
+          "text": "describe(data$인구), df.boxplot(), plot(kind=\"hist\")"
+        },
+        {
+          "id": "c",
+          "text": "AVERAGE(data$인구), MEDIAN(data$인구)"
+        },
+        {
+          "id": "d",
+          "text": "barchart(data), pie(data), scatter(data)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 C는 R에서 hist(), boxplot(), plot(type=\"l\")로 시각화한다고 명시한다. describe()/df.boxplot()/plot(kind=\"hist\")는 pandas, AVERAGE/MEDIAN은 엑셀 함수다."
+    },
+    {
+      "id": "data-042",
+      "type": "multi",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 분포를 보기 위해 소개한 시각화 방법과 그 용도가 옳게 짝지어진 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "히스토그램 - 분포 모양·치우침 확인"
+        },
+        {
+          "id": "b",
+          "text": "상자그림(box plot) - 사분위·이상치 확인"
+        },
+        {
+          "id": "c",
+          "text": "시계열 선그래프 - 시간에 따른 추세 확인"
+        },
+        {
+          "id": "d",
+          "text": "원그래프(pie chart) - 표준편차 확인"
+        },
+        {
+          "id": "e",
+          "text": "산점도(scatter) - 모집단/표본 구분"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트의 분포 시각화 항목은 히스토그램(분포 모양·치우침), 상자그림(사분위·이상치), 시계열 선그래프(추세)를 든다. 원그래프·산점도는 이 단원에서 해당 용도로 언급되지 않는다."
+    },
+    {
+      "id": "data-043",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "KOSIS에서 다운로드할 때 데이터 양에 따른 처리 방식으로 노트 내용과 일치하는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "셀 20,000개를 초과하면 조회 버튼이 다운로드 버튼으로 바뀌고, 200,000개를 초과하면 통계목록의 '파일다운로드'를 쓴다."
+        },
+        {
+          "id": "b",
+          "text": "셀 200,000개를 초과하면 조회 버튼이 다운로드 버튼으로 바뀐다."
+        },
+        {
+          "id": "c",
+          "text": "셀 개수와 무관하게 항상 EXCEL 파일로만 받을 수 있다."
+        },
+        {
+          "id": "d",
+          "text": "셀 20,000개 미만이면 다운로드가 불가능하다."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 A는 셀 20,000개 초과 시 조회 버튼이 다운로드 버튼으로 바뀌고, 200,000개 초과 시 통계목록의 '파일다운로드'를 쓴다고 설명한다. 파일은 EXCEL(.xlsx) 또는 CSV로 받을 수 있다."
+    },
+    {
+      "id": "data-044",
+      "type": "order",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트 실습 A에 제시된 'KOSIS에서 실데이터 검색·다운로드' 순서를 올바르게 나열하시오.",
+      "answer": [],
+      "items": [
+        "KOSIS에 접속해 '통계표'를 선택하고 관심 주제를 검색한다",
+        "검색 결과에서 통계표 제목을 클릭해 조회 화면으로 들어간다",
+        "조회설정(항목/분류/시점)을 열어 기간·값을 선택하고 '조회'를 누른다",
+        "행렬전환으로 시점을 열에 두어 '지역 x 연도' 형태로 정돈한다",
+        "'다운로드' 버튼을 눌러 EXCEL 또는 CSV로 저장한다",
+        "받은 파일에서 머리글·단위·빈 셀(결측치) 위치를 확인한다"
+      ],
+      "explanation": "노트 실습 A는 검색 → 통계표 클릭 → 조회설정·조회 → 행렬전환 → 다운로드 → 파일 점검 순서로 진행한다."
+    },
+    {
+      "id": "data-045",
+      "type": "short",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 사분위범위를 가리키는 약어이며 'Q3 - Q1'로 정의되는 산포 지표는? (영문 약어로 답)",
+      "answer": [
+        "IQR",
+        "iqr",
+        "사분위범위",
+        "사분위 범위",
+        "interquartile range"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 사분위범위(IQR = Q3 - Q1)로 정의한다. Q1과 Q3 사이의 거리로 데이터의 중간 50% 퍼짐을 나타낸다."
+    },
+    {
+      "id": "data-046",
+      "type": "match",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에 제시된 도구별 '표준편차/분산' 계산 방식을 올바르게 짝지으시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "엑셀 STDEV.P / VAR.P",
+          "right": "모집단 기준(n으로 나눔)"
+        },
+        {
+          "left": "엑셀 STDEV.S / VAR.S",
+          "right": "표본 기준(n-1로 나눔)"
+        },
+        {
+          "left": "R var() / sd()",
+          "right": "표본 기준"
+        },
+        {
+          "left": "pandas .var() / .std()",
+          "right": "기본 ddof=1, 표본 기준"
+        }
+      ],
+      "explanation": "노트의 모집단 vs 표본 분산 설명을 그대로 짝지은 것이다. 엑셀 .P는 모집단, .S는 표본, R과 pandas(기본값)는 모두 표본 기준이다."
+    },
+    {
+      "id": "data-047",
+      "type": "single",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 분포의 치우침을 해석하는 예로 든 '평균보다 중앙값이 낮다'는 어떤 분포를 의미하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "오른쪽으로 꼬리가 긴 분포(오른쪽 치우침)"
+        },
+        {
+          "id": "b",
+          "text": "왼쪽으로 꼬리가 긴 분포(왼쪽 치우침)"
+        },
+        {
+          "id": "c",
+          "text": "완전한 좌우대칭 정규분포"
+        },
+        {
+          "id": "d",
+          "text": "최빈값이 두 개인 이봉분포"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 B는 '평균보다 중앙값이 낮다 = 오른쪽으로 꼬리가 긴 분포'라는 해석 예를 든다. 큰 이상치들이 평균을 위로 끌어올려 평균 > 중앙값이 되는 오른쪽 치우침 분포다."
+    },
+    {
+      "id": "data-048",
+      "type": "code-output",
+      "unit": "3. 통계정보 검색 및 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "pandas로 시각화하려 한다. 노트에 제시된 시각화 코드로 올바르지 않은 것은?",
+      "stemCode": "import pandas as pd\ndf = pd.read_csv(\"kosis.csv\")\n# 아래 중 노트에 없는(잘못된) 호출을 고르시오",
+      "choices": [
+        {
+          "id": "a",
+          "text": "df[\"인구\"].plot(kind=\"hist\")"
+        },
+        {
+          "id": "b",
+          "text": "df.boxplot()"
+        },
+        {
+          "id": "c",
+          "text": "df[\"인구\"].plot()"
+        },
+        {
+          "id": "d",
+          "text": "df[\"인구\"].hist(type=\"box\")"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "노트 실습 C는 pandas 시각화로 df[\"인구\"].plot(kind=\"hist\"), df.boxplot(), df[\"인구\"].plot()을 제시한다. df[\"인구\"].hist(type=\"box\")는 노트에 없는 잘못된 호출이다."
+    },
+    {
+      "id": "data-049",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "한글(HWP)에서 수식 편집기를 여는 단축키로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Ctrl + N, T"
+        },
+        {
+          "id": "b",
+          "text": "Ctrl + N, M"
+        },
+        {
+          "id": "c",
+          "text": "Ctrl + Shift + E"
+        },
+        {
+          "id": "d",
+          "text": "Ctrl + M"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 한글의 수식 편집기는 입력 메뉴 > 수식, 단축키 Ctrl + N, M으로 연다. Ctrl + N, T는 표 만들기 단축키다."
+    },
+    {
+      "id": "data-050",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "문서에서 표와 그림의 제목(캡션)을 다는 관행으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "표 제목은 표 위에, 그림 제목은 그림 아래에 단다"
+        },
+        {
+          "id": "b",
+          "text": "표 제목은 표 아래에, 그림 제목은 그림 위에 단다"
+        },
+        {
+          "id": "c",
+          "text": "표와 그림 모두 제목을 위에 단다"
+        },
+        {
+          "id": "d",
+          "text": "표와 그림 모두 제목을 아래에 단다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 표 편집 관행에 따르면 표 제목은 표 위에, 그림 제목은 그림 아래에 다는 것이 관행이다."
+    },
+    {
+      "id": "data-051",
+      "type": "code-output",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "한글 표에서 B2부터 B4까지 세 셀의 합계를 자동 계산하려 한다. 빈 셀에 들어갈 계산식으로 옳은 것은?",
+      "stemCode": "표 데이터:\n|     | A      | B    |\n| 2행 | 1월    | 100  |\n| 3행 | 2월    | 150  |\n| 4행 | 3월    | 200  |\n| 5행 | 합계   | ???  |",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=SUM(B2-B4)"
+        },
+        {
+          "id": "b",
+          "text": "=SUM(B2;B4)"
+        },
+        {
+          "id": "c",
+          "text": "=SUM(B2:B4)"
+        },
+        {
+          "id": "d",
+          "text": "=TOTAL(B2~B4)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "한글 표 계산식에서 셀 범위는 콜론(:)으로 구분한다(=SUM(B2:B4)). 결과는 100+150+200=450이 된다. 노트의 실습 B 4번에 =SUM(B2:B4) 예시가 그대로 나온다."
+    },
+    {
+      "id": "data-052",
+      "type": "cloze",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "한글 표 안 계산식에서는 셀 이름을 소괄호로 묶고, 연속 범위를 지정할 때 셀 사이를 쉼표(,) 또는 {{1}} (으)로 구분한다. 예를 들어 A1부터 A5까지 합계는 ={{2}}(A1:A5)로 쓴다.",
+      "blanks": [
+        {
+          "accept": [
+            "콜론",
+            ":",
+            "콜론(:)"
+          ]
+        },
+        {
+          "accept": [
+            "SUM",
+            "sum",
+            "Sum"
+          ]
+        }
+      ],
+      "answer": [],
+      "explanation": "노트에 따르면 한글 표 계산식은 셀 사이를 쉼표(,) 또는 콜론(:)으로 구분하며, 합계 함수는 SUM이다(예: =SUM(A1:A5))."
+    },
+    {
+      "id": "data-053",
+      "type": "order",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "분석 보고서를 작성할 때 본문 구조의 흐름을 올바른 순서대로 나열하시오.",
+      "items": [
+        "서론: 주제·배경·목적과 데이터 출처 제시",
+        "분석: 데이터 설명",
+        "분석: 분석 방법",
+        "분석: 표·그래프 제시",
+        "분석: 결과 해석",
+        "결론: 핵심 발견 요약과 시사점·한계"
+      ],
+      "answer": [],
+      "explanation": "노트의 보고서 구조(서론-분석-결론)에 따르면 서론(주제·목적·출처) -> 분석은 데이터 설명 -> 분석 방법 -> 표·그래프 -> 결과 해석 순으로 전개하고, 마지막에 결론(핵심 발견 요약 + 시사점/한계)으로 닫는다."
+    },
+    {
+      "id": "data-054",
+      "type": "ox",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "수식 편집기로 만든 수식의 글자 크기는 본문 텍스트처럼 블록을 지정하면 함께 바뀐다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트에 따르면 수식 글자 크기는 일반 본문처럼 블록 지정으로 바뀌지 않고, 수식 편집기 안에서 따로 조정해야 한다. 따라서 거짓(X)이다."
+    },
+    {
+      "id": "data-055",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "연도가 가로축인 시계열 데이터를 보고서 차트로 넣을 때, 노트가 권장하는 차트 종류는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "원형(파이) 차트"
+        },
+        {
+          "id": "b",
+          "text": "분산형(X,Y) 차트 - 직선 및 표식이 있는 분산형"
+        },
+        {
+          "id": "c",
+          "text": "도넛 차트"
+        },
+        {
+          "id": "d",
+          "text": "100% 누적 막대 차트"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 연도·시점이 가로축인 시계열은 분산형(X,Y) 차트로 그리며, [삽입] > [분산형] > '직선 및 표식이 있는 분산형'을 고른다. 꺾은선과 달리 X축 간격이 실제 수치 간격으로 반영된다."
+    },
+    {
+      "id": "data-056",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "엑셀에서 정리한 통계표를 한글/워드 보고서에 옮길 때, 노트가 권장하는 붙여넣기 방식으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "'원본 서식 유지'로 붙여넣어 엑셀 모양을 그대로 둔다"
+        },
+        {
+          "id": "b",
+          "text": "'그림으로 붙여넣기'로 이미지화한다"
+        },
+        {
+          "id": "c",
+          "text": "'표로 붙여넣기'를 선택해 워드프로세서 표로 변환한다"
+        },
+        {
+          "id": "d",
+          "text": "'텍스트만 유지'로 붙여 표 구조를 없앤다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트 실습 A 5번에 따르면 '원본 서식 유지'가 아니라 '표로 붙여넣기'를 선택해 워드프로세서 표로 변환해야 이후 셀 정렬·음영 등 표 편집이 가능하다."
+    },
+    {
+      "id": "data-057",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "표에 숫자 데이터를 정리할 때 노트가 권장하는 셀 정렬·표기 방식으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "숫자는 왼쪽 정렬하고 소수점 자리수는 행마다 다르게 둔다"
+        },
+        {
+          "id": "b",
+          "text": "숫자는 가운데 정렬하고 소수점은 모두 제거한다"
+        },
+        {
+          "id": "c",
+          "text": "숫자는 오른쪽 정렬하고 소수점 자리수를 통일한다"
+        },
+        {
+          "id": "d",
+          "text": "숫자는 오른쪽 정렬하되 소수점 자리수는 자유롭게 둔다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트에 따르면 숫자 열은 모두 오른쪽 정렬하고 소수점 자리수를 통일한다. 자릿수 단위가 시각적으로 맞아 비교가 쉬워진다."
+    },
+    {
+      "id": "data-058",
+      "type": "code-output",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음은 한글 수식 편집기 입력 문법으로 표준편차 식을 쓰려는 것이다. 빈칸에 들어가 루트(제곱근) 구조를 만드는 명령으로 옳은 것은?",
+      "stemCode": "s = ___{ {1 over {n-1}} sum (x_i - bar x)^2 }",
+      "choices": [
+        {
+          "id": "a",
+          "text": "root"
+        },
+        {
+          "id": "b",
+          "text": "sqrt"
+        },
+        {
+          "id": "c",
+          "text": "rad"
+        },
+        {
+          "id": "d",
+          "text": "frac"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 실습 C 4번의 표준편차 식 예시 s = sqrt{ {1 over {n-1}} sum (x_i - bar x)^2 } 에서 루트는 sqrt로 입력한다. over는 분수, sum은 시그마를 만든다."
+    },
+    {
+      "id": "data-059",
+      "type": "multi",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "분석 보고서에서 표·그림에 반드시 표기해야 하는 항목을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "일련번호 (예: <표 1>, [그림 1])"
+        },
+        {
+          "id": "b",
+          "text": "캡션(제목)"
+        },
+        {
+          "id": "c",
+          "text": "출처"
+        },
+        {
+          "id": "d",
+          "text": "작성에 걸린 시간"
+        },
+        {
+          "id": "e",
+          "text": "사용한 글꼴 이름"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트에 따르면 표·그림에는 일련번호(<표 1>, [그림 1])와 캡션, 출처를 반드시 표기한다. 작성 시간이나 글꼴 이름은 표기 대상이 아니다."
+    },
+    {
+      "id": "data-060",
+      "type": "short",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "노트에서 실습용 실제 통계 데이터를 EXCEL/CSV로 내려받는 출처로 든 국가통계포털의 이름(약칭)은 무엇인가?",
+      "answer": [
+        "KOSIS",
+        "kosis",
+        "코시스",
+        "국가통계포털",
+        "KOSIS 국가통계포털"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 실습 A와 미션에서 KOSIS 국가통계포털(kosis.kr)에서 통계표를 EXCEL 또는 CSV로 다운로드한다고 했다."
+    },
+    {
+      "id": "data-061",
+      "type": "single",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "한글 수식 편집기에서 평균식을 bar x = {1 over n} sum_{i=1}^{n} x_i 로 입력했다. 이 문법에 대한 설명 중 잘못된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "over는 분수를 만들어 1/n을 표현한다"
+        },
+        {
+          "id": "b",
+          "text": "sum은 시그마(∑) 합 기호를 만든다"
+        },
+        {
+          "id": "c",
+          "text": "bar x는 x 위에 막대(평균 기호)를 올린다"
+        },
+        {
+          "id": "d",
+          "text": "sum_{i=1}^{n}에서 위 첨자가 i=1, 아래 첨자가 n으로 들어간다"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "sum_{i=1}^{n}에서 밑줄(_) 다음이 아래 첨자(i=1), 캐럿(^) 다음이 위 첨자(n)다. 즉 i=1이 아래, n이 위로 들어가므로 d의 설명이 거꾸로 되어 틀렸다. over(분수), sum(시그마), bar(윗막대) 설명은 노트 실습 C와 일치한다."
+    },
+    {
+      "id": "data-062",
+      "type": "match",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "보고서 구조의 각 부분과 그 안에 들어갈 내용을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "서론",
+          "right": "주제·배경·목적과 데이터 출처(예: KOSIS) 제시"
+        },
+        {
+          "left": "분석(본론)",
+          "right": "데이터 설명, 분석 방법, 표·그래프, 결과 해석"
+        },
+        {
+          "left": "결론",
+          "right": "핵심 발견 요약과 시사점·한계·향후 과제"
+        },
+        {
+          "left": "표 캡션",
+          "right": "표 위에 <표 1> 제목, 출처 표기"
+        }
+      ],
+      "answer": [],
+      "explanation": "노트의 보고서 구조 설명에 따르면 서론은 주제·목적·출처, 분석은 데이터 설명->방법->표·그래프->해석, 결론은 핵심 발견 요약과 시사점·한계를 담고, 표 캡션은 표 위에 제목과 출처를 단다."
+    },
+    {
+      "id": "data-063",
+      "type": "ox",
+      "unit": "4. 문서작성",
+      "source": "데이터정보처리입문 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "수식 미션에서는 평균·표준편차 공식을 화면 캡처 그림으로 붙여넣어도 무방하다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트의 수식 미션은 '그림 붙여넣기 금지, 반드시 수식 객체로' 입력하라고 명시한다. 따라서 캡처 그림으로 붙여넣는 것은 허용되지 않으므로 거짓(X)이다."
+    },
+    {
+      "id": "data-064",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 셀 주소를 `$A$1` 형태로 쓰는 참조 방식의 이름과 특징으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "상대 참조 - 복사하면 참조가 함께 이동한다"
+        },
+        {
+          "id": "b",
+          "text": "절대 참조 - 행과 열을 모두 고정해 복사해도 위치가 변하지 않는다"
+        },
+        {
+          "id": "c",
+          "text": "혼합 참조 - 열만 고정되고 행은 이동한다"
+        },
+        {
+          "id": "d",
+          "text": "혼합 참조 - 행만 고정되고 열은 이동한다"
+        },
+        {
+          "id": "e",
+          "text": "이름 정의 - 셀에 별칭을 붙이는 기능이다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`$A$1`은 행과 열 앞에 모두 `$`가 붙어 행·열을 모두 고정하는 절대 참조다. 수식을 복사해도 참조 위치가 변하지 않는다. 노트에 '절대 참조(`$A$1`): 행·열을 모두 고정. 복사해도 위치가 안 변한다'로 정의되어 있다."
+    },
+    {
+      "id": "data-065",
+      "type": "code-output",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 수식이 `C2`에 입력되어 있을 때, `B2`의 값이 55라면 `C2`에 표시되는 결과는?",
+      "stemCode": "=IF(B2>=60, \"합격\", \"불합격\")",
+      "choices": [
+        {
+          "id": "a",
+          "text": "합격"
+        },
+        {
+          "id": "b",
+          "text": "불합격"
+        },
+        {
+          "id": "c",
+          "text": "TRUE"
+        },
+        {
+          "id": "d",
+          "text": "FALSE"
+        },
+        {
+          "id": "e",
+          "text": "#VALUE!"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`IF(조건, 참일때, 거짓일때)`는 조건이 참이면 두 번째 인수, 거짓이면 세 번째 인수를 반환한다. `B2`가 55이므로 `55>=60`은 거짓이고, 따라서 세 번째 인수인 \"불합격\"이 표시된다."
+    },
+    {
+      "id": "data-066",
+      "type": "cloze",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "조건을 만족하는 셀의 개수를 세는 함수는 {{1}}, 조건을 만족하는 행의 값을 합산하는 함수는 {{2}} 이다. (함수 이름만, 대문자로)",
+      "blanks": [
+        {
+          "accept": [
+            "COUNTIF"
+          ]
+        },
+        {
+          "accept": [
+            "SUMIF"
+          ]
+        }
+      ],
+      "answer": [
+        "COUNTIF",
+        "SUMIF"
+      ],
+      "explanation": "`COUNTIF(범위, 조건)`은 조건을 만족하는 셀의 개수를 세고, `SUMIF(조건범위, 조건, 합계범위)`는 조건을 만족하는 행의 값 합계를 구한다. 노트의 논리·조건 집계 함수 항목에 정의되어 있다."
+    },
+    {
+      "id": "data-067",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "코드표 조회를 위해 `=VLOOKUP(D2, A1:B3, 2, FALSE)`를 입력하고 채우기 핸들로 아래로 복사했더니 일부 행에서 `#N/A` 오류가 났다. 원인과 해결로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "일치옵션을 FALSE 대신 TRUE로 바꿔야 한다"
+        },
+        {
+          "id": "b",
+          "text": "조회 범위 `A1:B3`를 절대 참조 `$A$1:$B$3`로 고정하지 않아 복사 시 범위가 밀렸기 때문이다"
+        },
+        {
+          "id": "c",
+          "text": "열 번호 2가 잘못되어 1로 바꿔야 한다"
+        },
+        {
+          "id": "d",
+          "text": "VLOOKUP 대신 COUNTIF를 써야 한다"
+        },
+        {
+          "id": "e",
+          "text": "찾을값 `D2`도 절대 참조로 고정해야 한다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "수식을 아래로 복사하면 상대 참조인 조회 범위가 함께 밀려 내려가, 찾으려는 값이 더 이상 범위 안에 없게 되어 `#N/A`가 난다. 범위를 `F4`로 `$A$1:$B$3` 절대 참조로 고정하면 해결된다. 노트 실습 B에 '고정 안 하면 범위가 밀려 `#N/A`가 난다'고 명시되어 있다."
+    },
+    {
+      "id": "data-068",
+      "type": "ox",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀의 `STDEV.P`는 모집단 표준편차(n으로 나눔)를 구하는 함수이고, `STDEV.S`는 표본 표준편차(n-1로 나눔)를 구하는 함수이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "이름 끝의 `P`(Population)가 모집단이라는 신호다. `STDEV.P`=모집단(n으로 나눔), `STDEV.S`=표본(n-1로 나눔)이다. 노트에 'STDEV = 표본 = STDEV.S, STDEVP = 모집단 = STDEV.P'로 정리되어 있다."
+    },
+    {
+      "id": "data-069",
+      "type": "code-output",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "범위 `B2:B6`에 점수 50, 60, 70, 80, 90이 들어 있다. 다음 수식의 결과는?",
+      "stemCode": "=COUNTIF(B2:B6, \">=60\")",
+      "choices": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "4"
+        },
+        {
+          "id": "c",
+          "text": "5"
+        },
+        {
+          "id": "d",
+          "text": "300"
+        },
+        {
+          "id": "e",
+          "text": "60"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`COUNTIF`는 조건을 만족하는 셀의 개수를 센다. 60 이상인 값은 60, 70, 80, 90으로 4개이므로 결과는 4다. (50은 제외)"
+    },
+    {
+      "id": "data-070",
+      "type": "code-output",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "범위 `B2:B6`에 점수 50, 60, 70, 80, 90이 들어 있다. 다음 수식의 결과는?",
+      "stemCode": "=SUMIF(B2:B6, \">=60\")",
+      "choices": [
+        {
+          "id": "a",
+          "text": "240"
+        },
+        {
+          "id": "b",
+          "text": "300"
+        },
+        {
+          "id": "c",
+          "text": "350"
+        },
+        {
+          "id": "d",
+          "text": "4"
+        },
+        {
+          "id": "e",
+          "text": "75"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`SUMIF(조건범위, 조건, 합계범위)`에서 합계범위를 생략하면 조건범위 자체를 합산한다. 60 이상인 값 60+70+80+90 = 300이다. (50은 제외)"
+    },
+    {
+      "id": "data-071",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "두 변수의 상관계수를 구하는 엑셀 함수와 그 값의 범위가 바르게 짝지어진 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "`CORREL` - 0 ~ 1"
+        },
+        {
+          "id": "b",
+          "text": "`CORREL` - -1 ~ +1"
+        },
+        {
+          "id": "c",
+          "text": "`MEDIAN` - -1 ~ +1"
+        },
+        {
+          "id": "d",
+          "text": "`AVERAGE` - 0 ~ 100"
+        },
+        {
+          "id": "e",
+          "text": "`STDEV.S` - -1 ~ +1"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`CORREL(범위1, 범위2)`는 두 변수의 상관계수를 구하며 값의 범위는 -1 ~ +1이다. 노트의 통계 함수 항목에 명시되어 있다."
+    },
+    {
+      "id": "data-072",
+      "type": "multi",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 다중(여러) 조건을 받을 수 있는 확장판 집계 함수로 소개된 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "COUNTIFS"
+        },
+        {
+          "id": "b",
+          "text": "SUMIFS"
+        },
+        {
+          "id": "c",
+          "text": "AVERAGEIFS"
+        },
+        {
+          "id": "d",
+          "text": "VLOOKUP"
+        },
+        {
+          "id": "e",
+          "text": "CORREL"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트는 `COUNTIF`/`SUMIF`의 '확장판으로 다중 조건을 받는 `COUNTIFS`, `SUMIFS`, `AVERAGEIF(S)`가 있다'고 설명한다. `VLOOKUP`은 조회 함수, `CORREL`은 통계 함수로 다중 조건 집계와 무관하다."
+    },
+    {
+      "id": "data-073",
+      "type": "short",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "수식 입력 중 셀 참조를 상대 -> 절대 -> 혼합 참조로 순환 전환할 때 반복해서 누르는 키보드 키는 무엇인가? (키 이름만)",
+      "answer": [
+        "F4",
+        "f4"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "`F4` 키를 반복해서 누르면 `A1` -> `$A$1` -> `A$1` -> `$A1` 순으로 참조 방식이 전환된다. VLOOKUP 범위를 절대 참조로 고정할 때도 `F4`를 사용한다."
+    },
+    {
+      "id": "data-074",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 '데이터 분석의 핵심 도구'로 소개하며, 행/열/값 영역에 필드를 끌어 넣어 즉석 교차 집계를 만드는 기능은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "자동 필터"
+        },
+        {
+          "id": "b",
+          "text": "피벗테이블"
+        },
+        {
+          "id": "c",
+          "text": "조건부 서식"
+        },
+        {
+          "id": "d",
+          "text": "다중 정렬"
+        },
+        {
+          "id": "e",
+          "text": "VLOOKUP"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "피벗테이블은 행/열/값 영역에 필드를 끌어 넣어 즉석 교차 집계를 만드는 기능으로, 노트에서 '데이터 분석의 핵심 도구'라고 표현했다."
+    },
+    {
+      "id": "data-075",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "`VLOOKUP(찾을값, 범위, 열번호, 일치옵션)`에서 실무상 거의 항상 사용하는 일치옵션 값은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "TRUE (1, 근사 일치)"
+        },
+        {
+          "id": "b",
+          "text": "FALSE (0, 정확히 일치)"
+        },
+        {
+          "id": "c",
+          "text": "둘 다 효과가 동일하므로 무엇이든 상관없다"
+        },
+        {
+          "id": "d",
+          "text": "공란으로 비워 둔다"
+        },
+        {
+          "id": "e",
+          "text": "2 (열 번호와 같은 값)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 'VLOOKUP의 일치옵션은 실무에서 거의 항상 FALSE(0, 정확히 일치)를 쓴다'고 명시한다. 근사 일치(TRUE)는 의도치 않은 잘못된 매칭을 부를 수 있다."
+    },
+    {
+      "id": "data-076",
+      "type": "match",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 엑셀 함수와 그 역할을 바르게 연결하시오.",
+      "pairs": [
+        {
+          "left": "AVERAGE(범위)",
+          "right": "산술 평균"
+        },
+        {
+          "left": "MEDIAN(범위)",
+          "right": "중앙값"
+        },
+        {
+          "left": "STDEV.S(범위)",
+          "right": "표본 표준편차"
+        },
+        {
+          "left": "CORREL(범위1, 범위2)",
+          "right": "두 변수의 상관계수"
+        },
+        {
+          "left": "VLOOKUP(...)",
+          "right": "표 첫 열에서 값을 찾아 같은 행의 다른 열 값 반환"
+        }
+      ],
+      "answer": [
+        "AVERAGE(범위)|산술 평균",
+        "MEDIAN(범위)|중앙값",
+        "STDEV.S(범위)|표본 표준편차",
+        "CORREL(범위1, 범위2)|두 변수의 상관계수",
+        "VLOOKUP(...)|표 첫 열에서 값을 찾아 같은 행의 다른 열 값 반환"
+      ],
+      "explanation": "노트의 통계 함수와 조회 함수 정의에 따른다. AVERAGE=산술 평균, MEDIAN=중앙값, STDEV.S=표본 표준편차, CORREL=상관계수, VLOOKUP=표 첫 열에서 값을 찾아 같은 행의 다른 열 값을 가져오는 조회 함수다."
+    },
+    {
+      "id": "data-077",
+      "type": "order",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트가 강조하는 데이터 분석의 사고방식 흐름을 올바른 순서대로 나열하시오.",
+      "items": [
+        "원본 데이터",
+        "가공",
+        "요약",
+        "해석"
+      ],
+      "answer": [
+        "원본 데이터",
+        "가공",
+        "요약",
+        "해석"
+      ],
+      "explanation": "노트 개요에서 '데이터 분석의 사고방식(원본 데이터 -> 가공 -> 요약 -> 해석)을 가장 빠르게 익히는 도구'라고 설명한다. 원본 데이터를 받아 가공하고, 요약 통계를 뽑은 뒤 그 의미를 해석하는 순서다."
+    },
+    {
+      "id": "data-078",
+      "type": "single",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "혼합 참조에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "`$A1`은 열만 고정되고 행은 복사 시 이동한다"
+        },
+        {
+          "id": "b",
+          "text": "`$A1`은 행만 고정되고 열은 복사 시 이동한다"
+        },
+        {
+          "id": "c",
+          "text": "`A$1`은 행과 열을 모두 고정한다"
+        },
+        {
+          "id": "d",
+          "text": "혼합 참조는 행과 열 중 어느 것도 고정하지 않는다"
+        },
+        {
+          "id": "e",
+          "text": "혼합 참조는 절대 참조와 완전히 동일하다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "혼합 참조(`$A1`, `A$1`)는 행 또는 열 중 하나만 고정한다. `$A1`은 `$`가 열(A) 앞에만 있으므로 열만 고정되고 행은 복사 시 이동한다. 반대로 `A$1`은 행(1)만 고정된다."
+    },
+    {
+      "id": "data-079",
+      "type": "code-output",
+      "unit": "5. 엑셀 데이터 처리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "조건범위 `A2:A5`에 등급 \"A\", \"B\", \"A\", \"C\"가, 합계범위 `B2:B5`에 30, 20, 30, 10이 있다. 다음 수식의 결과는?",
+      "stemCode": "=SUMIF(A2:A5, \"A\", B2:B5)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "60"
+        },
+        {
+          "id": "b",
+          "text": "30"
+        },
+        {
+          "id": "c",
+          "text": "90"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        },
+        {
+          "id": "e",
+          "text": "20"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "`SUMIF(조건범위, 조건, 합계범위)`는 조건범위에서 \"A\"인 행을 찾아 대응하는 합계범위 값을 더한다. \"A\"는 1행과 3행이므로 30+30 = 60이다."
+    },
+    {
+      "id": "data-080",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "전체에 대한 각 항목의 구성비(점유율)를 보여주기에 가장 적절한 차트는? (합이 100%인 데이터)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "꺾은선 차트"
+        },
+        {
+          "id": "b",
+          "text": "원형(파이) 차트"
+        },
+        {
+          "id": "c",
+          "text": "산점도(분산형)"
+        },
+        {
+          "id": "d",
+          "text": "히스토그램"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "원형(파이) 차트는 전체에 대한 각 항목의 구성비를 보여줄 때 쓰며, 합이 100%인 데이터에만 적합하다. 항목이 5개 이내로 적고 한 항목이 두드러질 때 효과적이다."
+    },
+    {
+      "id": "data-081",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "히스토그램에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "두 수치형 변수 사이의 관계를 점으로 찍어 본다."
+        },
+        {
+          "id": "b",
+          "text": "시간 흐름에 따른 추세를 보기 위한 시계열 차트다."
+        },
+        {
+          "id": "c",
+          "text": "하나의 수치형 변수가 어떤 구간(계급)에 몰려 있는지 분포를 보며, 막대 사이가 붙어 있다."
+        },
+        {
+          "id": "d",
+          "text": "합이 100%인 데이터의 구성비를 보여 준다."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "히스토그램은 하나의 수치형 변수가 어떤 구간(계급)에 얼마나 몰려 있는지 분포를 보는 차트다. 막대 차트와 달리 가로축이 '구간'이고 막대 사이가 붙어 있다. a는 산점도, b는 꺾은선, d는 원형 차트 설명이다."
+    },
+    {
+      "id": "data-082",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 상황에 가장 적절한 차트는? '2014-2024년 연도별 출생아 수 변화 추세를 보고 싶다.'",
+      "choices": [
+        {
+          "id": "a",
+          "text": "원형 차트"
+        },
+        {
+          "id": "b",
+          "text": "히스토그램"
+        },
+        {
+          "id": "c",
+          "text": "꺾은선 차트"
+        },
+        {
+          "id": "d",
+          "text": "산점도"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "시간 흐름(월, 분기, 연도)에 따른 추세(증가/감소)를 볼 때는 꺾은선 차트가 적합하며, 시계열 데이터의 기본 차트다."
+    },
+    {
+      "id": "data-083",
+      "type": "ox",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "단순선형회귀에서 R제곱이 1에 가까워 추세선이 데이터를 잘 설명하면, 두 변수는 인과관계(원인-결과)에 있다고 단정할 수 있다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "R제곱이 높아 직선 관계(상관)가 강하더라도 상관관계는 인과관계가 아니다. 상관이 있어도 원인-결과로 단정해서는 안 된다."
+    },
+    {
+      "id": "data-084",
+      "type": "code-output",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 산점도에 그린 선형 추세선의 회귀식 'y = a + bx'에서, 기울기 b를 함수로 직접 구하려면 어떤 함수를 써야 하는가?",
+      "stemCode": "=____(y범위, x범위)   ' 회귀직선의 기울기 b를 구한다",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=INTERCEPT(y범위, x범위)"
+        },
+        {
+          "id": "b",
+          "text": "=SLOPE(y범위, x범위)"
+        },
+        {
+          "id": "c",
+          "text": "=RSQ(y범위, x범위)"
+        },
+        {
+          "id": "d",
+          "text": "=FV(y범위, x범위)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "기울기 b는 SLOPE(y범위, x범위)로 구한다. INTERCEPT는 절편 a, RSQ는 R제곱을 구하는 함수다."
+    },
+    {
+      "id": "data-085",
+      "type": "cloze",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 회귀직선의 절편 a는 함수 {{1}} (y범위, x범위)로, R제곱은 함수 {{2}} (y범위, x범위)로 구한다.",
+      "blanks": [
+        {
+          "accept": [
+            "INTERCEPT",
+            "=INTERCEPT",
+            "intercept"
+          ]
+        },
+        {
+          "accept": [
+            "RSQ",
+            "=RSQ",
+            "rsq"
+          ]
+        }
+      ],
+      "answer": [
+        "INTERCEPT",
+        "RSQ"
+      ],
+      "explanation": "절편 a는 INTERCEPT(y범위, x범위), R제곱은 RSQ(y범위, x범위)로 구한다. 기울기 b는 SLOPE 함수다."
+    },
+    {
+      "id": "data-086",
+      "type": "code-output",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 R 코드에 대한 설명으로 옳은 것은?",
+      "stemCode": "fit <- lm(y ~ x, data = df)\nsummary(fit)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "x를 y로 설명하는 회귀이며, summary의 (Intercept) 행이 기울기다."
+        },
+        {
+          "id": "b",
+          "text": "y를 x로 설명하는 단순선형회귀를 적합하고, summary 출력의 (Intercept) 행은 절편 a, x 행은 기울기 b다."
+        },
+        {
+          "id": "c",
+          "text": "lm()은 히스토그램을 그리는 함수다."
+        },
+        {
+          "id": "d",
+          "text": "summary(fit)은 R제곱을 출력하지 않는다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "lm(y ~ x, data = df)는 y를 x로 설명하는 단순선형회귀를 적합한다. summary(fit) 출력에서 Coefficients의 (Intercept) 행이 절편 a, x 행이 기울기 b이며, 아래쪽 Multiple R-squared 값이 R제곱이다."
+    },
+    {
+      "id": "data-087",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "회귀식 'y = a + bx'에서 기울기 b의 의미로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "x = 0일 때의 y 예측값이다."
+        },
+        {
+          "id": "b",
+          "text": "x가 1 늘 때 y가 평균적으로 얼마나 변하는지를 나타낸다."
+        },
+        {
+          "id": "c",
+          "text": "직선이 세로축과 만나는 위치다."
+        },
+        {
+          "id": "d",
+          "text": "y의 분산 중 몇 %를 설명하는지를 나타낸다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "기울기 b는 x가 1 늘 때 y가 평균적으로 얼마나 변하는지(관계의 방향과 세기)를 나타낸다. b>0이면 양의 관계, b<0이면 음의 관계다. a, c는 절편의 의미, d는 R제곱의 의미다."
+    },
+    {
+      "id": "data-088",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "막대 차트로 정직한 비교를 하려는데 다음과 같은 설정을 했다. 무엇이 잘못되어 데이터를 왜곡하는가?",
+      "stemCode": "세로축 더블클릭 → [축 서식] → 최솟값을 0이 아닌 큰 값으로 설정",
+      "choices": [
+        {
+          "id": "a",
+          "text": "범례를 켜지 않아서 색의 의미를 알 수 없다."
+        },
+        {
+          "id": "b",
+          "text": "세로축 시작값을 0이 아닌 곳에서 끊어 작은 차이가 과장되어 보인다."
+        },
+        {
+          "id": "c",
+          "text": "차트 제목을 메시지가 담긴 제목으로 바꾸지 않았다."
+        },
+        {
+          "id": "d",
+          "text": "추세선의 R제곱을 표시하지 않았다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "축의 시작값을 0이 아닌 곳에서 끊으면 항목 간 작은 차이가 과장되어 보여 데이터가 왜곡된다. 정직한 비교를 위해 최솟값을 0(또는 자동)으로 두어야 한다."
+    },
+    {
+      "id": "data-089",
+      "type": "multi",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "산점도(분산형)의 점들이 보이는 모양과 상관관계의 해석으로 옳은 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "점들이 우상향으로 모이면 양의 상관이다."
+        },
+        {
+          "id": "b",
+          "text": "점들이 우하향으로 모이면 음의 상관이다."
+        },
+        {
+          "id": "c",
+          "text": "점들이 흩어져 있으면 무상관이다."
+        },
+        {
+          "id": "d",
+          "text": "단순선형회귀에서 R제곱은 상관계수 r과 같다."
+        },
+        {
+          "id": "e",
+          "text": "추세선의 R제곱이 1에 가까울수록 점들이 직선에 잘 붙어 예측력이 높다."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "explanation": "점들이 우상향이면 양의 상관, 우하향이면 음의 상관, 흩어져 있으면 무상관이다. R제곱이 1에 가까울수록 추세선이 데이터를 잘 설명한다. 단, 단순선형회귀에서 R제곱은 상관계수 r과 같은 것이 아니라 r의 '제곱'과 같으므로 d는 틀리다."
+    },
+    {
+      "id": "data-090",
+      "type": "match",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 데이터 상황과 가장 적절한 차트 종류를 짝지으시오.",
+      "pairs": [
+        {
+          "left": "연도별 1인당 국민총소득 변화 추세",
+          "right": "꺾은선 차트"
+        },
+        {
+          "left": "17개 시도의 인구 수 비교",
+          "right": "막대 차트"
+        },
+        {
+          "left": "학생 50명 시험 점수의 분포",
+          "right": "히스토그램"
+        },
+        {
+          "left": "광고비와 매출 두 변수의 관계",
+          "right": "산점도(분산형)"
+        },
+        {
+          "left": "가구 소비지출의 항목별 구성비",
+          "right": "원형(파이) 차트"
+        }
+      ],
+      "answer": [
+        "꺾은선 차트",
+        "막대 차트",
+        "히스토그램",
+        "산점도(분산형)",
+        "원형(파이) 차트"
+      ],
+      "explanation": "데이터 성격이 차트 종류를 결정한다. 시간 추세는 꺾은선, 항목 간 값 비교는 막대, 한 수치형 변수의 분포는 히스토그램, 두 수치형 변수의 관계는 산점도, 구성비는 원형 차트가 적합하다."
+    },
+    {
+      "id": "data-091",
+      "type": "order",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀 산점도에 선형 추세선과 R제곱을 표시해 상관관계를 보는 실습(실습 B)의 올바른 순서로 나열하시오.",
+      "items": [
+        "두 수치형 변수를 두 열에 나란히 입력한다",
+        "두 열을 모두 선택한 뒤 [삽입] → [분산형(산점도)] 차트를 고른다",
+        "점들이 우상향/우하향/무작위 중 어떤 모양인지 눈으로 판단한다",
+        "점 하나에 마우스 오른쪽 클릭 → [추세선 추가]를 선택한다",
+        "추세선 옵션에서 선형을 고르고 수식과 R-제곱 값을 차트에 표시하도록 체크한다",
+        "표시된 R제곱 값을 확인하고 결과를 한 문장으로 해석해 메모한다"
+      ],
+      "answer": [
+        "두 수치형 변수를 두 열에 나란히 입력한다",
+        "두 열을 모두 선택한 뒤 [삽입] → [분산형(산점도)] 차트를 고른다",
+        "점들이 우상향/우하향/무작위 중 어떤 모양인지 눈으로 판단한다",
+        "점 하나에 마우스 오른쪽 클릭 → [추세선 추가]를 선택한다",
+        "추세선 옵션에서 선형을 고르고 수식과 R-제곱 값을 차트에 표시하도록 체크한다",
+        "표시된 R제곱 값을 확인하고 결과를 한 문장으로 해석해 메모한다"
+      ],
+      "explanation": "실습 B는 변수 입력 → 산점도 생성 → 점 모양 눈으로 판단 → 추세선 추가 → 선형 선택 및 수식/R제곱 표시 → R제곱 확인 및 해석 메모 순으로 진행한다."
+    },
+    {
+      "id": "data-092",
+      "type": "short",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "생성된 차트를 클릭하면 우측 상단에 나타나는, 축 제목·차트 제목·범례 등 차트 요소를 켜고 끌 수 있는 버튼의 기호는 무엇인가? (기호 하나)",
+      "answer": [
+        "+",
+        "[+]",
+        "플러스",
+        "플러스 버튼",
+        "더하기"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "차트를 클릭하면 우측 상단에 나타나는 [+](차트 요소) 버튼으로 축 제목, 차트 제목, 범례를 켜고 끌 수 있다."
+    },
+    {
+      "id": "data-093",
+      "type": "single",
+      "unit": "6. 엑셀 그래프 그리기",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "데이터 계열이 둘 이상일 때 색이나 모양이 각각 무엇을 뜻하는지 표시해 주는 차트 구성 요소는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "축(axis)"
+        },
+        {
+          "id": "b",
+          "text": "범례(legend)"
+        },
+        {
+          "id": "c",
+          "text": "차트 제목"
+        },
+        {
+          "id": "d",
+          "text": "추세선(trendline)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "범례(legend)는 데이터 계열이 둘 이상일 때 색이나 모양이 무엇을 뜻하는지 표시하는 차트 구성 요소다."
+    },
+    {
+      "id": "data-094",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 두 날짜 셀을 단순히 빼면(=끝날짜-시작날짜) 두 날짜 사이의 '일수'가 바로 계산된다. 이것이 가능한 근본 이유로 가장 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "엑셀이 날짜를 1900-01-01을 1로 세는 일련번호(숫자)로 저장하기 때문"
+        },
+        {
+          "id": "b",
+          "text": "DATEDIF 함수가 백그라운드에서 자동으로 호출되기 때문"
+        },
+        {
+          "id": "c",
+          "text": "날짜는 텍스트 형식이며 ASCII 코드 차이로 계산되기 때문"
+        },
+        {
+          "id": "d",
+          "text": "엑셀이 두 날짜를 비교해 요일 차이를 자동 보정하기 때문"
+        },
+        {
+          "id": "e",
+          "text": "TODAY() 함수가 항상 기준점으로 더해지기 때문"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트에 따르면 엑셀에서 날짜는 1900-01-01을 1로 세는 일련번호(숫자)다. 그래서 '날짜 - 날짜 = 일수'가 그냥 뺄셈으로 계산된다."
+    },
+    {
+      "id": "data-095",
+      "type": "code-output",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "A2 셀에 회원정보가 다음과 같이 들어 있을 때, B2 셀 수식의 결과로 옳은 것은?",
+      "stemCode": "A2: 홍길동/seoul@knou.ac.kr\nB2: =LEFT(A2, FIND(\"/\", A2)-1)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "홍길동"
+        },
+        {
+          "id": "b",
+          "text": "seoul@knou.ac.kr"
+        },
+        {
+          "id": "c",
+          "text": "홍길동/"
+        },
+        {
+          "id": "d",
+          "text": "seoul"
+        },
+        {
+          "id": "e",
+          "text": "/seoul@knou.ac.kr"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "FIND(\"/\", A2)는 '/'의 위치(5)를 돌려주고, LEFT(A2, 5-1)=LEFT(A2, 4)는 왼쪽에서 4글자, 즉 '홍길동'을 추출한다. '/' 앞의 이름만 뽑는 패턴이다."
+    },
+    {
+      "id": "data-096",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "C2 셀에 이메일 주소 seoul@knou.ac.kr 가 들어 있다. 이메일 아이디(@ 앞부분)인 'seoul'만 뽑고 싶다. 올바른 수식은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=LEFT(C2, FIND(\"@\", C2)-1)"
+        },
+        {
+          "id": "b",
+          "text": "=RIGHT(C2, FIND(\"@\", C2)-1)"
+        },
+        {
+          "id": "c",
+          "text": "=MID(C2, FIND(\"@\", C2)+1, 100)"
+        },
+        {
+          "id": "d",
+          "text": "=LEFT(C2, FIND(\"@\", C2))"
+        },
+        {
+          "id": "e",
+          "text": "=LEN(C2)-FIND(\"@\", C2)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "FIND(\"@\", C2)는 '@'의 위치를 돌려주고, 그 위치보다 1 작은 글자 수만큼 LEFT로 왼쪽을 잘라야 @ 앞 아이디만 추출된다. 노트 실습 B의 D2 수식과 동일한 패턴이다."
+    },
+    {
+      "id": "data-097",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "월 30만원씩 3년간 연이율 3%로 적금할 때 만기금액을 FV로 구하려 한다. 다음 수식 중 부호 규칙과 월 단위 환산이 모두 올바른 것은? (셀: A1=0.03 연이율, A2=3 년수, A3=300000 월납입)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=FV(A1/12, A2*12, -A3)"
+        },
+        {
+          "id": "b",
+          "text": "=FV(A1, A2, A3)"
+        },
+        {
+          "id": "c",
+          "text": "=FV(A1/12, A2*12, A3)"
+        },
+        {
+          "id": "d",
+          "text": "=FV(A1*12, A2/12, -A3)"
+        },
+        {
+          "id": "e",
+          "text": "=PMT(A1/12, A2*12, -A3)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "월 단위이므로 이율은 연이율/12(A1/12), 기간은 년수*12(A2*12)로 환산한다. 월납입은 내가 내는 돈이므로 음수(-A3)를 붙인다. 노트 실습 C의 FV 수식과 동일하다."
+    },
+    {
+      "id": "data-098",
+      "type": "cloze",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "대출원금 2,000만원을 연 5%, 5년(60개월) 월 단위로 상환할 때 매달 갚을 원리금을 구하는 수식이다. 빈칸을 채우시오. (C1=0.05, C2=5, C3=20000000)\n\n=PMT(C1/{{1}}, C2*{{2}}, C3)",
+      "blanks": [
+        {
+          "accept": [
+            "12"
+          ]
+        },
+        {
+          "accept": [
+            "12"
+          ]
+        }
+      ],
+      "answer": [
+        "12",
+        "12"
+      ],
+      "explanation": "월 단위 상환이므로 이율은 연이율/12, 기간은 년수*12로 환산한다. 노트 실습 C의 PMT 수식(=PMT(C1/12, C2*12, C3))과 동일하다."
+    },
+    {
+      "id": "data-099",
+      "type": "ox",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "목표값 찾기(Goal Seek)는 변수 여러 개를 동시에 바꾸고 제약조건을 걸어 최적해를 찾는 도구다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "목표값 찾기는 변수 '1개'를 바꿔 수식 결과를 특정 값으로 맞추는 도구다. 변수 여러 개 + 제약조건 하에서 최대/최소/특정값을 찾는 최적화 도구는 해 찾기(Solver)다."
+    },
+    {
+      "id": "data-100",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 '오늘 날짜'를 반환하고, 시각 정보 없이 날짜만 보여 주는 함수는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "TODAY()"
+        },
+        {
+          "id": "b",
+          "text": "NOW()"
+        },
+        {
+          "id": "c",
+          "text": "DATE()"
+        },
+        {
+          "id": "d",
+          "text": "EDATE()"
+        },
+        {
+          "id": "e",
+          "text": "WEEKDAY()"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "TODAY()는 오늘 날짜를, NOW()는 현재 날짜+시각을 반환한다. 따라서 날짜만 필요하면 TODAY()를 쓴다."
+    },
+    {
+      "id": "data-101",
+      "type": "match",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 엑셀 함수와 그 기능을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "YEAR(날짜)",
+          "right": "날짜에서 연도를 추출"
+        },
+        {
+          "left": "EOMONTH(시작일, 0)",
+          "right": "해당 월의 말일을 반환"
+        },
+        {
+          "left": "DATEDIF(시작, 끝, \"Y\")",
+          "right": "두 날짜 사이의 햇수 계산"
+        },
+        {
+          "left": "EDATE(시작일, 개월)",
+          "right": "N개월 뒤/전 날짜 반환"
+        },
+        {
+          "left": "LEN(텍스트)",
+          "right": "텍스트의 글자 수 반환"
+        }
+      ],
+      "answer": [
+        "YEAR(날짜)=날짜에서 연도를 추출",
+        "EOMONTH(시작일, 0)=해당 월의 말일을 반환",
+        "DATEDIF(시작, 끝, \"Y\")=두 날짜 사이의 햇수 계산",
+        "EDATE(시작일, 개월)=N개월 뒤/전 날짜 반환",
+        "LEN(텍스트)=텍스트의 글자 수 반환"
+      ],
+      "explanation": "YEAR는 연 추출, EOMONTH는 월의 말일, DATEDIF의 \"Y\"는 햇수, EDATE는 N개월 뒤/전 날짜, LEN은 글자 수를 반환한다. 모두 노트의 날짜/문자열 함수 정리에 근거한다."
+    },
+    {
+      "id": "data-102",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "한 학생이 근속기간을 'X년 Y개월'로 표시하려고 아래 수식을 입력했으나 오류가 났다. 잘못된 부분으로 가장 적절한 것은? (C2=입사일)",
+      "stemCode": "=DATEDIF(C2, TODAY(), \"Y\")&\"년 \"&DATEDIF(C2, TODAY(), \"YD\")&\"개월\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "개월수를 구하려면 두 번째 DATEDIF의 단위가 \"YD\"가 아니라 \"YM\"이어야 한다"
+        },
+        {
+          "id": "b",
+          "text": "문자열 연결은 &가 아니라 +를 써야 한다"
+        },
+        {
+          "id": "c",
+          "text": "TODAY() 대신 NOW()를 써야 개월수가 계산된다"
+        },
+        {
+          "id": "d",
+          "text": "DATEDIF의 첫 인수와 둘째 인수 순서를 바꿔야 한다"
+        },
+        {
+          "id": "e",
+          "text": "\"년 \" 같은 텍스트는 큰따옴표 없이 넣어야 한다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트 실습 A에 따르면 'X년 Y개월'을 만들려면 햇수는 \"Y\", 나머지 개월수는 \"YM\"을 쓴다. \"YD\"는 연도를 무시한 일수라 개월 표시 목적과 맞지 않는다. 문자열 연결은 &가 맞고 텍스트는 큰따옴표로 감싸는 것이 맞다."
+    },
+    {
+      "id": "data-103",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "x와 y가 모두 수치인 데이터(예: x를 -5~5로 채우고 y=x^2 계산)를 그려 곡선의 포물선 모양을 확인하려 한다. 가장 적합한 차트 종류는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "분산형(Scatter, 곡선이 있는 분산형)"
+        },
+        {
+          "id": "b",
+          "text": "원형(파이) 차트"
+        },
+        {
+          "id": "c",
+          "text": "꺾은선 차트(x가 월·연도 같은 범주일 때 적합)"
+        },
+        {
+          "id": "d",
+          "text": "도넛형 차트"
+        },
+        {
+          "id": "e",
+          "text": "표면형 차트"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트에 따르면 분산형(Scatter)은 x·y가 모두 수치일 때 적합하고, 꺾은선(Line)은 x가 범주(월·연도 등)일 때 적합하다. y=f(x) 수식 그래프는 분산형으로 그린다."
+    },
+    {
+      "id": "data-104",
+      "type": "multi",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "해 찾기(Solver)로 문제를 정의할 때 직접 설정하는 구성 요소를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "목표 셀(Objective)"
+        },
+        {
+          "id": "b",
+          "text": "변수 셀(Changing cells)"
+        },
+        {
+          "id": "c",
+          "text": "제한 조건(Constraints)"
+        },
+        {
+          "id": "d",
+          "text": "차트 제목"
+        },
+        {
+          "id": "e",
+          "text": "셀 배경색"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트에 따르면 해 찾기의 구성 요소는 목표 셀(Objective), 변수 셀(Changing cells), 제한 조건(Constraints) 세 가지다. 차트 제목이나 셀 배경색은 Solver 설정과 무관하다."
+    },
+    {
+      "id": "data-105",
+      "type": "short",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "원금에 이자가 붙고 그 이자에 다시 이자가 붙는 방식으로 값이 시간에 따라 불어나는 계산 방식을 무엇이라 하는가? (FV 함수가 이 방식으로 만기금액을 계산한다)",
+      "answer": [
+        "복리",
+        "복리계산",
+        "복리 계산",
+        "compound interest"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 원리합계(재무함수) 설명에 따르면 원금에 이자가 붙고 그 이자에 다시 이자가 붙는 계산 방식은 '복리'다. FV는 이 복리로 적금 만기금액을 구한다."
+    },
+    {
+      "id": "data-106",
+      "type": "order",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀에서 수식 y = f(x) 그래프를 그리는 실습 절차를 올바른 순서대로 나열하시오.",
+      "items": [
+        "A열에 x 값들을 일정 간격으로 채운다(예: -5부터 0.5 간격으로 5까지)",
+        "B열에 y=f(x) 수식(예: =A2^2)을 입력하고 아래로 채운다",
+        "x열과 y열 범위를 함께 선택한다",
+        "삽입 > 차트 > 분산형(곡선이 있는 분산형)을 선택한다",
+        "차트 제목·축 제목을 추가하고 곡선 모양을 확인한다"
+      ],
+      "answer": [
+        "A열에 x 값들을 일정 간격으로 채운다(예: -5부터 0.5 간격으로 5까지)",
+        "B열에 y=f(x) 수식(예: =A2^2)을 입력하고 아래로 채운다",
+        "x열과 y열 범위를 함께 선택한다",
+        "삽입 > 차트 > 분산형(곡선이 있는 분산형)을 선택한다",
+        "차트 제목·축 제목을 추가하고 곡선 모양을 확인한다"
+      ],
+      "explanation": "노트 실습 E의 순서: x 값 채우기 → y 수식 채우기 → 두 열 범위 선택 → 분산형 차트 삽입 → 제목 추가 및 모양 확인이다."
+    },
+    {
+      "id": "data-107",
+      "type": "code-output",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "A2 셀에 '홍길동/seoul@knou.ac.kr' 가 들어 있을 때, 아래 C2 수식이 추출하는 결과로 옳은 것은?",
+      "stemCode": "C2: =MID(A2, FIND(\"/\", A2)+1, 100)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "seoul@knou.ac.kr"
+        },
+        {
+          "id": "b",
+          "text": "홍길동"
+        },
+        {
+          "id": "c",
+          "text": "seoul"
+        },
+        {
+          "id": "d",
+          "text": "@knou.ac.kr"
+        },
+        {
+          "id": "e",
+          "text": "/seoul@knou.ac.kr"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "FIND(\"/\", A2)+1은 '/' 바로 다음 위치를 가리키고, MID로 거기서부터 100글자를 가져오면 '/' 뒤의 이메일 전체 'seoul@knou.ac.kr'가 추출된다. 노트 실습 B의 C2 수식과 동일하다."
+    },
+    {
+      "id": "data-108",
+      "type": "single",
+      "unit": "7. 엑셀 활용",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 문자열(텍스트)에서 글자 수를 세는 함수는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "LEN(텍스트)"
+        },
+        {
+          "id": "b",
+          "text": "TRIM(텍스트)"
+        },
+        {
+          "id": "c",
+          "text": "MID(텍스트, 시작위치, n)"
+        },
+        {
+          "id": "d",
+          "text": "TEXT(값, 서식)"
+        },
+        {
+          "id": "e",
+          "text": "FIND(찾을값, 텍스트)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "LEN은 글자 수를 반환한다. TRIM은 불필요한 공백 제거, MID는 중간 글자 추출, TEXT는 서식 문자열 변환, FIND는 찾는 값의 위치 번호를 반환한다."
+    },
+    {
+      "id": "data-109",
+      "type": "single",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R과 RStudio의 관계를 가장 바르게 설명한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "R은 통합개발환경(IDE)이고, RStudio는 실제 계산을 수행하는 엔진(언어)이다."
+        },
+        {
+          "id": "b",
+          "text": "R은 실제 계산을 수행하는 엔진(언어)이고, RStudio는 코드 작성·실행·그래프 확인을 돕는 통합개발환경(IDE)이다."
+        },
+        {
+          "id": "c",
+          "text": "R과 RStudio는 같은 프로그램의 다른 이름일 뿐 기능 차이가 없다."
+        },
+        {
+          "id": "d",
+          "text": "RStudio를 먼저 설치한 뒤 R을 설치하는 것이 일반적인 순서다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "R은 실제 계산을 수행하는 엔진(언어)이고 RStudio는 코드 작성·실행·그래프 확인을 한 화면에서 돕는 IDE다. 보통 R을 먼저 설치한 뒤 RStudio를 설치한다."
+    },
+    {
+      "id": "data-110",
+      "type": "single",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R에서 변수에 값을 저장할 때 관행적으로 쓰는 할당 연산자는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "=="
+        },
+        {
+          "id": "b",
+          "text": "->"
+        },
+        {
+          "id": "c",
+          "text": "<-"
+        },
+        {
+          "id": "d",
+          "text": ":="
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "R에서는 `x <- 10` 처럼 `<-`를 할당 연산자로 쓰는 것이 관행이다. `=`도 동작하지만 R에서는 `<-`가 표준 관행으로 권장된다."
+    },
+    {
+      "id": "data-111",
+      "type": "code-output",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 R 코드를 실행했을 때 출력되는 결과로 옳은 것은?",
+      "stemCode": "scores <- c(85, 90, 78, 92, 88)\nlength(scores)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "[1] 5"
+        },
+        {
+          "id": "b",
+          "text": "[1] 4"
+        },
+        {
+          "id": "c",
+          "text": "[1] 433"
+        },
+        {
+          "id": "d",
+          "text": "[1] 86.6"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "`length()`는 벡터의 원소 개수를 반환한다. `scores`는 5개의 값을 가지므로 결과는 `[1] 5`다. (참고: 합계 433은 `sum()`, 평균 86.6은 `mean()`의 결과다.)"
+    },
+    {
+      "id": "data-112",
+      "type": "code-output",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 R 코드의 출력 결과로 옳은 것은?",
+      "stemCode": "scores <- c(85, 90, 78, 92, 88)\nmean(scores)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "[1] 88"
+        },
+        {
+          "id": "b",
+          "text": "[1] 86.6"
+        },
+        {
+          "id": "c",
+          "text": "[1] 433"
+        },
+        {
+          "id": "d",
+          "text": "[1] 90"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "`mean()`은 평균을 구한다. (85+90+78+92+88)=433, 433/5 = 86.6 이므로 출력은 `[1] 86.6`이다."
+    },
+    {
+      "id": "data-113",
+      "type": "cloze",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "빈칸을 채워 점수 벡터를 만들고 표준편차를 구하는 코드를 완성하시오.\n\nscores <- {{1}}(85, 90, 78, 92, 88)\n{{2}}(scores)   # 표준편차",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "c"
+          ]
+        },
+        {
+          "accept": [
+            "sd"
+          ]
+        }
+      ],
+      "explanation": "여러 값을 1차원 벡터로 묶을 때는 `c()` 함수를 쓴다. 표준편차는 `sd()` 함수로 구한다."
+    },
+    {
+      "id": "data-114",
+      "type": "single",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드는 학생 데이터프레임에서 점수가 85점 이상인 행만 추출하려는 의도다. 오류(의도와 다르게 동작하거나 작동하지 않는 부분)가 있는 줄을 고르시오.",
+      "stemCode": "df <- data.frame(name = c(\"가\",\"나\",\"다\"), score = c(85, 90, 78))   # (1)\nstr(df)                # (2)\ndf[df.score >= 85, ]   # (3)\nmean(df$score)         # (4)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "(1) data.frame로 표를 만드는 줄"
+        },
+        {
+          "id": "b",
+          "text": "(2) str(df)로 구조를 보는 줄"
+        },
+        {
+          "id": "c",
+          "text": "(3) df.score 로 열에 접근하는 줄"
+        },
+        {
+          "id": "d",
+          "text": "(4) mean(df$score) 로 평균을 구하는 줄"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "R에서 데이터프레임의 특정 열에 접근할 때는 `$` 기호를 쓴다(`df$score`). `df.score`는 R에서 열 접근 문법이 아니므로 오류가 난다. 올바른 코드는 `df[df$score >= 85, ]`다."
+    },
+    {
+      "id": "data-115",
+      "type": "single",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "행과 열로 된 표 형태 구조로, 열마다 자료형이 다를 수 있어 엑셀 시트와 가장 닮은 R의 자료구조는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "vector(벡터)"
+        },
+        {
+          "id": "b",
+          "text": "list(리스트)"
+        },
+        {
+          "id": "c",
+          "text": "data.frame(데이터프레임)"
+        },
+        {
+          "id": "d",
+          "text": "matrix(행렬)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "데이터프레임(data.frame)은 행과 열로 된 표 형태 구조로 열마다 자료형이 다를 수 있어 엑셀 시트와 가장 닮았다. 벡터는 같은 자료형 값을 1차원으로 묶은 구조다."
+    },
+    {
+      "id": "data-116",
+      "type": "multi",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트에서 소개한 R의 '시각화 함수'에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "hist()"
+        },
+        {
+          "id": "b",
+          "text": "boxplot()"
+        },
+        {
+          "id": "c",
+          "text": "summary()"
+        },
+        {
+          "id": "d",
+          "text": "barplot()"
+        },
+        {
+          "id": "e",
+          "text": "sd()"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explanation": "시각화 함수는 `plot()`, `hist()`(히스토그램), `boxplot()`(상자그림), `barplot()`(막대그래프)다. `summary()`(요약통계)와 `sd()`(표준편차)는 통계함수다."
+    },
+    {
+      "id": "data-117",
+      "type": "ox",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R의 `summary()` 함수는 최소·1사분위·중앙값·평균·3사분위·최대를 한 번에 보여 준다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "`summary()`는 최소·1사분위·중앙값·평균·3사분위·최대 등 요약통계를 한 번에 보여 주는 함수다."
+    },
+    {
+      "id": "data-118",
+      "type": "ox",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "벡터는 서로 다른 자료형의 값을 자유롭게 섞어 담을 수 있는 구조다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "벡터(vector)는 '같은 자료형' 값을 1차원으로 묶은 가장 기본 구조다. 숫자형·문자형·논리형이 있으며 한 벡터 안에서는 같은 자료형만 담는다. 서로 다른 자료형을 열별로 담을 수 있는 것은 데이터프레임이다."
+    },
+    {
+      "id": "data-119",
+      "type": "short",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R에서 외부 CSV 파일을 데이터프레임으로 읽어 들일 때 사용하는 함수 이름을 쓰시오. (괄호와 인자는 생략하고 함수 이름만)",
+      "answer": [
+        "read.csv",
+        "read.csv()"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "`read.csv(\"파일.csv\")` 로 CSV 파일을 데이터프레임으로 읽어 들인다."
+    },
+    {
+      "id": "data-120",
+      "type": "short",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R 콘솔에서 `mean` 함수의 사용법을 즉시 확인하려고 한다. `?mean` 외에 같은 역할을 하는 함수 형태의 명령 한 가지를 쓰시오.",
+      "answer": [
+        "help(mean)",
+        "help"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "`?mean` 또는 `help(mean)` 으로 함수 사용법(도움말)을 즉시 확인할 수 있다."
+    },
+    {
+      "id": "data-121",
+      "type": "match",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 R 함수와 그 기능을 알맞게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "median()",
+          "right": "중앙값"
+        },
+        {
+          "left": "sd()",
+          "right": "표준편차"
+        },
+        {
+          "left": "table()",
+          "right": "빈도표"
+        },
+        {
+          "left": "head()",
+          "right": "데이터의 앞부분 출력"
+        },
+        {
+          "left": "str()",
+          "right": "각 열의 자료형 구조 확인"
+        }
+      ],
+      "explanation": "`median()`은 중앙값, `sd()`는 표준편차, `table()`은 빈도표, `head()`는 앞부분 출력, `str()`은 각 열의 자료형(구조)을 확인하는 함수다."
+    },
+    {
+      "id": "data-122",
+      "type": "order",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "노트의 '실습 E'에 따라 공공데이터 CSV를 R로 분석하는 절차를 올바른 순서대로 나열하시오.",
+      "answer": [],
+      "items": [
+        "공공데이터포털 또는 KOSIS에서 관심 통계를 CSV로 내려받는다",
+        "Session > Set Working Directory 로 CSV가 있는 폴더를 작업 경로로 지정한다",
+        "read.csv()로 CSV를 데이터프레임으로 읽어 들인다",
+        "str(), summary()로 구조와 분포를 파악한다",
+        "숫자 열 하나를 hist() 또는 boxplot()으로 시각화하고 mean()·sd()로 요약한다"
+      ],
+      "explanation": "실습 E의 순서는 (1) CSV 다운로드 → (2) 작업 디렉터리 지정 → (3) read.csv()로 불러오기 → (4) str()·summary()로 구조·분포 파악 → (5) 시각화 및 요약통계다."
+    },
+    {
+      "id": "data-123",
+      "type": "cloze",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "R 패키지를 설치하고 불러오는 코드를 완성하시오.\n\n{{1}}(\"ggplot2\")   # 패키지 설치\n{{2}}(ggplot2)         # 패키지 불러오기",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "install.packages"
+          ]
+        },
+        {
+          "accept": [
+            "library"
+          ]
+        }
+      ],
+      "explanation": "패키지는 `install.packages(\"이름\")`으로 설치하고 `library(이름)`으로 불러온다."
+    },
+    {
+      "id": "data-124",
+      "type": "single",
+      "unit": "8. R을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드에서 데이터프레임 df의 score 열만 따로 꺼내려고 한다. 빈칸 ___ 에 들어갈 올바른 표현은?\n\ndf <- data.frame(name = c(\"가\",\"나\",\"다\"), score = c(85, 90, 78))\n___",
+      "choices": [
+        {
+          "id": "a",
+          "text": "df[score]"
+        },
+        {
+          "id": "b",
+          "text": "df$score"
+        },
+        {
+          "id": "c",
+          "text": "df->score"
+        },
+        {
+          "id": "d",
+          "text": "score(df)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "데이터프레임에서 특정 열만 꺼낼 때는 `$` 기호를 사용해 `df$score`로 접근한다."
+    },
+    {
+      "id": "data-125",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 pandas의 2차원 표 형태 자료구조로, 엑셀 시트처럼 행(index)과 열(column)로 구성되는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Series"
+        },
+        {
+          "id": "b",
+          "text": "DataFrame"
+        },
+        {
+          "id": "c",
+          "text": "Array"
+        },
+        {
+          "id": "d",
+          "text": "List"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "Series는 1차원 데이터(엑셀의 한 열), DataFrame은 2차원 표(엑셀 시트)로 행과 열로 구성된다."
+    },
+    {
+      "id": "data-126",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "설치 없이 웹 브라우저(구글 계정)에서 바로 파이썬 코드를 실행할 수 있고, 라이브러리가 이미 깔려 있어 입문자에게 가장 빠른 클라우드 노트북 환경은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Anaconda Navigator"
+        },
+        {
+          "id": "b",
+          "text": "Jupyter Notebook(로컬)"
+        },
+        {
+          "id": "c",
+          "text": "Google Colab"
+        },
+        {
+          "id": "d",
+          "text": "Visual Studio Code"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "Google Colab은 설치 없이 웹 브라우저에서 코드를 실행하는 클라우드 노트북으로, 라이브러리가 이미 설치되어 있어 입문자에게 가장 빠르다. Anaconda는 내 PC에 직접 설치하는 로컬 배포판이다."
+    },
+    {
+      "id": "data-127",
+      "type": "code-output",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드를 실행했을 때 출력되는 결과로 옳은 것은?",
+      "stemCode": "import pandas as pd\ndata = {\n    \"지역\": [\"서울\", \"부산\", \"대구\", \"인천\", \"광주\"],\n    \"인구\": [940, 330, 240, 295, 145],\n}\ndf = pd.DataFrame(data)\nprint(df.shape)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "(2, 5)"
+        },
+        {
+          "id": "b",
+          "text": "(5, 2)"
+        },
+        {
+          "id": "c",
+          "text": "(5, 5)"
+        },
+        {
+          "id": "d",
+          "text": "(10,)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "shape는 (행 수, 열 수)를 반환한다. 이 DataFrame은 5개 지역(행) × 2개 열(지역, 인구)이므로 (5, 2)이다."
+    },
+    {
+      "id": "data-128",
+      "type": "cloze",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "CSV 파일을 불러올 때는 {{1}}() 함수를, 데이터를 CSV 파일로 저장할 때는 {{2}}() 함수를 사용한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "read_csv",
+            "pd.read_csv"
+          ]
+        },
+        {
+          "accept": [
+            "to_csv",
+            "df.to_csv"
+          ]
+        }
+      ],
+      "explanation": "데이터 입출력에서 read_csv()로 CSV를 불러오고, to_csv()로 저장한다. read_excel()은 엑셀 파일을 불러올 때 쓴다."
+    },
+    {
+      "id": "data-129",
+      "type": "ox",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "matplotlib에서 한글 폰트 설정 코드를 넣지 않으면 그래프의 한글 제목·축 라벨이 네모(□)로 깨질 수 있다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "한글 폰트 설정(예: plt.rcParams[\"font.family\"] = \"Malgun Gothic\")이 없으면 한글이 네모로 깨진다. 그래서 시각화 전에 폰트 설정이 필요하다."
+    },
+    {
+      "id": "data-130",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 숫자 열의 요약 통계(개수·평균·표준편차·최솟값·사분위수·최댓값 등)를 한 번에 보여주는 메서드는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "df.info()"
+        },
+        {
+          "id": "b",
+          "text": "df.head()"
+        },
+        {
+          "id": "c",
+          "text": "df.describe()"
+        },
+        {
+          "id": "d",
+          "text": "df.columns"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "describe()는 숫자 열의 요약 통계를 보여준다. info()는 자료형·결측치 확인, head()는 앞부분 보기, columns는 열 이름 확인이다."
+    },
+    {
+      "id": "data-131",
+      "type": "code-output",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드의 실행 결과로 출력되는 지역의 개수는?",
+      "stemCode": "import pandas as pd\ndata = {\n    \"지역\": [\"서울\", \"부산\", \"대구\", \"인천\", \"광주\"],\n    \"인구\": [940, 330, 240, 295, 145],\n}\ndf = pd.DataFrame(data)\nresult = df[df[\"인구\"] >= 300]\nprint(len(result))",
+      "choices": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "2"
+        },
+        {
+          "id": "c",
+          "text": "3"
+        },
+        {
+          "id": "d",
+          "text": "5"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "인구가 300 이상인 행은 서울(940)과 부산(330) 두 개다. 대구(240)·인천(295)·광주(145)는 300 미만이므로 제외되어 len은 2이다."
+    },
+    {
+      "id": "data-132",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "한글 CSV 파일을 read_csv()로 불러왔더니 한글이 깨져 보였다. 노트의 안내에 따라 가장 먼저 시도해 볼 해결책으로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "encoding=\"cp949\" (또는 깨지면 \"utf-8\") 옵션을 지정한다"
+        },
+        {
+          "id": "b",
+          "text": "파일 확장자를 .txt로 바꾼다"
+        },
+        {
+          "id": "c",
+          "text": "df.dropna()를 먼저 실행한다"
+        },
+        {
+          "id": "d",
+          "text": "plt.rcParams로 폰트를 바꾼다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "한글 CSV는 인코딩 때문에 깨질 수 있으므로 read_csv(\"파일.csv\", encoding=\"cp949\")처럼 인코딩 옵션을 시도하고, 그래도 깨지면 encoding=\"utf-8\"로 바꾼다. 폰트 설정은 그래프(matplotlib) 한글 깨짐용이다."
+    },
+    {
+      "id": "data-133",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음은 막대그래프를 그리려는 코드다. 한 줄에 오류(문제)가 있다. 어느 줄을 고쳐야 하는가?\n\n1: import matplotlib.pyplot as plt\n2: plt.bar(df[\"지역\"], df[\"인구\"])\n3: plt.title(\"지역별 인구\")\n4: plt.show\n",
+      "choices": [
+        {
+          "id": "a",
+          "text": "1번 줄 - import 구문이 잘못됨"
+        },
+        {
+          "id": "b",
+          "text": "2번 줄 - plt.bar의 인자 순서가 잘못됨"
+        },
+        {
+          "id": "c",
+          "text": "4번 줄 - plt.show가 아니라 plt.show()로 호출해야 함"
+        },
+        {
+          "id": "d",
+          "text": "3번 줄 - title은 plt.title이 아니라 plt.label이어야 함"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "plt.show는 함수 객체일 뿐 호출되지 않아 그래프가 표시되지 않는다. 괄호를 붙여 plt.show()로 호출해야 한다. import, plt.bar(x, y) 순서, plt.title은 모두 올바르다."
+    },
+    {
+      "id": "data-134",
+      "type": "match",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "matplotlib 함수와 그리는 그래프 종류를 알맞게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "plt.plot()",
+          "right": "선그래프"
+        },
+        {
+          "left": "plt.bar()",
+          "right": "막대그래프"
+        },
+        {
+          "left": "plt.hist()",
+          "right": "히스토그램(분포)"
+        },
+        {
+          "left": "plt.scatter()",
+          "right": "산점도"
+        }
+      ],
+      "explanation": "plot은 선, bar는 막대, hist는 히스토그램(분포 확인), scatter는 산점도를 그린다."
+    },
+    {
+      "id": "data-135",
+      "type": "multi",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 중 pandas에서 결측치(NaN)를 처리하는 데 사용하는 메서드를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "isnull()"
+        },
+        {
+          "id": "b",
+          "text": "dropna()"
+        },
+        {
+          "id": "c",
+          "text": "fillna()"
+        },
+        {
+          "id": "d",
+          "text": "groupby()"
+        },
+        {
+          "id": "e",
+          "text": "sort_values()"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "결측치 처리는 isnull()(결측 확인), dropna()(결측 행 제거), fillna()(결측 값 채우기)를 사용한다. groupby()는 집계, sort_values()는 정렬용이다."
+    },
+    {
+      "id": "data-136",
+      "type": "cloze",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드는 '시도'별 '인구수' 합계를 구해 내림차순으로 정렬한다. 빈칸을 채우시오.\n\ndf.{{1}}(\"시도\")[\"인구수\"].{{2}}().sort_values(ascending=False)",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "groupby"
+          ]
+        },
+        {
+          "accept": [
+            "sum"
+          ]
+        }
+      ],
+      "explanation": "groupby(\"시도\")로 시도별로 묶은 뒤 인구수 열에 sum()을 적용해 합계를 구하고, sort_values(ascending=False)로 내림차순 정렬한다."
+    },
+    {
+      "id": "data-137",
+      "type": "code-output",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "상",
+      "points": 3,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "다음 코드의 출력 결과로 옳은 것은?",
+      "stemCode": "import pandas as pd\ns = pd.Series([10, 20, 30, 40])\nprint(s.sum())\nprint(s.mean())",
+      "choices": [
+        {
+          "id": "a",
+          "text": "100\\n25.0"
+        },
+        {
+          "id": "b",
+          "text": "100\\n25"
+        },
+        {
+          "id": "c",
+          "text": "4\\n10"
+        },
+        {
+          "id": "d",
+          "text": "10\\n40"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "sum()은 10+20+30+40=100, mean()은 100/4=25.0이다. 평균은 실수(float)로 25.0이 출력된다."
+    },
+    {
+      "id": "data-138",
+      "type": "order",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "KOSIS 공공 통계 CSV를 내려받아 pandas로 분석하는 실습 순서를 올바르게 나열하시오.",
+      "answer": [],
+      "items": [
+        "KOSIS(kosis.kr)에 접속해 관심 통계를 검색한다",
+        "통계표 화면에서 파일형태를 CSV로 선택해 다운로드한다",
+        "Colab에 받은 CSV 파일을 업로드한다",
+        "read_csv()로 파일을 불러온다",
+        "columns와 shape로 열 이름·크기를 확인하고 groupby로 집계한다"
+      ],
+      "explanation": "노트의 실습 D 순서: KOSIS 접속·검색 → CSV 다운로드 → Colab 업로드 → read_csv로 불러오기 → 열/크기 확인 후 집계."
+    },
+    {
+      "id": "data-139",
+      "type": "short",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "중",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "데이터프레임 df의 앞부분(기본 5행)을 미리 보기 위해 호출하는 메서드 이름을 (괄호 포함) 적으시오.",
+      "answer": [
+        "head()",
+        "df.head()",
+        "head"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "head()는 데이터프레임의 앞부분(기본 5행)을 보여준다. 반대로 끝부분을 보려면 tail()을 사용한다."
+    },
+    {
+      "id": "data-140",
+      "type": "single",
+      "unit": "9. 파이썬을 활용한 자료분석",
+      "difficulty": "하",
+      "points": 2,
+      "source": "데이터정보처리입문 · 오리지널",
+      "stem": "엑셀 대신 파이썬과 pandas로 자료를 분석할 때의 장점으로 노트에서 든 것이 아닌 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "수십만~수백만 행의 대용량 데이터도 코드 몇 줄로 처리할 수 있다"
+        },
+        {
+          "id": "b",
+          "text": "같은 코드를 다시 돌리면 항상 같은 결과가 나와 재현성이 높다"
+        },
+        {
+          "id": "c",
+          "text": "데이터만 바꿔 코드를 재실행하면 갱신되는 통계도 자동화할 수 있다"
+        },
+        {
+          "id": "d",
+          "text": "마우스 드래그만으로 코드 없이 표를 자동 생성해 준다"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "노트가 든 장점은 대용량 처리, 재현성, 자동화, 무료·개방 생태계다. '마우스 드래그만으로 코드 없이 표 자동 생성'은 언급되지 않은 내용으로, 오히려 코드 기반 분석이 파이썬의 특징이다."
+    }
+  ]
+}
