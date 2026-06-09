@@ -1,0 +1,2810 @@
+{
+  "subject": "대학영어",
+  "version": 1,
+  "config": {
+    "passPct": 60,
+    "secPerQuestion": 60,
+    "shuffle": true
+  },
+  "questions": [
+    {
+      "id": "english-001",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 '명사를 대신하는' 역할을 하는 품사(대명사)에 해당하는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "quickly"
+        },
+        {
+          "id": "b",
+          "text": "it"
+        },
+        {
+          "id": "c",
+          "text": "and"
+        },
+        {
+          "id": "d",
+          "text": "in"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트의 8품사 표에서 대명사(Pronoun)는 명사를 대신하는 품사로 I, you, it, this 등이 예시다. quickly는 부사, and는 접속사, in은 전치사다."
+    },
+    {
+      "id": "english-002",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "문장 'We call him a genius.'는 몇 형식 문장인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "2형식 (S+V+C)"
+        },
+        {
+          "id": "b",
+          "text": "3형식 (S+V+O)"
+        },
+        {
+          "id": "c",
+          "text": "4형식 (S+V+IO+DO)"
+        },
+        {
+          "id": "d",
+          "text": "5형식 (S+V+O+OC)"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "him이 목적어, a genius가 목적격보어(him = a genius)이므로 5형식(S+V+O+OC)이다. 노트의 5형식 예문과 동일한 구조다."
+    },
+    {
+      "id": "english-003",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "4형식 문장 'He gave me a book.'을 3형식으로 바르게 전환한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "He gave a book for me."
+        },
+        {
+          "id": "b",
+          "text": "He gave a book to me."
+        },
+        {
+          "id": "c",
+          "text": "He gave a book of me."
+        },
+        {
+          "id": "d",
+          "text": "He gave me to a book."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 give는 수여동사로 3형식 전환 시 전치사 to를 쓴다(He gave a book to me). for나 of는 동사 종류에 따라 달라지며 give에는 to가 맞다."
+    },
+    {
+      "id": "english-004",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'나는 2020년부터 영어를 계속 공부해 오고 있다'를 나타내는 현재완료진행 시제로 올바른 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "I study English since 2020."
+        },
+        {
+          "id": "b",
+          "text": "I am studying English since 2020."
+        },
+        {
+          "id": "c",
+          "text": "I have been studying English since 2020."
+        },
+        {
+          "id": "d",
+          "text": "I had been studying English since 2020."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "현재완료진행은 have/has been + -ing 형태다. 노트 예문 'I have been studying English since 2020.'와 동일하다."
+    },
+    {
+      "id": "english-005",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "'그녀가 도착했을 때 나는 두 시간째 공부하고 있었다'에 알맞은 시제(과거완료진행)는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "I had been studying for two hours when she arrived."
+        },
+        {
+          "id": "b",
+          "text": "I have been studying for two hours when she arrived."
+        },
+        {
+          "id": "c",
+          "text": "I was studying for two hours when she arrived."
+        },
+        {
+          "id": "d",
+          "text": "I will have been studying for two hours when she arrived."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "과거의 기준 시점(도착) 이전부터 그 시점까지 이어진 동작은 과거완료진행(had been + -ing)으로 표현한다. 노트 예문과 동일하다."
+    },
+    {
+      "id": "english-006",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'그가 그런 말을 했을 리 없다'라는 과거의 강한 부정 추측을 나타내는 표현은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "He must have said that."
+        },
+        {
+          "id": "b",
+          "text": "He may have said that."
+        },
+        {
+          "id": "c",
+          "text": "He cannot have said that."
+        },
+        {
+          "id": "d",
+          "text": "He should have said that."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 '조동사 + have + p.p.' 표현에서 cannot have p.p.는 과거에 대한 강한 부정 추측(~했을 리 없다)을 나타낸다. must have는 강한 추측, may have는 약한 추측, should have는 후회다."
+    },
+    {
+      "id": "english-007",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "능동태 'Shakespeare wrote Hamlet.'을 수동태로 바르게 전환한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Hamlet was wrote by Shakespeare."
+        },
+        {
+          "id": "b",
+          "text": "Hamlet was written by Shakespeare."
+        },
+        {
+          "id": "c",
+          "text": "Hamlet is written by Shakespeare."
+        },
+        {
+          "id": "d",
+          "text": "Hamlet has written by Shakespeare."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "수동태는 be동사 + 과거분사(p.p.)이며 과거 시제이므로 was written이 맞다. write의 p.p.는 written이다. 노트 예문과 동일하다."
+    },
+    {
+      "id": "english-008",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "빈칸에 알맞은 전치사는? 'She is very interested ___ classical music.'",
+      "choices": [
+        {
+          "id": "a",
+          "text": "in"
+        },
+        {
+          "id": "b",
+          "text": "at"
+        },
+        {
+          "id": "c",
+          "text": "with"
+        },
+        {
+          "id": "d",
+          "text": "of"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 'by 이외의 전치사' 정리에서 be interested in(~에 관심 있다)이다. be surprised at, be covered with, be made of/from와 구분한다."
+    },
+    {
+      "id": "english-009",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 to부정사의 용법이 나머지와 다른 하나는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "To learn is important."
+        },
+        {
+          "id": "b",
+          "text": "I have work to do."
+        },
+        {
+          "id": "c",
+          "text": "My hope is to travel."
+        },
+        {
+          "id": "d",
+          "text": "She wants to sleep."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "b의 to do는 명사 work를 수식하는 형용사적 용법이다. a(주어), c(보어), d(목적어)는 모두 명사적 용법이다."
+    },
+    {
+      "id": "english-010",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "빈칸에 알맞은 형태는? 'I enjoy ___ in the sea every summer.'",
+      "choices": [
+        {
+          "id": "a",
+          "text": "to swim"
+        },
+        {
+          "id": "b",
+          "text": "swim"
+        },
+        {
+          "id": "c",
+          "text": "swimming"
+        },
+        {
+          "id": "d",
+          "text": "swam"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "enjoy는 동명사만 목적어로 취하는 동사다(enjoy, finish, mind, avoid, give up, keep). 따라서 swimming이 맞다."
+    },
+    {
+      "id": "english-011",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "빈칸에 알맞은 관계사는? 'She has a friend ___ father is a doctor.'",
+      "choices": [
+        {
+          "id": "a",
+          "text": "who"
+        },
+        {
+          "id": "b",
+          "text": "whom"
+        },
+        {
+          "id": "c",
+          "text": "whose"
+        },
+        {
+          "id": "d",
+          "text": "which"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "뒤에 명사(father)가 이어지고 '친구의 아버지'라는 소유 관계이므로 소유격 관계대명사 whose가 맞다. 노트 예문과 동일한 구조다."
+    },
+    {
+      "id": "english-012",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "가정법 과거완료 문장으로 올바른 것은? (과거 사실의 반대)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "If I were rich, I would buy a house."
+        },
+        {
+          "id": "b",
+          "text": "If I had studied harder, I would have passed."
+        },
+        {
+          "id": "c",
+          "text": "If I study harder, I will pass."
+        },
+        {
+          "id": "d",
+          "text": "If I had studied harder, I would pass now."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "가정법 과거완료는 'if + had p.p., 주절 would/could/might + have p.p.'로 과거 사실의 반대를 나타낸다. a는 가정법 과거, d는 혼합 가정법, c는 단순 조건문이다."
+    },
+    {
+      "id": "english-013",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "수일치가 올바른 문장은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Mathematics are difficult."
+        },
+        {
+          "id": "b",
+          "text": "Every student have a book."
+        },
+        {
+          "id": "c",
+          "text": "The box of apples is heavy."
+        },
+        {
+          "id": "d",
+          "text": "Swimming are fun."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "진짜 주어는 box(단수)이고 of apples는 수식어구이므로 is가 맞다. 학문명 Mathematics는 단수(is), every+명사는 단수(has), 동명사 주어 Swimming도 단수(is)다."
+    },
+    {
+      "id": "english-014",
+      "type": "single",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "직접화법 'He said, \"I am tired.\"'를 간접화법으로 바르게 옮긴 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "He said that he is tired."
+        },
+        {
+          "id": "b",
+          "text": "He said that he was tired."
+        },
+        {
+          "id": "c",
+          "text": "He told that he was tired."
+        },
+        {
+          "id": "d",
+          "text": "He said that I am tired."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "전달동사가 과거(said)이므로 시제를 한 단계 과거로 일치시켜 am을 was로 바꾸고, 인칭은 he로 바꾼다. 노트 예문과 동일하다."
+    },
+    {
+      "id": "english-015",
+      "type": "multi",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 목적어로 '동명사만' 취하는 동사를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "enjoy"
+        },
+        {
+          "id": "b",
+          "text": "want"
+        },
+        {
+          "id": "c",
+          "text": "finish"
+        },
+        {
+          "id": "d",
+          "text": "avoid"
+        },
+        {
+          "id": "e",
+          "text": "decide"
+        }
+      ],
+      "answer": [
+        "a",
+        "c",
+        "d"
+      ],
+      "explanation": "노트에 따르면 동명사만 취하는 동사는 enjoy, finish, mind, avoid, give up, keep이다. want, decide는 to부정사만 취하는 동사다."
+    },
+    {
+      "id": "english-016",
+      "type": "ox",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "consist of는 수동태(is consisted of)로 쓸 수 있다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트의 참고에 따르면 consist는 수동태로 쓰지 않는다(O: consists of / X: is consisted of). 반면 comprise는 능동(comprise)과 수동(be comprised of) 모두 가능하다."
+    },
+    {
+      "id": "english-017",
+      "type": "ox",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "방법을 나타낼 때 선행사 the way와 관계부사 how는 함께 써서 'the way how he speaks'로 표현할 수 있다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트에 따르면 the way와 how는 함께 쓰지 않는다. the way he speaks, the way that he speaks, the way in which he speaks, 또는 how he speaks 중 하나만 쓴다. the way how는 비표준이다."
+    },
+    {
+      "id": "english-018",
+      "type": "short",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "선행사를 포함하여 'the thing(s) which'의 의미를 갖는 관계대명사를 쓰시오. (예: Tell me ___ you want.)",
+      "answer": [
+        "what"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "what은 선행사를 포함하는 관계대명사로 the thing which와 같다. 'Tell me what you want.'(네가 원하는 것을 말해라)에서처럼 쓰인다."
+    },
+    {
+      "id": "english-019",
+      "type": "short",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "부사절 'When she saw me'를 분사구문으로 줄인 첫 단어를 쓰시오. (___ me, she smiled.)",
+      "answer": [
+        "Seeing",
+        "seeing"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "분사구문은 부사절의 접속사와 주어를 생략하고 동사를 -ing로 바꾼다. When she saw me는 Seeing me로 줄인다."
+    },
+    {
+      "id": "english-020",
+      "type": "cloze",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "가정법 과거 문장을 완성하시오. 'If I {{1}} rich, I {{2}} buy a house.' (현재 사실의 반대)",
+      "blanks": [
+        {
+          "accept": [
+            "were",
+            "was"
+          ]
+        },
+        {
+          "accept": [
+            "would",
+            "could",
+            "might"
+          ]
+        }
+      ],
+      "answer": [],
+      "explanation": "가정법 과거는 'if + 과거동사(주로 were), 주절 would/could/might + 동사원형'으로 현재 사실의 반대를 나타낸다. 노트 예문 'If I were rich, I would buy a house.'와 동일하다."
+    },
+    {
+      "id": "english-021",
+      "type": "match",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "관계부사와 그 선행사(종류)를 바르게 연결하시오.",
+      "pairs": [
+        {
+          "left": "where",
+          "right": "장소"
+        },
+        {
+          "left": "when",
+          "right": "시간"
+        },
+        {
+          "left": "why",
+          "right": "이유"
+        },
+        {
+          "left": "how",
+          "right": "방법"
+        }
+      ],
+      "answer": [],
+      "explanation": "노트의 관계부사 표에 따르면 where는 장소, when은 시간, why는 이유, how는 방법을 나타내는 선행사와 연결된다."
+    },
+    {
+      "id": "english-022",
+      "type": "order",
+      "unit": "필수 문법 (8품사·문장 5형식·12시제·조동사·수동태·부정사/동명사/분사)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "단어를 배열하여 올바른 영어 문장을 만드시오. (의미: 그 다리가 건설되고 있다 - 진행형 수동태)",
+      "items": [
+        "The",
+        "bridge",
+        "is",
+        "being",
+        "built"
+      ],
+      "answer": [],
+      "explanation": "진행형 수동태는 be + being + p.p. 형태다. 따라서 'The bridge is being built.'가 올바른 순서다. 노트의 시제별 수동태 표 예문과 동일하다."
+    },
+    {
+      "id": "english-023",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "빈칸에 들어갈 가장 알맞은 관계대명사는? \"I know the man ____ lives next door.\" (나는 옆집에 사는 남자를 안다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "who"
+        },
+        {
+          "id": "b",
+          "text": "which"
+        },
+        {
+          "id": "c",
+          "text": "whose"
+        },
+        {
+          "id": "d",
+          "text": "what"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "선행사가 사람(the man)이고 관계사절에서 주어 역할을 하므로 주격 관계대명사 who를 쓴다. which는 사물·동물, whose는 소유격, what은 선행사를 포함하는 관계대명사다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-024",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸에 알맞은 관계대명사는? \"She has a friend ____ father is a doctor.\" (그녀에게는 아버지가 의사인 친구가 있다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "who"
+        },
+        {
+          "id": "b",
+          "text": "whom"
+        },
+        {
+          "id": "c",
+          "text": "whose"
+        },
+        {
+          "id": "d",
+          "text": "which"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "뒤에 명사(father)가 이어지고 '~의'라는 소유 관계를 나타내므로 소유격 관계대명사 whose를 쓴다. friend의 아버지(father)를 가리킨다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-025",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸에 알맞은 관계부사는? \"This is the house ____ I live.\" (이곳은 내가 사는 집이다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "which"
+        },
+        {
+          "id": "b",
+          "text": "where"
+        },
+        {
+          "id": "c",
+          "text": "when"
+        },
+        {
+          "id": "d",
+          "text": "why"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "선행사가 장소(the house)이고 뒤에 완전한 절(I live)이 오므로 장소의 관계부사 where를 쓴다(= in which). 시간은 when, 이유는 why다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-026",
+      "type": "ox",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "선행사 the way와 관계부사 how는 함께 써서 \"the way how he speaks\"처럼 표현할 수 있다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "the way와 how는 함께 쓰지 않는다. 둘 중 하나만 써서 the way he speaks, the way that he speaks, the way in which he speaks, 또는 how he speaks로 표현한다. the way how ~는 비표준이다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-027",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "다음 중 관계대명사 what이 올바르게 쓰인 문장은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Tell me what you want."
+        },
+        {
+          "id": "b",
+          "text": "I know the man what lives next door."
+        },
+        {
+          "id": "c",
+          "text": "This is the book what I bought."
+        },
+        {
+          "id": "d",
+          "text": "She has a friend what father is a doctor."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "what은 선행사를 포함하는 관계대명사로 'the thing which(~하는 것)'의 뜻이다. Tell me what you want.는 '네가 원하는 것을 말해라'로 올바르다. 나머지는 선행사가 별도로 있으므로 who/which/whose를 써야 한다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-028",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸을 채워 가정법 과거 문장을 완성하시오. \"If I ____ rich, I ____ buy a house.\" (내가 부자라면 집을 살 텐데.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "am / will"
+        },
+        {
+          "id": "b",
+          "text": "were / would"
+        },
+        {
+          "id": "c",
+          "text": "had been / would have"
+        },
+        {
+          "id": "d",
+          "text": "were / will"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "현재 사실의 반대를 가정하는 가정법 과거다. if절은 과거동사(were), 주절은 'would/could/might + 동사원형'을 쓴다. 따라서 were / would가 맞다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-029",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음 문장이 나타내는 가정법의 종류는? \"If I had studied harder, I would have passed.\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "가정법 과거 (현재 사실의 반대)"
+        },
+        {
+          "id": "b",
+          "text": "가정법 과거완료 (과거 사실의 반대)"
+        },
+        {
+          "id": "c",
+          "text": "혼합 가정법 (과거 가정 → 현재 결과)"
+        },
+        {
+          "id": "d",
+          "text": "직설법 조건문"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "if절이 'had + p.p.'(had studied), 주절이 'would + have + p.p.'(would have passed)이므로 과거 사실의 반대를 가정하는 가정법 과거완료다. 실제로는 합격하지 못했음을 함의한다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-030",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "빈칸에 알맞은 형태는? (혼합 가정법) \"If I had taken the medicine, I ____ not ____ sick now.\" (그때 약을 먹었다면 지금 아프지 않을 텐데.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "would / have been"
+        },
+        {
+          "id": "b",
+          "text": "will / be"
+        },
+        {
+          "id": "c",
+          "text": "would / be"
+        },
+        {
+          "id": "d",
+          "text": "had / been"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "과거의 가정(had taken)이 현재의 결과(now)로 이어지는 혼합 가정법이다. if절은 'had + p.p.', 주절은 'would + 동사원형'을 쓰므로 would not be가 맞다. now라는 현재 시간 부사가 단서다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-031",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸에 알맞은 것은? (현재 사실에 대한 유감) \"I wish I ____ her name.\" (그녀의 이름을 안다면 좋을 텐데.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "know"
+        },
+        {
+          "id": "b",
+          "text": "knew"
+        },
+        {
+          "id": "c",
+          "text": "had known"
+        },
+        {
+          "id": "d",
+          "text": "will know"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "I wish 가정법에서 현재 사실에 대한 유감을 나타낼 때는 과거동사를 쓴다. 따라서 knew가 맞다(실제로는 이름을 모름).",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-032",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "빈칸에 알맞은 비교 표현은? \"She is ____ tall ____ her brother.\" (그녀는 오빠만큼 키가 크다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "as / as"
+        },
+        {
+          "id": "b",
+          "text": "more / than"
+        },
+        {
+          "id": "c",
+          "text": "the / in"
+        },
+        {
+          "id": "d",
+          "text": "so / that"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "'~만큼 ...한'은 원급 비교 'as + 원급 + as' 구문을 쓴다. 따라서 as tall as가 맞다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-033",
+      "type": "short",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "다음 빈칸에 들어갈 한 단어를 쓰시오. (비교급 + than) \"This book is more interesting ____ that one.\" (이 책이 저 책보다 더 재미있다.)",
+      "answer": [
+        "than"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "비교급(more interesting) 뒤에 비교 대상을 연결할 때는 than을 쓴다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-034",
+      "type": "cloze",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "'the + 비교급, the + 비교급' 구문을 완성하시오. \"The {{1}} you read, the {{2}} you become.\" (많이 읽을수록 더 현명해진다.)",
+      "blanks": [
+        {
+          "accept": [
+            "more"
+          ]
+        },
+        {
+          "accept": [
+            "wiser"
+          ]
+        }
+      ],
+      "answer": [],
+      "explanation": "'~할수록 더 ...하다'는 'the + 비교급 ..., the + 비교급 ...' 구문이다. read는 양을 나타내므로 more, wise의 비교급은 wiser다. 따라서 The more you read, the wiser you become.이 된다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-035",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "다음 세 문장은 모두 같은 의미다. 빈칸에 알맞은 것은? \"No other student is as tall as he. = He is ____ any other student. = He is the tallest.\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "taller than"
+        },
+        {
+          "id": "b",
+          "text": "as tall as"
+        },
+        {
+          "id": "c",
+          "text": "tallest than"
+        },
+        {
+          "id": "d",
+          "text": "more tall than"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "최상급의 의미는 비교급으로도 표현할 수 있다. '다른 어떤 학생보다 더 키가 크다'는 'taller than any other student'로 쓴다. tall의 비교급은 taller이며 more tall은 틀린 형태다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-036",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "다음 중 형용사 good의 비교급-최상급이 바르게 짝지어진 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "good - gooder - goodest"
+        },
+        {
+          "id": "b",
+          "text": "good - better - best"
+        },
+        {
+          "id": "c",
+          "text": "good - worse - worst"
+        },
+        {
+          "id": "d",
+          "text": "good - more good - most good"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "good/well은 불규칙 변화로 better - best가 된다. worse - worst는 bad의 변화형이다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-037",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸에 알맞은 상관접속사 짝은? \"____ Tom ____ Jane passed.\" (톰과 제인 둘 다 합격했다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Either / or"
+        },
+        {
+          "id": "b",
+          "text": "Neither / nor"
+        },
+        {
+          "id": "c",
+          "text": "Both / and"
+        },
+        {
+          "id": "d",
+          "text": "Not only / but also"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "'둘 다'를 뜻하는 상관접속사는 'both A and B'다. either A or B는 '둘 중 하나', not only A but also B는 'A뿐만 아니라 B도'의 뜻이다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-038",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "빈칸에 알맞은 양보의 접속사는? \"____ it was cold, we went out.\" (추웠지만 우리는 나갔다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Because"
+        },
+        {
+          "id": "b",
+          "text": "Although"
+        },
+        {
+          "id": "c",
+          "text": "If"
+        },
+        {
+          "id": "d",
+          "text": "When"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "'~지만, ~에도 불구하고'라는 양보의 부사절을 이끄는 접속사는 although다. because는 이유, if는 조건, when은 시간을 나타낸다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-039",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "by와 until의 쓰임으로 알맞은 것은? \"Finish it ____ 5.\" (5시까지는 끝내라) / \"Wait ____ 5.\" (5시까지 줄곧 기다려라)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "until / by"
+        },
+        {
+          "id": "b",
+          "text": "by / until"
+        },
+        {
+          "id": "c",
+          "text": "by / by"
+        },
+        {
+          "id": "d",
+          "text": "until / until"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "by는 어떤 행동이 완료되는 시점(~까지는)을 나타내고, until은 동작이 계속되는 기간(~까지 줄곧)을 나타낸다. 끝내는 것은 완료이므로 by, 기다리는 것은 계속이므로 until이다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-040",
+      "type": "match",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "시간·장소 전치사 at/on/in의 쓰임을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "at 7 o'clock",
+          "right": "시간 (특정 시점)"
+        },
+        {
+          "left": "on Monday",
+          "right": "시간 (특정 날·요일)"
+        },
+        {
+          "left": "in summer",
+          "right": "시간 (긴 기간·계절)"
+        },
+        {
+          "left": "in the room",
+          "right": "장소 (공간 내부)"
+        },
+        {
+          "left": "on the wall",
+          "right": "장소 (표면 위)"
+        }
+      ],
+      "answer": [],
+      "explanation": "at은 특정 시점(7시)이나 지점, on은 특정 날·요일이나 표면, in은 긴 기간·계절이나 공간 내부에 쓴다. 노트의 전치사 표에 근거한다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-041",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "주어-동사 수일치가 올바른 것은? \"Mathematics ____ difficult.\" (수학은 어렵다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "are"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "were"
+        },
+        {
+          "id": "d",
+          "text": "have"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "Mathematics처럼 -s로 끝나는 학문명은 형태는 복수처럼 보여도 단수 취급한다. 따라서 단수 동사 is를 쓴다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-042",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음 중 주어-동사 수일치가 틀린 문장은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Every student has a book."
+        },
+        {
+          "id": "b",
+          "text": "Swimming is fun."
+        },
+        {
+          "id": "c",
+          "text": "The box of apples are heavy."
+        },
+        {
+          "id": "d",
+          "text": "A number of cars are parked."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "주어와 동사 사이에 수식어구(of apples)가 끼어들어도 동사는 진짜 주어(box, 단수)에 일치시켜야 한다. 따라서 The box of apples is heavy.가 맞다. every+명사는 단수, 동명사 주어는 단수, A number of ~는 복수 취급이므로 나머지는 옳다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-043",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "'The number of ~'와 'A number of ~'의 수일치 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The number of ~는 단수, A number of ~는 복수 취급한다."
+        },
+        {
+          "id": "b",
+          "text": "The number of ~는 복수, A number of ~는 단수 취급한다."
+        },
+        {
+          "id": "c",
+          "text": "둘 다 항상 단수 취급한다."
+        },
+        {
+          "id": "d",
+          "text": "둘 다 항상 복수 취급한다."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "The number of ~(~의 수)는 단수 취급하여 단수 동사를 쓰고(The number of cars is rising.), A number of ~(많은 ~)는 복수 취급하여 복수 동사를 쓴다(A number of cars are parked.).",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-044",
+      "type": "multi",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음 중 단수 동사를 취하는 주어를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Every student"
+        },
+        {
+          "id": "b",
+          "text": "Tom and Jane"
+        },
+        {
+          "id": "c",
+          "text": "Swimming"
+        },
+        {
+          "id": "d",
+          "text": "Mathematics"
+        },
+        {
+          "id": "e",
+          "text": "A number of cars"
+        }
+      ],
+      "answer": [
+        "a",
+        "c",
+        "d"
+      ],
+      "explanation": "every+명사, 동명사 주어(Swimming), 학문명(Mathematics)은 모두 단수 취급한다. 반면 'A and B'(Tom and Jane)와 'A number of ~'(많은 ~)는 복수 취급한다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-045",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "다음 직접화법을 간접화법으로 바르게 바꾼 것은? \"He said, 'I am tired.'\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "He said that he was tired."
+        },
+        {
+          "id": "b",
+          "text": "He said that I am tired."
+        },
+        {
+          "id": "c",
+          "text": "He told that he is tired."
+        },
+        {
+          "id": "d",
+          "text": "He said if he was tired."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "평서문의 간접화법은 접속사 that을 쓰고, 인칭(I→he)을 전달자 기준으로 바꾸며, 전달동사가 과거(said)이므로 시제를 한 단계 과거(am→was)로 일치시킨다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-046",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음 의문문을 간접화법으로 바르게 바꾼 것은? \"She asked, 'Do you like coffee?'\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "She asked do I like coffee."
+        },
+        {
+          "id": "b",
+          "text": "She asked if I liked coffee."
+        },
+        {
+          "id": "c",
+          "text": "She asked that I liked coffee."
+        },
+        {
+          "id": "d",
+          "text": "She told if I liked coffee."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "의문사가 없는 의문문은 접속사 if/whether로 연결하고, 어순을 평서문 어순(I like)으로 바꾸며, 전달동사가 과거(asked)이므로 시제를 일치(like→liked)시킨다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-047",
+      "type": "single",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "명령문을 간접화법으로 바르게 바꾼 것은? \"She said to me, 'Open the door.'\"",
+      "choices": [
+        {
+          "id": "a",
+          "text": "She told me to open the door."
+        },
+        {
+          "id": "b",
+          "text": "She told me open the door."
+        },
+        {
+          "id": "c",
+          "text": "She said me to open the door."
+        },
+        {
+          "id": "d",
+          "text": "She told to me that open the door."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "명령문의 간접화법은 'tell/order/ask/advise + 목적어 + to부정사'로 바꾼다. say to me는 told me로, Open은 to open으로 전환된다.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-048",
+      "type": "order",
+      "unit": "필수 문법 (관계사·가정법·비교·접속사와 전치사·주어동사 수일치·화법)",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "직접화법을 간접화법으로 전환하는 다섯 단계를 노트의 순서대로 배열하시오.",
+      "items": [
+        "전달동사 조정 (say → say / say to → tell)",
+        "접속사 추가 (평서문 that, 의문문 if/whether 또는 의문사)",
+        "인칭대명사를 전달자 기준으로 변경",
+        "시제 일치 (전달동사가 과거면 한 단계 과거로)",
+        "시간·장소 부사 변경 (now → then, today → that day)"
+      ],
+      "answer": [],
+      "explanation": "노트의 화법 전환 규칙 순서다. (1) 전달동사 조정, (2) 접속사 추가, (3) 인칭대명사 변경, (4) 시제 일치, (5) 시간·장소 부사 변경.",
+      "source": "대학영어 · 오리지널"
+    },
+    {
+      "id": "english-049",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 동사를 고르시오.\nShe worked hard to ______ her goals.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "achieve"
+        },
+        {
+          "id": "b",
+          "text": "avoid"
+        },
+        {
+          "id": "c",
+          "text": "refuse"
+        },
+        {
+          "id": "d",
+          "text": "complain"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "achieve는 '달성하다, 이루다'라는 뜻으로, 목표(goals)를 이룬다는 문맥에 적절하다. avoid(피하다), refuse(거절하다), complain(불평하다)은 의미상 맞지 않는다."
+    },
+    {
+      "id": "english-050",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "동사 'acquire'의 뜻으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "거절하다"
+        },
+        {
+          "id": "b",
+          "text": "습득하다, 얻다"
+        },
+        {
+          "id": "c",
+          "text": "발표하다"
+        },
+        {
+          "id": "d",
+          "text": "교체하다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "acquire는 '습득하다, 얻다'라는 뜻이다. 예: He acquired fluent English while living abroad."
+    },
+    {
+      "id": "english-051",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 '인정하다, 시인하다'라는 뜻의 동사는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "admit"
+        },
+        {
+          "id": "b",
+          "text": "assume"
+        },
+        {
+          "id": "c",
+          "text": "attend"
+        },
+        {
+          "id": "d",
+          "text": "arrange"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "admit은 '인정하다, 시인하다'라는 뜻이다. assume은 '가정하다', attend는 '참석하다', arrange는 '준비하다'이다."
+    },
+    {
+      "id": "english-052",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 동사를 고르시오.\nThe weather can ______ our mood.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "affect"
+        },
+        {
+          "id": "b",
+          "text": "appreciate"
+        },
+        {
+          "id": "c",
+          "text": "approve"
+        },
+        {
+          "id": "d",
+          "text": "announce"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "affect는 '영향을 미치다'라는 뜻으로, 날씨가 기분에 영향을 준다는 문맥에 맞다. appreciate(감사하다), approve(승인하다), announce(발표하다)는 부적절하다."
+    },
+    {
+      "id": "english-053",
+      "type": "multi",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 '가정하다, 추정하다'라는 의미를 가질 수 있는 동사를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "assume"
+        },
+        {
+          "id": "b",
+          "text": "suppose"
+        },
+        {
+          "id": "c",
+          "text": "deliver"
+        },
+        {
+          "id": "d",
+          "text": "discover"
+        },
+        {
+          "id": "e",
+          "text": "survive"
+        }
+      ],
+      "answer": [
+        "a",
+        "b"
+      ],
+      "explanation": "assume은 '가정하다, 추정하다', suppose는 '추측하다, 가정하다'로 둘 다 가정/추정의 의미를 갖는다. deliver(배달하다), discover(발견하다), survive(생존하다)는 해당하지 않는다."
+    },
+    {
+      "id": "english-054",
+      "type": "ox",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "동사 'borrow'는 '빌려주다'라는 뜻이다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "borrow는 '빌리다'(빌려 오는 쪽)라는 뜻이다. 예: Can I borrow your pen for a moment? '빌려주다'는 lend이다."
+    },
+    {
+      "id": "english-055",
+      "type": "ox",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "동사 'maintain'에는 '유지하다'뿐 아니라 '주장하다'라는 뜻도 있다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "maintain은 '유지하다, 주장하다' 두 가지 뜻을 모두 갖는다. 예: It is important to maintain good health."
+    },
+    {
+      "id": "english-056",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 동사를 고르시오.\nExercise can ______ many diseases.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "prevent"
+        },
+        {
+          "id": "b",
+          "text": "produce"
+        },
+        {
+          "id": "c",
+          "text": "prefer"
+        },
+        {
+          "id": "d",
+          "text": "prepare"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "prevent는 '막다, 예방하다'라는 뜻으로 질병을 예방한다는 문맥에 맞다. produce(생산하다), prefer(선호하다), prepare(준비하다)는 부적절하다."
+    },
+    {
+      "id": "english-057",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 두 동사의 뜻이 '증가/감소'로 서로 반대가 되도록 짝지은 것 중 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "increase(증가하다) - decrease(감소하다)"
+        },
+        {
+          "id": "b",
+          "text": "increase(감소하다) - decrease(증가하다)"
+        },
+        {
+          "id": "c",
+          "text": "reduce(늘리다) - decrease(줄이다)"
+        },
+        {
+          "id": "d",
+          "text": "improve(줄이다) - reduce(향상시키다)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "increase는 '증가하다, 늘리다', decrease는 '감소하다, 줄이다'로 정확히 반대 의미다. reduce는 '줄이다', improve는 '향상시키다, 개선하다'이다."
+    },
+    {
+      "id": "english-058",
+      "type": "short",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'깨닫다, 실현하다'라는 뜻을 가진 동사를 영어로 쓰시오.",
+      "answer": [
+        "realize",
+        "realise"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "realize는 '깨닫다, 실현하다'라는 뜻이다. 예: I suddenly realized my mistake. 영국식 철자 realise도 허용된다."
+    },
+    {
+      "id": "english-059",
+      "type": "short",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 예문의 빈칸에 들어갈 동사를 영어 한 단어로 쓰시오.\nThis song ______s me of my childhood. (이 노래는 나에게 어린 시절을 떠올리게 한다.)",
+      "answer": [
+        "remind"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "remind는 '상기시키다, 떠올리게 하다'라는 뜻이다. remind A of B 형태로 자주 쓰인다."
+    },
+    {
+      "id": "english-060",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 동사와 한국어 뜻의 연결이 잘못된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "contribute - 기여하다, 기부하다"
+        },
+        {
+          "id": "b",
+          "text": "recognize - 알아보다, 인정하다"
+        },
+        {
+          "id": "c",
+          "text": "refuse - 응답하다"
+        },
+        {
+          "id": "d",
+          "text": "establish - 설립하다, 확립하다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "refuse는 '거절하다'라는 뜻이다. '응답하다, 반응하다'는 respond이다. 나머지 연결은 모두 옳다."
+    },
+    {
+      "id": "english-061",
+      "type": "cloze",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "빈칸에 알맞은 동사를 채우시오.\nWe replaced the old computer ______ a new one. (우리는 오래된 컴퓨터를 새것으로 {{1}}했다.)\n또한 동사 'represent'는 '대표하다, {{2}}'라는 뜻이다.",
+      "blanks": [
+        {
+          "accept": [
+            "교체",
+            "대체",
+            "교체하다",
+            "대체하다"
+          ]
+        },
+        {
+          "accept": [
+            "나타내다",
+            "나타내다(표상하다)",
+            "표상하다"
+          ]
+        }
+      ],
+      "answer": [
+        "교체",
+        "나타내다"
+      ],
+      "explanation": "replace는 '대체하다, 교체하다'(replace A with B 구문), represent는 '대표하다, 나타내다'라는 뜻이다."
+    },
+    {
+      "id": "english-062",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 형용사를 고르시오.\nWater is ______ for life. (물은 생명에 필수적이다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "essential"
+        },
+        {
+          "id": "b",
+          "text": "empty"
+        },
+        {
+          "id": "c",
+          "text": "ancient"
+        },
+        {
+          "id": "d",
+          "text": "absent"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "essential은 '필수적인'이라는 뜻이다. empty(비어 있는), ancient(고대의), absent(결석한)는 문맥에 맞지 않는다."
+    },
+    {
+      "id": "english-063",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "형용사 'crucial'의 뜻으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "편리한"
+        },
+        {
+          "id": "b",
+          "text": "결정적인, 중대한"
+        },
+        {
+          "id": "c",
+          "text": "평범한, 보통의"
+        },
+        {
+          "id": "d",
+          "text": "드문, 희귀한"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "crucial은 '결정적인, 중대한'이라는 뜻이다. 편리한은 convenient, 평범한은 ordinary, 드문은 rare이다."
+    },
+    {
+      "id": "english-064",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 형용사와 한국어 뜻의 연결이 옳지 않은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "reliable - 믿을 만한"
+        },
+        {
+          "id": "b",
+          "text": "sufficient - 충분한"
+        },
+        {
+          "id": "c",
+          "text": "previous - 최근의"
+        },
+        {
+          "id": "d",
+          "text": "various - 다양한"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "previous는 '이전의'라는 뜻이다. '최근의'는 recent이다. 나머지 연결은 모두 옳다."
+    },
+    {
+      "id": "english-065",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 형용사를 고르시오.\nThe problem is more ______ than it seems. (그 문제는 보이는 것보다 더 복잡하다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "complex"
+        },
+        {
+          "id": "b",
+          "text": "obvious"
+        },
+        {
+          "id": "c",
+          "text": "convenient"
+        },
+        {
+          "id": "d",
+          "text": "confident"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "complex는 '복잡한'이라는 뜻이다. obvious(명백한), convenient(편리한), confident(자신감 있는)는 문맥에 맞지 않는다."
+    },
+    {
+      "id": "english-066",
+      "type": "multi",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 형용사 중 '구체적인/특정한'의 의미를 가질 수 있는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "specific"
+        },
+        {
+          "id": "b",
+          "text": "particular"
+        },
+        {
+          "id": "c",
+          "text": "general"
+        },
+        {
+          "id": "d",
+          "text": "typical"
+        },
+        {
+          "id": "e",
+          "text": "huge"
+        }
+      ],
+      "answer": [
+        "a",
+        "b"
+      ],
+      "explanation": "specific은 '구체적인, 특정한', particular는 '특정한, 특별한'으로 둘 다 특정/구체의 의미를 갖는다. general(일반적인)은 오히려 반대 의미이고, typical(전형적인), huge(거대한)는 해당하지 않는다."
+    },
+    {
+      "id": "english-067",
+      "type": "ox",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "형용사 'available'은 '이용 가능한'이라는 뜻이다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "available은 '이용 가능한'이라는 뜻이다. 예: The doctor is not available right now."
+    },
+    {
+      "id": "english-068",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 부사를 고르시오.\nHe could ______ walk after the accident. (그는 사고 후 간신히 걸을 수 있었다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "barely"
+        },
+        {
+          "id": "b",
+          "text": "certainly"
+        },
+        {
+          "id": "c",
+          "text": "frequently"
+        },
+        {
+          "id": "d",
+          "text": "completely"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "barely는 '간신히, 거의 ~않다'라는 뜻으로 문맥에 맞다. certainly(확실히), frequently(자주), completely(완전히)는 부적절하다."
+    },
+    {
+      "id": "english-069",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "부사 'eventually'의 뜻으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "결국, 마침내"
+        },
+        {
+          "id": "b",
+          "text": "즉시"
+        },
+        {
+          "id": "c",
+          "text": "갑자기"
+        },
+        {
+          "id": "d",
+          "text": "점차, 서서히"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "eventually는 '결국, 마침내'라는 뜻이다. 즉시는 immediately, 갑자기는 suddenly, 점차는 gradually이다."
+    },
+    {
+      "id": "english-070",
+      "type": "single",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 부사를 고르시오.\nThe weather is ______ getting warmer. (날씨가 점차 따뜻해지고 있다.)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "gradually"
+        },
+        {
+          "id": "b",
+          "text": "exactly"
+        },
+        {
+          "id": "c",
+          "text": "rarely"
+        },
+        {
+          "id": "d",
+          "text": "obviously"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "gradually는 '점차, 서서히'라는 뜻으로 문맥에 맞다. exactly(정확히), rarely(드물게), obviously(명백히)는 부적절하다."
+    },
+    {
+      "id": "english-071",
+      "type": "short",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'드물게, 좀처럼 ~않다'라는 뜻을 가진 부사를 영어 한 단어로 쓰시오.",
+      "answer": [
+        "rarely"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "rarely는 '드물게, 좀처럼 ~않다'라는 빈도 부사다. 예: He rarely watches television. 형용사 rare(드문, 희귀한)와 구별한다."
+    },
+    {
+      "id": "english-072",
+      "type": "match",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 동사와 한국어 뜻을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "examine",
+          "right": "조사하다, 검토하다"
+        },
+        {
+          "left": "obtain",
+          "right": "얻다, 획득하다"
+        },
+        {
+          "left": "encourage",
+          "right": "격려하다, 장려하다"
+        },
+        {
+          "left": "occur",
+          "right": "발생하다, 일어나다"
+        }
+      ],
+      "answer": [
+        "examine-조사하다, 검토하다",
+        "obtain-얻다, 획득하다",
+        "encourage-격려하다, 장려하다",
+        "occur-발생하다, 일어나다"
+      ],
+      "explanation": "examine은 '조사/검토하다', obtain은 '얻다/획득하다', encourage는 '격려/장려하다', occur는 '발생/일어나다'라는 뜻이다."
+    },
+    {
+      "id": "english-073",
+      "type": "match",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 형용사와 한국어 뜻을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "anxious",
+          "right": "불안한, 걱정하는"
+        },
+        {
+          "left": "familiar",
+          "right": "익숙한, 친숙한"
+        },
+        {
+          "left": "efficient",
+          "right": "효율적인"
+        },
+        {
+          "left": "ordinary",
+          "right": "평범한, 보통의"
+        },
+        {
+          "left": "curious",
+          "right": "호기심 많은"
+        }
+      ],
+      "answer": [
+        "anxious-불안한, 걱정하는",
+        "familiar-익숙한, 친숙한",
+        "efficient-효율적인",
+        "ordinary-평범한, 보통의",
+        "curious-호기심 많은"
+      ],
+      "explanation": "anxious는 '불안한', familiar는 '익숙한', efficient는 '효율적인', ordinary는 '평범한', curious는 '호기심 많은'이라는 뜻이다."
+    },
+    {
+      "id": "english-074",
+      "type": "order",
+      "unit": "핵심 어휘 (동사·형용사·부사 빈출어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 영어 단어들을 한국어 뜻의 'ㄱㄴㄷ' 순서(가나다순)대로 배열하시오. [거대한, 다양한, 명백한, 정확한]에 해당하는 단어를 가나다순으로 나열하면?",
+      "items": [
+        "huge",
+        "various",
+        "obvious",
+        "accurate"
+      ],
+      "answer": [
+        "huge",
+        "various",
+        "obvious",
+        "accurate"
+      ],
+      "explanation": "huge=거대한, various=다양한, obvious=명백한, accurate=정확한. 한국어 뜻을 가나다순(거대한 < 다양한 < 명백한 < 정확한)으로 정렬하면 huge → various → obvious → accurate 순이다."
+    },
+    {
+      "id": "english-075",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 '교육과정'을 뜻하는 학업 분야 명사로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "curriculum"
+        },
+        {
+          "id": "b",
+          "text": "scholarship"
+        },
+        {
+          "id": "c",
+          "text": "tuition"
+        },
+        {
+          "id": "d",
+          "text": "discipline"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "curriculum은 '교육과정'을 뜻한다. scholarship은 장학금, tuition은 수업료, discipline은 학문 분야/규율이다."
+    },
+    {
+      "id": "english-076",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "명사 'thesis'(학위논문, 논제)의 올바른 복수형은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "thesises"
+        },
+        {
+          "id": "b",
+          "text": "theses"
+        },
+        {
+          "id": "c",
+          "text": "thesi"
+        },
+        {
+          "id": "d",
+          "text": "thesae"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "thesis의 복수형은 theses이다. -is로 끝나는 학술 명사가 -es로 바뀌는 불규칙 복수형(analysis/analyses, hypothesis/hypotheses)과 같은 유형이다."
+    },
+    {
+      "id": "english-077",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 'phenomenon'의 올바른 복수형은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "phenomenons"
+        },
+        {
+          "id": "b",
+          "text": "phenomeni"
+        },
+        {
+          "id": "c",
+          "text": "phenomena"
+        },
+        {
+          "id": "d",
+          "text": "phenomenae"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "phenomenon(현상)의 복수형은 phenomena이다. -on으로 끝나는 그리스어 기원 명사의 불규칙 복수형 유형이다."
+    },
+    {
+      "id": "english-078",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "사회·문화 주제 명사 중 '편견'을 뜻하는 단어는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "prejudice"
+        },
+        {
+          "id": "b",
+          "text": "heritage"
+        },
+        {
+          "id": "c",
+          "text": "welfare"
+        },
+        {
+          "id": "d",
+          "text": "identity"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "prejudice는 '편견'(racial prejudice)을 뜻한다. heritage는 유산, welfare는 복지, identity는 정체성이다."
+    },
+    {
+      "id": "english-079",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "경제·비즈니스 어휘 중 '경기 침체'를 뜻하는 명사는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "inflation"
+        },
+        {
+          "id": "b",
+          "text": "revenue"
+        },
+        {
+          "id": "c",
+          "text": "recession"
+        },
+        {
+          "id": "d",
+          "text": "asset"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "recession은 '경기 침체'(economic recession)를 뜻한다. inflation은 물가 상승, revenue는 수익/세입, asset은 자산이다."
+    },
+    {
+      "id": "english-080",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 중 'liability'의 뜻으로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "자산"
+        },
+        {
+          "id": "b",
+          "text": "부채, 책임"
+        },
+        {
+          "id": "c",
+          "text": "투자"
+        },
+        {
+          "id": "d",
+          "text": "이해관계자"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "liability는 '부채, 책임'(limited liability 유한책임)을 뜻한다. 자산은 asset, 투자는 investment, 이해관계자는 stakeholder이다."
+    },
+    {
+      "id": "english-081",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 구동사는?\n\nThe car ______ on the highway, so we had to call a tow truck.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "broke down"
+        },
+        {
+          "id": "b",
+          "text": "brought up"
+        },
+        {
+          "id": "c",
+          "text": "called off"
+        },
+        {
+          "id": "d",
+          "text": "carried out"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "break down은 '고장 나다'를 뜻해 고속도로에서 차가 멈춘 상황에 알맞다. bring up은 (화제를) 꺼내다/기르다, call off는 취소하다, carry out은 수행하다이다."
+    },
+    {
+      "id": "english-082",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "구동사 'come up with'의 뜻으로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "~을 줄이다"
+        },
+        {
+          "id": "b",
+          "text": "(생각을) 떠올리다, 내놓다"
+        },
+        {
+          "id": "c",
+          "text": "검토하다"
+        },
+        {
+          "id": "d",
+          "text": "~에 의존하다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "come up with는 '(생각을) 떠올리다, 내놓다'(He came up with a creative solution.)는 뜻이다. ~을 줄이다는 cut down on, 검토하다는 go over, ~에 의존하다는 rely on이다."
+    },
+    {
+      "id": "english-083",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 구동사는?\n\nWe ______ milk this morning, so I have to buy some on the way home.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "ran out of"
+        },
+        {
+          "id": "b",
+          "text": "took over"
+        },
+        {
+          "id": "c",
+          "text": "turned down"
+        },
+        {
+          "id": "d",
+          "text": "set up"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "run out of는 '~이 다 떨어지다'로 우유가 떨어진 상황에 맞다. take over는 인수하다, turn down은 거절하다/줄이다, set up은 설치하다/설립하다이다."
+    },
+    {
+      "id": "english-084",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "밑줄 친 구동사의 뜻이 문맥상 잘못 연결된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The rumor turned out to be false. (결국 ~로 판명되다)"
+        },
+        {
+          "id": "b",
+          "text": "Her hard work finally paid off. (성과를 내다)"
+        },
+        {
+          "id": "c",
+          "text": "Please fill out this form. (작성하다)"
+        },
+        {
+          "id": "d",
+          "text": "I finally figured out how it works. (미루다)"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "figure out은 '알아내다, 이해하다'이며 '미루다'는 put off이다. 나머지 turn out(판명되다), pay off(성과를 내다), fill out(작성하다)은 모두 올바르다."
+    },
+    {
+      "id": "english-085",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "관용어 'a piece of cake'의 의미로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "아주 쉬운 일"
+        },
+        {
+          "id": "b",
+          "text": "엄청나게 비싼 것"
+        },
+        {
+          "id": "c",
+          "text": "아주 드문 일"
+        },
+        {
+          "id": "d",
+          "text": "어색한 분위기"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "a piece of cake는 '식은 죽 먹기, 아주 쉬운 일'(The exam was a piece of cake.)을 뜻한다."
+    },
+    {
+      "id": "english-086",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 빈칸에 가장 알맞은 관용어는?\n\nI'm feeling a little ______ today, so I'll stay home and rest.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "out of the blue"
+        },
+        {
+          "id": "b",
+          "text": "under the weather"
+        },
+        {
+          "id": "c",
+          "text": "on the same page"
+        },
+        {
+          "id": "d",
+          "text": "in a nutshell"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "under the weather는 '몸이 좀 안 좋은'이라는 뜻이라 집에서 쉬는 상황에 맞다. out of the blue는 난데없이, on the same page는 같은 생각이다, in a nutshell은 요컨대이다."
+    },
+    {
+      "id": "english-087",
+      "type": "single",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "'마음의 평안'을 뜻하는 표준 표현으로 철자가 올바른 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "piece of mind"
+        },
+        {
+          "id": "b",
+          "text": "peace of mind"
+        },
+        {
+          "id": "c",
+          "text": "peace of mine"
+        },
+        {
+          "id": "d",
+          "text": "piece of mine"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "'마음의 평안'은 peace of mind이다. piece of mind는 표준 표현이 아니며, give someone a piece of one's mind는 '상대를 강하게 나무라다'라는 다른 뜻이므로 철자에 유의해야 한다."
+    },
+    {
+      "id": "english-088",
+      "type": "ox",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "furniture, luggage, research는 불가산명사이므로 a/an을 붙이거나 복수형으로 쓰지 않는다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "맞다. furniture, luggage, research는 불가산명사로 a/an을 붙이거나 -s 복수형으로 쓰지 않는다."
+    },
+    {
+      "id": "english-089",
+      "type": "ox",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "하",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "관용어 'break the ice'는 '얼음을 깨서 길을 내다'라는 글자 그대로의 뜻으로 쓰인다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "틀리다. break the ice는 '어색한 분위기를 깨다'라는 관용적 의미로 쓰인다(He told a joke to break the ice.)."
+    },
+    {
+      "id": "english-090",
+      "type": "ox",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "data는 본래 datum의 복수형이지만, 현대 영어에서는 불가산명사처럼 단수 취급(The data is clear.)하는 용법도 널리 쓰인다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "맞다. data는 datum의 복수형이지만 현대 영어, 특히 일상·학술 일반체에서는 불가산명사처럼 단수로 취급하는 용법도 널리 쓰인다."
+    },
+    {
+      "id": "english-091",
+      "type": "short",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'요컨대, 간단히 말해'를 뜻하는 관용어를 영어로 쓰시오. (in으로 시작)",
+      "answer": [
+        "in a nutshell"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "in a nutshell은 '요컨대, 간단히 말해'(In a nutshell, the plan failed.)라는 뜻의 관용어이다."
+    },
+    {
+      "id": "english-092",
+      "type": "short",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "'(서식 등을) 작성하다'를 뜻하는 구동사를 두 단어로 쓰시오. (fill로 시작)",
+      "answer": [
+        "fill out",
+        "fill out the form",
+        "fill it out"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "fill out은 '(서식을) 작성하다'(Please fill out this application form.)는 뜻의 구동사이다."
+    },
+    {
+      "id": "english-093",
+      "type": "short",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "'가설'을 뜻하는 과학·기술 명사를 영어로 쓰고(단수형), 그 복수형도 함께 떠올려 보자. 여기서는 단수형 한 단어만 쓰시오.",
+      "answer": [
+        "hypothesis"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "hypothesis는 '가설'을 뜻하며 복수형은 hypotheses이다."
+    },
+    {
+      "id": "english-094",
+      "type": "cloze",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "구동사를 넣어 문장을 완성하시오.\n\nThe teacher {{1}} {{2}} my mistakes during the review session. (지적하다)",
+      "blanks": [
+        {
+          "accept": [
+            "pointed",
+            "points",
+            "point"
+          ]
+        },
+        {
+          "accept": [
+            "out"
+          ]
+        }
+      ],
+      "answer": [
+        "pointed",
+        "out"
+      ],
+      "explanation": "point out은 '지적하다, 가리키다'(The teacher pointed out my mistakes.)는 뜻이다. 과거 시제 문맥이므로 pointed out이 자연스럽다."
+    },
+    {
+      "id": "english-095",
+      "type": "cloze",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "관용어를 완성하시오.\n\nThat new phone costs an {{1}} and a {{2}}; I can't afford it. (엄청나게 비싸다)",
+      "blanks": [
+        {
+          "accept": [
+            "arm"
+          ]
+        },
+        {
+          "accept": [
+            "leg"
+          ]
+        }
+      ],
+      "answer": [
+        "arm",
+        "leg"
+      ],
+      "explanation": "cost an arm and a leg는 '엄청나게 비싸다'(That new phone costs an arm and a leg.)는 뜻의 관용어이다."
+    },
+    {
+      "id": "english-096",
+      "type": "match",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "주제별 명사와 그 뜻을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "diversity",
+          "right": "다양성"
+        },
+        {
+          "left": "revenue",
+          "right": "수익, 세입"
+        },
+        {
+          "left": "hypothesis",
+          "right": "가설"
+        },
+        {
+          "left": "commute",
+          "right": "통근"
+        },
+        {
+          "left": "literacy",
+          "right": "읽고 쓰는 능력, 소양"
+        }
+      ],
+      "answer": [
+        "diversity-다양성",
+        "revenue-수익, 세입",
+        "hypothesis-가설",
+        "commute-통근",
+        "literacy-읽고 쓰는 능력, 소양"
+      ],
+      "explanation": "diversity=다양성, revenue=수익/세입, hypothesis=가설, commute=통근, literacy=읽고 쓰는 능력/소양이다. 각각 사회문화·경제·과학·일상·학업 주제의 대표 명사다."
+    },
+    {
+      "id": "english-097",
+      "type": "match",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "구동사와 그 뜻을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "deal with",
+          "right": "~을 다루다, 처리하다"
+        },
+        {
+          "left": "give up",
+          "right": "포기하다"
+        },
+        {
+          "left": "look into",
+          "right": "조사하다"
+        },
+        {
+          "left": "keep up with",
+          "right": "~에 뒤지지 않다, 따라가다"
+        },
+        {
+          "left": "turn down",
+          "right": "거절하다, (소리를) 줄이다"
+        }
+      ],
+      "answer": [
+        "deal with-~을 다루다, 처리하다",
+        "give up-포기하다",
+        "look into-조사하다",
+        "keep up with-~에 뒤지지 않다, 따라가다",
+        "turn down-거절하다, (소리를) 줄이다"
+      ],
+      "explanation": "deal with=다루다/처리하다, give up=포기하다, look into=조사하다, keep up with=뒤지지 않다/따라가다, turn down=거절하다/줄이다이다."
+    },
+    {
+      "id": "english-098",
+      "type": "match",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "관용어와 그 뜻을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "call it a day",
+          "right": "그만하고 마치다"
+        },
+        {
+          "left": "hit the books",
+          "right": "열심히 공부하다"
+        },
+        {
+          "left": "once in a blue moon",
+          "right": "아주 드물게"
+        },
+        {
+          "left": "keep an eye on",
+          "right": "~을 주시하다, 지켜보다"
+        },
+        {
+          "left": "the ball is in your court",
+          "right": "결정[행동]은 네게 달렸다"
+        }
+      ],
+      "answer": [
+        "call it a day-그만하고 마치다",
+        "hit the books-열심히 공부하다",
+        "once in a blue moon-아주 드물게",
+        "keep an eye on-~을 주시하다, 지켜보다",
+        "the ball is in your court-결정[행동]은 네게 달렸다"
+      ],
+      "explanation": "call it a day=그만하고 마치다, hit the books=열심히 공부하다, once in a blue moon=아주 드물게, keep an eye on=주시하다, the ball is in your court=결정은 네게 달렸다이다."
+    },
+    {
+      "id": "english-099",
+      "type": "multi",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "상",
+      "points": 3,
+      "source": "대학영어 · 오리지널",
+      "stem": "다음 명사 중 비고에서 언급된 불규칙 복수형 또는 불가산명사에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "research (불가산명사)"
+        },
+        {
+          "id": "b",
+          "text": "analysis (복수형 analyses)"
+        },
+        {
+          "id": "c",
+          "text": "lecture (복수형 lectures)"
+        },
+        {
+          "id": "d",
+          "text": "furniture (불가산명사)"
+        },
+        {
+          "id": "e",
+          "text": "curriculum (복수형 curricula)"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d",
+        "e"
+      ],
+      "explanation": "research와 furniture는 불가산명사, analysis는 analyses, curriculum은 curricula라는 불규칙 복수형을 갖는다. lecture는 규칙적으로 lectures가 되므로 해당하지 않는다."
+    },
+    {
+      "id": "english-100",
+      "type": "order",
+      "unit": "주제별 어휘와 숙어 (주제별 명사·구동사·관용어)",
+      "difficulty": "중",
+      "points": 2,
+      "source": "대학영어 · 오리지널",
+      "stem": "단어들을 올바른 순서로 배열해 다음 뜻의 영어 문장을 완성하시오. '그들은 폭풍 때문에 회의를 취소했다.' (구동사 call off 사용)",
+      "items": [
+        "They",
+        "called off",
+        "the meeting",
+        "due to",
+        "the storm"
+      ],
+      "answer": [
+        "They",
+        "called off",
+        "the meeting",
+        "due to",
+        "the storm"
+      ],
+      "explanation": "call off는 '취소하다'라는 구동사이다. They called off the meeting due to the storm. 순서로 배열하면 '그들은 폭풍 때문에 회의를 취소했다'가 된다."
+    }
+  ]
+}
