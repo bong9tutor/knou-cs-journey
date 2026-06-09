@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>AI리터러시 모의시험</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/exam.css">
+</head>
+<body data-exam="ai-literacy" data-exam-src="./data/ai-literacy-exam.json">
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <button class="iconbtn iconbtn--toc" data-toc-toggle
+            aria-label="목차 열기" aria-controls="toc" aria-expanded="false">&#9776;</button>
+        <h1 class="topbar__title"><a href="./index.html" title="메인으로">KNOU 컴퓨터과학과 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle
+            aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+
+    <div class="toc-overlay" aria-hidden="true"></div>
+    <nav class="toc" id="toc" aria-label="목차">
+        <div class="toc__head">
+            <p class="toc__title">목차</p>
+            <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
+        </div>
+        <div class="toc__nav">
+            <a href="#format">시험 형식</a>
+            <a href="#mock">모의시험</a>
+            <a href="./ai-literacy.html">학습 노트</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>AI리터러시 모의시험</h1>
+        <blockquote>학습 노트를 바탕으로 만든 오리지널 연습문제로 모의시험을 풀어 봅니다. 다양한 유형을 타이머와 자동 채점, 문항별 해설로 점검하세요.</blockquote>
+
+        <h2 id="format">시험 형식</h2>
+        <p>방송통신대학교 공식 성적평가 규정 기준입니다(과목 · 학기마다 다를 수 있으니 개강 후 강의계획서로 확인).</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>평가</th><th>배점</th><th>형태</th></tr></thead>
+                <tbody>
+                    <tr><td>형성평가</td><td>20점</td><td>온라인 강의 진도율 + 학습활동</td></tr>
+                    <tr><td>중간평가</td><td>30점</td><td>출석수업 후 맞춤형평가, 또는 출석수업대체과제물</td></tr>
+                    <tr><td>기말시험</td><td>50점</td><td>태블릿 IBT 객관식 4지선다 + OX, 25문항 / 25분</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="callout warn">
+            <p class="callout__title">안내 (저작권 · 범위)</p>
+            <p>이 문항들은 실제 KNOU 기출을 복제하지 않은 <strong>오리지널 연습문제</strong>입니다. 공개된 시험 형식과 학습 노트만 참고했으며, 정답이 페이지에 포함되어 <strong>자가진단·연습용</strong>입니다(감독시험 아님). 실제 출제 범위·강조점과 다를 수 있습니다. AI리터러시는 신규 개설 과목이라 시험 형식·범위가 확정되지 않았습니다(개강 후 강의계획서로 재확인 필요).</p>
+        </div>
+        <div class="callout tip">
+            <p>아래에서 범위(단원)와 문항 수를 고른 뒤 "시험 시작"을 누르세요. 진행 중 새로고침해도 "이어서 응시"로 복원되고, 제출하면 자동 채점과 단원별 정답률, 문항별 해설을 볼 수 있습니다. 응시 기록은 이 브라우저에 저장됩니다.</p>
+        </div>
+
+        <h2 id="mock">모의시험</h2>
+        <div id="exam" class="exam"></div>
+    </main>
+
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+
+    <script src="./assets/app.js" defer></script>
+    <script src="./assets/exam.js" defer></script>
+</body>
+</html>

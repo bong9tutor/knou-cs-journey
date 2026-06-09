@@ -1,0 +1,5781 @@
+{
+  "subject": "AI리터러시",
+  "version": 1,
+  "config": {
+    "passPct": 60,
+    "secPerQuestion": 60,
+    "shuffle": true
+  },
+  "questions": [
+    {
+      "id": "ai-literacy-001",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "학습 노트가 강조하는 AI(인공지능)의 본질에 가장 가까운 설명은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "스스로 의식과 감정을 갖고 생각하는 기계"
+        },
+        {
+          "id": "b",
+          "text": "특정 작업을 잘 해내도록 학습된 계산 시스템"
+        },
+        {
+          "id": "c",
+          "text": "사람과 동일한 방식으로 의미를 이해하는 두뇌"
+        },
+        {
+          "id": "d",
+          "text": "정답을 미리 모두 알고 있는 완벽한 지식 저장소"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 AI를 '생각하는 기계'가 아니라 '특정 작업을 잘 해내도록 학습된 계산 시스템'으로 본다고 강조한다. 의식·감정이 있거나 의미를 이해하거나 정답을 미리 아는 존재가 아니다."
+    },
+    {
+      "id": "ai-literacy-002",
+      "type": "ox",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "AI는 '정답'을 알고 답을 내는 것이 아니라, '가장 그럴듯한 답'을 확률로 고른다.",
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트의 흔한 오해 깨기 항목에서 AI는 정답을 아는 게 아니라 가장 그럴듯한 답을 확률로 고른다고 명시한다."
+    },
+    {
+      "id": "ai-literacy-003",
+      "type": "ox",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "현실의 AI는 SF 영화의 로봇처럼 의식과 감정을 가지고 있다.",
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 AI가 의식이나 감정이 없으며 SF 영화의 로봇과 현실의 AI는 다르다고 분명히 한다."
+    },
+    {
+      "id": "ai-literacy-004",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "1956년 다트머스 회의가 AI 역사에서 갖는 의미로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "튜링 테스트가 처음 제안되었다"
+        },
+        {
+          "id": "b",
+          "text": "'Artificial Intelligence'라는 용어가 탄생하고 AI가 공식 출발했다"
+        },
+        {
+          "id": "c",
+          "text": "딥러닝 시대가 개막되었다"
+        },
+        {
+          "id": "d",
+          "text": "생성형 AI가 대중화되었다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트의 연표에 따르면 1956년 다트머스 회의에서 'Artificial Intelligence' 용어가 탄생하고 AI가 공식적으로 출발했다."
+    },
+    {
+      "id": "ai-literacy-005",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "'기계가 생각할 수 있는가'를 처음 따진 사건과 연도로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "1950년, 튜링 테스트 제안"
+        },
+        {
+          "id": "b",
+          "text": "1956년, 다트머스 회의"
+        },
+        {
+          "id": "c",
+          "text": "1997년, 딥블루"
+        },
+        {
+          "id": "d",
+          "text": "2017년, 트랜스포머 논문"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 연표에서 1950년 앨런 튜링이 튜링 테스트를 제안하며 '기계가 생각할 수 있는가'를 처음 따졌다."
+    },
+    {
+      "id": "ai-literacy-006",
+      "type": "short",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "1950년에 '기계가 생각할 수 있는가'를 따지는 테스트를 제안한 인물의 이름을 쓰시오.",
+      "answer": [
+        "앨런 튜링",
+        "튜링",
+        "Alan Turing",
+        "Turing"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 연표에 따르면 1950년 앨런 튜링이 튜링 테스트를 제안했다."
+    },
+    {
+      "id": "ai-literacy-007",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "2017년에 발표되어 오늘날 LLM의 기반 구조가 된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AlexNet"
+        },
+        {
+          "id": "b",
+          "text": "딥블루"
+        },
+        {
+          "id": "c",
+          "text": "트랜스포머(Transformer)"
+        },
+        {
+          "id": "d",
+          "text": "알파고"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 연표에서 2017년 트랜스포머 논문이 발표되었고 이것이 오늘날 LLM의 기반 구조라고 설명한다."
+    },
+    {
+      "id": "ai-literacy-008",
+      "type": "multi",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "노트가 제시한 'AI에 대한 흔한 오해 깨기' 내용에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI는 사람처럼 '이해'하지 않고 통계적 패턴을 계산할 뿐이다"
+        },
+        {
+          "id": "b",
+          "text": "AI는 정답을 아는 게 아니라 가장 그럴듯한 답을 확률로 고른다"
+        },
+        {
+          "id": "c",
+          "text": "AI는 의식이나 감정이 없다"
+        },
+        {
+          "id": "d",
+          "text": "AI는 데이터 없이도 스스로 규칙을 만들어낸다"
+        },
+        {
+          "id": "e",
+          "text": "현실의 AI는 SF 영화의 로봇과 동일하다"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트의 오해 깨기 세 항목은 (1) AI는 통계적 패턴을 계산할 뿐 이해하지 않는다, (2) 정답이 아니라 가장 그럴듯한 답을 확률로 고른다, (3) 의식·감정이 없으며 SF 로봇과 다르다이다. d와 e는 노트 내용과 반대된다."
+    },
+    {
+      "id": "ai-literacy-009",
+      "type": "order",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "다음 AI 역사 사건들을 노트의 연표에 따라 시간 순(이른 것부터)으로 나열하시오.",
+      "items": [
+        "튜링 테스트 제안",
+        "다트머스 회의",
+        "딥블루, 체스 챔피언 격파",
+        "AlexNet, 이미지 인식 혁명",
+        "알파고, 이세돌 격파",
+        "트랜스포머 논문 발표"
+      ],
+      "answer": [
+        "튜링 테스트 제안",
+        "다트머스 회의",
+        "딥블루, 체스 챔피언 격파",
+        "AlexNet, 이미지 인식 혁명",
+        "알파고, 이세돌 격파",
+        "트랜스포머 논문 발표"
+      ],
+      "explanation": "노트 연표 순서: 1950 튜링 테스트 → 1956 다트머스 회의 → 1997 딥블루 → 2012 AlexNet → 2016 알파고 → 2017 트랜스포머."
+    },
+    {
+      "id": "ai-literacy-010",
+      "type": "match",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "AI 역사의 연도와 해당 사건을 바르게 연결하시오.",
+      "pairs": [
+        {
+          "left": "1956",
+          "right": "다트머스 회의"
+        },
+        {
+          "left": "1997",
+          "right": "딥블루, 체스 챔피언 격파"
+        },
+        {
+          "left": "2012",
+          "right": "AlexNet, 이미지 인식 혁명"
+        },
+        {
+          "left": "2016",
+          "right": "알파고, 이세돌 격파"
+        },
+        {
+          "left": "2022~",
+          "right": "ChatGPT 등 생성형 AI 대중화"
+        }
+      ],
+      "answer": [
+        "1956-다트머스 회의",
+        "1997-딥블루, 체스 챔피언 격파",
+        "2012-AlexNet, 이미지 인식 혁명",
+        "2016-알파고, 이세돌 격파",
+        "2022~-ChatGPT 등 생성형 AI 대중화"
+      ],
+      "explanation": "노트 연표 기준: 1956 다트머스 회의, 1997 딥블루, 2012 AlexNet, 2016 알파고, 2022~ ChatGPT 등 생성형 AI 대중화."
+    },
+    {
+      "id": "ai-literacy-011",
+      "type": "cloze",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "2012년 {{1}}의 등장으로 이미지 인식 혁명이 일어나 {{2}} 시대가 개막되었다.",
+      "blanks": [
+        {
+          "accept": [
+            "AlexNet",
+            "알렉스넷"
+          ]
+        },
+        {
+          "accept": [
+            "딥러닝",
+            "deep learning",
+            "Deep Learning"
+          ]
+        }
+      ],
+      "answer": [
+        "AlexNet",
+        "딥러닝"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 연표에서 2012년 AlexNet이 이미지 인식 혁명을 일으켰고 이것이 딥러닝 시대 개막을 의미한다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-012",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "2016년 알파고가 이세돌을 격파한 사건이 보여준 기술 조합으로 노트가 제시한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "규칙 기반 시스템 + 전문가 시스템"
+        },
+        {
+          "id": "b",
+          "text": "강화학습 + 딥러닝"
+        },
+        {
+          "id": "c",
+          "text": "튜링 테스트 + 탐색"
+        },
+        {
+          "id": "d",
+          "text": "트랜스포머 + 생성형 AI"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 연표에서 2016년 알파고의 이세돌 격파는 '강화학습 + 딥러닝의 충격'으로 기록되어 있다."
+    },
+    {
+      "id": "ai-literacy-013",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "1970~80년대에 일어난 '1차 AI 겨울'의 원인으로 노트가 설명하는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터가 너무 많아 처리할 수 없어서"
+        },
+        {
+          "id": "b",
+          "text": "기대에 못 미쳐 투자가 위축되어서"
+        },
+        {
+          "id": "c",
+          "text": "트랜스포머가 등장해 기존 기술이 사라져서"
+        },
+        {
+          "id": "d",
+          "text": "전문가 시스템이 너무 잘 작동해서"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 연표에서 1970~80년대 1차 AI 겨울은 '기대에 못 미쳐 투자 위축'으로 설명된다."
+    },
+    {
+      "id": "ai-literacy-014",
+      "type": "single",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "노트가 정리한 AI의 진화 핵심 흐름을 순서대로 가장 잘 나타낸 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "생성형 AI → 딥러닝 → 머신러닝 → 규칙 기반 AI"
+        },
+        {
+          "id": "b",
+          "text": "사람이 규칙을 짜주던 AI → 머신러닝 → 딥러닝 → 생성형 AI"
+        },
+        {
+          "id": "c",
+          "text": "딥러닝 → 규칙 기반 AI → 생성형 AI → 머신러닝"
+        },
+        {
+          "id": "d",
+          "text": "머신러닝 → 규칙 기반 AI → 생성형 AI → 딥러닝"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트의 핵심 흐름은 '사람이 규칙을 짜주던 AI → 데이터로 스스로 패턴을 배우는 AI(머신러닝) → 거대 신경망(딥러닝) → 무엇이든 만들어내는 생성형 AI'다."
+    },
+    {
+      "id": "ai-literacy-015",
+      "type": "short",
+      "unit": "1. AI란 무엇인가: 정의와 역사",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "1980년대에 의료·진단 등 특정 분야의 규칙을 모아 부흥한 AI 시스템을 무엇이라 하는지 쓰시오.",
+      "answer": [
+        "전문가 시스템",
+        "expert system",
+        "expert systems"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 연표에서 1980년대에는 의료/진단 등 특정 분야의 규칙 시스템인 전문가 시스템이 부흥했다."
+    },
+    {
+      "id": "ai-literacy-016",
+      "type": "single",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI를 '지능의 범위'로 나눌 때, '한 가지 작업만 잘하는' 유형에 해당하는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "약인공지능(ANI)"
+        },
+        {
+          "id": "b",
+          "text": "강인공지능(AGI)"
+        },
+        {
+          "id": "c",
+          "text": "초인공지능(ASI)"
+        },
+        {
+          "id": "d",
+          "text": "범용인공지능(AGI)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트에서 약인공지능(ANI)은 번역, 추천, 얼굴인식처럼 '한 가지 작업만 잘함'으로 설명한다. 강인공지능과 초인공지능은 범용성 또는 인간 초월을 다룬다."
+    },
+    {
+      "id": "ai-literacy-017",
+      "type": "single",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "약인공지능(ANI)의 영어 명칭으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Artificial Narrow Intelligence"
+        },
+        {
+          "id": "b",
+          "text": "Artificial General Intelligence"
+        },
+        {
+          "id": "c",
+          "text": "Artificial Super Intelligence"
+        },
+        {
+          "id": "d",
+          "text": "Artificial Natural Intelligence"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 표에 따르면 ANI는 Artificial Narrow Intelligence의 약자다. General은 AGI(강인공지능), Super는 ASI(초인공지능)에 해당한다."
+    },
+    {
+      "id": "ai-literacy-018",
+      "type": "single",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'사람처럼 어떤 문제든 두루 해결'하는 것을 목표로 하지만 아직 실현되지 않은(연구 단계) 인공지능은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "약인공지능(ANI)"
+        },
+        {
+          "id": "b",
+          "text": "강인공지능(AGI)"
+        },
+        {
+          "id": "c",
+          "text": "초인공지능(ASI)"
+        },
+        {
+          "id": "d",
+          "text": "협소인공지능(ANI)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에서 강인공지능(AGI)은 '사람처럼 어떤 문제든 두루 해결'하며 '아직 없음(연구 단계)'으로 분류된다."
+    },
+    {
+      "id": "ai-literacy-019",
+      "type": "single",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 '가설/상상 단계'로 분류되며 '모든 면에서 인간을 초월'한다고 설명한 인공지능은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "약인공지능(ANI)"
+        },
+        {
+          "id": "b",
+          "text": "강인공지능(AGI)"
+        },
+        {
+          "id": "c",
+          "text": "초인공지능(ASI)"
+        },
+        {
+          "id": "d",
+          "text": "딥러닝(Deep Learning)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "초인공지능(ASI, Artificial Super Intelligence)은 모든 면에서 인간을 초월하며 가설/상상 단계로 분류된다."
+    },
+    {
+      "id": "ai-literacy-020",
+      "type": "single",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 ChatGPT는 지능의 범위 분류상 무엇에 해당하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "약인공지능(ANI)"
+        },
+        {
+          "id": "b",
+          "text": "강인공지능(AGI)"
+        },
+        {
+          "id": "c",
+          "text": "초인공지능(ASI)"
+        },
+        {
+          "id": "d",
+          "text": "범용인공지능(AGI)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 ChatGPT처럼 똑똑해 보이는 AI도 결국 '언어 생성'이라는 좁은 작업에 특화된 약인공지능이라고 명시한다."
+    },
+    {
+      "id": "ai-literacy-021",
+      "type": "ox",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "강인공지능(AGI)은 현재 실제로 존재하며 우리가 일상에서 쓰고 있는 AI다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트에서 AGI는 '아직 없음(연구 단계)'이다. 현재 우리가 쓰는 모든 AI는 약인공지능(ANI)에 해당한다."
+    },
+    {
+      "id": "ai-literacy-022",
+      "type": "ox",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI가 번역, 추천, 얼굴인식 등 여러 작업을 잘한다면 그것은 사람처럼 범용적으로 이해하는 강인공지능이라는 의미다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 여러 작업을 잘한다고 해서 사람처럼 '범용적으로 이해'하는 것은 아니라고 강조한다. 각각은 좁은 작업에 특화된 약인공지능이다."
+    },
+    {
+      "id": "ai-literacy-023",
+      "type": "multi",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 약인공지능(ANI)의 예로 든 작업을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "번역"
+        },
+        {
+          "id": "b",
+          "text": "추천"
+        },
+        {
+          "id": "c",
+          "text": "얼굴인식"
+        },
+        {
+          "id": "d",
+          "text": "사람처럼 어떤 문제든 두루 해결"
+        },
+        {
+          "id": "e",
+          "text": "모든 면에서 인간을 초월"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트는 ANI의 예로 번역, 추천, 얼굴인식을 든다. '두루 해결'은 AGI, '인간 초월'은 ASI의 설명이다."
+    },
+    {
+      "id": "ai-literacy-024",
+      "type": "short",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "현재 우리가 쓰는 모든 AI가 속하며 '한 가지 작업만 잘하는' 인공지능을 한국어 명칭으로 쓰시오.",
+      "answer": [
+        "약인공지능",
+        "약 인공지능",
+        "ANI",
+        "Artificial Narrow Intelligence"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 표에서 '있음(지금 우리가 쓰는 모든 AI)'으로 분류된 것은 약인공지능(ANI)이다."
+    },
+    {
+      "id": "ai-literacy-025",
+      "type": "short",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "초인공지능을 가리키는 영어 약어(세 글자)를 쓰시오.",
+      "answer": [
+        "ASI",
+        "A.S.I",
+        "A.S.I.",
+        "Artificial Super Intelligence"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "초인공지능은 ASI(Artificial Super Intelligence)다. 노트에서 모든 면에서 인간을 초월하는 가설/상상 단계의 AI로 설명한다."
+    },
+    {
+      "id": "ai-literacy-026",
+      "type": "cloze",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "ChatGPT처럼 똑똑해 보이는 AI도 결국 '{{1}}'이라는 좁은 작업에 특화된 {{2}}이다.",
+      "blanks": [
+        {
+          "accept": [
+            "언어 생성",
+            "언어생성"
+          ]
+        },
+        {
+          "accept": [
+            "약인공지능",
+            "약 인공지능",
+            "ANI"
+          ]
+        }
+      ],
+      "answer": [
+        "언어 생성",
+        "약인공지능"
+      ],
+      "explanation": "노트는 ChatGPT가 '언어 생성'이라는 좁은 작업에 특화된 약인공지능이라고 명시한다."
+    },
+    {
+      "id": "ai-literacy-027",
+      "type": "match",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "각 인공지능 유형과 노트상의 '현재 존재 여부' 설명을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "약인공지능(ANI)",
+          "right": "있음 (지금 우리가 쓰는 모든 AI)"
+        },
+        {
+          "left": "강인공지능(AGI)",
+          "right": "아직 없음 (연구 단계)"
+        },
+        {
+          "left": "초인공지능(ASI)",
+          "right": "가설/상상 단계"
+        },
+        {
+          "left": "ChatGPT",
+          "right": "언어 생성에 특화된 약인공지능"
+        }
+      ],
+      "answer": [
+        "있음 (지금 우리가 쓰는 모든 AI)",
+        "아직 없음 (연구 단계)",
+        "가설/상상 단계",
+        "언어 생성에 특화된 약인공지능"
+      ],
+      "explanation": "노트의 표와 본문에 따르면 ANI는 현재 존재, AGI는 아직 없음(연구 단계), ASI는 가설/상상 단계이며, ChatGPT는 언어 생성에 특화된 약인공지능이다."
+    },
+    {
+      "id": "ai-literacy-028",
+      "type": "match",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "각 인공지능의 한국어 명칭과 영어 약어를 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "약인공지능",
+          "right": "ANI"
+        },
+        {
+          "left": "강인공지능",
+          "right": "AGI"
+        },
+        {
+          "left": "초인공지능",
+          "right": "ASI"
+        },
+        {
+          "left": "Artificial General Intelligence",
+          "right": "강인공지능"
+        }
+      ],
+      "answer": [
+        "ANI",
+        "AGI",
+        "ASI",
+        "강인공지능"
+      ],
+      "explanation": "노트의 표 기준으로 약인공지능=ANI, 강인공지능=AGI(Artificial General Intelligence), 초인공지능=ASI다."
+    },
+    {
+      "id": "ai-literacy-029",
+      "type": "order",
+      "unit": "2. 약인공지능과 강인공지능",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '지능의 범위'에 따라, 지능 수준이 낮은(좁은) 것부터 높은(넓은/초월) 순서로 배열하시오.",
+      "items": [
+        "약인공지능(ANI) - 한 가지 작업만 잘함",
+        "강인공지능(AGI) - 사람처럼 어떤 문제든 두루 해결",
+        "초인공지능(ASI) - 모든 면에서 인간을 초월"
+      ],
+      "answer": [
+        "약인공지능(ANI) - 한 가지 작업만 잘함",
+        "강인공지능(AGI) - 사람처럼 어떤 문제든 두루 해결",
+        "초인공지능(ASI) - 모든 면에서 인간을 초월"
+      ],
+      "explanation": "노트의 표는 지능의 범위를 좁은 것(ANI)에서 범용(AGI), 인간 초월(ASI) 순으로 제시한다."
+    },
+    {
+      "id": "ai-literacy-030",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"Garbage In, Garbage Out\"이라는 표현이 데이터와 학습 단원에서 강조하는 핵심 메시지로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터의 질이 AI의 성능을 좌우한다"
+        },
+        {
+          "id": "b",
+          "text": "데이터의 양이 많을수록 무조건 성능이 좋아진다"
+        },
+        {
+          "id": "c",
+          "text": "AI는 데이터 없이도 규칙만으로 학습할 수 있다"
+        },
+        {
+          "id": "d",
+          "text": "전처리 단계는 생략해도 결과에 영향이 없다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 \"쓰레기를 넣으면 쓰레기가 나온다\"는 말처럼 데이터의 질이 AI의 성능을 좌우한다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-031",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "표(엑셀)처럼 행과 열로 정리된 데이터를 가리키는 용어는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "비정형 데이터"
+        },
+        {
+          "id": "b",
+          "text": "정형 데이터"
+        },
+        {
+          "id": "c",
+          "text": "레이블"
+        },
+        {
+          "id": "d",
+          "text": "결측치"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "정형 데이터는 표(엑셀)처럼 행과 열로 정리된 데이터로, 키·몸무게·나이 등이 예시다."
+    },
+    {
+      "id": "ai-literacy-032",
+      "type": "multi",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 비정형 데이터의 예로 든 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "텍스트"
+        },
+        {
+          "id": "b",
+          "text": "이미지"
+        },
+        {
+          "id": "c",
+          "text": "음성"
+        },
+        {
+          "id": "d",
+          "text": "영상"
+        },
+        {
+          "id": "e",
+          "text": "행과 열로 정리된 표"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "비정형 데이터는 텍스트, 이미지, 음성, 영상처럼 정해진 틀이 없는 데이터다. 행과 열로 정리된 표는 정형 데이터다."
+    },
+    {
+      "id": "ai-literacy-033",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"이 사진은 고양이\"처럼 지도학습에 필요한 정답 표시를 가리키는 용어는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "정형 데이터"
+        },
+        {
+          "id": "b",
+          "text": "레이블(정답표)"
+        },
+        {
+          "id": "c",
+          "text": "정규화"
+        },
+        {
+          "id": "d",
+          "text": "군집"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "레이블(정답표)은 지도학습에 필요한 \"이 사진은 고양이\"라는 정답 표시를 의미한다."
+    },
+    {
+      "id": "ai-literacy-034",
+      "type": "order",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 과정의 전형적 흐름을 올바른 순서대로 배열하시오.",
+      "answer": [
+        "데이터 수집",
+        "전처리",
+        "학습/훈련(training)",
+        "검증(validation)",
+        "평가/테스트(test)",
+        "배포 및 모니터링"
+      ],
+      "items": [
+        "데이터 수집",
+        "전처리",
+        "학습/훈련(training)",
+        "검증(validation)",
+        "평가/테스트(test)",
+        "배포 및 모니터링"
+      ],
+      "explanation": "노트의 전형적 흐름은 데이터 수집 → 전처리 → 학습/훈련 → 검증 → 평가/테스트 → 배포 및 모니터링 순서다."
+    },
+    {
+      "id": "ai-literacy-035",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "결측치 제거, 정규화, 중복 정리 등 데이터를 깨끗하게 다듬는 학습 과정의 단계는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터 수집"
+        },
+        {
+          "id": "b",
+          "text": "전처리"
+        },
+        {
+          "id": "c",
+          "text": "검증"
+        },
+        {
+          "id": "d",
+          "text": "배포 및 모니터링"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "전처리 단계에서 결측치 제거, 정규화, 중복 정리 등으로 데이터를 깨끗하게 다듬는다."
+    },
+    {
+      "id": "ai-literacy-036",
+      "type": "short",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 과정에서 모델이 데이터의 패턴을 찾아 내부 값(파라미터)을 조정하는 단계를 무엇이라 하는가? (한글 또는 영어로 답)",
+      "answer": [
+        "학습",
+        "훈련",
+        "학습/훈련",
+        "training",
+        "트레이닝"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "학습/훈련(training) 단계에서 모델이 데이터의 패턴을 찾아 내부 값(파라미터)을 조정한다."
+    },
+    {
+      "id": "ai-literacy-037",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 과정에서 \"완전히 새로운 데이터로 최종 성능을 잰다\"에 해당하는 단계는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "검증(validation)"
+        },
+        {
+          "id": "b",
+          "text": "전처리"
+        },
+        {
+          "id": "c",
+          "text": "평가/테스트(test)"
+        },
+        {
+          "id": "d",
+          "text": "학습/훈련(training)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "평가/테스트(test)는 완전히 새로운 데이터로 최종 성능을 재는 단계다. 검증은 학습에 쓰지 않은 데이터로 성능을 점검하고 설정을 조정하는 단계로 구분된다."
+    },
+    {
+      "id": "ai-literacy-038",
+      "type": "ox",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "검증(validation) 단계는 학습에 쓰지 않은 데이터로 성능을 점검하고 설정을 조정하는 단계다.",
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트에 따르면 검증(validation)은 학습에 쓰지 않은 데이터로 성능을 점검하고 설정을 조정하는 단계다."
+    },
+    {
+      "id": "ai-literacy-039",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"시험 문제를 통째로 외운 학생\"에 비유되며, 학습 데이터는 잘 맞히는데 새 문제는 틀리는 문제는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "과소적합(underfitting)"
+        },
+        {
+          "id": "b",
+          "text": "과적합(overfitting)"
+        },
+        {
+          "id": "c",
+          "text": "일반화(generalization)"
+        },
+        {
+          "id": "d",
+          "text": "정규화"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "과적합(overfitting)은 시험 문제를 통째로 외운 학생에 비유되며, 학습 데이터는 잘 맞히지만 새 문제는 틀리는 증상을 보인다."
+    },
+    {
+      "id": "ai-literacy-040",
+      "type": "single",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"공부를 너무 안 한 학생\"에 비유되며, 학습 데이터조차 잘 못 맞히는 문제는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "과적합(overfitting)"
+        },
+        {
+          "id": "b",
+          "text": "과소적합(underfitting)"
+        },
+        {
+          "id": "c",
+          "text": "일반화(generalization)"
+        },
+        {
+          "id": "d",
+          "text": "레이블링"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "과소적합(underfitting)은 공부를 너무 안 한 학생에 비유되며, 학습 데이터조차 잘 못 맞히는 증상을 보인다."
+    },
+    {
+      "id": "ai-literacy-041",
+      "type": "cloze",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "좋은 모델은 \"외우지 않고 {{1}}\"하는 모델이다. 그래서 학습/검증/{{2}} 데이터를 나누어 쓰는 것이다.",
+      "answer": [
+        "일반화",
+        "테스트"
+      ],
+      "blanks": [
+        {
+          "accept": [
+            "일반화",
+            "generalization",
+            "일반화(generalization)"
+          ]
+        },
+        {
+          "accept": [
+            "테스트",
+            "평가/테스트",
+            "test",
+            "평가"
+          ]
+        }
+      ],
+      "explanation": "노트는 좋은 모델을 \"외우지 않고 일반화(generalization)\"하는 모델로 정의하며, 그래서 학습/검증/테스트 데이터를 나누어 쓴다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-042",
+      "type": "match",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "각 용어와 그에 맞는 설명을 짝지으시오.",
+      "pairs": [
+        {
+          "left": "정형 데이터",
+          "right": "표처럼 행과 열로 정리된 데이터"
+        },
+        {
+          "left": "비정형 데이터",
+          "right": "텍스트·이미지·음성처럼 정해진 틀이 없는 데이터"
+        },
+        {
+          "left": "레이블",
+          "right": "지도학습에 필요한 정답 표시"
+        },
+        {
+          "left": "전처리",
+          "right": "결측치 제거·정규화·중복 정리"
+        },
+        {
+          "left": "과적합",
+          "right": "학습 데이터는 잘 맞히나 새 문제는 틀림"
+        }
+      ],
+      "answer": [
+        "정형 데이터-표처럼 행과 열로 정리된 데이터",
+        "비정형 데이터-텍스트·이미지·음성처럼 정해진 틀이 없는 데이터",
+        "레이블-지도학습에 필요한 정답 표시",
+        "전처리-결측치 제거·정규화·중복 정리",
+        "과적합-학습 데이터는 잘 맞히나 새 문제는 틀림"
+      ],
+      "explanation": "정형 데이터는 행과 열 정리, 비정형 데이터는 틀 없는 데이터, 레이블은 정답 표시, 전처리는 데이터를 다듬는 단계, 과적합은 학습 데이터만 잘 맞히는 증상이다."
+    },
+    {
+      "id": "ai-literacy-043",
+      "type": "ox",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI, 특히 머신러닝의 핵심 연료는 데이터다.",
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 AI, 특히 머신러닝의 핵심 연료가 데이터라고 명시한다."
+    },
+    {
+      "id": "ai-literacy-044",
+      "type": "short",
+      "unit": "3. 데이터와 학습",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 과정의 마지막 단계로, 모델을 실제로 쓰면서 성능 저하를 감시하는 단계의 이름은? (핵심 키워드)",
+      "answer": [
+        "배포 및 모니터링",
+        "배포",
+        "모니터링",
+        "배포및모니터링"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "학습 과정의 마지막 단계는 배포 및 모니터링으로, 실제로 쓰면서 성능 저하를 감시한다."
+    },
+    {
+      "id": "ai-literacy-045",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 머신러닝(Machine Learning)을 가장 잘 설명한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "사람이 모든 규칙을 일일이 짜주어야만 동작하는 AI 기법"
+        },
+        {
+          "id": "b",
+          "text": "사람이 규칙을 일일이 짜주지 않아도 데이터에서 규칙을 스스로 찾아내는 AI 기법"
+        },
+        {
+          "id": "c",
+          "text": "데이터 없이 사람의 직관만으로 판단하는 기법"
+        },
+        {
+          "id": "d",
+          "text": "정답 레이블이 반드시 있어야만 학습이 가능한 기법"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 머신러닝을 '사람이 규칙을 일일이 짜주지 않아도, 데이터에서 규칙을 스스로 찾아내는 AI 기법'으로 정의한다."
+    },
+    {
+      "id": "ai-literacy-046",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "입력과 정답(레이블)을 함께 주고 둘의 관계를 배우게 하는 학습 방식은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "지도학습(Supervised Learning)"
+        },
+        {
+          "id": "b",
+          "text": "비지도학습(Unsupervised Learning)"
+        },
+        {
+          "id": "c",
+          "text": "강화학습(Reinforcement Learning)"
+        },
+        {
+          "id": "d",
+          "text": "전이학습(Transfer Learning)"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "지도학습은 입력과 정답(레이블)을 함께 주고 둘의 관계를 배우게 하는 방식으로, '정답지를 보며 문제를 푸는 학생'에 비유된다."
+    },
+    {
+      "id": "ai-literacy-047",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "지도학습의 두 갈래 중 '연속된 수치를 예측'하는 작업에 해당하는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "분류(Classification)"
+        },
+        {
+          "id": "b",
+          "text": "회귀(Regression)"
+        },
+        {
+          "id": "c",
+          "text": "군집화(Clustering)"
+        },
+        {
+          "id": "d",
+          "text": "차원 축소(Dimensionality Reduction)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "지도학습은 분류와 회귀로 나뉘는데, 회귀는 집값이나 내일 기온처럼 연속된 수치를 예측하는 작업이다. 분류는 카테고리를 맞히는 작업이다."
+    },
+    {
+      "id": "ai-literacy-048",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 중 노트에서 '분류(Classification)'의 예시로 제시된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "집값 예측"
+        },
+        {
+          "id": "b",
+          "text": "내일 기온 예측"
+        },
+        {
+          "id": "c",
+          "text": "스팸/정상 메일 구분"
+        },
+        {
+          "id": "d",
+          "text": "고객 세분화"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트에서 분류의 예시는 스팸/정상 메일, 개/고양이처럼 카테고리를 맞히는 것이다. 집값과 기온 예측은 회귀, 고객 세분화는 비지도학습의 군집화다."
+    },
+    {
+      "id": "ai-literacy-049",
+      "type": "ox",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비지도학습은 정답(레이블) 없이 데이터의 숨은 구조나 패턴을 스스로 찾는 방식이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "비지도학습의 정의는 '정답 없이 데이터의 숨은 구조나 패턴을 스스로 찾는다'이며, 정답지 없이 비슷한 것끼리 묶어보는 학생에 비유된다."
+    },
+    {
+      "id": "ai-literacy-050",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "쇼핑몰 고객을 구매 패턴에 따라 자동으로 몇 개 그룹으로 나누는 작업은 비지도학습의 어떤 대표 작업에 해당하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "회귀(Regression)"
+        },
+        {
+          "id": "b",
+          "text": "군집화(Clustering)"
+        },
+        {
+          "id": "c",
+          "text": "분류(Classification)"
+        },
+        {
+          "id": "d",
+          "text": "역전파(Backpropagation)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 비지도학습의 대표 작업으로 군집화(비슷한 데이터끼리 그룹화, 고객 세분화)와 차원 축소를 든다. 고객을 그룹으로 나누는 것은 군집화의 예시다."
+    },
+    {
+      "id": "ai-literacy-051",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "강화학습(Reinforcement Learning)에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "입력과 정답을 함께 주고 그 관계를 학습한다."
+        },
+        {
+          "id": "b",
+          "text": "행동에 보상/벌점을 주어 보상을 최대화하는 전략을 시행착오로 배운다."
+        },
+        {
+          "id": "c",
+          "text": "정답 없이 데이터를 비슷한 것끼리 묶기만 한다."
+        },
+        {
+          "id": "d",
+          "text": "차원 축소로 데이터를 단순화하는 것이 핵심이다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "강화학습은 행동에 보상/벌점을 주어 보상을 최대화하는 전략을 시행착오로 배우는 방식이며, 게임을 반복하며 점수 올리는 법을 터득하는 플레이어에 비유된다."
+    },
+    {
+      "id": "ai-literacy-052",
+      "type": "multi",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 제시한 강화학습의 구성 요소를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "에이전트(agent)"
+        },
+        {
+          "id": "b",
+          "text": "환경(environment)"
+        },
+        {
+          "id": "c",
+          "text": "레이블(label)"
+        },
+        {
+          "id": "d",
+          "text": "보상(reward)"
+        },
+        {
+          "id": "e",
+          "text": "상태(state)"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d",
+        "e"
+      ],
+      "explanation": "노트는 강화학습의 구성 요소로 에이전트, 환경, 상태, 행동, 보상을 든다. 레이블(정답)은 지도학습의 요소이며 강화학습에는 없다(보상으로 대체)."
+    },
+    {
+      "id": "ai-literacy-053",
+      "type": "ox",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "알파고가 수많은 대국을 두며 이기는 수를 학습한 것은 지도학습의 대표 예시다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "알파고, 로봇 보행, 자율주행은 강화학습의 예시다. 비교표에서도 알파고와 자율주행은 강화학습 행에 들어 있다."
+    },
+    {
+      "id": "ai-literacy-054",
+      "type": "match",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "각 학습 방식을 노트에 제시된 비유와 올바르게 연결하시오.",
+      "pairs": [
+        {
+          "left": "지도학습",
+          "right": "정답지를 보며 문제를 푸는 학생"
+        },
+        {
+          "left": "비지도학습",
+          "right": "정답지 없이 비슷한 것끼리 묶어보는 학생"
+        },
+        {
+          "left": "강화학습",
+          "right": "게임을 반복하며 점수를 올리는 법을 터득하는 플레이어"
+        },
+        {
+          "left": "분류(Classification)",
+          "right": "스팸/정상 메일을 구분하기"
+        }
+      ],
+      "answer": [
+        "지도학습-정답지를 보며 문제를 푸는 학생",
+        "비지도학습-정답지 없이 비슷한 것끼리 묶어보는 학생",
+        "강화학습-게임을 반복하며 점수를 올리는 법을 터득하는 플레이어",
+        "분류(Classification)-스팸/정상 메일을 구분하기"
+      ],
+      "explanation": "노트의 비유와 예시에 따르면 지도학습은 정답지를 보는 학생, 비지도학습은 정답지 없이 묶는 학생, 강화학습은 게임 점수를 올리는 플레이어이며, 분류는 스팸/정상 메일 구분이 예시다."
+    },
+    {
+      "id": "ai-literacy-055",
+      "type": "cloze",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "세 방식 비교표에 따르면 지도학습은 정답(레이블)이 {{1}}, 비지도학습은 정답이 {{2}}, 강화학습은 정답이 {{3}}(으)로 대체된다.",
+      "blanks": [
+        {
+          "accept": [
+            "있음",
+            "있다"
+          ]
+        },
+        {
+          "accept": [
+            "없음",
+            "없다"
+          ]
+        },
+        {
+          "accept": [
+            "보상",
+            "보상(reward)",
+            "리워드"
+          ]
+        }
+      ],
+      "answer": [
+        "있음",
+        "없음",
+        "보상"
+      ],
+      "explanation": "비교표의 '정답(레이블)' 열은 지도학습=있음, 비지도학습=없음, 강화학습=없음(보상으로 대체)으로 정리되어 있다."
+    },
+    {
+      "id": "ai-literacy-056",
+      "type": "short",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비지도학습의 대표 작업 중, 복잡한 데이터를 핵심만 남겨 단순화하는 작업의 이름을 쓰시오.",
+      "answer": [
+        "차원 축소",
+        "차원축소",
+        "Dimensionality Reduction",
+        "dimensionality reduction"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 비지도학습의 대표 작업으로 군집화와 차원 축소(Dimensionality Reduction)를 들며, 차원 축소는 복잡한 데이터를 핵심만 남겨 단순화하는 것이라고 설명한다."
+    },
+    {
+      "id": "ai-literacy-057",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비교표 기준으로 '핵심 목표'가 잘못 짝지어진 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "지도학습 - 입력에서 정답을 예측"
+        },
+        {
+          "id": "b",
+          "text": "비지도학습 - 숨은 구조 발견"
+        },
+        {
+          "id": "c",
+          "text": "강화학습 - 보상 최대화 전략"
+        },
+        {
+          "id": "d",
+          "text": "비지도학습 - 입력에서 정답을 예측"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "비교표에서 비지도학습의 핵심 목표는 '숨은 구조 발견'이다. '입력→정답 예측'은 지도학습의 핵심 목표이므로 d가 잘못된 짝이다."
+    },
+    {
+      "id": "ai-literacy-058",
+      "type": "order",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 4단원에서 학습 방식이 소개된 순서대로 나열하시오.",
+      "items": [
+        "지도학습 (Supervised Learning)",
+        "비지도학습 (Unsupervised Learning)",
+        "강화학습 (Reinforcement Learning)",
+        "세 방식 비교표"
+      ],
+      "answer": [
+        "지도학습 (Supervised Learning)",
+        "비지도학습 (Unsupervised Learning)",
+        "강화학습 (Reinforcement Learning)",
+        "세 방식 비교표"
+      ],
+      "explanation": "노트 4단원은 4.1 지도학습, 4.2 비지도학습, 4.3 강화학습 순으로 다룬 뒤 마지막에 세 방식 비교표를 제시한다."
+    },
+    {
+      "id": "ai-literacy-059",
+      "type": "single",
+      "unit": "4. 머신러닝 기초: 학습의 세 가지 방식",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 사례와 학습 방식의 연결이 옳은 것은? (1) 사진 1만 장에 '고양이/강아지' 라벨을 붙여 학습해 새 사진을 분류, (2) 자율주행 자동차가 시행착오로 운전 전략을 익힘",
+      "choices": [
+        {
+          "id": "a",
+          "text": "(1) 지도학습, (2) 강화학습"
+        },
+        {
+          "id": "b",
+          "text": "(1) 비지도학습, (2) 지도학습"
+        },
+        {
+          "id": "c",
+          "text": "(1) 강화학습, (2) 비지도학습"
+        },
+        {
+          "id": "d",
+          "text": "(1) 지도학습, (2) 비지도학습"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "라벨을 붙여 학습한 뒤 새 사진을 분류하는 것은 지도학습의 예시이고, 자율주행은 강화학습의 예시다. 따라서 (1) 지도학습, (2) 강화학습이 옳다."
+    },
+    {
+      "id": "ai-literacy-060",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망(ANN)이 영감을 받은 대상으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "컴퓨터의 논리회로 구조"
+        },
+        {
+          "id": "b",
+          "text": "뇌의 뉴런 구조"
+        },
+        {
+          "id": "c",
+          "text": "DNA의 이중나선 구조"
+        },
+        {
+          "id": "d",
+          "text": "인터넷의 네트워크 구조"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "인공신경망(ANN)은 뇌의 뉴런 구조에서 영감을 받은 모델로, 기본 단위인 노드(뉴런)들이 층을 이루어 연결된다."
+    },
+    {
+      "id": "ai-literacy-061",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망에서 데이터가 처음 들어오는 층은 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "은닉층(hidden layer)"
+        },
+        {
+          "id": "b",
+          "text": "출력층(output layer)"
+        },
+        {
+          "id": "c",
+          "text": "입력층(input layer)"
+        },
+        {
+          "id": "d",
+          "text": "연결층(connection layer)"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "입력층(input layer)은 데이터가 들어오는 곳이다. 은닉층은 패턴을 추출하는 중간 계산층, 출력층은 최종 결과가 나오는 곳이다."
+    },
+    {
+      "id": "ai-literacy-062",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망에서 '학습'의 본질을 가장 정확히 설명한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "은닉층의 개수를 점점 늘려가는 과정"
+        },
+        {
+          "id": "b",
+          "text": "오차를 줄이도록 연결의 가중치들을 조금씩 조정하는 과정"
+        },
+        {
+          "id": "c",
+          "text": "입력 데이터를 출력층으로 그대로 복사하는 과정"
+        },
+        {
+          "id": "d",
+          "text": "사람이 볼 특징을 직접 골라주는 과정"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "각 연결에는 가중치(weight)가 있으며, 학습이란 오차를 줄이도록 이 가중치들을 조금씩 조정하는 과정이다."
+    },
+    {
+      "id": "ai-literacy-063",
+      "type": "multi",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망 학습에 쓰이는 핵심 알고리즘으로 노트에 언급된 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "역전파(backpropagation)"
+        },
+        {
+          "id": "b",
+          "text": "경사하강법(gradient descent)"
+        },
+        {
+          "id": "c",
+          "text": "어텐션(attention)"
+        },
+        {
+          "id": "d",
+          "text": "트랜스포머(transformer)"
+        },
+        {
+          "id": "e",
+          "text": "토큰화(tokenization)"
+        }
+      ],
+      "answer": [
+        "a",
+        "b"
+      ],
+      "explanation": "노트에서는 가중치 조정에 쓰이는 핵심 알고리즘으로 역전파(오차를 거꾸로 전파해 가중치를 수정)와 경사하강법(비탈을 내려가듯 오차를 줄임)을 든다. 어텐션과 트랜스포머는 LLM 단원의 개념이다."
+    },
+    {
+      "id": "ai-literacy-064",
+      "type": "ox",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "딥러닝은 은닉층이 여러 개로 '깊은' 신경망을 쓰는 머신러닝의 한 갈래다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "딥러닝(Deep Learning)은 은닉층이 여러 개로 깊은(deep) 신경망을 쓰는 머신러닝의 한 갈래로, 층이 깊을수록 더 복잡하고 추상적인 특징을 스스로 뽑아낸다."
+    },
+    {
+      "id": "ai-literacy-065",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "기존 머신러닝과 비교했을 때 딥러닝의 가장 큰 차별점은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "사람이 어떤 특징을 볼지 직접 골라줘야 한다"
+        },
+        {
+          "id": "b",
+          "text": "데이터 없이도 학습이 가능하다"
+        },
+        {
+          "id": "c",
+          "text": "특징 추출까지 스스로 학습한다"
+        },
+        {
+          "id": "d",
+          "text": "규칙을 사람이 일일이 코딩해 준다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "기존 머신러닝은 사람이 어떤 특징(feature)을 볼지 직접 골라줘야 했지만, 딥러닝은 특징 추출까지 스스로 학습한다. 예를 들어 사진에서 귀 모양, 수염 같은 특징을 사람이 안 알려줘도 발견한다."
+    },
+    {
+      "id": "ai-literacy-066",
+      "type": "multi",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 딥러닝이 2012년 이후 폭발적으로 성장한 이유로 제시한 세 가지를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "빅데이터 - 인터넷에 학습용 데이터가 넘쳐남"
+        },
+        {
+          "id": "b",
+          "text": "GPU - 대규모 병렬 계산이 가능한 하드웨어 보급"
+        },
+        {
+          "id": "c",
+          "text": "알고리즘 발전 - 더 깊은 망을 안정적으로 학습시키는 기법 등장"
+        },
+        {
+          "id": "d",
+          "text": "양자컴퓨터의 상용화"
+        },
+        {
+          "id": "e",
+          "text": "스마트폰 보급률 증가"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트는 딥러닝 폭발의 세 가지 이유로 (1) 빅데이터, (2) GPU, (3) 알고리즘 발전을 든다. 양자컴퓨터나 스마트폰 보급은 언급되지 않았다."
+    },
+    {
+      "id": "ai-literacy-067",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI, 머신러닝(ML), 딥러닝(DL)의 포함 관계를 가장 넓은 개념부터 좁은 개념 순으로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "딥러닝 ⊃ 머신러닝 ⊃ AI"
+        },
+        {
+          "id": "b",
+          "text": "머신러닝 ⊃ AI ⊃ 딥러닝"
+        },
+        {
+          "id": "c",
+          "text": "AI ⊃ 머신러닝 ⊃ 딥러닝"
+        },
+        {
+          "id": "d",
+          "text": "AI ⊃ 딥러닝 ⊃ 머신러닝"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 포함 관계는 AI(인공지능) ⊃ 머신러닝(ML) ⊃ 딥러닝(DL)이다. AI가 가장 넓고(규칙 기반 포함), 머신러닝은 데이터로 학습하는 AI, 딥러닝은 깊은 신경망을 쓰는 머신러닝이다."
+    },
+    {
+      "id": "ai-literacy-068",
+      "type": "cloze",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망에서 각 연결에는 {{1}}가 있고, 학습이란 오차를 줄이도록 이를 조금씩 조정하는 과정이다. 이때 오차를 거꾸로 전파해 가중치를 수정하는 알고리즘을 {{2}}라고 한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "가중치",
+            "weight",
+            "웨이트"
+          ]
+        },
+        {
+          "accept": [
+            "역전파",
+            "backpropagation",
+            "백프로퍼게이션"
+          ]
+        }
+      ],
+      "explanation": "각 연결에는 가중치(weight)가 있고, 학습은 오차를 줄이도록 가중치를 조정하는 과정이다. 오차를 거꾸로 전파해 가중치를 수정하는 알고리즘이 역전파(backpropagation)다."
+    },
+    {
+      "id": "ai-literacy-069",
+      "type": "short",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망에서 입력층과 출력층 사이에서 패턴을 추출하는 중간 계산층을 무엇이라 하는가?",
+      "answer": [
+        "은닉층",
+        "은닉 층",
+        "hidden layer",
+        "hidden",
+        "히든레이어",
+        "히든 레이어"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "은닉층(hidden layer)은 입력층과 출력층 사이에서 패턴을 추출하는 중간 계산층이다. 딥러닝은 이 은닉층이 여러 개로 깊은 신경망을 쓴다."
+    },
+    {
+      "id": "ai-literacy-070",
+      "type": "short",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비탈을 내려가듯 오차를 점점 줄여가며 가중치를 조정하는, 인공신경망 학습의 핵심 알고리즘 이름은? (한글 또는 영문)",
+      "answer": [
+        "경사하강법",
+        "경사 하강법",
+        "gradient descent",
+        "그래디언트 디센트",
+        "그래디언트디센트"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "경사하강법(gradient descent)은 비탈을 내려가듯 오차를 줄여 가중치를 조정하는 알고리즘이다. 역전파와 함께 신경망 학습의 핵심 알고리즘으로 언급된다."
+    },
+    {
+      "id": "ai-literacy-071",
+      "type": "match",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망의 각 층과 그 역할을 바르게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "입력층(input layer)",
+          "right": "데이터가 들어오는 곳"
+        },
+        {
+          "left": "은닉층(hidden layer)",
+          "right": "패턴을 추출하는 중간 계산층"
+        },
+        {
+          "left": "출력층(output layer)",
+          "right": "최종 결과가 나오는 곳"
+        },
+        {
+          "left": "가중치(weight)",
+          "right": "각 연결에 부여되어 학습으로 조정되는 값"
+        }
+      ],
+      "explanation": "입력층은 데이터가 들어오는 곳, 은닉층은 패턴을 추출하는 중간 계산층, 출력층은 최종 결과가 나오는 곳이며, 가중치는 각 연결에 부여되어 학습 과정에서 조정되는 값이다."
+    },
+    {
+      "id": "ai-literacy-072",
+      "type": "order",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "인공신경망에서 데이터가 처리되어 가중치가 수정되기까지의 흐름을 올바른 순서로 배열하시오.",
+      "answer": [],
+      "items": [
+        "입력층으로 데이터가 들어온다",
+        "은닉층에서 패턴을 추출한다",
+        "출력층에서 최종 결과가 나온다",
+        "역전파로 오차를 거꾸로 전파해 가중치를 수정한다"
+      ],
+      "explanation": "데이터는 입력층 -> 은닉층(패턴 추출) -> 출력층(결과) 순으로 흐르고, 출력의 오차를 역전파로 거꾸로 전파해 가중치를 수정한다."
+    },
+    {
+      "id": "ai-literacy-073",
+      "type": "ox",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "딥러닝은 머신러닝과 무관한 별개의 기술이며, 머신러닝에 포함되지 않는다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "딥러닝은 깊은 신경망을 쓰는 머신러닝의 한 갈래로, 머신러닝에 포함된다. 포함 관계는 AI ⊃ 머신러닝 ⊃ 딥러닝이다."
+    },
+    {
+      "id": "ai-literacy-074",
+      "type": "single",
+      "unit": "5. 신경망과 딥러닝",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 내용에 비추어 다음 중 옳지 않은 설명은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "오늘날 화제인 생성형 AI는 대부분 딥러닝 기반이다"
+        },
+        {
+          "id": "b",
+          "text": "AI는 규칙 기반까지 포함하는 가장 넓은 개념이다"
+        },
+        {
+          "id": "c",
+          "text": "층이 깊을수록 더 복잡하고 추상적인 특징을 스스로 뽑아낸다"
+        },
+        {
+          "id": "d",
+          "text": "딥러닝은 사람이 특징을 직접 골라줘야만 학습할 수 있다"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "딥러닝은 특징 추출까지 스스로 학습하는 것이 핵심 차별점이다. 사람이 특징을 직접 골라줘야 하는 것은 기존 머신러닝의 방식이므로 d가 옳지 않다. 나머지는 모두 노트와 일치한다."
+    },
+    {
+      "id": "ai-literacy-075",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "기존 AI와 비교했을 때 생성형 AI(Generative AI)를 가장 잘 설명한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터를 분류하거나 미래 값을 예측하는 데만 쓰인다"
+        },
+        {
+          "id": "b",
+          "text": "텍스트, 이미지, 음성, 코드, 영상 같은 새로운 콘텐츠를 만들어낸다"
+        },
+        {
+          "id": "c",
+          "text": "오직 스팸 메일을 걸러내는 용도로만 사용된다"
+        },
+        {
+          "id": "d",
+          "text": "사람의 개입 없이 항상 100% 정확한 사실만 출력한다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "기존 AI가 주로 분류/예측(스팸 판별, 집값 예측 등)을 했다면, 생성형 AI는 텍스트·이미지·음성·코드·영상 같은 새로운 콘텐츠를 만들어내는 것이 핵심이다."
+    },
+    {
+      "id": "ai-literacy-076",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "거대언어모델(LLM)의 핵심 동작 원리로 가장 정확한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "입력 문장을 사람이 작성한 정답 DB에서 그대로 검색해 반환한다"
+        },
+        {
+          "id": "b",
+          "text": "이미지를 픽셀 단위로 분석해 사물을 분류한다"
+        },
+        {
+          "id": "c",
+          "text": "다음에 올 토큰(단어 조각)을 가장 그럴듯하게 확률로 예측하는 일을 거대한 규모로 반복한다"
+        },
+        {
+          "id": "d",
+          "text": "사용자의 음성을 텍스트로 바꾸는 변환만 수행한다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "LLM은 방대한 텍스트로 학습해 '다음에 올 토큰(단어 조각)을 가장 그럴듯하게 예측'하는 일을 엄청난 규모로 반복하는 거대한 신경망이다."
+    },
+    {
+      "id": "ai-literacy-077",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "현재 LLM의 기반이 되는 구조와 그 발표 연도가 바르게 짝지어진 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "트랜스포머(Transformer) - 2017년"
+        },
+        {
+          "id": "b",
+          "text": "퍼셉트론(Perceptron) - 2017년"
+        },
+        {
+          "id": "c",
+          "text": "트랜스포머(Transformer) - 2012년"
+        },
+        {
+          "id": "d",
+          "text": "합성곱신경망(CNN) - 2017년"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "LLM의 기반 구조는 2017년에 발표된 트랜스포머(Transformer)이며, 그 핵심은 어텐션(Attention) 메커니즘이다."
+    },
+    {
+      "id": "ai-literacy-078",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "트랜스포머 구조에서 '문맥에서 중요한 부분에 집중'하는 핵심 메커니즘의 이름은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "드롭아웃(Dropout)"
+        },
+        {
+          "id": "b",
+          "text": "어텐션(Attention)"
+        },
+        {
+          "id": "c",
+          "text": "백프로퍼게이션(Backpropagation)"
+        },
+        {
+          "id": "d",
+          "text": "임베딩(Embedding)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "트랜스포머의 핵심은 어텐션(Attention) 메커니즘으로, 문맥에서 중요한 부분에 집중하도록 한다."
+    },
+    {
+      "id": "ai-literacy-079",
+      "type": "ox",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "하",
+      "points": 2,
+      "stem": "ChatGPT, Claude, Gemini는 모두 LLM(거대언어모델)을 기반으로 한다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트에 따르면 ChatGPT, Claude, Gemini가 모두 LLM 기반이라고 명시되어 있다."
+    },
+    {
+      "id": "ai-literacy-080",
+      "type": "ox",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "LLM은 '사실'을 그대로 저장해 출력하기 때문에 환각(hallucination)이 발생하지 않는다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "LLM은 '사실'이 아니라 '그럴듯함'을 생성한다. 그래서 존재하지 않는 정보를 자신 있게 지어내는 환각(hallucination) 현상이 발생한다."
+    },
+    {
+      "id": "ai-literacy-081",
+      "type": "short",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "LLM이 사실 여부와 무관하게 존재하지 않는 정보를 자신 있게 지어내는 현상을 가리키는 용어를 한 단어로 쓰시오.",
+      "answer": [
+        "환각",
+        "hallucination",
+        "할루시네이션"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "LLM은 사실이 아니라 그럴듯함을 생성하므로 없는 논문·가짜 인용·틀린 날짜를 진짜처럼 말하는 환각(hallucination) 현상이 생긴다."
+    },
+    {
+      "id": "ai-literacy-082",
+      "type": "multi",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "환각(hallucination)의 예시 또는 올바른 대응 방법에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "존재하지 않는 논문을 진짜처럼 인용한다"
+        },
+        {
+          "id": "b",
+          "text": "중요한 사실은 반드시 1차 출처로 교차 확인한다"
+        },
+        {
+          "id": "c",
+          "text": "AI의 답은 '초안'으로 보고 사람이 검증한다"
+        },
+        {
+          "id": "d",
+          "text": "AI가 자신 있게 말하면 검증 없이 그대로 신뢰한다"
+        },
+        {
+          "id": "e",
+          "text": "틀린 날짜를 진짜처럼 말한다"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "explanation": "환각의 예로는 없는 논문, 가짜 인용, 틀린 날짜를 진짜처럼 말하는 것이 있다(a, e). 대응으로는 중요한 사실을 1차 출처로 교차 확인하고(b), AI의 답을 초안으로 보아 사람이 검증한다(c). d는 검증을 생략하므로 잘못된 태도다."
+    },
+    {
+      "id": "ai-literacy-083",
+      "type": "cloze",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "LLM의 학습 단계는 인터넷 규모 텍스트로 언어 패턴을 습득하는 {{1}}(pre-training) 단계와, 사람 피드백으로 더 유용하고 안전하게 조정하는 미세조정/정렬({{2}}) 단계로 나뉜다.",
+      "answer": [
+        "사전학습",
+        "RLHF"
+      ],
+      "blanks": [
+        {
+          "accept": [
+            "사전학습",
+            "프리트레이닝",
+            "pre-training",
+            "pretraining"
+          ]
+        },
+        {
+          "accept": [
+            "RLHF",
+            "fine-tuning",
+            "파인튜닝",
+            "미세조정",
+            "정렬"
+          ]
+        }
+      ],
+      "explanation": "LLM 학습은 1) 사전학습(pre-training): 인터넷 규모 텍스트로 언어 패턴 습득, 2) 미세조정/정렬(fine-tuning, RLHF): 사람 피드백으로 더 유용하고 안전하게 조정하는 두 단계로 개념적으로 구분된다."
+    },
+    {
+      "id": "ai-literacy-084",
+      "type": "match",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "생성형 AI의 분야와 노트에 제시된 대표 예시 도구를 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "텍스트",
+          "right": "ChatGPT, Claude, Gemini"
+        },
+        {
+          "left": "이미지",
+          "right": "DALL-E, Midjourney, Stable Diffusion"
+        },
+        {
+          "left": "음성",
+          "right": "다양한 TTS 서비스"
+        },
+        {
+          "left": "코드",
+          "right": "GitHub Copilot"
+        }
+      ],
+      "answer": [
+        "ChatGPT, Claude, Gemini",
+        "DALL-E, Midjourney, Stable Diffusion",
+        "다양한 TTS 서비스",
+        "GitHub Copilot"
+      ],
+      "explanation": "노트의 생성형 AI 분야 표에 따르면 텍스트는 ChatGPT/Claude/Gemini, 이미지는 DALL-E/Midjourney/Stable Diffusion, 음성은 다양한 TTS 서비스, 코드는 GitHub Copilot 등이 대표 예시 도구다."
+    },
+    {
+      "id": "ai-literacy-085",
+      "type": "order",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "노트에 제시된 LLM의 개념적 작동 흐름을 순서대로 나열하시오.",
+      "items": [
+        "사전학습(pre-training)으로 인터넷 규모 텍스트에서 언어 패턴을 습득한다",
+        "사람 피드백(RLHF)으로 미세조정/정렬해 더 유용하고 안전하게 만든다",
+        "사용자 입력 문장을 받아 다음 토큰을 확률로 예측한다",
+        "예측한 토큰들을 이어 그럴듯한 응답을 생성한다"
+      ],
+      "answer": [
+        "사전학습(pre-training)으로 인터넷 규모 텍스트에서 언어 패턴을 습득한다",
+        "사람 피드백(RLHF)으로 미세조정/정렬해 더 유용하고 안전하게 만든다",
+        "사용자 입력 문장을 받아 다음 토큰을 확률로 예측한다",
+        "예측한 토큰들을 이어 그럴듯한 응답을 생성한다"
+      ],
+      "explanation": "LLM은 먼저 사전학습으로 언어 패턴을 습득하고, 이어 RLHF로 미세조정/정렬한 뒤, 실제 사용 시 입력 문장을 받아 다음 토큰을 확률로 예측하고 이를 이어 응답을 생성한다."
+    },
+    {
+      "id": "ai-literacy-086",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "이미지 생성/편집 분야의 대표 도구로 노트에 제시되지 않은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "DALL-E"
+        },
+        {
+          "id": "b",
+          "text": "Midjourney"
+        },
+        {
+          "id": "c",
+          "text": "Stable Diffusion"
+        },
+        {
+          "id": "d",
+          "text": "GitHub Copilot"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "노트에서 이미지 분야 예시 도구는 DALL-E, Midjourney, Stable Diffusion이다. GitHub Copilot은 코드 분야의 예시 도구다."
+    },
+    {
+      "id": "ai-literacy-087",
+      "type": "short",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "중",
+      "points": 2,
+      "stem": "LLM이 텍스트를 처리할 때 예측 단위가 되는, '단어 조각'을 뜻하는 용어를 쓰시오.",
+      "answer": [
+        "토큰",
+        "token"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "LLM은 '다음에 올 토큰(단어 조각)을 가장 그럴듯하게 예측'하는 일을 반복한다. 예측의 기본 단위가 토큰(token)이다."
+    },
+    {
+      "id": "ai-literacy-088",
+      "type": "single",
+      "unit": "6. 생성형 AI와 거대언어모델(LLM)",
+      "source": "AI리터러시 · 오리지널",
+      "difficulty": "상",
+      "points": 3,
+      "stem": "환각(hallucination)에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "LLM이 사실이 아니라 그럴듯함을 생성하기 때문에 발생한다"
+        },
+        {
+          "id": "b",
+          "text": "존재하지 않는 정보를 자신 있게 지어내는 현상이다"
+        },
+        {
+          "id": "c",
+          "text": "충분히 큰 모델을 쓰면 원리상 완전히 사라지므로 검증이 불필요하다"
+        },
+        {
+          "id": "d",
+          "text": "중요한 사실은 1차 출처로 교차 확인하는 것이 대응 방법이다"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "환각은 LLM이 사실이 아니라 그럴듯함을 생성하는 본질에서 비롯되며, 노트는 중요한 사실을 1차 출처로 교차 확인하고 AI 답을 초안으로 보아 사람이 검증할 것을 강조한다. 모델만 키우면 검증이 불필요하다는 c는 옳지 않다."
+    },
+    {
+      "id": "ai-literacy-089",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "프롬프트(prompt)에 대한 설명으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI 모델을 학습시키는 데 쓰는 원본 데이터"
+        },
+        {
+          "id": "b",
+          "text": "AI에게 주는 지시문"
+        },
+        {
+          "id": "c",
+          "text": "AI가 출력한 결과를 저장하는 형식"
+        },
+        {
+          "id": "d",
+          "text": "AI의 내부 알고리즘을 가리키는 용어"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 프롬프트는 'AI에게 주는 지시문'이며, 같은 AI라도 프롬프트에 따라 답의 질이 크게 달라진다."
+    },
+    {
+      "id": "ai-literacy-090",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "프롬프트를 잘 쓰는 기술을 무엇이라고 부르는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터 라벨링"
+        },
+        {
+          "id": "b",
+          "text": "파인튜닝"
+        },
+        {
+          "id": "c",
+          "text": "프롬프트 엔지니어링"
+        },
+        {
+          "id": "d",
+          "text": "멀티모달 처리"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트는 프롬프트를 잘 쓰는 기술을 '프롬프트 엔지니어링'이라 정의한다."
+    },
+    {
+      "id": "ai-literacy-091",
+      "type": "cloze",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "좋은 프롬프트의 4요소는 'CRTF'로 기억하며, 맥락(Context), 역할(Role), {{1}}, {{2}}로 구성된다.",
+      "blanks": [
+        {
+          "accept": [
+            "작업",
+            "Task",
+            "태스크"
+          ]
+        },
+        {
+          "accept": [
+            "형식",
+            "Format",
+            "포맷"
+          ]
+        }
+      ],
+      "answer": [
+        "작업",
+        "형식"
+      ],
+      "explanation": "CRTF는 Context(맥락), Role(역할), Task(작업), Format(형식)의 머리글자다."
+    },
+    {
+      "id": "ai-literacy-092",
+      "type": "match",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "좋은 프롬프트의 4요소(CRTF)와 그 설명을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "맥락(Context)",
+          "right": "배경/상황을 준다"
+        },
+        {
+          "left": "역할(Role)",
+          "right": "AI에게 역할을 부여"
+        },
+        {
+          "left": "작업(Task)",
+          "right": "무엇을 원하는지 명확히"
+        },
+        {
+          "left": "형식(Format)",
+          "right": "출력 형식을 지정"
+        }
+      ],
+      "answer": [
+        "맥락(Context)-배경/상황을 준다",
+        "역할(Role)-AI에게 역할을 부여",
+        "작업(Task)-무엇을 원하는지 명확히",
+        "형식(Format)-출력 형식을 지정"
+      ],
+      "explanation": "노트의 7.1 표에서 Context는 배경/상황, Role은 역할 부여, Task는 원하는 작업 명확화, Format은 출력 형식 지정에 대응한다."
+    },
+    {
+      "id": "ai-literacy-093",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"너는 친절한 컴퓨터과학 튜터야\"라는 문구는 좋은 프롬프트의 4요소 중 어디에 해당하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "맥락(Context)"
+        },
+        {
+          "id": "b",
+          "text": "역할(Role)"
+        },
+        {
+          "id": "c",
+          "text": "작업(Task)"
+        },
+        {
+          "id": "d",
+          "text": "형식(Format)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "AI에게 특정 역할을 부여하는 문구이므로 역할(Role)에 해당한다."
+    },
+    {
+      "id": "ai-literacy-094",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"이 개념을 표로 정리해줘\" 또는 \"초등학생도 알게 설명해줘\"는 4요소 중 무엇을 지정한 것인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "맥락(Context)"
+        },
+        {
+          "id": "b",
+          "text": "역할(Role)"
+        },
+        {
+          "id": "c",
+          "text": "작업(Task)"
+        },
+        {
+          "id": "d",
+          "text": "형식(Format)"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "출력의 형태나 전달 방식을 지정하는 것이므로 형식(Format)에 해당한다."
+    },
+    {
+      "id": "ai-literacy-095",
+      "type": "short",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "원하는 답의 예시를 1~2개 보여주어 AI가 형식을 잘 따르게 하는 실전 기법을 영어로 무엇이라 하는가?",
+      "answer": [
+        "few-shot",
+        "few shot",
+        "퓨샷",
+        "few-shot 기법",
+        "예시 제공"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 7.2의 '예시 제공(few-shot)' 기법으로, 원하는 답의 예를 1~2개 보여주면 형식을 잘 따른다."
+    },
+    {
+      "id": "ai-literacy-096",
+      "type": "ox",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"차근차근 단계별로 설명해줘\"라고 요청하면 더 논리적인 답을 얻을 수 있다.",
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트 7.2의 '단계적 사고 유도' 기법으로, 단계별 설명을 요청하면 더 논리적인 답이 나온다."
+    },
+    {
+      "id": "ai-literacy-097",
+      "type": "ox",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "프롬프트는 한 번에 완벽한 답을 기대하는 것이 가장 좋은 활용법이다.",
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트 7.2의 '반복 개선(iteration)'에 따르면 한 번에 완벽을 기대하지 말고 '더 짧게', '더 쉽게'로 다듬어야 한다."
+    },
+    {
+      "id": "ai-literacy-098",
+      "type": "multi",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 7.2에서 제시한 프롬프트 실전 기법에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "단계적 사고 유도"
+        },
+        {
+          "id": "b",
+          "text": "예시 제공(few-shot)"
+        },
+        {
+          "id": "c",
+          "text": "반복 개선(iteration)"
+        },
+        {
+          "id": "d",
+          "text": "출력 제약"
+        },
+        {
+          "id": "e",
+          "text": "학습률 조정"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "7.2의 실전 기법은 단계적 사고 유도, 예시 제공(few-shot), 반복 개선(iteration), 출력 제약 네 가지다. '학습률 조정'은 모델 훈련 용어로 프롬프트 기법이 아니다."
+    },
+    {
+      "id": "ai-literacy-099",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "\"300자 이내\", \"불릿 5개\"처럼 분량/형식을 못 박는 프롬프트 기법은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "단계적 사고 유도"
+        },
+        {
+          "id": "b",
+          "text": "예시 제공(few-shot)"
+        },
+        {
+          "id": "c",
+          "text": "반복 개선(iteration)"
+        },
+        {
+          "id": "d",
+          "text": "출력 제약"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "분량이나 형식을 못 박는 것은 7.2의 '출력 제약' 기법이다."
+    },
+    {
+      "id": "ai-literacy-100",
+      "type": "single",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 7.3의 '좋은 프롬프트' 예시가 나쁜 예시보다 우수한 핵심 이유로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "더 짧고 간결하게 묻기 때문"
+        },
+        {
+          "id": "b",
+          "text": "대상, 비유, 분량 등 맥락과 형식을 구체적으로 지정하기 때문"
+        },
+        {
+          "id": "c",
+          "text": "AI에게 반드시 코드로만 답하도록 강제하기 때문"
+        },
+        {
+          "id": "d",
+          "text": "전문 용어를 많이 사용하기 때문"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "\"AI를 60대 부모님께 비유를 들어 5문장으로 설명해줘\"처럼 대상/비유/분량을 구체화해 맥락과 형식을 명확히 한 점이 좋은 프롬프트의 핵심이다."
+    },
+    {
+      "id": "ai-literacy-101",
+      "type": "order",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "좋은 프롬프트 4요소 CRTF를 머리글자 순서(C-R-T-F)대로 나열하시오.",
+      "items": [
+        "맥락(Context)",
+        "역할(Role)",
+        "작업(Task)",
+        "형식(Format)"
+      ],
+      "answer": [
+        "맥락(Context)",
+        "역할(Role)",
+        "작업(Task)",
+        "형식(Format)"
+      ],
+      "explanation": "CRTF는 Context(맥락) → Role(역할) → Task(작업) → Format(형식) 순서의 머리글자다."
+    },
+    {
+      "id": "ai-literacy-102",
+      "type": "short",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "한 번에 완벽을 기대하지 않고 \"더 짧게\", \"더 쉽게\"처럼 답을 거듭 다듬어 가는 프롬프트 기법의 이름(한글 또는 영어)을 쓰시오.",
+      "answer": [
+        "반복 개선",
+        "iteration",
+        "이터레이션",
+        "반복개선"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 7.2의 '반복 개선(iteration)' 기법으로, 결과를 거듭 다듬어 품질을 높인다."
+    },
+    {
+      "id": "ai-literacy-103",
+      "type": "cloze",
+      "unit": "7. 프롬프트 작성 기초",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "같은 AI라도 {{1}}에 따라 답의 질이 크게 달라지며, 이를 잘 쓰는 기술을 프롬프트 {{2}}(이)라 한다.",
+      "blanks": [
+        {
+          "accept": [
+            "프롬프트",
+            "prompt"
+          ]
+        },
+        {
+          "accept": [
+            "엔지니어링",
+            "engineering"
+          ]
+        }
+      ],
+      "answer": [
+        "프롬프트",
+        "엔지니어링"
+      ],
+      "explanation": "노트 도입부에서 같은 AI라도 프롬프트에 따라 답의 질이 달라지며, 이를 잘 쓰는 기술을 프롬프트 엔지니어링이라 한다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-104",
+      "type": "single",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트가 강조하는, 일상 속 AI를 바라보는 올바른 관점은 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "특별한 소수만 다루는 첨단 기술로 본다"
+        },
+        {
+          "id": "b",
+          "text": "특별한 기술이 아니라 잘 쓰는 도구로 본다"
+        },
+        {
+          "id": "c",
+          "text": "위험하므로 가능한 한 멀리하는 대상으로 본다"
+        },
+        {
+          "id": "d",
+          "text": "사람의 판단을 완전히 대신하는 존재로 본다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 AI가 이미 일상 곳곳에 있으며, '특별한 기술'이 아니라 '잘 쓰는 도구'로 보는 관점이 중요하다고 강조한다."
+    },
+    {
+      "id": "ai-literacy-105",
+      "type": "multi",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 8.1에서 '일상 속 AI(이미 쓰고 있는 것들)'의 예로 든 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "유튜브/넷플릭스의 영상 추천 시스템"
+        },
+        {
+          "id": "b",
+          "text": "스마트폰 음성 비서"
+        },
+        {
+          "id": "c",
+          "text": "스팸 필터"
+        },
+        {
+          "id": "d",
+          "text": "지도 길 안내"
+        },
+        {
+          "id": "e",
+          "text": "딥페이크 영상 제작"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "8.1은 추천 시스템, 음성 비서, 스팸 필터, 자동 번역, 지도 길 안내, 얼굴 인식 잠금을 예로 든다. 딥페이크 제작은 8장이 아니라 이후 12.3(딥페이크와 합성 미디어)에서 다루는 별개 내용이다."
+    },
+    {
+      "id": "ai-literacy-106",
+      "type": "ox",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI는 조수(助手)가 아니라 대리인(代理人)이며, 최종 책임과 판단도 AI가 진다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "8.3은 정반대로 'AI는 조수이지 대리인이 아니다. 최종 책임과 판단은 사람이 진다'고 말한다."
+    },
+    {
+      "id": "ai-literacy-107",
+      "type": "single",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 8.2 표에서 '외국어' 목적의 활용 예로 제시되지 않은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "번역"
+        },
+        {
+          "id": "b",
+          "text": "영작 첨삭"
+        },
+        {
+          "id": "c",
+          "text": "회화 연습 상대"
+        },
+        {
+          "id": "d",
+          "text": "보고서 초안 작성"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "8.2 표에서 외국어 활용 예는 번역, 영작 첨삭, 회화 연습 상대다. 보고서 초안 작성은 '글쓰기' 목적의 활용 예다."
+    },
+    {
+      "id": "ai-literacy-108",
+      "type": "match",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 8.2 표에 따라 '목적'과 그 '활용 예'를 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "학습",
+          "right": "어려운 개념을 쉬운 비유로 설명받기"
+        },
+        {
+          "left": "글쓰기",
+          "right": "문장 다듬기와 맞춤법 점검"
+        },
+        {
+          "left": "정리",
+          "right": "긴 자료 요약, 표/개요 만들기"
+        },
+        {
+          "left": "외국어",
+          "right": "영작 첨삭, 회화 연습 상대"
+        },
+        {
+          "left": "코딩",
+          "right": "코드 설명, 오류 원인 찾기"
+        }
+      ],
+      "answer": [
+        "학습=어려운 개념을 쉬운 비유로 설명받기",
+        "글쓰기=문장 다듬기와 맞춤법 점검",
+        "정리=긴 자료 요약, 표/개요 만들기",
+        "외국어=영작 첨삭, 회화 연습 상대",
+        "코딩=코드 설명, 오류 원인 찾기"
+      ],
+      "explanation": "8.2 표의 목적별 활용 예: 학습(쉬운 비유 설명/모의 문제/요약), 글쓰기(보고서 초안/문장 다듬기/맞춤법 점검), 정리(자료 요약/표·개요), 외국어(번역/영작 첨삭/회화 연습), 코딩(코드 설명/오류 원인 찾기)."
+    },
+    {
+      "id": "ai-literacy-109",
+      "type": "cloze",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "8.3 활용 원칙: 'AI는 {{1}}이지 {{2}}이 아니다. 최종 책임과 판단은 사람이 진다.'",
+      "blanks": [
+        {
+          "accept": [
+            "조수",
+            "助手"
+          ]
+        },
+        {
+          "accept": [
+            "대리인",
+            "代理人"
+          ]
+        }
+      ],
+      "answer": [
+        "조수",
+        "대리인"
+      ],
+      "explanation": "8.3의 첫 번째 원칙 그대로다. AI는 보조(조수)일 뿐 사람을 대신하는 대리인이 아니며 책임과 판단은 사람의 몫이다."
+    },
+    {
+      "id": "ai-literacy-110",
+      "type": "short",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "과제나 시험에서 AI를 쓰기 전에 표절/부정행위를 피하기 위해 반드시 확인해야 한다고 노트가 강조하는 것은 무엇인가? (학교의 ○○○ ○○)",
+      "answer": [
+        "AI 사용 규정",
+        "AI사용규정",
+        "사용 규정",
+        "사용규정",
+        "AI 사용규정"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "8.3은 '과제/시험에서는 학교의 AI 사용 규정을 반드시 확인한다(표절/부정행위 주의)'고 명시한다."
+    },
+    {
+      "id": "ai-literacy-111",
+      "type": "single",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 말하는 '진짜 내 실력'이 되게 하는 AI 활용 태도로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI 결과를 그대로 제출하고 검토하지 않는다"
+        },
+        {
+          "id": "b",
+          "text": "AI에게 시켜 얻은 결과도 스스로 이해하고 검증한다"
+        },
+        {
+          "id": "c",
+          "text": "AI 결과는 무조건 사실로 믿고 출처를 묻지 않는다"
+        },
+        {
+          "id": "d",
+          "text": "사람의 최종 책임을 AI에게 넘긴다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "8.3은 'AI에게 시켜 얻은 결과도 스스로 이해하고 검증해야 진짜 내 실력이 된다'고 강조한다."
+    },
+    {
+      "id": "ai-literacy-112",
+      "type": "multi",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 8.3 '활용 원칙(남용 방지)'에 해당하는 내용을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI는 조수이지 대리인이 아니며 최종 책임과 판단은 사람이 진다"
+        },
+        {
+          "id": "b",
+          "text": "과제/시험에서는 학교의 AI 사용 규정을 반드시 확인한다"
+        },
+        {
+          "id": "c",
+          "text": "AI에게 시켜 얻은 결과도 스스로 이해하고 검증한다"
+        },
+        {
+          "id": "d",
+          "text": "민감정보는 그대로 입력해도 무방하다"
+        },
+        {
+          "id": "e",
+          "text": "AI 결과는 검증 없이 그대로 제출하는 것이 효율적이다"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "8.3의 세 원칙은 (1) 조수이지 대리인이 아님, (2) 학교 AI 사용 규정 확인, (3) 결과를 스스로 이해·검증이다. d와 e는 노트의 취지에 어긋난다."
+    },
+    {
+      "id": "ai-literacy-113",
+      "type": "single",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "8.2 표에서 '코딩' 활용에 대해 노트가 덧붙인 단서로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "1학년부터 모든 과목에서 곧바로 다룬다"
+        },
+        {
+          "id": "b",
+          "text": "이후 전공 과목에서 본격적으로 다룬다"
+        },
+        {
+          "id": "c",
+          "text": "AI리터러시 과목에서만 다루고 다른 과목에서는 다루지 않는다"
+        },
+        {
+          "id": "d",
+          "text": "코딩에는 AI를 활용할 수 없다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "8.2 표의 코딩 행은 '코드 설명, 오류 원인 찾기(이후 전공 과목에서)'로, 본격적인 코딩 활용은 이후 전공 과목에서 다룸을 밝힌다."
+    },
+    {
+      "id": "ai-literacy-114",
+      "type": "ox",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "얼굴 인식 잠금과 자동 번역은 노트의 8.1에서 '일상 속 AI'의 예로 제시된다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "8.1은 스팸 필터, 자동 번역, 지도 길 안내, 얼굴 인식 잠금을 일상 속 AI의 예로 든다."
+    },
+    {
+      "id": "ai-literacy-115",
+      "type": "single",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 중 노트의 8.2에서 '학습' 목적의 활용 예로 제시된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "모의 문제 만들기"
+        },
+        {
+          "id": "b",
+          "text": "회화 연습 상대"
+        },
+        {
+          "id": "c",
+          "text": "맞춤법 점검"
+        },
+        {
+          "id": "d",
+          "text": "오류 원인 찾기"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "8.2 표에서 학습 목적의 활용 예는 '어려운 개념 쉬운 비유로 설명받기, 모의 문제 만들기, 요약'이다. 회화 연습은 외국어, 맞춤법 점검은 글쓰기, 오류 원인 찾기는 코딩에 해당한다."
+    },
+    {
+      "id": "ai-literacy-116",
+      "type": "order",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 활용 원칙에 부합하도록, 과제에 AI를 책임감 있게 활용하는 절차를 올바른 순서로 배열하시오.",
+      "items": [
+        "과제/시험에 적용되는 학교의 AI 사용 규정을 먼저 확인한다",
+        "AI를 조수로 삼아 초안이나 자료를 얻는다",
+        "얻은 결과를 스스로 이해하고 사실 여부를 검증한다",
+        "최종 판단과 책임을 사람이 지고 결과물을 마무리한다"
+      ],
+      "answer": [
+        "과제/시험에 적용되는 학교의 AI 사용 규정을 먼저 확인한다",
+        "AI를 조수로 삼아 초안이나 자료를 얻는다",
+        "얻은 결과를 스스로 이해하고 사실 여부를 검증한다",
+        "최종 판단과 책임을 사람이 지고 결과물을 마무리한다"
+      ],
+      "explanation": "8.3의 원칙(규정 확인 → AI는 조수로 활용 → 스스로 이해·검증 → 사람이 최종 책임·판단)을 실제 작업 순서로 재구성한 것이다."
+    },
+    {
+      "id": "ai-literacy-117",
+      "type": "short",
+      "unit": "8. 일상과 업무에서 AI 도구 활용하기",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "8.1에서 유튜브와 넷플릭스의 영상 추천, 쇼핑몰의 상품 추천을 담당하는 일상 속 AI를 통틀어 무엇이라 부르는가? (○○ 시스템)",
+      "answer": [
+        "추천 시스템",
+        "추천시스템",
+        "추천",
+        "추천 시스템(recommendation system)"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "8.1은 유튜브/넷플릭스 영상 추천, 쇼핑몰 상품 추천을 '추천 시스템'의 예로 든다."
+    },
+    {
+      "id": "ai-literacy-118",
+      "type": "single",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "멀티모달(multimodal) AI에 대한 설명으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "텍스트만 입력받아 텍스트만 생성하는 AI"
+        },
+        {
+          "id": "b",
+          "text": "텍스트뿐 아니라 이미지, 음성, 영상 등 여러 형태(modality)를 함께 이해/생성하는 AI"
+        },
+        {
+          "id": "c",
+          "text": "여러 사용자가 동시에 접속할 수 있도록 설계된 대규모 AI"
+        },
+        {
+          "id": "d",
+          "text": "여러 회사의 모델을 하나로 합쳐 만든 AI"
+        },
+        {
+          "id": "e",
+          "text": "한 번에 한 가지 작업만 처리하도록 제한된 AI"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "멀티모달 AI는 텍스트뿐 아니라 이미지, 음성, 영상 등 여러 형태(modality)를 함께 이해하고 생성하는 AI다. '여러 모달리티'가 핵심이며 동시 접속자 수나 모델 결합과는 무관하다."
+    },
+    {
+      "id": "ai-literacy-119",
+      "type": "single",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI 에이전트(Agent)의 핵심 특징을 가장 잘 나타낸 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "질문에 한 번 답하고 그것으로 작업을 끝낸다"
+        },
+        {
+          "id": "b",
+          "text": "목표를 받아 스스로 여러 단계를 계획하고 도구를 써가며 작업을 수행한다"
+        },
+        {
+          "id": "c",
+          "text": "이미지와 음성을 동시에 처리하는 데만 특화되어 있다"
+        },
+        {
+          "id": "d",
+          "text": "사람이 모든 단계를 일일이 지시해야만 동작한다"
+        },
+        {
+          "id": "e",
+          "text": "학습 데이터의 편향을 제거하는 것이 주된 기능이다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "AI 에이전트는 단순히 한 번 답하는 것을 넘어, 목표를 받아 스스로 여러 단계를 계획하고 도구를 써가며 작업을 수행하는 AI다. 단발성 응답(a)이나 사람이 모든 단계를 지시하는 방식(d)과 대비된다."
+    },
+    {
+      "id": "ai-literacy-120",
+      "type": "ox",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "멀티모달 AI는 사진을 올리면 설명해 주거나 그래프를 읽어 해석해 주는 기능을 할 수 있다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트에서 멀티모달 AI의 예로 '사진을 올리면 설명해 주고, 그래프를 읽어 해석해 주는 기능'을 들고 있다. 따라서 옳은 설명이다."
+    },
+    {
+      "id": "ai-literacy-121",
+      "type": "ox",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI 에이전트는 한 번 답하고 끝나는 단발성 응답에 머무르며, 스스로 여러 단계를 계획하지는 못한다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "AI 에이전트는 단순히 한 번 답하는 것을 '넘어' 목표를 받아 스스로 여러 단계를 계획하고 도구를 써가며 작업을 수행한다. 단발성 응답에 머문다는 설명은 틀렸다."
+    },
+    {
+      "id": "ai-literacy-122",
+      "type": "short",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "텍스트뿐 아니라 이미지, 음성, 영상 등 여러 형태(modality)를 함께 이해/생성하는 AI를 무엇이라 하는가? (한국어 또는 영어로)",
+      "answer": [
+        "멀티모달 AI",
+        "멀티모달",
+        "multimodal AI",
+        "multimodal",
+        "멀티모달 인공지능"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "여러 형태(modality)를 함께 다루는 AI는 멀티모달(multimodal) AI다. modality(모달리티)는 데이터의 형태/양식을 뜻한다."
+    },
+    {
+      "id": "ai-literacy-123",
+      "type": "short",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "데이터의 형태/양식을 뜻하며, 멀티모달 AI에서 텍스트, 이미지, 음성, 영상 등을 가리키는 영어 용어는 무엇인가?",
+      "answer": [
+        "modality",
+        "모달리티",
+        "modalities"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 '여러 형태(modality)'라고 표기한다. modality(모달리티)는 데이터의 형태/양식을 의미하며, 텍스트·이미지·음성·영상 각각이 하나의 모달리티에 해당한다."
+    },
+    {
+      "id": "ai-literacy-124",
+      "type": "cloze",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI 에이전트는 목표를 받으면 스스로 여러 단계를 {{1}}하고 {{2}}을(를) 써가며 작업을 수행한다.",
+      "blanks": [
+        {
+          "accept": [
+            "계획",
+            "계획"
+          ]
+        },
+        {
+          "accept": [
+            "도구",
+            "툴",
+            "도구들"
+          ]
+        }
+      ],
+      "answer": [
+        "계획",
+        "도구"
+      ],
+      "explanation": "노트의 정의 그대로, 에이전트는 목표를 받아 스스로 여러 단계를 '계획'하고 '도구'를 써가며 작업을 수행한다."
+    },
+    {
+      "id": "ai-literacy-125",
+      "type": "cloze",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'이 주제로 자료 조사해서 보고서 초안 만들어'라는 목표를 받은 에이전트는 {{1}} - {{2}} - {{3}}을(를) 연쇄로 처리한다.",
+      "blanks": [
+        {
+          "accept": [
+            "검색",
+            "조사",
+            "자료조사",
+            "자료 조사"
+          ]
+        },
+        {
+          "accept": [
+            "정리"
+          ]
+        },
+        {
+          "accept": [
+            "작성",
+            "보고서 작성"
+          ]
+        }
+      ],
+      "answer": [
+        "검색",
+        "정리",
+        "작성"
+      ],
+      "explanation": "노트의 에이전트 예시에서 보고서 초안을 만들라는 목표를 받으면 '검색-정리-작성'을 연쇄로 처리한다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-126",
+      "type": "multi",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 멀티모달 AI가 함께 다룰 수 있다고 명시한 데이터 형태(modality)를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "텍스트"
+        },
+        {
+          "id": "b",
+          "text": "이미지"
+        },
+        {
+          "id": "c",
+          "text": "음성"
+        },
+        {
+          "id": "d",
+          "text": "영상"
+        },
+        {
+          "id": "e",
+          "text": "냄새(후각)"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "노트는 멀티모달 AI가 텍스트, 이미지, 음성, 영상 등 여러 형태를 함께 이해/생성한다고 했다. 냄새(후각)는 언급되지 않았다."
+    },
+    {
+      "id": "ai-literacy-127",
+      "type": "single",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 중 'AI 에이전트'의 동작에 해당하는 사례로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "올린 사진의 내용을 한 문장으로 설명해 준다"
+        },
+        {
+          "id": "b",
+          "text": "'이 주제로 자료 조사해서 보고서 초안 만들어'를 받아 검색-정리-작성을 연쇄로 처리한다"
+        },
+        {
+          "id": "c",
+          "text": "그래프 이미지를 읽어 수치를 해석해 준다"
+        },
+        {
+          "id": "d",
+          "text": "음성을 텍스트로 변환해 준다"
+        },
+        {
+          "id": "e",
+          "text": "영상 속 사물을 인식해 라벨을 붙여 준다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "b는 목표를 받아 여러 단계(검색-정리-작성)를 스스로 계획·수행하는 에이전트의 전형적 사례다. 나머지(a, c, d, e)는 여러 형태의 입력을 이해/생성하는 멀티모달 AI의 예에 가깝다."
+    },
+    {
+      "id": "ai-literacy-128",
+      "type": "match",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 용어와 그 핵심 설명을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "멀티모달 AI",
+          "right": "이미지·음성·영상 등 여러 형태를 함께 이해/생성하는 AI"
+        },
+        {
+          "left": "AI 에이전트",
+          "right": "목표를 받아 스스로 단계를 계획하고 도구를 써 작업을 수행하는 AI"
+        },
+        {
+          "left": "modality(모달리티)",
+          "right": "텍스트·이미지·음성 등 데이터의 형태/양식"
+        },
+        {
+          "left": "에이전트의 작업 연쇄 예시",
+          "right": "검색-정리-작성으로 보고서 초안을 만드는 과정"
+        }
+      ],
+      "answer": [
+        "멀티모달 AI -> 이미지·음성·영상 등 여러 형태를 함께 이해/생성하는 AI",
+        "AI 에이전트 -> 목표를 받아 스스로 단계를 계획하고 도구를 써 작업을 수행하는 AI",
+        "modality(모달리티) -> 텍스트·이미지·음성 등 데이터의 형태/양식",
+        "에이전트의 작업 연쇄 예시 -> 검색-정리-작성으로 보고서 초안을 만드는 과정"
+      ],
+      "explanation": "멀티모달 AI는 여러 형태를 함께 다루고, 에이전트는 목표 기반으로 단계를 계획·수행한다. modality는 데이터의 형태/양식이며, 에이전트의 연쇄 예시는 검색-정리-작성이다."
+    },
+    {
+      "id": "ai-literacy-129",
+      "type": "order",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'이 주제로 자료 조사해서 보고서 초안 만들어'라는 목표를 받은 AI 에이전트가 작업을 처리하는 순서대로 나열하시오.",
+      "items": [
+        "목표(보고서 초안 작성)를 받는다",
+        "관련 자료를 검색한다",
+        "검색한 내용을 정리한다",
+        "보고서 초안을 작성한다"
+      ],
+      "answer": [
+        "목표(보고서 초안 작성)를 받는다",
+        "관련 자료를 검색한다",
+        "검색한 내용을 정리한다",
+        "보고서 초안을 작성한다"
+      ],
+      "explanation": "에이전트는 먼저 목표를 받고, 노트의 예시대로 검색-정리-작성을 연쇄로 처리한다. 따라서 목표 수신 → 검색 → 정리 → 작성 순이다."
+    },
+    {
+      "id": "ai-literacy-130",
+      "type": "single",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "멀티모달 AI와 AI 에이전트를 구분하는 기준으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "멀티모달 AI는 무료이고, 에이전트는 유료라는 점"
+        },
+        {
+          "id": "b",
+          "text": "멀티모달 AI는 여러 형태의 데이터를 다루는 '입출력 범위'가 핵심이고, 에이전트는 목표 달성을 위해 스스로 단계를 계획·수행하는 '자율적 작업 수행'이 핵심이라는 점"
+        },
+        {
+          "id": "c",
+          "text": "멀티모달 AI만 도구를 사용할 수 있고, 에이전트는 도구를 쓸 수 없다는 점"
+        },
+        {
+          "id": "d",
+          "text": "에이전트는 텍스트만 다루고, 멀티모달 AI는 단계 계획을 한다는 점"
+        },
+        {
+          "id": "e",
+          "text": "두 개념은 사실상 같은 것을 다르게 부르는 명칭일 뿐이라는 점"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트에 따르면 멀티모달 AI는 텍스트·이미지·음성·영상 등 여러 형태를 함께 이해/생성하는 '입출력 범위'가 핵심이고, 에이전트는 목표를 받아 스스로 단계를 계획하고 도구를 써가며 수행하는 '자율적 작업 수행'이 핵심이다. 두 개념은 서로 다른 측면을 가리킨다."
+    },
+    {
+      "id": "ai-literacy-131",
+      "type": "ox",
+      "unit": "9. AI Agent와 멀티모달 AI",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트는 AI 에이전트를 앞으로 활용이 빠르게 늘어나는 분야로 설명한다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 AI 에이전트에 대해 '앞으로 활용이 빠르게 늘어나는 분야다'라고 명시했으므로 옳은 설명이다."
+    },
+    {
+      "id": "ai-literacy-132",
+      "type": "single",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 AI와 학습 데이터의 관계를 한 문장으로 요약한 표현으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI는 학습 데이터를 닮는다"
+        },
+        {
+          "id": "b",
+          "text": "AI는 학습 데이터를 무시한다"
+        },
+        {
+          "id": "c",
+          "text": "AI는 학습 데이터보다 항상 공정하다"
+        },
+        {
+          "id": "d",
+          "text": "AI는 학습 데이터의 편견을 자동으로 제거한다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 'AI는 학습 데이터를 닮는다'고 하며, 데이터에 사회의 편견이 담겨 있으면 AI도 그 편견을 학습하고 증폭시킬 수 있다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-133",
+      "type": "single",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 설명에 해당하는 편향의 종류는? '특정 집단의 데이터가 적거나 왜곡되어, 예컨대 한쪽 인종 얼굴 데이터만 많아 다른 인종 인식률이 떨어진다.'",
+      "choices": [
+        {
+          "id": "a",
+          "text": "표본 편향"
+        },
+        {
+          "id": "b",
+          "text": "데이터 편향"
+        },
+        {
+          "id": "c",
+          "text": "역사적 편향"
+        },
+        {
+          "id": "d",
+          "text": "확증 편향"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트의 10.1에서 데이터 편향은 '특정 집단의 데이터가 적거나 왜곡됨'으로 정의되며, 한쪽 인종 얼굴 데이터만 많아 다른 인종 인식률이 저하되는 예가 제시된다."
+    },
+    {
+      "id": "ai-literacy-134",
+      "type": "single",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'과거의 차별적 관행이 데이터에 그대로 녹아 있어' 생기는 편향을 노트에서는 무엇이라 부르는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터 편향"
+        },
+        {
+          "id": "b",
+          "text": "표본 편향"
+        },
+        {
+          "id": "c",
+          "text": "역사적 편향"
+        },
+        {
+          "id": "d",
+          "text": "측정 편향"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 10.1에서 역사적 편향은 '과거의 차별적 관행이 데이터에 그대로 녹아 있음'으로 정의된다."
+    },
+    {
+      "id": "ai-literacy-135",
+      "type": "single",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.1에서 '수집 과정에서 특정 집단이 과대 또는 과소 대표됨'으로 설명한 편향은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "표본 편향"
+        },
+        {
+          "id": "b",
+          "text": "역사적 편향"
+        },
+        {
+          "id": "c",
+          "text": "데이터 편향"
+        },
+        {
+          "id": "d",
+          "text": "알고리즘 편향"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 표본 편향을 '수집 과정에서 특정 집단이 과대/과소 대표됨'으로 정의한다."
+    },
+    {
+      "id": "ai-literacy-136",
+      "type": "ox",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면, 데이터에 사회의 편견이 담겨 있으면 AI는 그 편견을 학습할 뿐 아니라 증폭시킬 수도 있다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 'AI도 그 편견을 학습하고 증폭시킬 수 있다'고 명시한다."
+    },
+    {
+      "id": "ai-literacy-137",
+      "type": "ox",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 공정성을 위한 노력에 따르면, 일단 데이터를 다양하게 수집하면 집단별 성능 차이를 따로 점검할 필요는 없다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트의 10.3은 다양하고 대표성 있는 데이터 수집과 함께 '결과를 집단별로 나누어 성능 차이 점검'을 별도 노력으로 제시한다. 데이터 수집만으로 충분하다는 설명은 없다."
+    },
+    {
+      "id": "ai-literacy-138",
+      "type": "multi",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.3에서 공정성을 위한 노력으로 제시한 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "다양하고 대표성 있는 데이터 수집"
+        },
+        {
+          "id": "b",
+          "text": "결과를 집단별로 나누어 성능 차이 점검"
+        },
+        {
+          "id": "c",
+          "text": "사람의 최종 검토(human-in-the-loop)와 설명가능성 확보"
+        },
+        {
+          "id": "d",
+          "text": "학습 데이터를 한 집단으로만 통일하여 일관성 확보"
+        },
+        {
+          "id": "e",
+          "text": "편향이 의심되면 AI 사용을 전면 금지"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트의 10.3은 (1) 다양하고 대표성 있는 데이터 수집, (2) 집단별 성능 차이 점검, (3) human-in-the-loop와 설명가능성 확보의 세 가지를 든다. d, e는 노트에 없는 내용이다."
+    },
+    {
+      "id": "ai-literacy-139",
+      "type": "multi",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.2에서 제시한 편향의 실제 사례 유형을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "채용 AI가 과거 데이터를 학습해 특정 성별을 불리하게 평가"
+        },
+        {
+          "id": "b",
+          "text": "얼굴 인식이 특정 피부색에서 오류율이 더 높음"
+        },
+        {
+          "id": "c",
+          "text": "번역기가 직업에 성별 고정관념을 자동으로 부여"
+        },
+        {
+          "id": "d",
+          "text": "추천 알고리즘이 사용자의 구매 이력을 무작위로 삭제"
+        },
+        {
+          "id": "e",
+          "text": "음성비서가 배터리를 과도하게 소모"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트의 10.2는 채용 AI의 성별 불이익, 얼굴 인식의 피부색별 오류율 차이, 번역기의 직업 성별 고정관념 세 가지를 사례로 든다. d, e는 노트에 없다."
+    },
+    {
+      "id": "ai-literacy-140",
+      "type": "cloze",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.3에 따르면 공정성을 위해서는 사람의 최종 검토, 즉 {{1}}와(과) 함께 모델이 왜 그런 결정을 내렸는지 알 수 있는 {{2}}을(를) 확보해야 한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "human-in-the-loop",
+            "휴먼인더루프",
+            "사람의 최종 검토"
+          ]
+        },
+        {
+          "accept": [
+            "설명가능성",
+            "설명 가능성",
+            "explainability"
+          ]
+        }
+      ],
+      "explanation": "노트의 10.3은 '사람의 최종 검토(human-in-the-loop)와 설명가능성 확보'를 공정성을 위한 노력으로 제시한다."
+    },
+    {
+      "id": "ai-literacy-141",
+      "type": "short",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.1에서 편향이 생기는 세 가지 이유 중, '특정 집단의 데이터가 적거나 왜곡됨'으로 정의되는 편향의 이름을 쓰시오.",
+      "answer": [
+        "데이터 편향",
+        "데이터편향",
+        "data bias"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 10.1은 데이터 편향을 '특정 집단의 데이터가 적거나 왜곡됨'으로 정의한다."
+    },
+    {
+      "id": "ai-literacy-142",
+      "type": "short",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.3에서 공정성을 위해 '결과를 집단별로 나누어' 무엇을 점검하라고 했는가? (핵심 단어로 답하시오.)",
+      "answer": [
+        "성능 차이",
+        "성능차이",
+        "성능 차이 점검",
+        "성능 격차"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 10.3은 '결과를 집단별로 나누어 성능 차이 점검'을 공정성 노력으로 제시한다."
+    },
+    {
+      "id": "ai-literacy-143",
+      "type": "match",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.1 편향 종류와 그 설명을 바르게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "데이터 편향",
+          "right": "특정 집단의 데이터가 적거나 왜곡됨"
+        },
+        {
+          "left": "표본 편향",
+          "right": "수집 과정에서 특정 집단이 과대/과소 대표됨"
+        },
+        {
+          "left": "역사적 편향",
+          "right": "과거의 차별적 관행이 데이터에 그대로 녹아 있음"
+        },
+        {
+          "left": "공정성을 위한 노력",
+          "right": "다양하고 대표성 있는 데이터 수집"
+        }
+      ],
+      "explanation": "데이터 편향, 표본 편향, 역사적 편향의 정의는 노트 10.1을, 다양하고 대표성 있는 데이터 수집은 10.3을 따른다."
+    },
+    {
+      "id": "ai-literacy-144",
+      "type": "single",
+      "unit": "10. 편향과 공정성",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 10.2에서 '번역기'와 관련해 든 편향 사례로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "번역기가 직업에 성별 고정관념을 자동으로 부여"
+        },
+        {
+          "id": "b",
+          "text": "번역기가 특정 피부색의 인식 오류율을 높임"
+        },
+        {
+          "id": "c",
+          "text": "번역기가 과거 채용 데이터로 성별을 평가"
+        },
+        {
+          "id": "d",
+          "text": "번역기가 개인의 의료정보를 외부로 유출"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 10.2는 번역기 사례로 '직업에 성별 고정관념을 자동으로 부여'를 든다. b는 얼굴 인식, c는 채용 AI 사례이며 d는 이 절에 없다."
+    },
+    {
+      "id": "ai-literacy-145",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에서 정의한 'AI 윤리'의 의미로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI의 연산 속도를 최대한 빠르게 만드는 기술 원칙"
+        },
+        {
+          "id": "b",
+          "text": "기술이 사람과 사회에 해를 끼치지 않도록 하는 원칙과 책임"
+        },
+        {
+          "id": "c",
+          "text": "AI 모델의 정확도를 평가하는 통계적 기준"
+        },
+        {
+          "id": "d",
+          "text": "AI 서비스의 수익을 극대화하기 위한 경영 전략"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "학습 노트는 AI 윤리를 '기술이 사람과 사회에 해를 끼치지 않도록 하는 원칙과 책임'으로 정의한다."
+    },
+    {
+      "id": "ai-literacy-146",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에서 AI 윤리는 이 과목의 어느 영역에 해당한다고 했는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The Brain"
+        },
+        {
+          "id": "b",
+          "text": "The Body"
+        },
+        {
+          "id": "c",
+          "text": "The Soul"
+        },
+        {
+          "id": "d",
+          "text": "The Tool"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트는 AI 윤리가 이 과목의 'The Soul' 영역에 해당한다고 명시한다."
+    },
+    {
+      "id": "ai-literacy-147",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'AI가 잘못 판단하면 누가 책임지는가(개발사인가, 사용자인가)?'라는 질문은 어떤 윤리 쟁점에 해당하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "책임성"
+        },
+        {
+          "id": "b",
+          "text": "투명성/설명가능성"
+        },
+        {
+          "id": "c",
+          "text": "공정성"
+        },
+        {
+          "id": "d",
+          "text": "안전성"
+        },
+        {
+          "id": "e",
+          "text": "저작권/소유권"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트의 핵심 윤리 쟁점 표에서 '책임성'은 'AI가 잘못 판단하면 누가 책임지는가(개발사? 사용자?)'로 설명된다."
+    },
+    {
+      "id": "ai-literacy-148",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "딥페이크, 가짜뉴스, 사기 등 악용을 막을 수 있는가의 문제는 어떤 윤리 쟁점에 가장 직접적으로 해당하는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "투명성/설명가능성"
+        },
+        {
+          "id": "b",
+          "text": "안전성"
+        },
+        {
+          "id": "c",
+          "text": "공정성"
+        },
+        {
+          "id": "d",
+          "text": "책임성"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트의 윤리 쟁점 표에서 '안전성'은 악용(딥페이크, 가짜뉴스, 사기)을 막을 수 있는가의 문제로 설명된다."
+    },
+    {
+      "id": "ai-literacy-149",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'AI 생성물의 저작권은 누구 것인가? 학습 데이터의 권리는?'이라는 질문은 어떤 윤리 쟁점인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "안전성"
+        },
+        {
+          "id": "b",
+          "text": "책임성"
+        },
+        {
+          "id": "c",
+          "text": "저작권/소유권"
+        },
+        {
+          "id": "d",
+          "text": "투명성/설명가능성"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 윤리 쟁점 표에서 '저작권/소유권'은 AI 생성물의 저작권 귀속과 학습 데이터의 권리 문제로 설명된다."
+    },
+    {
+      "id": "ai-literacy-150",
+      "type": "multi",
+      "unit": "11. AI 윤리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트의 '11.1 핵심 윤리 쟁점' 표에 나열된 쟁점을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "책임성"
+        },
+        {
+          "id": "b",
+          "text": "투명성/설명가능성"
+        },
+        {
+          "id": "c",
+          "text": "에너지 효율성"
+        },
+        {
+          "id": "d",
+          "text": "공정성"
+        },
+        {
+          "id": "e",
+          "text": "저작권/소유권"
+        },
+        {
+          "id": "f",
+          "text": "안전성"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f"
+      ],
+      "explanation": "노트의 핵심 윤리 쟁점 표는 책임성, 투명성/설명가능성, 공정성, 저작권/소유권, 안전성 다섯 가지를 다룬다. '에너지 효율성'은 표에 없다."
+    },
+    {
+      "id": "ai-literacy-151",
+      "type": "multi",
+      "unit": "11. AI 윤리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트의 '11.2 주요 원칙(국내외 공통 흐름)'에 포함된 항목을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "인간 존엄과 인권 존중, 인간의 통제 가능성 유지"
+        },
+        {
+          "id": "b",
+          "text": "투명성과 설명 책임"
+        },
+        {
+          "id": "c",
+          "text": "수익 극대화와 시장 점유율 확대"
+        },
+        {
+          "id": "d",
+          "text": "안전성과 견고함"
+        },
+        {
+          "id": "e",
+          "text": "프라이버시 보호"
+        },
+        {
+          "id": "f",
+          "text": "공정성과 차별 금지"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f"
+      ],
+      "explanation": "노트의 주요 원칙은 인간 존엄/인권 존중과 통제 가능성, 투명성과 설명 책임, 안전성과 견고함, 프라이버시 보호, 공정성과 차별 금지다. '수익 극대화'는 윤리 원칙이 아니다."
+    },
+    {
+      "id": "ai-literacy-152",
+      "type": "ox",
+      "unit": "11. AI 윤리",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에 따르면 AI 윤리의 주요 원칙 중 하나로 '인간의 통제 가능성 유지'가 포함된다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트의 주요 원칙 첫 항목이 '인간 존엄과 인권 존중, 인간의 통제 가능성 유지'이므로 O다."
+    },
+    {
+      "id": "ai-literacy-153",
+      "type": "ox",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트는 AI 윤리에 관한 규범 정비가 이미 완성되어 더 이상 변화가 없는 상태라고 설명한다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 EU AI 법, 유네스코 AI 윤리 권고, 국내 AI 윤리기준 등 '규범 정비가 빠르게 진행 중'이라고 했으므로 완성되었다는 서술은 틀리다."
+    },
+    {
+      "id": "ai-literacy-154",
+      "type": "short",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에서 세계적으로 규범 정비가 진행 중인 사례로 언급한, 유럽연합이 제정한 AI 관련 법의 이름은 무엇인가?",
+      "answer": [
+        "AI 법",
+        "AI Act",
+        "AI법",
+        "EU AI 법",
+        "EU AI Act",
+        "AI 액트"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 'EU의 AI 법(AI Act)'을 세계적 규범 정비 사례로 든다."
+    },
+    {
+      "id": "ai-literacy-155",
+      "type": "short",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에서 AI 윤리 규범 정비 사례로 든 국제기구는, 'AI 윤리 권고'를 채택한 ( )이다. 괄호에 들어갈 국제기구의 약칭(한글)을 쓰시오.",
+      "answer": [
+        "유네스코",
+        "UNESCO"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 '유네스코 AI 윤리 권고'를 규범 정비 사례로 언급한다."
+    },
+    {
+      "id": "ai-literacy-156",
+      "type": "cloze",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "윤리 쟁점 중 '왜 그런 결정을 내렸는지 설명할 수 있는가?'는 {{1}}/설명가능성 쟁점이고, '특정 집단을 차별하지 않는가?'는 {{2}} 쟁점이다.",
+      "blanks": [
+        {
+          "accept": [
+            "투명성"
+          ]
+        },
+        {
+          "accept": [
+            "공정성"
+          ]
+        }
+      ],
+      "answer": [],
+      "explanation": "노트 표에서 '왜 그런 결정을 내렸는지 설명할 수 있는가'는 투명성/설명가능성, '특정 집단을 차별하지 않는가'는 공정성에 해당한다."
+    },
+    {
+      "id": "ai-literacy-157",
+      "type": "match",
+      "unit": "11. AI 윤리",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트의 '11.1 핵심 윤리 쟁점' 표에 근거하여 각 쟁점과 그 설명을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "책임성",
+          "right": "AI가 잘못 판단하면 누가 책임지는가"
+        },
+        {
+          "left": "투명성/설명가능성",
+          "right": "왜 그런 결정을 내렸는지 설명할 수 있는가"
+        },
+        {
+          "left": "공정성",
+          "right": "특정 집단을 차별하지 않는가"
+        },
+        {
+          "left": "저작권/소유권",
+          "right": "AI 생성물의 저작권은 누구 것인가"
+        },
+        {
+          "left": "안전성",
+          "right": "딥페이크, 가짜뉴스, 사기 같은 악용을 막을 수 있는가"
+        }
+      ],
+      "answer": [],
+      "explanation": "노트의 윤리 쟁점 표에 정의된 쟁점-설명 대응을 그대로 짝지은 것이다."
+    },
+    {
+      "id": "ai-literacy-158",
+      "type": "single",
+      "unit": "11. AI 윤리",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 중 학습 노트의 AI 윤리 주요 원칙에 포함되지 않는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "투명성과 설명 책임"
+        },
+        {
+          "id": "b",
+          "text": "안전성과 견고함"
+        },
+        {
+          "id": "c",
+          "text": "최대한의 자동화로 인간 개입 배제"
+        },
+        {
+          "id": "d",
+          "text": "공정성과 차별 금지"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트의 주요 원칙은 인간 존엄/통제 가능성 유지를 강조하므로 '인간 개입 배제'는 원칙에 어긋난다. 나머지는 모두 노트에 나열된 원칙이다."
+    },
+    {
+      "id": "ai-literacy-159",
+      "type": "single",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "생성형 AI 사용 시 프라이버시 보호가 특히 중요한 가장 근본적인 이유로 노트에서 제시한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI 모델의 정확도가 입력량에 비례해서 떨어지기 때문"
+        },
+        {
+          "id": "b",
+          "text": "AI에 입력한 내용이 서비스 제공자의 서버로 전송될 수 있기 때문"
+        },
+        {
+          "id": "c",
+          "text": "AI가 입력 내용을 자동으로 암호화하지 못하도록 법으로 금지되어 있기 때문"
+        },
+        {
+          "id": "d",
+          "text": "AI는 입력 데이터를 절대 저장하지 않아 추적이 불가능하기 때문"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 12.1은 'AI, 특히 생성형 AI에 입력한 내용은 서비스 제공자의 서버로 전송될 수 있다'고 하며, 부주의하면 개인정보나 회사 기밀이 새어 나간다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-160",
+      "type": "ox",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 주민번호, 비밀번호, 의료/금융 정보, 회사 기밀 같은 민감정보는 AI에 입력하지 않는 것이 안전한 사용 수칙이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트 12.2 안전한 사용 수칙의 첫 항목이 '민감정보(주민번호, 비밀번호, 의료/금융 정보, 회사 기밀)는 입력하지 않는다'이다."
+    },
+    {
+      "id": "ai-literacy-161",
+      "type": "multi",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 12.2에서 제시한 'AI 안전한 사용 수칙'에 해당하는 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "민감정보는 입력하지 않는다."
+        },
+        {
+          "id": "b",
+          "text": "회사/학교의 데이터 정책과 보안 규정을 따른다."
+        },
+        {
+          "id": "c",
+          "text": "가능하면 익명화/가명화한 데이터를 쓴다."
+        },
+        {
+          "id": "d",
+          "text": "AI가 만든 결과에 타인의 개인정보가 들어가지 않았는지 확인한다."
+        },
+        {
+          "id": "e",
+          "text": "민감정보는 반드시 관리자 권한으로 로그인한 뒤 입력한다."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "노트 12.2는 네 가지 수칙(민감정보 미입력, 데이터 정책·보안 규정 준수, 익명화/가명화 데이터 사용, 결과 내 타인 개인정보 확인)을 제시한다. e는 노트에 없는 잘못된 진술이다."
+    },
+    {
+      "id": "ai-literacy-162",
+      "type": "single",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "실제 같은 가짜 영상이나 음성을 만들어 사기, 명예훼손, 가짜뉴스 등에 악용될 수 있는 기술을 노트에서 무엇이라 부르는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "환각(hallucination)"
+        },
+        {
+          "id": "b",
+          "text": "딥페이크(합성 미디어)"
+        },
+        {
+          "id": "c",
+          "text": "디지털 격차(AI divide)"
+        },
+        {
+          "id": "d",
+          "text": "가명화(pseudonymization)"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 12.3은 딥페이크를 '실제 같은 가짜 영상/음성을 만드는 기술'로 정의하고, 사기·명예훼손·가짜뉴스에 악용될 수 있다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-163",
+      "type": "cloze",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "딥페이크처럼 합성 미디어가 범람하는 시대에는 '{{1}} 것을 다 믿지 않는' {{2}} 리터러시가 함께 필요하다.",
+      "blanks": [
+        {
+          "accept": [
+            "보는"
+          ]
+        },
+        {
+          "accept": [
+            "미디어"
+          ]
+        }
+      ],
+      "answer": [
+        "보는",
+        "미디어"
+      ],
+      "explanation": "노트 12.3은 딥페이크에 대응하려면 '보는 것을 다 믿지 않는 미디어 리터러시가 함께 필요하다'고 명시한다."
+    },
+    {
+      "id": "ai-literacy-164",
+      "type": "short",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "데이터에서 개인을 식별할 수 없도록 처리해, 노트가 'AI에 가능하면 사용하라'고 권한 데이터 처리 방식 두 가지를 쓰시오. (둘 중 하나만 적어도 됨)",
+      "answer": [
+        "익명화",
+        "가명화",
+        "익명화/가명화",
+        "익명화, 가명화",
+        "anonymization",
+        "pseudonymization"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 12.2는 '가능하면 익명화/가명화한 데이터를 쓴다'고 권한다. 익명화는 개인 식별 정보를 완전히 제거하는 것, 가명화는 식별자를 대체값으로 바꾸는 것이다."
+    },
+    {
+      "id": "ai-literacy-165",
+      "type": "ox",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI가 생성한 결과물에는 타인의 개인정보가 절대 포함될 수 없으므로 별도 확인은 불필요하다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트 12.2는 오히려 'AI가 만든 결과에 타인의 개인정보가 들어가지 않았는지 확인한다'고 하여, 결과물 확인이 필요함을 강조한다. 따라서 진술은 틀렸다."
+    },
+    {
+      "id": "ai-literacy-166",
+      "type": "single",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "직장인 A씨가 사내 기밀 회의록 전문을 그대로 외부 생성형 AI 챗봇에 붙여넣고 요약을 요청했다. 노트의 안전한 사용 수칙에 비추어 이 행동의 가장 큰 문제점은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI가 회의록을 요약하면 원문보다 길이가 늘어나기 때문"
+        },
+        {
+          "id": "b",
+          "text": "회사 기밀이 서비스 제공자의 서버로 전송되어 유출될 수 있기 때문"
+        },
+        {
+          "id": "c",
+          "text": "AI가 회의록을 한국어로만 처리할 수 있기 때문"
+        },
+        {
+          "id": "d",
+          "text": "요약 결과가 항상 환각이라 신뢰할 수 없기 때문"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 12.1과 12.2에 따르면 회사 기밀은 입력해서는 안 되는 민감정보이며, 입력 내용은 제공자 서버로 전송될 수 있어 기밀이 유출될 위험이 있다."
+    },
+    {
+      "id": "ai-literacy-167",
+      "type": "match",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 개념과 노트상의 설명을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "딥페이크",
+          "right": "실제 같은 가짜 영상/음성을 만드는 기술"
+        },
+        {
+          "left": "민감정보",
+          "right": "주민번호·비밀번호·의료/금융 정보·회사 기밀 등 입력 금지 대상"
+        },
+        {
+          "left": "익명화/가명화",
+          "right": "가능하면 AI에 입력하기 위해 데이터를 처리하는 방식"
+        },
+        {
+          "left": "미디어 리터러시",
+          "right": "보는 것을 다 믿지 않는 비판적 수용 능력"
+        }
+      ],
+      "answer": [
+        "실제 같은 가짜 영상/음성을 만드는 기술",
+        "주민번호·비밀번호·의료/금융 정보·회사 기밀 등 입력 금지 대상",
+        "가능하면 AI에 입력하기 위해 데이터를 처리하는 방식",
+        "보는 것을 다 믿지 않는 비판적 수용 능력"
+      ],
+      "explanation": "노트 12.2와 12.3의 정의에 근거한다. 딥페이크는 가짜 영상/음성 기술, 민감정보는 입력 금지 대상, 익명화/가명화는 권장되는 데이터 처리, 미디어 리터러시는 딥페이크 대응에 필요한 비판적 수용 능력이다."
+    },
+    {
+      "id": "ai-literacy-168",
+      "type": "multi",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 12.2에서 '민감정보'의 예로 직접 열거한 항목을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "주민번호"
+        },
+        {
+          "id": "b",
+          "text": "비밀번호"
+        },
+        {
+          "id": "c",
+          "text": "의료/금융 정보"
+        },
+        {
+          "id": "d",
+          "text": "회사 기밀"
+        },
+        {
+          "id": "e",
+          "text": "공개된 뉴스 기사 제목"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "노트 12.2는 민감정보의 예로 '주민번호, 비밀번호, 의료/금융 정보, 회사 기밀'을 괄호 안에 명시한다. 공개된 뉴스 기사 제목은 민감정보로 열거되지 않았다."
+    },
+    {
+      "id": "ai-literacy-169",
+      "type": "ox",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 딥페이크는 사기, 명예훼손, 가짜뉴스 등에 악용될 수 있는 위험을 가진다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트 12.3은 딥페이크가 '사기, 명예훼손, 가짜뉴스에 악용될 수 있어' 미디어 리터러시가 필요하다고 설명한다."
+    },
+    {
+      "id": "ai-literacy-170",
+      "type": "single",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 12.2의 안전한 사용 수칙 중 '조직 차원의 규범 준수'에 해당하는 항목은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "민감정보는 입력하지 않는다."
+        },
+        {
+          "id": "b",
+          "text": "회사/학교의 데이터 정책과 보안 규정을 따른다."
+        },
+        {
+          "id": "c",
+          "text": "가능하면 익명화/가명화한 데이터를 쓴다."
+        },
+        {
+          "id": "d",
+          "text": "AI가 만든 결과에 타인의 개인정보가 들어갔는지 확인한다."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트 12.2의 네 수칙 중 조직(회사/학교)의 규범을 따르는 것은 '회사/학교의 데이터 정책과 보안 규정을 따른다'이다. 나머지는 개인의 입력·결과 관리 차원의 수칙이다."
+    },
+    {
+      "id": "ai-literacy-171",
+      "type": "order",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "프라이버시를 지키며 AI로 고객 데이터를 분석하려 한다. 노트 12.2의 수칙에 부합하도록 다음 절차를 올바른 순서로 배열하시오.",
+      "items": [
+        "회사/학교의 데이터 정책과 보안 규정을 먼저 확인한다.",
+        "데이터에서 개인을 식별할 수 없도록 익명화/가명화한다.",
+        "민감정보가 남아 있지 않은지 점검한 뒤 AI에 입력한다.",
+        "AI가 만든 결과에 타인의 개인정보가 들어가지 않았는지 확인한다."
+      ],
+      "answer": [
+        "회사/학교의 데이터 정책과 보안 규정을 먼저 확인한다.",
+        "데이터에서 개인을 식별할 수 없도록 익명화/가명화한다.",
+        "민감정보가 남아 있지 않은지 점검한 뒤 AI에 입력한다.",
+        "AI가 만든 결과에 타인의 개인정보가 들어가지 않았는지 확인한다."
+      ],
+      "explanation": "노트 12.2의 수칙을 실무 흐름으로 재구성하면, 먼저 조직 규정을 확인하고, 데이터를 익명화/가명화한 뒤, 민감정보 잔존 여부를 점검해 입력하고, 마지막으로 결과물에 타인 개인정보가 없는지 확인하는 순서가 자연스럽다."
+    },
+    {
+      "id": "ai-literacy-172",
+      "type": "short",
+      "unit": "12. 프라이버시와 정보 보호",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트 12.3에서 '실제 같은 가짜 영상/음성을 만드는 기술'을 가리키는 용어를 쓰시오.",
+      "answer": [
+        "딥페이크",
+        "deepfake",
+        "deep fake"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트 12.3의 소제목이자 정의 대상인 '딥페이크'가 정답이다. 합성 미디어의 대표 사례로, 보는 것을 다 믿지 않는 미디어 리터러시가 필요한 이유다."
+    },
+    {
+      "id": "ai-literacy-173",
+      "type": "single",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트가 제시한 'AI와 일자리'의 핵심 메시지로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI가 결국 모든 사람의 일자리를 대체한다"
+        },
+        {
+          "id": "b",
+          "text": "AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다"
+        },
+        {
+          "id": "c",
+          "text": "AI는 일자리 수에 아무 영향을 주지 않는다"
+        },
+        {
+          "id": "d",
+          "text": "AI는 새로운 일자리만 만들고 기존 일자리는 그대로 둔다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 'AI가 사람을 대체한다'기보다 'AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다'에 가깝다고 강조하며, 그래서 AI리터러시 자체가 경쟁력이라고 본다."
+    },
+    {
+      "id": "ai-literacy-174",
+      "type": "single",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "다음 중 AI로 인해 '사라지거나 줄어드는 일'의 예로 노트에 제시된 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI 윤리 검토"
+        },
+        {
+          "id": "b",
+          "text": "프롬프트 설계"
+        },
+        {
+          "id": "c",
+          "text": "단순 데이터 입력"
+        },
+        {
+          "id": "d",
+          "text": "데이터 엔지니어링"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "explanation": "노트는 반복적/정형적 업무(단순 데이터 입력, 일부 번역/요약)를 사라지거나 줄어드는 일의 예로 든다. 나머지는 새로 생기거나 늘어나는 일이다."
+    },
+    {
+      "id": "ai-literacy-175",
+      "type": "multi",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 '늘어나거나 새로 생기는 일'(AI를 만들고 다루고 감독하는 일)의 예로 제시된 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "데이터 엔지니어"
+        },
+        {
+          "id": "b",
+          "text": "프롬프트 설계"
+        },
+        {
+          "id": "c",
+          "text": "AI 윤리 검토"
+        },
+        {
+          "id": "d",
+          "text": "단순 데이터 입력"
+        },
+        {
+          "id": "e",
+          "text": "일부 번역/요약"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "노트는 새로 생기는 일로 데이터 엔지니어, 프롬프트 설계, AI 윤리 검토 등을 든다. 단순 데이터 입력과 일부 번역/요약은 줄어드는 일에 해당한다."
+    },
+    {
+      "id": "ai-literacy-176",
+      "type": "ox",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI 시대에는 반복적/정형적 업무가 사라지거나 줄어드는 경향이 있다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 사라지거나 줄어드는 일로 반복적/정형적 업무(단순 데이터 입력, 일부 번역/요약)를 명시한다."
+    },
+    {
+      "id": "ai-literacy-177",
+      "type": "ox",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트는 'AI가 사람을 대체한다'는 표현이 현실을 가장 정확하게 설명한다고 본다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 'AI가 사람을 대체한다'기보다 'AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다'에 더 가깝다고 보았다."
+    },
+    {
+      "id": "ai-literacy-178",
+      "type": "single",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI를 잘 쓰는 사람/집단/국가와 그렇지 못한 쪽 사이의 격차가 커지는 현상을 노트는 무엇이라 부르는가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "정보 신뢰 위기"
+        },
+        {
+          "id": "b",
+          "text": "디지털 격차(AI divide)"
+        },
+        {
+          "id": "c",
+          "text": "교육과 노동의 재편"
+        },
+        {
+          "id": "d",
+          "text": "멀티모달 격차"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 AI를 잘 쓰는 쪽과 그렇지 못한 쪽의 격차 확대를 디지털 격차(AI divide)로 정의한다."
+    },
+    {
+      "id": "ai-literacy-179",
+      "type": "short",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "가짜뉴스와 합성 콘텐츠가 범람하면서 발생하는, 노트가 제시한 사회적 쟁점의 명칭을 쓰시오.",
+      "answer": [
+        "정보 신뢰 위기",
+        "정보신뢰위기"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 가짜뉴스, 합성 콘텐츠 범람을 '정보 신뢰 위기'로 제시한다."
+    },
+    {
+      "id": "ai-literacy-180",
+      "type": "single",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 '교육과 노동의 재편'에서 중요성이 증가한다고 본 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "단순 반복 업무 숙련"
+        },
+        {
+          "id": "b",
+          "text": "평생학습과 재교육"
+        },
+        {
+          "id": "c",
+          "text": "정형적 데이터 입력 능력"
+        },
+        {
+          "id": "d",
+          "text": "합성 콘텐츠 제작 기술"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 교육과 노동의 재편 항목에서 평생학습과 재교육의 중요성이 증가한다고 본다."
+    },
+    {
+      "id": "ai-literacy-181",
+      "type": "multi",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 13.2 '사회적 쟁점'에 직접 제시된 항목을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "디지털 격차(AI divide)"
+        },
+        {
+          "id": "b",
+          "text": "정보 신뢰 위기"
+        },
+        {
+          "id": "c",
+          "text": "교육과 노동의 재편"
+        },
+        {
+          "id": "d",
+          "text": "온디바이스 AI 확산"
+        },
+        {
+          "id": "e",
+          "text": "환각(hallucination) 문제"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "13.2 사회적 쟁점은 디지털 격차, 정보 신뢰 위기, 교육과 노동의 재편 세 가지다. 온디바이스 AI는 15장(미래 전망), 환각은 14장(한계)에 속한다."
+    },
+    {
+      "id": "ai-literacy-182",
+      "type": "cloze",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 핵심 메시지: 'AI가 사람을 대체한다'기보다, AI를 잘 쓰는 사람이 못 쓰는 사람을 {{1}}한다에 가깝다. 그래서 {{2}} 자체가 경쟁력이다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "대체"
+          ]
+        },
+        {
+          "accept": [
+            "AI리터러시",
+            "AI 리터러시",
+            "에이아이리터러시"
+          ]
+        }
+      ],
+      "explanation": "노트는 'AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다'고 표현하며, 그래서 AI리터러시 자체가 경쟁력이라고 본다."
+    },
+    {
+      "id": "ai-literacy-183",
+      "type": "match",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "사회적 쟁점(또는 일자리 변화)과 그 설명을 올바르게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "디지털 격차(AI divide)",
+          "right": "AI를 잘 쓰는 쪽과 못 쓰는 쪽의 격차 확대"
+        },
+        {
+          "left": "정보 신뢰 위기",
+          "right": "가짜뉴스, 합성 콘텐츠 범람"
+        },
+        {
+          "left": "교육과 노동의 재편",
+          "right": "평생학습과 재교육의 중요성 증가"
+        },
+        {
+          "left": "사라지거나 줄어드는 일",
+          "right": "반복적/정형적 업무(단순 데이터 입력 등)"
+        },
+        {
+          "left": "늘어나거나 새로 생기는 일",
+          "right": "AI를 만들고 다루고 감독하는 일"
+        }
+      ],
+      "explanation": "노트의 13.1과 13.2 내용을 그대로 연결한 것이다. 각 쟁점과 일자리 변화의 정의가 본문과 일치한다."
+    },
+    {
+      "id": "ai-literacy-184",
+      "type": "single",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI리터러시 자체를 '경쟁력'으로 보는 근거로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI가 모든 직업을 똑같이 대체하기 때문"
+        },
+        {
+          "id": "b",
+          "text": "AI를 잘 쓰는 사람이 못 쓰는 사람을 대체하는 구도이기 때문"
+        },
+        {
+          "id": "c",
+          "text": "AI가 정보 신뢰 위기를 완전히 해결하기 때문"
+        },
+        {
+          "id": "d",
+          "text": "반복 업무가 늘어나기 때문"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 'AI를 잘 쓰는 사람이 못 쓰는 사람을 대체한다'는 구도이므로 AI리터러시 자체가 경쟁력이라고 본다."
+    },
+    {
+      "id": "ai-literacy-185",
+      "type": "ox",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트는 '데이터 엔지니어, 프롬프트 설계, AI 윤리 검토'를 AI 시대에 늘어나거나 새로 생기는 일의 예로 제시한다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 이들을 'AI를 만들고 다루고 감독하는 일'로서 늘어나거나 새로 생기는 일의 예로 명시한다."
+    },
+    {
+      "id": "ai-literacy-186",
+      "type": "short",
+      "unit": "13. AI와 일자리, 사회",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI를 잘 쓰는 사람/집단/국가와 그렇지 못한 쪽의 격차 확대를 가리키는 영어 표현을 쓰시오. (노트 표기 기준)",
+      "answer": [
+        "AI divide",
+        "AI Divide",
+        "에이아이 디바이드"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 디지털 격차를 영어로 'AI divide'라고 병기한다."
+    },
+    {
+      "id": "ai-literacy-187",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "학습 노트에서 'AI를 잘 쓰는 사람의 가장 큰 특징'으로 제시한 것은 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AI를 의심할 줄 안다"
+        },
+        {
+          "id": "b",
+          "text": "AI를 가장 빠르게 도입한다"
+        },
+        {
+          "id": "c",
+          "text": "AI의 답을 그대로 신뢰한다"
+        },
+        {
+          "id": "d",
+          "text": "AI 도구를 가장 많이 보유한다"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 'AI를 잘 쓰는 사람의 가장 큰 특징은 AI를 의심할 줄 안다는 것'이라고 명시한다. 맹신이 아닌 비판적 태도가 핵심이다."
+    },
+    {
+      "id": "ai-literacy-188",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'사실이 아닌 것을 그럴듯하게 지어내는' AI의 한계를 가리키는 용어는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "환각"
+        },
+        {
+          "id": "b",
+          "text": "편향"
+        },
+        {
+          "id": "c",
+          "text": "최신성 한계"
+        },
+        {
+          "id": "d",
+          "text": "맥락 이해 부족"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 환각을 '사실이 아닌 것을 그럴듯하게 지어냄'으로 정의한다."
+    },
+    {
+      "id": "ai-literacy-189",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "'학습 시점 이후의 정보를 모를 수 있다'는 AI의 한계는 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "최신성 한계"
+        },
+        {
+          "id": "b",
+          "text": "추론의 한계"
+        },
+        {
+          "id": "c",
+          "text": "환각"
+        },
+        {
+          "id": "d",
+          "text": "편향"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 최신성 한계를 '학습 시점 이후의 정보를 모를 수 있음'으로 설명한다."
+    },
+    {
+      "id": "ai-literacy-190",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI가 '진짜로 이해하는 것이 아니라 패턴을 흉내 낸다'는 점에서 비롯되는 한계는?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "맥락 이해 부족"
+        },
+        {
+          "id": "b",
+          "text": "최신성 한계"
+        },
+        {
+          "id": "c",
+          "text": "편향"
+        },
+        {
+          "id": "d",
+          "text": "추론의 한계"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 맥락 이해 부족을 '진짜로 이해하는 게 아니라 패턴을 흉내 냄'으로 설명한다."
+    },
+    {
+      "id": "ai-literacy-191",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 AI의 '편향'이 발생하는 원인으로 든 것은 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "학습 데이터의 편견을 반영하기 때문"
+        },
+        {
+          "id": "b",
+          "text": "복잡한 수학을 못 풀기 때문"
+        },
+        {
+          "id": "c",
+          "text": "학습 시점이 오래되었기 때문"
+        },
+        {
+          "id": "d",
+          "text": "출처를 제시하지 못하기 때문"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "노트는 편향을 '학습 데이터의 편견을 반영'하는 것으로 설명한다."
+    },
+    {
+      "id": "ai-literacy-192",
+      "type": "multi",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '14.1 현재 AI의 분명한 한계'에서 직접 제시한 한계를 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "환각"
+        },
+        {
+          "id": "b",
+          "text": "추론의 한계"
+        },
+        {
+          "id": "c",
+          "text": "편향"
+        },
+        {
+          "id": "d",
+          "text": "에너지 소비 한계"
+        },
+        {
+          "id": "e",
+          "text": "맥락 이해 부족"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "explanation": "노트가 든 5가지 한계는 환각, 최신성 한계, 추론의 한계, 맥락 이해 부족, 편향이다. '에너지 소비 한계'는 이 단원에 없다."
+    },
+    {
+      "id": "ai-literacy-193",
+      "type": "ox",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 AI는 복잡한 논리나 수학에서 틀리기 쉽다. (O/X)",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 추론의 한계를 '복잡한 논리/수학에서 틀리기 쉬움'으로 설명하므로 참이다."
+    },
+    {
+      "id": "ai-literacy-194",
+      "type": "ox",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 비판적 활용 체크리스트는 'AI의 답이 빠르게 나왔는지'를 점검 항목으로 포함한다. (O/X)",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "체크리스트 5개 항목은 출처 확인, 사실/추정 구분, 교차 검증, 이해/설명 가능 여부, 윤리/프라이버시이며 답변 속도는 포함되지 않는다."
+    },
+    {
+      "id": "ai-literacy-195",
+      "type": "multi",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '14.2 비판적 활용 체크리스트'에 포함된 질문을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "이 답의 출처는 무엇이며 확인 가능한가?"
+        },
+        {
+          "id": "b",
+          "text": "사실과 추정이 섞여 있지 않은가?"
+        },
+        {
+          "id": "c",
+          "text": "다른 도구나 1차 자료로 교차 검증했는가?"
+        },
+        {
+          "id": "d",
+          "text": "이 AI의 학습 파라미터 수는 몇 개인가?"
+        },
+        {
+          "id": "e",
+          "text": "윤리/프라이버시 문제는 없는가?"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "explanation": "체크리스트는 출처, 사실/추정 구분, 교차 검증, 이해/설명 가능, 윤리/프라이버시 5개 항목이다. 학습 파라미터 수는 체크리스트에 없다."
+    },
+    {
+      "id": "ai-literacy-196",
+      "type": "short",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI가 사실이 아닌 내용을 그럴듯하게 지어내는 현상을 가리키는 두 글자 용어를 쓰시오.",
+      "answer": [
+        "환각",
+        "할루시네이션",
+        "hallucination"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 이 현상을 '환각'으로 정의한다. 흔히 영어로 hallucination(할루시네이션)이라고도 부른다."
+    },
+    {
+      "id": "ai-literacy-197",
+      "type": "cloze",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비판적 활용 체크리스트: 답에 {{1}}과(와) {{2}}이(가) 섞여 있지 않은지 점검해야 한다.",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "사실"
+          ]
+        },
+        {
+          "accept": [
+            "추정",
+            "추측"
+          ]
+        }
+      ],
+      "explanation": "체크리스트 2번 항목은 '사실과 추정이 섞여 있지 않은가?'이다."
+    },
+    {
+      "id": "ai-literacy-198",
+      "type": "cloze",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 한 줄 메시지: \"AI를 {{1}}지도, {{2}}지도 말고, 이해하고 비판적으로 다루는 사람이 되자.\"",
+      "answer": [],
+      "blanks": [
+        {
+          "accept": [
+            "두려워하",
+            "두려워"
+          ]
+        },
+        {
+          "accept": [
+            "맹신하",
+            "맹신"
+          ]
+        }
+      ],
+      "explanation": "노트의 마무리 메시지는 'AI를 두려워하지도, 맹신하지도 말고, 이해하고 비판적으로 다루는 사람이 되자'이다."
+    },
+    {
+      "id": "ai-literacy-199",
+      "type": "match",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "AI의 한계와 그 설명을 알맞게 연결하시오.",
+      "answer": [],
+      "pairs": [
+        {
+          "left": "환각",
+          "right": "사실이 아닌 것을 그럴듯하게 지어냄"
+        },
+        {
+          "left": "최신성 한계",
+          "right": "학습 시점 이후의 정보를 모를 수 있음"
+        },
+        {
+          "left": "추론의 한계",
+          "right": "복잡한 논리/수학에서 틀리기 쉬움"
+        },
+        {
+          "left": "맥락 이해 부족",
+          "right": "진짜로 이해하는 게 아니라 패턴을 흉내 냄"
+        },
+        {
+          "left": "편향",
+          "right": "학습 데이터의 편견을 반영"
+        }
+      ],
+      "explanation": "노트 14.1의 다섯 한계와 각 정의를 그대로 짝지은 것이다."
+    },
+    {
+      "id": "ai-literacy-200",
+      "type": "order",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '14.2 비판적 활용 체크리스트' 항목을 노트에 제시된 순서대로 나열하시오.",
+      "answer": [],
+      "items": [
+        "이 답의 출처는 무엇인가? 확인 가능한가?",
+        "사실과 추정이 섞여 있지 않은가?",
+        "다른 도구나 1차 자료로 교차 검증했는가?",
+        "내가 결과를 이해하고 설명할 수 있는가?",
+        "윤리/프라이버시 문제는 없는가?"
+      ],
+      "explanation": "체크리스트는 노트에서 출처 확인 → 사실/추정 구분 → 교차 검증 → 이해/설명 → 윤리/프라이버시 순서로 제시된다."
+    },
+    {
+      "id": "ai-literacy-201",
+      "type": "single",
+      "unit": "14. 한계와 비판적 활용",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "비판적 활용 체크리스트에서 '다른 도구나 1차 자료로' 수행하라고 권하는 활동은 무엇인가?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "교차 검증"
+        },
+        {
+          "id": "b",
+          "text": "출처 삭제"
+        },
+        {
+          "id": "c",
+          "text": "재학습"
+        },
+        {
+          "id": "d",
+          "text": "프롬프트 압축"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "explanation": "체크리스트 3번은 '다른 도구나 1차 자료로 교차 검증했는가?'이다."
+    },
+    {
+      "id": "ai-literacy-202",
+      "type": "single",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '멀티모달과 에이전트의 보편화' 전망에서 설명하는 AI의 특징으로 가장 적절한 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "텍스트만 정교하게 처리하는 단일 모달 AI가 주류가 된다"
+        },
+        {
+          "id": "b",
+          "text": "보고 듣고 행동하며 스스로 작업을 수행하는 AI가 일상화된다"
+        },
+        {
+          "id": "c",
+          "text": "사람이 모든 단계를 직접 지시해야만 작동하는 AI가 늘어난다"
+        },
+        {
+          "id": "d",
+          "text": "이미지 생성만 전문으로 하는 AI가 다른 기능을 대체한다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 '멀티모달과 에이전트의 보편화'를 텍스트를 넘어 보고 듣고 행동하는 AI, 스스로 작업을 수행하는 AI가 일상화될 전망이라고 설명한다."
+    },
+    {
+      "id": "ai-literacy-203",
+      "type": "single",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 '개인화와 온디바이스 AI'에서 강조한 방향으로 옳은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "오직 대형 클라우드 서버에서만 작동하는 거대 모델 확산"
+        },
+        {
+          "id": "b",
+          "text": "내 기기 안에서 작동하는 더 작고 안전한 모델 확산"
+        },
+        {
+          "id": "c",
+          "text": "모든 데이터를 외부로 전송해야 하는 모델의 확산"
+        },
+        {
+          "id": "d",
+          "text": "개인화를 포기하고 동일한 응답을 주는 모델 확산"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 '개인화와 온디바이스 AI'를 내 기기 안에서 작동하는 더 작고 안전한 모델의 확산으로 설명한다."
+    },
+    {
+      "id": "ai-literacy-204",
+      "type": "single",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '규범과 신뢰의 시대' 전망이 의미하는 바로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "성능 경쟁만이 유일하게 중요한 가치가 된다"
+        },
+        {
+          "id": "b",
+          "text": "안전성, 투명성, 규제 정비가 성능 경쟁만큼 중요해진다"
+        },
+        {
+          "id": "c",
+          "text": "규제가 사라지고 자유로운 개발만 남는다"
+        },
+        {
+          "id": "d",
+          "text": "신뢰보다 속도가 우선시되는 시대가 된다"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "explanation": "노트는 '규범과 신뢰의 시대'에서 성능 경쟁만큼 안전성/투명성/규제 정비가 중요해진다고 본다."
+    },
+    {
+      "id": "ai-literacy-205",
+      "type": "single",
+      "unit": "15. 미래 전망",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 미래에도 인간의 핵심 가치로 남는다고 본 '사람의 역할'에 해당하지 않는 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "질문 설계"
+        },
+        {
+          "id": "b",
+          "text": "판단과 책임"
+        },
+        {
+          "id": "c",
+          "text": "창의적 종합"
+        },
+        {
+          "id": "d",
+          "text": "방대한 데이터의 단순 암기와 빠른 연산"
+        }
+      ],
+      "answer": [
+        "d"
+      ],
+      "explanation": "노트는 AI가 못 하는 질문 설계, 판단, 책임, 창의적 종합이 인간의 핵심 가치로 남는다고 했다. 데이터의 단순 암기와 빠른 연산은 오히려 AI가 잘하는 영역이다."
+    },
+    {
+      "id": "ai-literacy-206",
+      "type": "multi",
+      "unit": "15. 미래 전망",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 '사람의 역할 변화'에서 AI가 못 하기에 인간의 핵심 가치로 남는다고 제시한 것을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "질문 설계"
+        },
+        {
+          "id": "b",
+          "text": "판단"
+        },
+        {
+          "id": "c",
+          "text": "책임"
+        },
+        {
+          "id": "d",
+          "text": "창의적 종합"
+        },
+        {
+          "id": "e",
+          "text": "대규모 행렬 연산의 고속 처리"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "노트는 질문 설계, 판단, 책임, 창의적 종합 네 가지를 인간의 핵심 가치로 들었다. 대규모 연산은 AI가 잘하는 영역이라 해당하지 않는다."
+    },
+    {
+      "id": "ai-literacy-207",
+      "type": "multi",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '15. 미래 전망'에서 직접 제시한 미래 전망 항목을 모두 고르시오.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "멀티모달과 에이전트의 보편화"
+        },
+        {
+          "id": "b",
+          "text": "개인화와 온디바이스 AI"
+        },
+        {
+          "id": "c",
+          "text": "규범과 신뢰의 시대"
+        },
+        {
+          "id": "d",
+          "text": "사람의 역할 변화"
+        },
+        {
+          "id": "e",
+          "text": "양자컴퓨터로 인한 암호 체계 붕괴"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "노트의 미래 전망은 멀티모달과 에이전트의 보편화, 개인화와 온디바이스 AI, 규범과 신뢰의 시대, 사람의 역할 변화 네 가지다. 양자컴퓨터 관련 내용은 이 단원에 없다."
+    },
+    {
+      "id": "ai-literacy-208",
+      "type": "ox",
+      "unit": "15. 미래 전망",
+      "difficulty": "하",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에 따르면 온디바이스 AI는 내 기기 안에서 작동하는 더 작고 안전한 모델의 방향이다.",
+      "choices": [],
+      "answer": [
+        "O"
+      ],
+      "explanation": "노트는 '개인화와 온디바이스 AI'를 내 기기 안에서 작동하는 더 작고 안전한 모델의 확산으로 설명한다."
+    },
+    {
+      "id": "ai-literacy-209",
+      "type": "ox",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트는 미래에 성능 경쟁이 유일하게 중요해지고 안전성과 규제는 덜 중요해진다고 전망한다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 '규범과 신뢰의 시대'에서 성능 경쟁만큼 안전성/투명성/규제 정비가 중요해진다고 했으므로 안전성과 규제가 덜 중요해진다는 서술은 틀리다."
+    },
+    {
+      "id": "ai-literacy-210",
+      "type": "ox",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트는 미래에 AI가 인간의 책임과 판단까지 완전히 대체할 것이라고 전망한다.",
+      "choices": [],
+      "answer": [
+        "X"
+      ],
+      "explanation": "노트는 판단, 책임 등은 AI가 못 하기에 인간의 핵심 가치로 남는다고 했으므로 AI가 완전히 대체한다는 서술은 틀리다."
+    },
+    {
+      "id": "ai-literacy-211",
+      "type": "short",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 텍스트를 넘어 보고 듣고 행동하며 다양한 형태의 데이터를 다루는 AI를 가리키는 용어는? (한 단어)",
+      "answer": [
+        "멀티모달",
+        "멀티모달 AI",
+        "multimodal",
+        "multimodal AI"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트의 '멀티모달과 에이전트의 보편화'에서 멀티모달은 텍스트를 넘어 보고 듣고 행동하는, 즉 여러 형태의 데이터를 다루는 AI를 가리킨다."
+    },
+    {
+      "id": "ai-literacy-212",
+      "type": "short",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트에서 스스로 작업을 수행하는 AI를 가리키는 용어로, '__의 보편화'라는 전망으로 제시된 단어는? (한 단어)",
+      "answer": [
+        "에이전트",
+        "AI 에이전트",
+        "agent",
+        "AI agent"
+      ],
+      "acceptCaseInsensitive": true,
+      "explanation": "노트는 스스로 작업을 수행하는 AI를 에이전트로 표현하며 '멀티모달과 에이전트의 보편화'를 미래 전망으로 든다."
+    },
+    {
+      "id": "ai-literacy-213",
+      "type": "cloze",
+      "unit": "15. 미래 전망",
+      "difficulty": "상",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 '규범과 신뢰의 시대'에 따르면, 성능 경쟁만큼 {{1}}, 투명성, {{2}} 정비가 중요해진다.",
+      "blanks": [
+        {
+          "accept": [
+            "안전성"
+          ]
+        },
+        {
+          "accept": [
+            "규제"
+          ]
+        }
+      ],
+      "answer": [
+        "안전성",
+        "규제"
+      ],
+      "explanation": "노트는 성능 경쟁만큼 안전성/투명성/규제 정비가 중요해진다고 했다."
+    },
+    {
+      "id": "ai-literacy-214",
+      "type": "cloze",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 2,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트가 한 줄로 정리한 과목의 메시지: \"AI를 {{1}}도, 맹신하지도 말고, 이해하고 {{2}}으로 다루는 사람이 되자.\"",
+      "blanks": [
+        {
+          "accept": [
+            "두려워하지",
+            "두려워하지말지",
+            "두려워하지말고도",
+            "두려워하지도"
+          ]
+        },
+        {
+          "accept": [
+            "비판적",
+            "비판적으로"
+          ]
+        }
+      ],
+      "answer": [
+        "두려워하지",
+        "비판적"
+      ],
+      "explanation": "노트의 마지막 메시지는 'AI를 두려워하지도, 맹신하지도 말고, 이해하고 비판적으로 다루는 사람이 되자.'이다."
+    },
+    {
+      "id": "ai-literacy-215",
+      "type": "match",
+      "unit": "15. 미래 전망",
+      "difficulty": "중",
+      "points": 3,
+      "source": "AI리터러시 · 오리지널",
+      "stem": "노트의 미래 전망 항목(왼쪽)과 그 핵심 설명(오른쪽)을 알맞게 연결하시오.",
+      "pairs": [
+        {
+          "left": "멀티모달과 에이전트의 보편화",
+          "right": "보고 듣고 행동하며 스스로 작업을 수행하는 AI의 일상화"
+        },
+        {
+          "left": "개인화와 온디바이스 AI",
+          "right": "내 기기 안에서 작동하는 더 작고 안전한 모델의 확산"
+        },
+        {
+          "left": "규범과 신뢰의 시대",
+          "right": "성능 경쟁만큼 안전성/투명성/규제 정비가 중요해짐"
+        },
+        {
+          "left": "사람의 역할 변화",
+          "right": "질문 설계, 판단, 책임, 창의적 종합이 인간의 핵심 가치로 남음"
+        }
+      ],
+      "answer": [
+        "멀티모달과 에이전트의 보편화-보고 듣고 행동하며 스스로 작업을 수행하는 AI의 일상화",
+        "개인화와 온디바이스 AI-내 기기 안에서 작동하는 더 작고 안전한 모델의 확산",
+        "규범과 신뢰의 시대-성능 경쟁만큼 안전성/투명성/규제 정비가 중요해짐",
+        "사람의 역할 변화-질문 설계, 판단, 책임, 창의적 종합이 인간의 핵심 가치로 남음"
+      ],
+      "explanation": "노트의 네 가지 미래 전망 항목과 각 설명을 그대로 연결한 것이다."
+    }
+  ]
+}
