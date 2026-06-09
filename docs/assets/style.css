@@ -1,0 +1,1158 @@
+/* ==========================================================================
+   KNOU 학습 노트 공용 디자인 시스템
+   모바일 우선 - 휴대폰에서 빠르게 훑어보고 필요할 때 펼쳐 깊게 읽는 양식
+   라이트/다크 테마(prefers-color-scheme + 수동 토글), 의존성 없음
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS 변수 - 디자인 토큰 (라이트 테마 기본값)
+   대비는 WCAG AA(본문 4.5:1, 큰 글자/UI 3:1)를 만족하도록 잡았다.
+   -------------------------------------------------------------------------- */
+:root {
+    /* 색상 - 표면 */
+    --bg: #ffffff;
+    --bg-soft: #f5f6f8;
+    --bg-sunken: #eceef1;
+    --surface: #ffffff;
+    --border: #d8dce1;
+    --border-soft: #e7eaee;
+
+    /* 색상 - 텍스트 */
+    --text: #1c1f24;
+    --text-soft: #4a525c;
+    --text-muted: #6b7480;
+
+    /* 색상 - 강조 */
+    --accent: #2563c4;
+    --accent-soft: #e7f0fc;
+    --accent-text: #1a4ea0;
+
+    /* 색상 - 콜아웃(의미별) */
+    --tip: #1f8a54;
+    --tip-bg: #e6f5ed;
+    --warn: #b5751a;
+    --warn-bg: #fbf1df;
+    --info: #2563c4;
+    --info-bg: #e7f0fc;
+
+    /* 색상 - 코드 */
+    --code-bg: #f5f6f8;
+    --code-text: #b03a5b;
+    --codeblock-bg: #1e2530;
+    --codeblock-text: #e6e9ee;
+
+    /* 타이포 */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+    --font-mono: "SFMono-Regular", "JetBrains Mono", "D2Coding", Consolas,
+        "Courier New", monospace;
+    --fs-body: 17px;          /* 모바일 본문 16-18px 권장의 중앙값 */
+    --lh-body: 1.65;          /* 한글 본문 가독 라인 높이 */
+
+    /* 레이아웃 */
+    --reading-width: 720px;   /* 읽기 폭 제한(가운데 정렬) */
+    --topbar-h: 56px;         /* 상단바 높이(탭 타깃 확보) */
+    --tap: 44px;              /* 최소 탭 타깃 크기 */
+    --radius: 12px;
+    --radius-sm: 8px;
+    --gap: 16px;
+
+    /* 그림자 */
+    --shadow-1: 0 1px 3px rgba(20, 25, 35, 0.08), 0 1px 2px rgba(20, 25, 35, 0.06);
+    --shadow-2: 0 6px 24px rgba(20, 25, 35, 0.14);
+
+    color-scheme: light;
+}
+
+/* 다크 테마 - 수동 토글(data-theme) 우선 */
+:root[data-theme="dark"] {
+    --bg: #14171c;
+    --bg-soft: #1b1f26;
+    --bg-sunken: #0f1216;
+    --surface: #1b1f26;
+    --border: #333a44;
+    --border-soft: #262c34;
+
+    --text: #e8ebef;
+    --text-soft: #b6bdc7;
+    --text-muted: #8b94a0;
+
+    --accent: #6ba6ff;
+    --accent-soft: #1c2a40;
+    --accent-text: #9cc2ff;
+
+    --tip: #56c98a;
+    --tip-bg: #16291f;
+    --warn: #e0a94a;
+    --warn-bg: #2c2415;
+    --info: #6ba6ff;
+    --info-bg: #1c2a40;
+
+    --code-bg: #232a33;
+    --code-text: #ff8fab;
+    --codeblock-bg: #0f1419;
+    --codeblock-text: #e6e9ee;
+
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-2: 0 6px 24px rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+}
+
+/* OS 설정이 다크이고 사용자가 수동 토글을 안 했을 때(data-theme 미지정) */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #14171c;
+        --bg-soft: #1b1f26;
+        --bg-sunken: #0f1216;
+        --surface: #1b1f26;
+        --border: #333a44;
+        --border-soft: #262c34;
+
+        --text: #e8ebef;
+        --text-soft: #b6bdc7;
+        --text-muted: #8b94a0;
+
+        --accent: #6ba6ff;
+        --accent-soft: #1c2a40;
+        --accent-text: #9cc2ff;
+
+        --tip: #56c98a;
+        --tip-bg: #16291f;
+        --warn: #e0a94a;
+        --warn-bg: #2c2415;
+        --info: #6ba6ff;
+        --info-bg: #1c2a40;
+
+        --code-bg: #232a33;
+        --code-text: #ff8fab;
+        --codeblock-bg: #0f1419;
+        --codeblock-text: #e6e9ee;
+
+        --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+        --shadow-2: 0 6px 24px rgba(0, 0, 0, 0.5);
+
+        color-scheme: dark;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. 리셋 / 기본 골격
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* 스티키 상단바에 가려지지 않도록 앵커 점프 보정 */
+    scroll-padding-top: calc(var(--topbar-h) + 12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    word-break: keep-all;        /* 한글 단어 단위 줄바꿈 */
+    overflow-wrap: anywhere;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent-text);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   3. 읽기 진행바 (.progress)
+   -------------------------------------------------------------------------- */
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 60;
+    transition: width 0.08s linear;
+    will-change: width;
+}
+
+/* --------------------------------------------------------------------------
+   4. 스티키 상단바 (.topbar)
+   -------------------------------------------------------------------------- */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--topbar-h);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.topbar__title {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 제목을 누르면 메인(index.html)으로 이동. 제목처럼 보이도록 색/밑줄 상속 */
+.topbar__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar__title a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+/* 상단바 아이콘 버튼 - 큰 탭 타깃 */
+.iconbtn {
+    flex: 0 0 auto;
+    width: var(--tap);
+    height: var(--tap);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.iconbtn:hover {
+    background: var(--bg-soft);
+}
+
+.iconbtn:active {
+    transform: scale(0.94);
+}
+
+/* --------------------------------------------------------------------------
+   5. 목차 드로어 (.toc) + 오버레이
+   모바일: 좌측에서 슬라이드인. 데스크톱: 본문 옆 고정 사이드바.
+   -------------------------------------------------------------------------- */
+.toc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 12, 16, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 70;
+}
+
+.toc-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(82vw, 320px);
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    box-shadow: var(--shadow-2);
+    transform: translateX(-102%);
+    transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.toc.open {
+    transform: translateX(0);
+}
+
+.toc__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 12px 16px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.toc__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-soft);
+    letter-spacing: 0.02em;
+}
+
+.toc__nav {
+    overflow-y: auto;
+    padding: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.toc__nav a {
+    display: block;
+    padding: 10px 12px;
+    min-height: var(--tap);
+    line-height: 1.4;
+    border-radius: var(--radius-sm);
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+}
+
+/* 들여쓰기: h3 항목 */
+.toc__nav a.lvl-3 {
+    padding-left: 28px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.toc__nav a:hover {
+    background: var(--bg-soft);
+    text-decoration: none;
+}
+
+/* scrollspy 현재 위치 하이라이트 */
+.toc__nav a.active {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    border-left-color: var(--accent);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   6. 본문 (.content)
+   -------------------------------------------------------------------------- */
+.content {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+    padding: 24px 18px 96px;
+}
+
+/* 타이포 위계 */
+.content h1 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+    font-weight: 800;
+    margin: 0.2em 0 0.6em;
+    letter-spacing: -0.01em;
+}
+
+.content h2 {
+    font-size: 1.35rem;
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 2em 0 0.6em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border-soft);
+}
+
+.content h3 {
+    font-size: 1.12rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: 1.6em 0 0.5em;
+    color: var(--text);
+}
+
+.content p {
+    margin: 0 0 1em;
+    color: var(--text);
+}
+
+.content ul,
+.content ol {
+    margin: 0 0 1em;
+    padding-left: 1.4em;
+}
+
+.content li {
+    margin: 0.35em 0;
+}
+
+.content li::marker {
+    color: var(--text-muted);
+}
+
+.content blockquote {
+    margin: 1em 0;
+    padding: 0.6em 1em;
+    border-left: 4px solid var(--accent);
+    background: var(--bg-soft);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-soft);
+}
+
+.content hr {
+    border: 0;
+    border-top: 1px solid var(--border-soft);
+    margin: 2em 0;
+}
+
+.content :where(strong, b) {
+    font-weight: 700;
+}
+
+mark {
+    background: var(--warn-bg);
+    color: var(--text);
+    padding: 0 0.15em;
+    border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   7. 섹션 아코디언 (.section / details / summary)
+   훑어보기: 요약(summary) 먼저, 펼치면 본문.
+   -------------------------------------------------------------------------- */
+.section {
+    margin: 0.8em 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+}
+
+.section > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: var(--tap);
+    padding: 12px 16px;
+    font-weight: 700;
+    color: var(--text);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.section > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 펼침 화살표(+/- 대신 회전 캐럿) */
+.section > summary::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--text-muted);
+    border-bottom: 2px solid var(--text-muted);
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+}
+
+.section[open] > summary::before {
+    transform: rotate(45deg);
+}
+
+.section > summary:hover {
+    background: var(--bg-soft);
+}
+
+.section__body {
+    padding: 4px 16px 16px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.section__body > :first-child {
+    margin-top: 0.6em;
+}
+
+.section__body > :last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. 콜아웃 (.callout / .tip / .warn / .info)
+   -------------------------------------------------------------------------- */
+.callout {
+    margin: 1.2em 0;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--text-muted);
+    border-radius: var(--radius-sm);
+    background: var(--bg-soft);
+}
+
+.callout > :first-child {
+    margin-top: 0;
+}
+
+.callout > :last-child {
+    margin-bottom: 0;
+}
+
+.callout__title {
+    font-weight: 700;
+    margin: 0 0 0.4em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.callout.tip {
+    border-left-color: var(--tip);
+    background: var(--tip-bg);
+}
+
+.callout.tip .callout__title {
+    color: var(--tip);
+}
+
+.callout.warn {
+    border-left-color: var(--warn);
+    background: var(--warn-bg);
+}
+
+.callout.warn .callout__title {
+    color: var(--warn);
+}
+
+.callout.info {
+    border-left-color: var(--info);
+    background: var(--info-bg);
+}
+
+.callout.info .callout__title {
+    color: var(--info);
+}
+
+/* --------------------------------------------------------------------------
+   9. 코드 블록 (.code) + 복사 버튼 (.copy)
+   -------------------------------------------------------------------------- */
+.code {
+    position: relative;
+    margin: 1.2em 0;
+    border-radius: var(--radius);
+    background: var(--codeblock-bg);
+    overflow: hidden;
+}
+
+.code__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.code__lang {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #9aa4b2;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+}
+
+.code pre {
+    margin: 0;
+    padding: 14px 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.code pre code,
+.code code {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--codeblock-text);
+    background: transparent;
+    white-space: pre;
+    tab-size: 4;
+}
+
+/* 인라인 코드 */
+:not(pre) > code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 0.12em 0.4em;
+    border-radius: 5px;
+}
+
+/* 복사 버튼 */
+.copy {
+    flex: 0 0 auto;
+    min-height: 32px;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.06);
+    color: #d6dbe2;
+    font-size: 0.78rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease;
+}
+
+.copy:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.copy.copied {
+    background: var(--tip);
+    border-color: var(--tip);
+    color: #fff;
+}
+
+/* head 없이 코드만 쓸 때를 위한 떠있는 복사 버튼 */
+.code > .copy:only-child,
+.code > pre + .copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   10. 예상 출력 토글 (.output / details)
+   -------------------------------------------------------------------------- */
+.output {
+    margin: -0.6em 0 1.2em;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-soft);
+}
+
+.output > summary {
+    list-style: none;
+    cursor: pointer;
+    min-height: var(--tap);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.output > summary::-webkit-details-marker {
+    display: none;
+}
+
+.output > summary::before {
+    content: "\25B6";   /* ▶ */
+    font-size: 0.7em;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+}
+
+.output[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.output pre {
+    margin: 0;
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-soft);
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--text);
+    white-space: pre;
+}
+
+/* --------------------------------------------------------------------------
+   11. 플래시카드 (.flashcard / .front / .back / .flipped)
+   탭하면 뒤집힌다. 활성 회상(active recall) 학습용.
+   -------------------------------------------------------------------------- */
+.flashcard {
+    perspective: 1200px;
+    margin: 1em 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 앞/뒤를 grid로 같은 칸에 겹쳐 쌓아, 카드 높이가 더 긴 면에 맞춰 자동으로
+   늘어난다. (이전의 고정 140px 절대배치는 내용이 길면 카드 밖으로 넘쳤음) */
+.flashcard__inner {
+    position: relative;
+    display: grid;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.flashcard.flipped .flashcard__inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard .front,
+.flashcard .back {
+    grid-area: 1 / 1;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 120px;
+    padding: 22px 20px 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.flashcard .front {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.flashcard .back {
+    transform: rotateY(180deg);
+    background: var(--accent-soft);
+    color: var(--accent-text);
+}
+
+/* 앞면 하단 안내 라벨 */
+.flashcard .front::after {
+    content: "탭하면 답 보기";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   12. 자가점검 (.quiz / details) - 접어서 정답 보기
+   -------------------------------------------------------------------------- */
+.quiz {
+    margin: 1.2em 0;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+}
+
+.quiz__q {
+    padding: 14px 16px;
+    font-weight: 600;
+}
+
+.quiz__a {
+    border-top: 1px solid var(--border-soft);
+}
+
+.quiz__a > summary {
+    list-style: none;
+    cursor: pointer;
+    min-height: var(--tap);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-text);
+    background: var(--accent-soft);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.quiz__a > summary::-webkit-details-marker {
+    display: none;
+}
+
+.quiz__a > summary::before {
+    content: "\1F4A1";   /* 전구 */
+    font-size: 0.95em;
+}
+
+.quiz__a[open] > summary {
+    background: transparent;
+    color: var(--text-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.quiz__a-body {
+    padding: 12px 16px;
+}
+
+.quiz__a-body > :first-child {
+    margin-top: 0;
+}
+
+.quiz__a-body > :last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   13. 어휘카드 그리드 (.vocab)
+   -------------------------------------------------------------------------- */
+.vocab {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 1.2em 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 520px) {
+    .vocab {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.vocab > li,
+.vocab__item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    padding: 12px 14px;
+}
+
+.vocab__term {
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin: 0 0 4px;
+}
+
+.vocab__read {
+    font-size: 0.82rem;
+    color: var(--accent-text);
+    margin: 0 0 6px;
+}
+
+.vocab__def {
+    font-size: 0.92rem;
+    color: var(--text-soft);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   14. 반응형 표 (.table-wrap)
+   -------------------------------------------------------------------------- */
+.table-wrap {
+    margin: 1.2em 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.table-wrap th,
+.table-wrap td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+    white-space: nowrap;
+}
+
+.table-wrap thead th {
+    background: var(--bg-soft);
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+}
+
+.table-wrap tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table-wrap tbody tr:nth-child(even) {
+    background: var(--bg-soft);
+}
+
+/* --------------------------------------------------------------------------
+   15. 배지 / 칩 (.chip)
+   -------------------------------------------------------------------------- */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--bg-sunken);
+    color: var(--text-soft);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.6;
+    border: 1px solid var(--border-soft);
+}
+
+.chip.accent {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    border-color: transparent;
+}
+
+.chip.tip {
+    background: var(--tip-bg);
+    color: var(--tip);
+    border-color: transparent;
+}
+
+.chip.warn {
+    background: var(--warn-bg);
+    color: var(--warn);
+    border-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   16. 맨위로 버튼 (.to-top)
+   -------------------------------------------------------------------------- */
+.to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow-2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.to-top:active {
+    transform: scale(0.92);
+}
+
+/* --------------------------------------------------------------------------
+   17. 데스크톱 향상 - 넓은 화면에서 목차를 고정 사이드바로
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+    :root {
+        --fs-body: 18px;
+    }
+
+    /* 본문을 사이드바 폭만큼 밀어 가운데 정렬 유지 */
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 32px;
+    }
+
+    /* 목차를 항상 보이는 고정 패널로 */
+    .toc {
+        transform: none;
+        top: var(--topbar-h);
+        box-shadow: none;
+        width: 280px;
+        background: transparent;
+        border-right: 1px solid var(--border-soft);
+    }
+
+    .toc__head {
+        display: none;   /* 데스크톱에선 닫기 버튼 불필요 */
+    }
+
+    .toc-overlay {
+        display: none;
+    }
+
+    /* 본문 영역을 사이드바 옆으로 */
+    body.has-fixed-toc .content {
+        margin-left: max(calc(50% - var(--reading-width) / 2), 300px);
+    }
+
+    /* 데스크톱에선 목차 토글 버튼 숨김 */
+    .iconbtn--toc {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   18. 오버플로우 안전망 - 레이아웃을 벗어나는 항목 방지
+   -------------------------------------------------------------------------- */
+/* .code/.output 밖의 단독 pre 도 가로 스크롤되게(긴 코드/예문 줄) */
+.content pre {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* .table-wrap로 감싸지 않은 표도 넘치지 않도록 가로 스크롤 폴백 */
+.content > table,
+.section__body > table,
+.callout > table,
+.quiz__a-body > table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 플렉스 자식이 줄지 못해 넘치는 것 방지(섹션 요약 등) */
+.section > summary,
+.section > summary > *,
+.callout__title {
+    min-width: 0;
+}
+
+/* 긴 제목/링크/인라인 코드/단어가 컨테이너를 벗어나지 않게 */
+.content :where(a, code, summary, h1, h2, h3) {
+    overflow-wrap: anywhere;
+}
+
+/* 가로 넘침만 잘라낸다.
+   overflow-x: hidden은 스크롤 컨테이너를 만들어 position:sticky 상단바를 깨뜨린다
+   (스크롤하면 상단바가 따라오지 않고 사라짐). clip은 컨테이너를 만들지 않아 sticky가 유지된다. */
+body {
+    overflow-x: clip;
+}
+
+/* ==========================================================================
+   19. 발음 듣기 버튼 (.speak-btn) - Web Speech API TTS (어학 과목)
+   ========================================================================== */
+.speak-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.25em;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font-size: 0.82em;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease, border-color 0.15s ease,
+        transform 0.08s ease;
+}
+
+/* 아이콘(span)은 클릭 타깃에서 제외해 항상 버튼이 잡히도록 */
+.speak-btn > span {
+    pointer-events: none;
+}
+
+.speak-btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+.speak-btn:active {
+    transform: scale(0.9);
+}
+
+.speak-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* 재생 중 상태: 색 변화(기본) + 펄스(모션 허용 시) */
+.speak-btn.speaking {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .speak-btn.speaking {
+        animation: speak-pulse 1s ease-in-out infinite;
+    }
+}
+
+@keyframes speak-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+    }
+    50% {
+        box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 0%, transparent);
+    }
+}
+
+/* pre(예문) 안의 버튼은 살짝 작게, 기준선에 맞춰 */
+pre .speak-btn {
+    font-size: 0.78em;
+    vertical-align: baseline;
+}
