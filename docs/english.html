@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>대학영어 - 문법과 어휘 핵심 정리</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
 </head>
 <body data-tts="en">
     <div class="progress" aria-hidden="true"></div>
@@ -41,6 +42,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./english-exam.html">대학영어 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>필수 문법 단원 곳곳에 직접 만져 보는 위젯 8개가 들어 있다. <strong>직접 해보기</strong> 카드에서 5형식 분해, 12시제 타임라인, 능동-수동 변환, 동명사/to부정사·관계사·수일치 퀴즈, 가정법, 어순 조립을 발음 듣기와 함께 연습해 보자.</p>
         </div>
 
         <h2 id="overview">0. 한눈에 보기</h2>
@@ -217,6 +222,7 @@
                     <p class="callout__title">4형식 -&gt; 3형식 전환</p>
                     <p><span class="en">He gave me a book.</span> = <span class="en">He gave a book to me.</span> 수여동사에 따라 전치사 to / for / of 를 쓴다.</p>
                 </div>
+                <div data-sim="en-pattern-lab"></div>
             </div>
         </details>
         <details class="section">
@@ -256,6 +262,7 @@
                         </tbody>
                     </table>
                 </div>
+                <div data-sim="en-tense-matrix"></div>
             </div>
         </details>
         <details class="section">
@@ -312,6 +319,7 @@
                     <p class="callout__title">by 이외의 전치사</p>
                     <p>be interested in (~에 관심 있다), be surprised at (~에 놀라다), be made of/from (~로 만들어지다), be covered with (~로 덮이다).</p>
                 </div>
+                <div data-sim="en-passive-machine"></div>
             </div>
         </details>
         <details class="section">
@@ -349,6 +357,7 @@
                     </table>
                 </div>
                 <blockquote>분사구문: 부사절을 분사로 줄인 형태.<br><span class="en">When she saw me, she smiled.</span> -&gt; <span class="en">Seeing me, she smiled.</span> 나를 보자 그녀는 미소 지었다.</blockquote>
+                <div data-sim="en-verbal-quiz"></div>
             </div>
         </details>
         <details class="section">
@@ -393,6 +402,7 @@
                     <p>방법의 선행사 the way와 관계부사 how는 함께 쓰지 않는다. the way he speaks, the way that he speaks, the way in which he speaks, 또는 how he speaks 중 하나만 쓴다(the way how ~ 는 비표준).<br>
                     계속적 용법: 콤마(,)가 있으면 선행사에 보충 설명을 더한다. <span class="en">He has two sons, who are doctors.</span> 그에게는 아들이 둘 있는데 의사다(아들이 둘뿐임).</p>
                 </div>
+                <div data-sim="en-relative-picker"></div>
             </div>
         </details>
         <details class="section">
@@ -419,6 +429,7 @@
                     I wish: <span class="en">I wish I knew her name.</span> 그녀의 이름을 안다면 좋을 텐데.<br>
                     as if: <span class="en">He talks as if he were an expert.</span> 그는 마치 전문가인 것처럼 말한다.</p>
                 </div>
+                <div data-sim="en-conditional-lab"></div>
             </div>
         </details>
         <details class="section">
@@ -518,6 +529,7 @@
                     <p class="callout__title">주의</p>
                     <p>주어와 동사 사이에 수식어구가 끼어들어도 동사는 진짜 주어에 일치시킨다. <span class="en">The box of apples is heavy.</span> 사과 한 상자는 무겁다. (주어 = box, 단수)</p>
                 </div>
+                <div data-sim="en-agreement-quiz"></div>
             </div>
         </details>
         <details class="section">
@@ -572,6 +584,7 @@
                         <div class="quiz__a-body">is. The number of ~ 는 단수 취급한다. 반대로 A number of ~(많은 ~)는 복수 취급한다.</div>
                     </details>
                 </details>
+                <div data-sim="en-order-builder"></div>
             </div>
         </details>
 
@@ -1192,5 +1205,6 @@
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
 </body>
 </html>
