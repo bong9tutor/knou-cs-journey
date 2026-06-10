@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>파이썬프로그래밍기초 - 1학년 1학기 학습 노트</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
     <style>
         /* 페이지 전용 보강: Prism 토큰 색(공용 코드블록 변수에 맞춤) + 실행 플레이그라운드.
            공용 컴포넌트 클래스(.code/.section/.callout 등)는 재정의하지 않는다. */
@@ -190,6 +191,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./python-exam.html">파이썬프로그래밍기초 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 코드출력 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 형변환, 슬라이싱, 리스트 별칭, 자료구조 고르기, 조건문 흐름, 반복문 추적, 함수 스코프를 단계별로 실험해 보자.</p>
         </div>
 
         <div class="callout info">
@@ -453,6 +458,7 @@ print(score)  # 26</code></pre>
                         </div>
                     </details>
                 </details>
+                <div data-sim="py-type-casting"></div>
             </div>
         </details>
 
@@ -534,6 +540,7 @@ print(f"{1234567:,}")
 </textarea>
                     <pre class="play__out" aria-live="polite"></pre>
                 </div>
+                <div data-sim="py-slice-lab"></div>
             </div>
         </details>
 
@@ -577,6 +584,7 @@ c = a[:]         # 얕은 복사
 c.append(5)
 print(a)         # [1, 2, 3, 4]  a는 그대로</code></pre>
                 </div>
+                <div data-sim="py-alias-lab"></div>
 
                 <h3>튜플(tuple)</h3>
                 <p>순서가 있지만 <strong>변경 불가(immutable)</strong>한 모음. 변하면 안 되는 좌표/설정값에 씁니다. 함수가 여러 값을 반환할 때 내부적으로 튜플을 씁니다.</p>
@@ -656,6 +664,7 @@ print(list(set(nums)))  # [1, 2, 3]  리스트 중복 제거</code></pre>
                         </tbody>
                     </table>
                 </div>
+                <div data-sim="py-collection-chooser"></div>
             </div>
         </details>
 
@@ -693,6 +702,7 @@ else:
     grade = "F"
 print(grade)   # B</code></pre>
                 </div>
+                <div data-sim="py-grade-flow"></div>
 
                 <h3>중첩 조건과 논리 결합</h3>
                 <div class="code">
@@ -854,6 +864,7 @@ print()
 </textarea>
                     <pre class="play__out" aria-live="polite"></pre>
                 </div>
+                <div data-sim="py-loop-tracer"></div>
             </div>
         </details>
 
@@ -976,6 +987,7 @@ people = [("홍길동", 23), ("김철수", 19), ("이영희", 31)]
 people.sort(key=lambda p: p[1])   # 나이 기준 정렬
 print(people)   # [('김철수', 19), ('홍길동', 23), ('이영희', 31)]</code></pre>
                 </div>
+                <div data-sim="py-scope-vis"></div>
             </div>
         </details>
 
@@ -1604,6 +1616,7 @@ print(f"전적: {game.user_win}승 {game.comp_win}패")</code></pre>
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
 
     <!-- 페이지 전용: Prism 구문 강조(지연 로드) + Pyodide 실행 플레이그라운드 -->
     <script>
