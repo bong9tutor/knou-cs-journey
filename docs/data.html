@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>데이터정보처리입문 - KOSIS 실데이터로 익히는 엑셀/R/Python</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
     <style>
         /* 페이지 전용 보강: Prism 토큰 색(공용 변수 기반) + Pyodide 플레이그라운드.
            공용 컴포넌트 클래스(.code/.section/.callout 등)는 재정의하지 않는다. */
@@ -144,6 +145,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./data-exam.html">데이터정보처리입문 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 코드출력 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 IQR 이상치 판별, 기술통계(평균 vs 중앙값), 셀 참조 F4 순환, 조건 집계 함수, 차트 고르기, 단순선형회귀, 적금 FV 계산까지 손으로 실험해 보자.</p>
         </div>
 
         <h2 id="intro">0. 학습 방향과 우선순위</h2>
@@ -310,6 +315,7 @@ long <- pivot_longer(df, cols = starts_with("y20"),
                     <p class="callout__title">엑셀 점검 팁</p>
                     <p>빈 칸 개수는 <code>=COUNTBLANK(범위)</code>, 중복 행은 [데이터 → 중복된 항목 제거], 이상치는 [삽입 → 차트 → 상자 수염 그림]으로 점으로 튀어나온 값을 본다.</p>
                 </div>
+                <div data-sim="da-boxplot-iqr"></div>
             </div>
         </details>
 
@@ -339,6 +345,7 @@ long <- pivot_longer(df, cols = starts_with("y20"),
                     <p class="callout__title">표본 vs 모집단 분산 (시험 단골)</p>
                     <p>나누는 값이 n-1(표본)인지 n(모집단)인지에 따라 다르다. 엑셀 <code>VAR.S</code>/<code>STDEV.S</code>(표본) vs <code>VAR.P</code>/<code>STDEV.P</code>(모집단), R <code>var()</code>/<code>sd()</code>(표본 기준), pandas <code>.var()</code>/<code>.std()</code>(기본 ddof=1 = 표본).</p>
                 </div>
+                <div data-sim="da-stats-lab"></div>
 
                 <h3>KOSIS 다운로드 한도</h3>
                 <div class="table-wrap">
@@ -447,6 +454,7 @@ df["인구"].plot()            # 시계열</code></pre>
                     <p class="callout__title">F4 순환</p>
                     <p><code>F4</code>를 반복하면 <code>A1</code> → <code>$A$1</code> → <code>A$1</code> → <code>$A1</code> 순으로 전환된다. VLOOKUP 범위는 <code>F4</code>로 절대 참조 고정이 필수(고정 안 하면 범위가 밀려 <code>#N/A</code>).</p>
                 </div>
+                <div data-sim="da-cell-ref"></div>
 
                 <h3>주요 함수</h3>
                 <div class="table-wrap">
@@ -476,6 +484,7 @@ df["인구"].plot()            # 시계열</code></pre>
     =AVERAGE(B2:B11)  =MEDIAN(B2:B11)  =STDEV.S(B2:B11)</code></pre>
                 </div>
                 <p>피벗테이블은 [삽입 → 피벗 테이블]로 행 영역에 <code>등급</code>, 값 영역에 <code>점수</code>를 넣고 "값 필드 설정"에서 합계를 평균으로 바꾼다. 같은 결과를 <code>AVERAGEIF</code>로도 구해 일치를 확인한다.</p>
+                <div data-sim="da-excel-fn"></div>
             </div>
         </details>
 
@@ -521,6 +530,7 @@ df["인구"].plot()            # 시계열</code></pre>
                     <pre><code class="language-r">fit <- lm(y ~ x, data = df)  # y를 x로 설명하는 단순선형회귀
 summary(fit)                 # (Intercept)=a, x=기울기 b, Multiple R-squared=R제곱</code></pre>
                 </div>
+                <div data-sim="da-regression-lab"></div>
 
                 <details class="quiz">
                     <div class="quiz__q">Q. 다음 네 상황에 가장 적절한 차트는? (1) 연도별 출생아 수 변화, (2) 17개 시도 인구 비교, (3) 한 반 30명의 키 분포, (4) 가구 소비지출 항목별 구성비.</div>
@@ -529,6 +539,7 @@ summary(fit)                 # (Intercept)=a, x=기울기 b, Multiple R-squared=
                         <div class="quiz__a-body">(1) 꺾은선 - 시간 추세, (2) 막대 - 항목 비교, (3) 히스토그램 - 분포, (4) 원형 - 구성비(합 100%).</div>
                     </details>
                 </details>
+                <div data-sim="da-chart-picker"></div>
             </div>
         </details>
 
@@ -568,6 +579,7 @@ summary(fit)                 # (Intercept)=a, x=기울기 b, Multiple R-squared=
                     <p class="callout__title">부호와 단위 규칙</p>
                     <p>내가 내는 돈은 음수(-), 받는 돈은 양수(+). 월 단위면 이율은 <code>연이율/12</code>, 기간은 <code>년수*12</code>.</p>
                 </div>
+                <div data-sim="da-fv-calc"></div>
 
                 <h3>해 찾기 / 목표값 찾기</h3>
                 <ul>
@@ -854,6 +866,7 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
     <script>
         /* 페이지 전용: Prism 1.29.0(python, r) 지연 로드 + Pyodide 실행 플레이그라운드.
            공용 app.js는 그대로 두고, 이 과목 페이지에서만 동작한다. */
