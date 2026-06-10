@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>AI리터러시 - AI 문해력의 이해와 비판적 활용</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
 </head>
 <body>
     <div class="progress" aria-hidden="true"></div>
@@ -51,6 +52,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./ai-literacy-exam.html">AI리터러시 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 6개가 들어 있다. <strong>직접 해보기</strong> 카드에서 학습 방식 3종 퀴즈, k-NN 분류 체험, 뉴런 가중치 실험, LLM 다음 단어 예측, CRTF 프롬프트 빌더, 데이터 편향 시뮬레이터까지 손으로 실험해 보자.</p>
         </div>
 
         <div class="callout warn">
@@ -282,6 +287,8 @@
                         <div class="quiz__a-body">비지도학습, 그중에서도 군집화(Clustering)다. 정답 레이블 없이 데이터의 숨은 구조를 찾는다.</div>
                     </details>
                 </details>
+                <div data-sim="ai-ml3-quiz"></div>
+                <div data-sim="knn-demo"></div>
             </div>
         </details>
 
@@ -331,6 +338,7 @@
                         <div class="quiz__a-body">딥러닝(Deep Learning). 깊은 은닉층이 특징을 자동으로 추출한다.</div>
                     </details>
                 </details>
+                <div data-sim="ai-neuron-lab"></div>
             </div>
         </details>
 
@@ -375,6 +383,7 @@
                         <div class="quiz__a-body">환각(Hallucination). LLM은 사실이 아니라 "그럴듯함"을 확률로 생성하기 때문이다.</div>
                     </details>
                 </details>
+                <div data-sim="ai-token-predict"></div>
             </div>
         </details>
 
@@ -426,6 +435,7 @@
                         <div class="quiz__a-body">Context(맥락), Role(역할), Task(작업), Format(형식). 좋은 프롬프트의 4요소다.</div>
                     </details>
                 </details>
+                <div data-sim="ai-prompt-builder"></div>
             </div>
         </details>
 
@@ -515,6 +525,7 @@
                         <div class="quiz__a-body">역사적 편향(historical bias). 데이터 자체가 과거 사회의 편견을 담고 있어 AI가 이를 답습/증폭한다.</div>
                     </details>
                 </details>
+                <div data-sim="ai-bias-sim"></div>
             </div>
         </details>
 
@@ -682,5 +693,6 @@
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
 </body>
 </html>
