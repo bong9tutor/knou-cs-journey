@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>유비쿼터스컴퓨팅개론 - 어디에나 스며든 컴퓨팅</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
 </head>
 <body>
     <div class="progress" aria-hidden="true"></div>
@@ -53,6 +54,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./ubicomp-exam.html">유비쿼터스컴퓨팅개론 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 6개가 들어 있다. <strong>직접 해보기</strong> 카드에서 5C·5Any 분류, 무선 기술 고르기, 블록체인 위변조 체험, 클라우드 모델 퀴즈, 상황인식 3단계, 자율주행 레벨까지 손으로 실험해 보자.</p>
         </div>
 
         <div class="callout info">
@@ -167,6 +172,7 @@
                         <div class="quiz__a-body">Calm(고요함). 와이저의 캄 테크놀로지 철학이 5C 안에도 들어가 있다.</div>
                     </details>
                 </details>
+                <div data-sim="ub-5c5any-quiz"></div>
             </div>
         </details>
 
@@ -315,6 +321,7 @@
                         <div class="quiz__a-body">IPv6. IoT의 대규모 연결을 가능하게 한다.</div>
                     </details>
                 </details>
+                <div data-sim="ub-wireless-match"></div>
             </div>
         </details>
 
@@ -337,6 +344,7 @@
                         <div class="quiz__a-body">해시(hash) 값. 이 연결 때문에 위변조가 어렵다.</div>
                     </details>
                 </details>
+                <div data-sim="ub-blockchain-demo"></div>
             </div>
         </details>
 
@@ -378,6 +386,7 @@
                         <div class="quiz__a-body">SaaS(Software as a Service). "다 지어진 집에 입주"에 비유한다.</div>
                     </details>
                 </details>
+                <div data-sim="ub-cloud-quiz"></div>
             </div>
         </details>
 
@@ -451,6 +460,7 @@
                         <div class="quiz__a-body">How(어떻게) - 방법/상태. 나머지 5W는 Who/What/Where/When/Why.</div>
                     </details>
                 </details>
+                <div data-sim="ub-context-flow"></div>
             </div>
         </details>
 
@@ -545,6 +555,7 @@
                         <div class="quiz__a-body">라이다(LiDAR). 전파를 쓰는 레이더와 구분한다.</div>
                     </details>
                 </details>
+                <div data-sim="ub-car-level"></div>
             </div>
         </details>
 
@@ -708,5 +719,6 @@
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
 </body>
 </html>
