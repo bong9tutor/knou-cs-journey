@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>컴퓨터과학개론 - 전공의 지도를 그리는 한 학기</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
 </head>
 <body>
     <div class="progress" aria-hidden="true"></div>
@@ -52,6 +53,10 @@
         <div class="callout info">
             <p class="callout__title">교재 서지</p>
             <p>이관용-정광식, 『컴퓨터과학개론』, 한국방송통신대학교출판문화원, 2021. ISBN 9788920039553. 1학년 2학기 과목, 워크북 포함, 본문 8개 장 구성. 이 노트는 교재 8개 장에 컴퓨터의 역사, 데이터 표현 심화, 불 대수-논리회로, 정보보안, 인공지능, 소프트웨어공학-윤리를 보강해 13개 단원으로 정리했다. 보강 단원에는 단원 머리에 별도 라벨을 달았다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>이 노트에는 개념을 직접 만져 보며 익히는 위젯 16개가 들어 있다. 각 단원의 <strong>직접 해보기</strong> 카드에서 진법 변환, 논리 게이트, CPU 사이클, 스케줄링, 정렬-탐색, 스택-큐-트리, SQL, 암호, k-NN 분류까지 손으로 실험해 보자.</p>
         </div>
 
         <h2 id="what-is-cs">1. 컴퓨터과학이란 무엇인가</h2>
@@ -211,6 +216,7 @@
                     <li><strong>2진 -&gt; 10진</strong>: 자리값(2의 거듭제곱)을 곱해 더한다. 1101 = 8+4+0+1 = 13.</li>
                     <li>16진수는 4비트를 한 자리로 묶어 표기하므로 2진수와 변환이 쉽다(예: 1101 1110 = DE).</li>
                 </ul>
+                <div data-sim="base-converter"></div>
             </div>
         </details>
 
@@ -241,6 +247,7 @@
                     <p class="callout__title">현대 표준은 2의 보수</p>
                     <p>0이 하나뿐이고 덧셈 회로를 그대로 쓸 수 있어 현대 컴퓨터의 표준이다. n비트 2의 보수 범위는 -2^(n-1) ~ +2^(n-1)-1 (8비트면 -128 ~ +127).</p>
                 </div>
+                <div data-sim="bit-explorer"></div>
             </div>
         </details>
 
@@ -252,6 +259,7 @@
                     <p class="callout__title">0.1 + 0.2 != 0.3</p>
                     <p>0.1처럼 10진 소수는 2진 부동소수점으로 정확히 표현되지 않아 미세한 오차가 생긴다. 금액 계산에 부동소수점을 쓰면 안 되는 근거다.</p>
                 </div>
+                <div data-sim="float-demo"></div>
             </div>
         </details>
 
@@ -267,6 +275,7 @@
                     <p class="callout__title">"뷁" 현상의 원인</p>
                     <p>파일이 깨져 보이는 현상은 대부분 저장한 인코딩과 읽는 인코딩이 달라서 생긴다. 이 레포가 UTF-8을 강제하는 이유이기도 하다.</p>
                 </div>
+                <div data-sim="text-encoder"></div>
             </div>
         </details>
 
@@ -315,6 +324,7 @@
                     </table>
                 </div>
                 <p><strong>NAND</strong>(또는 <strong>NOR</strong>) 게이트 하나만으로 다른 모든 게이트를 만들 수 있어 "완전 집합(universal gate)"이라 부른다.</p>
+                <div data-sim="logic-lab"></div>
             </div>
         </details>
 
@@ -371,6 +381,7 @@
                     <li><strong>저장(Store/Write-back)</strong>: 결과를 레지스터/메모리에 기록.</li>
                 </ol>
                 <p>성능 향상 기법: <strong>파이프라이닝</strong>(여러 명령의 각 단계를 겹쳐 실행), <strong>멀티코어</strong>(CPU 코어를 여러 개), <strong>캐시</strong>(자주 쓰는 데이터를 CPU 가까이에).</p>
+                <div data-sim="cpu-cycle"></div>
             </div>
         </details>
 
@@ -452,6 +463,7 @@
                     <p class="callout__title">CPU 스케줄링 대표 알고리즘</p>
                     <p>FCFS(선착순), SJF(짧은 작업 우선), 라운드 로빈(시간 분할). 여러 프로세스가 동시에 도는 것처럼 보이게 CPU를 빠르게 전환한다.</p>
                 </div>
+                <div data-sim="os-schedule"></div>
             </div>
         </details>
 
@@ -518,6 +530,9 @@
                     <li><strong>정렬</strong>: 버블-선택-삽입 정렬(O(n^2)), 병합-퀵 정렬(평균 O(n log n)).</li>
                     <li><strong>탐색</strong>: 순차 탐색(O(n)), 이진 탐색(정렬된 데이터에서 O(log n)).</li>
                 </ul>
+                <div data-sim="bigo-curve"></div>
+                <div data-sim="sort-visual"></div>
+                <div data-sim="search-race"></div>
             </div>
         </details>
 
@@ -555,6 +570,8 @@
                     <li><strong>스택과 큐</strong>의 차이: 스택은 쌓은 접시처럼 마지막에 넣은 것을 먼저 꺼내고, 큐는 줄 서기처럼 먼저 온 것을 먼저 꺼낸다.</li>
                     <li><strong>이진 탐색 트리</strong>: 왼쪽 자식 &lt; 부모 &lt; 오른쪽 자식 규칙으로, 균형이 잡히면 탐색이 O(log n)이다.</li>
                 </ul>
+                <div data-sim="stack-queue"></div>
+                <div data-sim="bst-builder"></div>
             </div>
         </details>
 
@@ -633,6 +650,7 @@
                     <li><strong>클라이언트-서버 모델</strong>: 브라우저(클라이언트)가 요청(request)하면 서버가 응답(response)으로 HTML/CSS/JS를 보내고, 브라우저가 화면으로 렌더링한다.</li>
                     <li><strong>HTTPS</strong>: HTTP에 암호화(TLS)를 더해 도청-위변조를 막은 안전한 통신.</li>
                 </ul>
+                <div data-sim="net-journey"></div>
             </div>
         </details>
 
@@ -671,6 +689,7 @@
                     <li>데이터 조작: SELECT(조회), INSERT(삽입), UPDATE(수정), DELETE(삭제).</li>
                     <li>데이터 정의: CREATE, ALTER, DROP.</li>
                 </ul>
+                <div data-sim="sql-playground"></div>
             </div>
         </details>
 
@@ -727,6 +746,7 @@
                     <li><strong>공개키 암호</strong>: 공개키로 잠그면 짝이 되는 개인키로만 열 수 있다. 이를 응용해 본인 인증을 하는 것이 <strong>전자서명</strong>.</li>
                     <li><strong>해시 함수</strong>: 임의 데이터를 고정 길이 값으로 바꾸는 일방향 함수(SHA-256 등). 무결성 검증과 비밀번호 저장에 쓴다(원본 복원 불가).</li>
                 </ul>
+                <div data-sim="crypto-lab"></div>
             </div>
         </details>
 
@@ -778,6 +798,7 @@
                     <p class="callout__title">여기서는 큰 그림만</p>
                     <p>방통대에서는 상위 학년의 인공지능-머신러닝-딥러닝 과목으로 이어지므로, 여기서는 용어와 큰 그림만 잡아 두면 된다.</p>
                 </div>
+                <div data-sim="knn-demo"></div>
             </div>
         </details>
 
@@ -832,5 +853,6 @@
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
 </body>
 </html>
