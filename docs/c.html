@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>C프로그래밍 - 기초 문법부터 포인터와 파일 입출력까지</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sim.css">
     <style>
         /* 페이지 전용: Prism 토큰 색을 공용 CSS 변수로 맞춘다(공용 컴포넌트는 재정의하지 않음) */
         code[class*="language-"],
@@ -109,6 +110,10 @@
         <div class="callout tip">
             <p class="callout__title">모의시험</p>
             <p>학습한 내용을 <a href="./c-exam.html">C프로그래밍 모의시험</a>으로 점검해 보세요. 다양한 유형(객관식 · OX · 단답 · 빈칸 · 코드출력 · 매칭 · 순서)을 타이머 · 자동 채점 · 문항별 해설로 풀어 볼 수 있습니다.</p>
+        </div>
+        <div class="callout tip">
+            <p class="callout__title">인터랙티브 학습 위젯</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 printf 서식, 정수 나눗셈 함정, 배열 인덱스, 문자열 '\0', 포인터(&amp;와 *), 배열-포인터 등가, 재귀 호출 스택까지 단계별로 실험해 보자.</p>
         </div>
 
         <div class="callout info">
@@ -260,6 +265,7 @@ int main(void)
                     <p class="callout__title">핵심 주의점</p>
                     <p><code>scanf</code>에는 변수 앞에 반드시 <code>&amp;</code>(주소 연산자)를 붙인다. <code>scanf("%d", a)</code>처럼 빼먹으면 프로그램이 비정상 종료할 수 있다(문자열 <code>%s</code>만은 예외인데, 이는 포인터 단원에서 이해하게 된다). 서식 너비를 조절하려면 <code>%5d</code>(5칸 오른쪽 정렬), <code>%.2f</code>(소수점 2자리)처럼 쓴다.</p>
                 </div>
+                <div data-sim="c-printf-lab"></div>
             </div>
         </details>
 
@@ -350,6 +356,7 @@ avg2 = 3.5</pre>
                 </details>
 
                 <p><code>avg1</code>이 3.5가 아닌 3.0인 이유는 <code>total / count</code>가 정수 연산으로 먼저 끝나 3이 되고, 그 뒤 double에 담겼기 때문이다. 평균 같은 계산에서 자주 나오는 함정이니 주의하자.</p>
+                <div data-sim="c-intdiv-lab"></div>
             </div>
         </details>
 
@@ -658,6 +665,7 @@ int main(void)
                     <p class="callout__title">배열 범위 주의</p>
                     <p>C는 배열 범위를 검사하지 않는다. 크기 5 배열에서 <code>score[5]</code>나 <code>score[10]</code>에 접근해도 컴파일은 되지만 엉뚱한 메모리를 건드려 버그가 생긴다(off-by-one 오류). 반복 조건은 <code>i &lt; 5</code>처럼 정확히 맞춘다.</p>
                 </div>
+                <div data-sim="c-array-index"></div>
 
                 <h3>2차원 배열</h3>
                 <p>행과 열을 가진 표 형태의 데이터다.</p>
@@ -731,6 +739,7 @@ int main(void)
                     <p class="callout__title">문자열 비교</p>
                     <p>문자열을 비교할 때 <code>name == "KNOU"</code>처럼 <code>==</code>를 쓰면 안 된다. 이건 내용이 아니라 주소를 비교하는 것이라 항상 의도와 다르게 동작한다. 반드시 <code>strcmp</code>를 쓴다.</p>
                 </div>
+                <div data-sim="c-string-null"></div>
             </div>
         </details>
 
@@ -798,6 +807,7 @@ int main(void)
                     <pre>a=2, b=1</pre>
                 </details>
                 <p>주소를 넘겼기 때문에 함수가 원래 변수 <code>a</code>, <code>b</code>를 직접 고칠 수 있었다. <code>scanf</code>에 <code>&amp;</code>를 붙이는 이유도 바로 이것이다(scanf가 우리 변수에 값을 써넣어야 하므로 주소가 필요하다).</p>
+                <div data-sim="c-pointer-vis"></div>
 
                 <h3>NULL 포인터와 주의점</h3>
                 <p>아무것도 가리키지 않는 포인터는 <code>NULL</code>로 초기화한다. 초기화하지 않은 포인터(쓰레기 주소)를 역참조하거나 <code>NULL</code>을 역참조하면 프로그램이 죽는다(segmentation fault). 포인터는 항상 유효한 곳을 가리키는지 확인하고 쓴다.</p>
@@ -921,6 +931,7 @@ int main(void)
                     <summary>예상 출력 보기</summary>
                     <pre>2 4 6 8</pre>
                 </details>
+                <div data-sim="c-ptr-array"></div>
             </div>
         </details>
 
@@ -1379,6 +1390,7 @@ int main(void)
                         <div class="quiz__a-body">종료 조건(base case)이다. 이것이 없으면 함수가 자기 자신을 끝없이 호출해 호출이 스택에 쌓이다가 스택 오버플로로 프로그램이 죽는다.</div>
                     </details>
                 </details>
+                <div data-sim="c-recursion-stack"></div>
             </div>
         </details>
 
@@ -1490,6 +1502,7 @@ int main(void)
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
 
     <script src="./assets/app.js" defer></script>
+    <script src="./assets/sim.js" defer></script>
     <script>
         // 프로그래밍 과목 전용: Prism 1.29.0을 cdn.jsdelivr.net에서 지연 로드해 C 구문 강조
         (function () {
