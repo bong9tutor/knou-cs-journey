@@ -1,0 +1,44 @@
+name: 학습 노티
+
+on:
+    schedule:
+        # GitHub Actions cron은 UTC 기준. 08:00 KST = 전날 23:00 UTC.
+        - cron: "0 23 * * *"
+    workflow_dispatch:
+        # 수동 실행(테스트)용. test 모드면 제목에 [테스트] 표시, dry_run이면 발송 대신 로그만.
+        inputs:
+            test:
+                description: "테스트 모드 (제목에 [테스트] 표시)"
+                type: boolean
+                default: false
+            dry_run:
+                description: "발송하지 않고 로그만 출력"
+                type: boolean
+                default: false
+
+# 동시 실행 방지(겹쳐 도는 것 차단)
+concurrency:
+    group: study-noti
+    cancel-in-progress: false
+
+jobs:
+    notify:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 레포 체크아웃
+              uses: actions/checkout@v4
+
+            - name: Node 설정
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+
+            - name: 학습 노티 발송
+              env:
+                  NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+                  NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
+                  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+                  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+                  TEST_MODE: ${{ inputs.test }}
+                  DRY_RUN: ${{ inputs.dry_run }}
+              run: node .github/scripts/send-study-noti.mjs
