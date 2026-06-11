@@ -2,10 +2,13 @@ name: 학습 노티
 
 on:
     schedule:
-        # GitHub Actions cron은 UTC 기준. 08:00 KST = 전날 23:00 UTC.
-        - cron: "0 23 * * *"
+        # GitHub Actions cron은 UTC 기준이고 예약은 지연·누락이 잦다(특히 정시 0분은 전역 부하 집중).
+        # 그래서 분을 어긋나게 잡고 같은 아침에 3회 시도한다. 중복은 아래 캐시 가드로 막는다.
+        - cron: "13 23 * * *"   # 08:13 KST (전날 23:13 UTC)
+        - cron: "43 23 * * *"   # 08:43 KST (전날 23:43 UTC)
+        - cron: "13 0 * * *"    # 09:13 KST (당일 00:13 UTC)
     workflow_dispatch:
-        # 수동 실행(테스트)용. test 모드면 제목에 [테스트] 표시, dry_run이면 발송 대신 로그만.
+        # 수동 실행(테스트)용. 가드를 무시하고 항상 발송한다.
         inputs:
             test:
                 description: "테스트 모드 (제목에 [테스트] 표시)"
@@ -16,7 +19,7 @@ on:
                 type: boolean
                 default: false
 
-# 동시 실행 방지(겹쳐 도는 것 차단)
+# 동시 실행 방지(겹쳐 도는 것 차단). 직렬화되어 앞 실행이 끝난 뒤 다음 실행이 캐시 표식을 본다.
 concurrency:
     group: study-noti
     cancel-in-progress: false
@@ -33,7 +36,24 @@ jobs:
               with:
                   node-version: "20"
 
+            - name: KST 날짜 계산
+              id: kst
+              run: echo "date=$(TZ=Asia/Seoul date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+            - name: 오늘 발송 여부 확인(캐시 복원)
+              id: guard
+              uses: actions/cache/restore@v4
+              with:
+                  path: .noti-sent
+                  key: noti-sent-${{ steps.kst.outputs.date }}
+
+            - name: 이미 발송됨 - 건너뜀
+              if: steps.guard.outputs.cache-hit == 'true' && github.event_name != 'workflow_dispatch'
+              run: echo "오늘(${{ steps.kst.outputs.date }} KST) 이미 발송됨 - 중복 방지로 건너뜀"
+
             - name: 학습 노티 발송
+              # 수동 실행은 가드를 무시하고 항상 발송. 예약 실행은 그날 첫 번째만 발송.
+              if: steps.guard.outputs.cache-hit != 'true' || github.event_name == 'workflow_dispatch'
               env:
                   NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
                   NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
@@ -41,4 +61,14 @@ jobs:
                   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
                   TEST_MODE: ${{ inputs.test }}
                   DRY_RUN: ${{ inputs.dry_run }}
-              run: node .github/scripts/send-study-noti.mjs
+              run: |
+                  node .github/scripts/send-study-noti.mjs
+                  touch .noti-sent
+
+            - name: 발송 표시 저장(당일 캐시)
+              # 발송 단계가 성공했고, 그날 표식이 아직 없을 때만 저장(중복 키 경고 방지).
+              if: success() && steps.guard.outputs.cache-hit != 'true'
+              uses: actions/cache/save@v4
+              with:
+                  path: .noti-sent
+                  key: noti-sent-${{ steps.kst.outputs.date }}
