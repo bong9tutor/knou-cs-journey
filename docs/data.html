@@ -93,7 +93,7 @@
             margin: 0;
             padding: 12px;
             border-top: 1px solid var(--border);
-            color: var(--codeblock-text);
+            color: var(--text);
             background: var(--bg-sunken);
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -104,6 +104,200 @@
             overflow: auto;
         }
         .play__out:empty { display: none; }
+
+        /* 부록: 용어 사전 */
+        .gl-toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: var(--gap) 0;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-soft);
+        }
+        .gl-search {
+            font: inherit;
+            font-size: 0.95rem;
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 40px;
+            padding: 8px 12px;
+            color: var(--text);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .gl-search:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+        .gl-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .gl-chip {
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            color: var(--text-soft);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            cursor: pointer;
+        }
+        .gl-chip:hover { border-color: var(--accent); }
+        .gl-chip.is-on {
+            color: #fff;
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .gl-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .gl-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+        .gl-btn {
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-height: 32px;
+            padding: 4px 12px;
+            color: var(--text-soft);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+        }
+        .gl-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .gl-btn[aria-pressed="true"] {
+            color: #fff;
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .gl-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .gl-count { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+        .gl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+            margin: var(--gap) 0;
+        }
+        .gl-card {
+            margin: 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            overflow: hidden;
+        }
+        .gl-card[hidden] { display: none; }
+        .gl-card > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 10px 12px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gl-card > summary::-webkit-details-marker { display: none; }
+        .gl-card > summary:hover { background: var(--bg-soft); }
+        .gl-card.is-hit { box-shadow: 0 0 0 2px var(--accent); }
+        .gl-term {
+            display: block;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .gl-term em {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.82em;
+            color: var(--text-muted);
+            margin-left: 4px;
+        }
+        .gl-brief {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-soft);
+        }
+        .gl-memorize .gl-brief { display: none; }
+        .gl-memorize .gl-card:not([open]) > summary::after {
+            content: "탭해서 뜻 보기";
+            display: block;
+            margin-top: 3px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .gl-body {
+            padding: 0 12px 12px;
+            font-size: 0.88rem;
+            line-height: 1.65;
+            border-top: 1px dashed var(--border-soft);
+        }
+        .gl-body p { margin: 10px 0 0; }
+        .gl-body .gl-ex {
+            padding: 8px 10px;
+            border-left: 3px solid var(--accent);
+            background: var(--bg-soft);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        .gl-rel, .gl-tool { font-size: 0.82rem; color: var(--text-soft); }
+        .gl-link {
+            font: inherit;
+            font-size: 0.82rem;
+            padding: 1px 8px;
+            margin: 0 2px 2px 0;
+            color: var(--accent);
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            cursor: pointer;
+        }
+        .gl-link:hover { border-color: var(--accent); }
+        .gl-empty {
+            margin: var(--gap) 0;
+            padding: 16px;
+            text-align: center;
+            color: var(--text-muted);
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+        }
+
+        /* 부록: 미니 실험 위젯 */
+        .gl-widget {
+            margin: var(--gap) 0;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+        }
+        .gl-widget h4 { margin: 0 0 8px; font-size: 0.95rem; }
+        .gl-widget__hint { margin: 0 0 10px; font-size: 0.84rem; color: var(--text-soft); }
+        .gl-widget input[type="range"] { width: 100%; accent-color: var(--accent); }
+        .gl-widget svg { display: block; width: 100%; height: auto; margin: 8px 0; }
+        .gl-stats { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .gl-stats th, .gl-stats td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .gl-stats th { color: var(--text-soft); font-weight: 600; }
+        .gl-stats .num { font-family: var(--font-mono); text-align: right; white-space: nowrap; }
+        .gl-stats .is-changed { color: var(--accent); font-weight: 700; }
+        .gl-badge {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .gl-badge--sens { color: #b03a5b; background: rgba(176, 58, 91, 0.12); }
+        .gl-badge--robust { color: #2e7d4f; background: rgba(46, 125, 79, 0.14); }
+        .gl-widget { --gl-ok: #2e7d4f; }
+        :root[data-theme="dark"] .gl-badge--sens { color: #ff8fab; }
+        :root[data-theme="dark"] .gl-badge--robust { color: #7fd6a4; }
+        :root[data-theme="dark"] .gl-widget { --gl-ok: #7fd6a4; }
+        :root[data-theme="dark"] .gl-chip.is-on,
+        :root[data-theme="dark"] .gl-btn[aria-pressed="true"] { color: #0f1216; }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) .gl-badge--sens { color: #ff8fab; }
+            :root:not([data-theme="light"]) .gl-badge--robust { color: #7fd6a4; }
+            :root:not([data-theme="light"]) .gl-widget { --gl-ok: #7fd6a4; }
+            :root:not([data-theme="light"]) .gl-chip.is-on,
+            :root:not([data-theme="light"]) .gl-btn[aria-pressed="true"] { color: #0f1216; }
+        }
     </style>
 </head>
 <body>
@@ -136,6 +330,7 @@
             <a href="#ch9">9. 파이썬을 활용한 자료분석</a>
             <a href="#quiz">10. 종합 퀴즈와 플래시카드</a>
             <a href="#resources">11. 무료 학습 자료</a>
+            <a href="#glossary">부록. 데이터 용어 사전</a>
         </div>
     </nav>
 
@@ -148,7 +343,7 @@
         </div>
         <div class="callout tip">
             <p class="callout__title">인터랙티브 학습 위젯</p>
-            <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 IQR 이상치 판별, 기술통계(평균 vs 중앙값), 셀 참조 F4 순환, 조건 집계 함수, 차트 고르기, 단순선형회귀, 적금 FV 계산까지 손으로 실험해 보자.</p>
+            <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 IQR 이상치 판별, 기술통계(평균 vs 중앙값), 셀 참조 F4 순환, 조건 집계 함수, 차트 고르기, 단순선형회귀, 적금 FV 계산까지 손으로 실험해 보자. 생소한 용어는 <a href="#glossary">부록 용어 사전</a>에서 검색/분류 필터/암기 모드로 점검하고, 이상치 실험실에서 평균/중앙값/IQR이 어떻게 다르게 반응하는지 직접 실험할 수 있다.</p>
         </div>
 
         <h2 id="intro">0. 학습 방향과 우선순위</h2>
@@ -313,7 +508,7 @@ long <- pivot_longer(df, cols = starts_with("y20"),
 
                 <div class="callout warn">
                     <p class="callout__title">엑셀 점검 팁</p>
-                    <p>빈 칸 개수는 <code>=COUNTBLANK(범위)</code>, 중복 행은 [데이터 → 중복된 항목 제거], 이상치는 [삽입 → 차트 → 상자 수염 그림]으로 점으로 튀어나온 값을 본다.</p>
+                    <p>빈 칸 개수는 <code>=COUNTBLANK(범위)</code>, 중복 행은 [데이터 → 중복된 항목 제거], 이상치는 [삽입 → 통계 차트 → 상자 수염]으로 점으로 튀어나온 값을 본다.</p>
                 </div>
                 <div data-sim="da-boxplot-iqr"></div>
             </div>
@@ -861,6 +1056,527 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
                 </div>
             </div>
         </details>
+
+        <h2 id="glossary">부록. 데이터 용어 사전</h2>
+        <details class="section" open>
+            <summary>생소한 용어 한 번에 - 검색 / 분류 필터 / 암기 모드 / 이상치 실험실</summary>
+            <div class="section__body">
+                <p>교재와 본문에 등장하는 생소한 용어를 8개 분류로 묶어 정리했다. 각 카드는 한 줄 요약을 먼저 보여 주고, 펼치면 쉬운 설명과 예시, 엑셀/R/pandas 표기, 연관 용어로 이어진다. <strong>암기 모드</strong>를 켜면 뜻이 가려져 셀프 테스트가 된다.</p>
+
+                <h3>직접 만져 보기 1: 이상치 실험실</h3>
+                <div class="gl-widget" id="gl-lab">
+                    <h4>마지막 값 하나가 통계량을 어떻게 바꾸나</h4>
+                    <p class="gl-widget__hint">값 다섯 개 60, 70, 80, 90, <strong data-lab-x>100</strong> 중 마지막 값을 슬라이더로 키워 보자. 평균/범위/분산/표준편차는 끌려가고, 중앙값/IQR은 버틴다. 이것이 "평균은 이상치에 민감, 중앙값은 강건"의 의미다.</p>
+                    <input type="range" min="100" max="1000" step="10" value="100" aria-label="마지막 값 조절 (100에서 1000까지)">
+                    <div data-lab-svg aria-hidden="true"></div>
+                    <table class="gl-stats">
+                        <thead>
+                            <tr><th>통계량</th><th class="num">처음(100일 때)</th><th class="num">지금</th><th>성질</th></tr>
+                        </thead>
+                        <tbody data-lab-rows></tbody>
+                    </table>
+                    <p class="gl-widget__hint">사분위수는 엑셀 QUARTILE.INC / pandas quantile과 같은 선형 보간 기준, 분산/표준편차는 표본(n-1) 기준이다.</p>
+                </div>
+
+                <h3>직접 만져 보기 2: 같은 평균, 다른 산포</h3>
+                <div class="gl-widget" id="gl-compare">
+                    <h4>A반 78, 79, 80, 81, 82 vs B반 40, 60, 80, 100, 120</h4>
+                    <p class="gl-widget__hint">두 반 모두 평균은 80으로 같다. 그런데 점수가 모여 있는 정도(산포)는 전혀 다르다. 산포 통계량이 왜 필요한지 보여 주는 가장 짧은 예시다.</p>
+                    <div data-cmp-svg aria-hidden="true"></div>
+                    <table class="gl-stats">
+                        <thead>
+                            <tr><th>통계량</th><th class="num">A반</th><th class="num">B반</th></tr>
+                        </thead>
+                        <tbody data-cmp-rows></tbody>
+                    </table>
+                </div>
+
+                <h3>용어 사전</h3>
+                <div class="gl-toolbar">
+                    <input class="gl-search" type="search" placeholder="용어 검색 (한글/영문, 예: 중앙값, median)" aria-label="용어 검색">
+                    <div class="gl-chips" role="group" aria-label="분류 필터">
+                        <button type="button" class="gl-chip is-on" data-cat="all">전체</button>
+                        <button type="button" class="gl-chip" data-cat="center">중심경향</button>
+                        <button type="button" class="gl-chip" data-cat="spread">산포</button>
+                        <button type="button" class="gl-chip" data-cat="dist">분포·시각화</button>
+                        <button type="button" class="gl-chip" data-cat="scale">척도·데이터</button>
+                        <button type="button" class="gl-chip" data-cat="infer">표본·추론</button>
+                        <button type="button" class="gl-chip" data-cat="clean">전처리·정제</button>
+                        <button type="button" class="gl-chip" data-cat="rel">관계·회귀</button>
+                        <button type="button" class="gl-chip" data-cat="tool">도구·실무</button>
+                    </div>
+                    <div class="gl-tools">
+                        <button type="button" class="gl-btn" data-gl-expand>모두 펼치기</button>
+                        <button type="button" class="gl-btn" data-gl-collapse>모두 접기</button>
+                        <button type="button" class="gl-btn" data-gl-memorize aria-pressed="false">암기 모드</button>
+                        <p class="gl-count" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <div class="gl-grid">
+                    <details class="gl-card" id="gl-center" data-cat="center" data-key="중심경향 central tendency 대표값 representative">
+                        <summary><span class="gl-term">중심경향 <em>central tendency</em></span><span class="gl-brief">데이터가 어디쯤 모여 있는지를 요약하는 대표값. 평균/중앙값/최빈값이 3총사.</span></summary>
+                        <div class="gl-body">
+                            <p>"대표값"이라고도 부른다. 어떤 대표값이 적절한지는 데이터의 척도와 이상치 유무에 달려 있다.</p>
+                            <p class="gl-ex">예: 소득처럼 큰 값 쪽으로 꼬리가 긴 데이터는 평균보다 중앙값이 실태를 더 잘 보여 준다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-mean">평균</button><button type="button" class="gl-link" data-goto="gl-median">중앙값</button><button type="button" class="gl-link" data-goto="gl-mode">최빈값</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-mean" data-cat="center" data-key="평균 mean average 산술평균">
+                        <summary><span class="gl-term">평균 <em>mean</em></span><span class="gl-brief">전부 더해 개수로 나눈 값. 가장 많이 쓰지만 이상치에 민감하다.</span></summary>
+                        <div class="gl-body">
+                            <p>모든 값을 반영하는 장점이 곧 약점이다. 튀는 값 하나가 평균 전체를 끌고 간다. 위 이상치 실험실에서 직접 확인해 보자.</p>
+                            <p class="gl-ex">예: 60, 70, 80, 90, 100의 평균은 80. 마지막 값이 1000이 되면 평균은 260으로 튀어 오른다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>AVERAGE</code> · R <code>mean()</code> · pandas <code>.mean()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-median">중앙값</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button><button type="button" class="gl-link" data-goto="gl-skew">왜도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-median" data-cat="center" data-key="중앙값 median 중위수 가운데">
+                        <summary><span class="gl-term">중앙값 <em>median</em></span><span class="gl-brief">크기순으로 정렬했을 때 한가운데 값. 이상치가 있어도 잘 흔들리지 않는다.</span></summary>
+                        <div class="gl-body">
+                            <p>값이 짝수 개면 가운데 두 값의 평균을 쓴다. 평균과 중앙값이 크게 다르면 분포가 한쪽으로 치우쳤다는 신호다.</p>
+                            <p class="gl-ex">예: 60, 70, 80, 90, 1000의 중앙값은 여전히 80. 튀는 값 1000의 영향을 받지 않는다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>MEDIAN</code> · R <code>median()</code> · pandas <code>.median()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-mean">평균</button><button type="button" class="gl-link" data-goto="gl-quartile">사분위수</button><button type="button" class="gl-link" data-goto="gl-robust">강건성</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-mode" data-cat="center" data-key="최빈값 mode 빈도 최다">
+                        <summary><span class="gl-term">최빈값 <em>mode</em></span><span class="gl-brief">가장 자주 나오는 값. 명목척도(범주형)에서 쓸 수 있는 유일한 대표값.</span></summary>
+                        <div class="gl-body">
+                            <p>혈액형, 시도명처럼 평균을 낼 수 없는 데이터의 대표값은 최빈값뿐이다. 두 개 이상일 수도, 없을 수도 있다.</p>
+                            <p class="gl-ex">예: 70, 80, 80, 90, 100의 최빈값은 80.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>MODE.SNGL</code>(숫자 전용, 문자 범주는 <code>COUNTIF</code>/피벗) · R <code>table()</code> 최대 빈도 · pandas <code>.mode()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-nominal">명목척도</button><button type="button" class="gl-link" data-goto="gl-freq">빈도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-robust" data-cat="center" data-key="강건성 robust 강건 robustness 둔감">
+                        <summary><span class="gl-term">강건성 <em>robustness</em></span><span class="gl-brief">이상치가 끼어도 결과가 크게 흔들리지 않는 성질.</span></summary>
+                        <div class="gl-body">
+                            <p>중앙값과 IQR이 대표적인 강건한 통계량이고, 평균/범위/표준편차는 민감한 쪽이다. "강건하다 = 튀는 값에 둔감하다"로 기억하면 된다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-median">중앙값</button><button type="button" class="gl-link" data-goto="gl-iqr">IQR</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-spread" data-cat="spread" data-key="산포 dispersion spread 퍼짐 변동">
+                        <summary><span class="gl-term">산포 <em>dispersion</em></span><span class="gl-brief">데이터가 얼마나 퍼져 있는지. 중심이 같아도 퍼짐은 전혀 다를 수 있다.</span></summary>
+                        <div class="gl-body">
+                            <p>대표값(중심)만 보면 절반만 본 것이다. 범위/분산/표준편차/IQR이 산포를 재는 도구다.</p>
+                            <p class="gl-ex">예: A반(78~82)과 B반(40~120)은 평균이 80으로 같지만 퍼짐이 전혀 다르다. 위 "같은 평균, 다른 산포" 위젯 참고.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-range">범위</button><button type="button" class="gl-link" data-goto="gl-variance">분산</button><button type="button" class="gl-link" data-goto="gl-sd">표준편차</button><button type="button" class="gl-link" data-goto="gl-iqr">IQR</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-range" data-cat="spread" data-key="범위 range 최대 최소">
+                        <summary><span class="gl-term">범위 <em>range</em></span><span class="gl-brief">최댓값 - 최솟값. 가장 단순한 산포지만 이상치 하나에 확 변한다.</span></summary>
+                        <div class="gl-body">
+                            <p>양 끝 두 값만 쓰기 때문에 중간이 어떻게 분포하는지는 전혀 말해 주지 못한다.</p>
+                            <p class="gl-ex">예: 60~100이면 범위 40. 마지막 값이 1000이면 범위는 940으로 폭발한다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>MAX - MIN</code> · R <code>max() - min()</code> (<code>range()</code>는 최소/최대 쌍을 반환) · pandas <code>.max() - .min()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-iqr">IQR</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-deviation" data-cat="spread" data-key="편차 deviation 거리">
+                        <summary><span class="gl-term">편차 <em>deviation</em></span><span class="gl-brief">각 값에서 평균을 뺀 거리(값 - 평균). 그대로 다 더하면 항상 0이 된다.</span></summary>
+                        <div class="gl-body">
+                            <p>합이 0이라 그대로는 산포 지표로 못 쓴다. 그래서 제곱해서 평균 낸 것이 분산이다.</p>
+                            <p class="gl-ex">예: 평균 80일 때 60의 편차는 -20, 100의 편차는 +20. 합치면 0.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-variance">분산</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-variance" data-cat="spread" data-key="분산 variance 제곱">
+                        <summary><span class="gl-term">분산 <em>variance</em></span><span class="gl-brief">편차를 제곱해 평균 낸 값. 단위가 제곱이라 직관적으로 읽기 어렵다.</span></summary>
+                        <div class="gl-body">
+                            <p>제곱 때문에 단위가 "점수의 제곱"처럼 이상해진다. 그래서 루트를 씌운 표준편차를 주로 읽는다. 분산이 작다 = 값들이 평균 근처에 모여 있다.</p>
+                            <p class="gl-ex">예: A반(78~82)의 표본 분산은 2.5, B반(40~120)은 1000.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>VAR.S</code>/<code>VAR.P</code> · R <code>var()</code> · pandas <code>.var()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-sd">표준편차</button><button type="button" class="gl-link" data-goto="gl-deviation">편차</button><button type="button" class="gl-link" data-goto="gl-ddof">n-1 보정</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-sd" data-cat="spread" data-key="표준편차 standard deviation sd std 시그마">
+                        <summary><span class="gl-term">표준편차 <em>standard deviation</em></span><span class="gl-brief">분산에 루트를 씌워 원래 단위로 되돌린 값. "평균에서 대략 이만큼 퍼져 있다".</span></summary>
+                        <div class="gl-body">
+                            <p>표준편차가 작다 = 값들이 비슷하다, 크다 = 값 차이가 크다. 시험 점수라면 "몇 점 정도 퍼져 있다"로 바로 읽을 수 있는 것이 분산 대비 장점이다.</p>
+                            <p class="gl-ex">예: 60, 70, 80, 90, 100의 표본 표준편차는 약 15.8점.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>STDEV.S</code>/<code>STDEV.P</code> · R <code>sd()</code> · pandas <code>.std()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-variance">분산</button><button type="button" class="gl-link" data-goto="gl-zscore">Z-점수</button><button type="button" class="gl-link" data-goto="gl-ddof">n-1 보정</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-quartile" data-cat="spread" data-key="사분위수 quartile q1 q2 q3 백분위수 percentile 4등분">
+                        <summary><span class="gl-term">사분위수 <em>quartile</em></span><span class="gl-brief">정렬한 데이터를 4등분하는 세 지점. Q1(25%), Q2(50% = 중앙값), Q3(75%).</span></summary>
+                        <div class="gl-body">
+                            <p>100등분하면 백분위수(percentile)다. Q1은 25백분위수, Q3는 75백분위수와 같다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>QUARTILE.INC</code> · R <code>quantile()</code> · pandas <code>.quantile([0.25, 0.75])</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-iqr">IQR</button><button type="button" class="gl-link" data-goto="gl-boxplot">상자그림</button><button type="button" class="gl-link" data-goto="gl-median">중앙값</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-iqr" data-cat="spread" data-key="iqr 사분위범위 interquartile range 이상치 규칙 1.5">
+                        <summary><span class="gl-term">IQR(사분위범위) <em>interquartile range</em></span><span class="gl-brief">Q3 - Q1. 가운데 50%의 퍼짐이라 이상치에 강건하다.</span></summary>
+                        <div class="gl-body">
+                            <p>이상치 판별 규칙: Q1 - 1.5×IQR 미만이거나 Q3 + 1.5×IQR 초과면 이상치 후보로 본다. 상자그림의 수염 밖 점이 바로 이것이다.</p>
+                            <p class="gl-ex">예: 60, 70, 80, 90, 100에서 Q1=70, Q3=90이므로 IQR=20. 마지막 값이 1000이 되어도 IQR은 20 그대로다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-quartile">사분위수</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button><button type="button" class="gl-link" data-goto="gl-robust">강건성</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-ddof" data-cat="spread" data-key="자유도 n-1 ddof degrees of freedom 표본분산 stdev.s stdev.p">
+                        <summary><span class="gl-term">n-1 보정(자유도) <em>degrees of freedom</em></span><span class="gl-brief">표본의 분산/표준편차는 n이 아니라 n-1로 나눈다.</span></summary>
+                        <div class="gl-body">
+                            <p>표본 평균을 기준으로 편차를 재면 퍼짐이 실제(모집단)보다 작게 측정되는 경향이 있어 n-1로 나눠 보정한다. 같은 데이터라도 도구/함수에 따라 결과가 미세하게 달라지는 단골 원인.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>STDEV.S</code>(n-1) vs <code>STDEV.P</code>(n) · R <code>sd()</code>는 n-1 · pandas <code>.std()</code>는 기본 ddof=1(n-1)</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-sd">표준편차</button><button type="button" class="gl-link" data-goto="gl-sample">표본</button><button type="button" class="gl-link" data-goto="gl-population">모집단</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-zscore" data-cat="spread" data-key="z점수 z-score zscore 표준화 standardize">
+                        <summary><span class="gl-term">Z-점수 <em>z-score</em></span><span class="gl-brief">(값 - 평균) / 표준편차. 평균에서 표준편차 몇 배 떨어졌는지 나타내는 표준화 점수.</span></summary>
+                        <div class="gl-body">
+                            <p>단위가 다른 변수끼리도 비교할 수 있게 해 준다. |z|가 3 안팎을 넘으면 이상치를 의심한다.</p>
+                            <p class="gl-ex">예: 평균 80, 표준편차 10인 시험에서 95점의 z = (95-80)/10 = 1.5.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-sd">표준편차</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-dist" data-cat="dist" data-key="분포 distribution 모양">
+                        <summary><span class="gl-term">분포 <em>distribution</em></span><span class="gl-brief">값들이 어떤 구간에 얼마나 몰려 있는지의 전체 모양.</span></summary>
+                        <div class="gl-body">
+                            <p>중심(어디에), 산포(얼마나 퍼져), 모양(대칭인지 치우쳤는지)을 함께 봐야 분포를 본 것이다. 히스토그램이 기본 도구다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-hist">히스토그램</button><button type="button" class="gl-link" data-goto="gl-skew">왜도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-freq" data-cat="dist" data-key="빈도 도수 frequency count 카운트">
+                        <summary><span class="gl-term">빈도(도수) <em>frequency</em></span><span class="gl-brief">각 값/범주가 몇 번 나왔는지 센 것. 범주형 요약의 기본.</span></summary>
+                        <div class="gl-body">
+                            <p>범주형 변수는 평균 대신 빈도와 비율로 요약한다. 빈도를 표로 만든 것이 빈도표(도수분포표)다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>COUNTIF</code> · R <code>table()</code> · pandas <code>.value_counts()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-categorical">범주형 변수</button><button type="button" class="gl-link" data-goto="gl-mode">최빈값</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-hist" data-cat="dist" data-key="히스토그램 histogram 분포 구간 빈도">
+                        <summary><span class="gl-term">히스토그램 <em>histogram</em></span><span class="gl-brief">연속형 변수의 분포를 구간(bin)별 빈도 막대로 그린 그래프. 막대 사이가 붙어 있다.</span></summary>
+                        <div class="gl-body">
+                            <p>어느 구간에 값이 몰리는지, 어느 쪽으로 치우쳤는지 한눈에 보인다. 구간 너비를 바꾸면 인상이 달라지니 몇 가지로 시험해 본다.</p>
+                            <p class="gl-tool">도구: 엑셀 [삽입 &gt; 통계 차트 &gt; 히스토그램] · R <code>hist()</code> · pandas <code>.plot(kind="hist")</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-bin">계급(빈)</button><button type="button" class="gl-link" data-goto="gl-barchart">막대 차트</button><button type="button" class="gl-link" data-goto="gl-dist">분포</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-bin" data-cat="dist" data-key="계급 빈 bin 구간 간격 width">
+                        <summary><span class="gl-term">계급(빈) <em>bin</em></span><span class="gl-brief">히스토그램에서 값을 묶는 구간. 너비/개수에 따라 분포 모양이 달라 보인다.</span></summary>
+                        <div class="gl-body">
+                            <p>빈이 너무 넓으면 디테일이 사라지고, 너무 좁으면 들쭉날쭉해진다. 엑셀 축 서식에서 "계급 구간 너비"로 조절한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-hist">히스토그램</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-boxplot" data-cat="dist" data-key="상자그림 boxplot box plot 상자수염 5수요약 five number whisker 수염">
+                        <summary><span class="gl-term">상자그림 <em>box plot</em></span><span class="gl-brief">5수 요약(최소, Q1, 중앙값, Q3, 최대)을 상자와 수염으로 그린 그래프.</span></summary>
+                        <div class="gl-body">
+                            <p>상자 = Q1~Q3(IQR), 상자 안 가로선 = 중앙값. 수염은 1.5×IQR 울타리 안의 가장 끝 값까지만 뻗고, 그 밖의 값은 점으로 찍혀 이상치 후보가 된다. 여러 집단의 분포를 나란히 비교할 때 특히 강력하다.</p>
+                            <p class="gl-tool">도구: 엑셀 [삽입 &gt; 통계 차트 &gt; 상자 수염] · R <code>boxplot()</code> · pandas <code>.boxplot()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-quartile">사분위수</button><button type="button" class="gl-link" data-goto="gl-iqr">IQR</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-timeseries" data-cat="dist" data-key="시계열 time series 추세 트렌드 꺾은선">
+                        <summary><span class="gl-term">시계열 그래프 <em>time series</em></span><span class="gl-brief">시간 순서에 따른 값의 변화(추세)를 보는 그래프. 꺾은선이 기본.</span></summary>
+                        <div class="gl-body">
+                            <p>연도/월이 가로축, 값이 세로축. 교재는 X축 간격이 실제 수치 간격으로 반영되는 분산형(X,Y) 차트도 권한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-scatter">산점도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-scatter" data-cat="dist" data-key="산점도 scatter plot 분산형 점 관계">
+                        <summary><span class="gl-term">산점도 <em>scatter plot</em></span><span class="gl-brief">두 수치형 변수를 점으로 찍어 관계(우상향/우하향/무관)를 보는 그래프.</span></summary>
+                        <div class="gl-body">
+                            <p>점들이 우상향으로 모이면 양의 상관, 우하향이면 음의 상관, 흩어져 있으면 무상관. 상관계수를 눈으로 보는 도구다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-corr">상관계수</button><button type="button" class="gl-link" data-goto="gl-trend">추세선</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-skew" data-cat="dist" data-key="왜도 치우침 skewness 꼬리 비대칭">
+                        <summary><span class="gl-term">왜도(치우침) <em>skewness</em></span><span class="gl-brief">분포의 꼬리가 어느 쪽으로 길게 늘어졌는지. 오른쪽 꼬리가 길면 평균 &gt; 중앙값.</span></summary>
+                        <div class="gl-body">
+                            <p>"평균보다 중앙값이 낮다 = 오른쪽으로 꼬리가 긴 분포"처럼 평균과 중앙값의 차이로 치우침을 읽을 수 있다.</p>
+                            <p class="gl-ex">예: 소득 분포는 소수의 고소득이 평균을 끌어올려 평균이 중앙값보다 크다(오른쪽 꼬리).</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-mean">평균</button><button type="button" class="gl-link" data-goto="gl-median">중앙값</button><button type="button" class="gl-link" data-goto="gl-dist">분포</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-barchart" data-cat="dist" data-key="막대차트 bar chart 막대그래프 범주 비교">
+                        <summary><span class="gl-term">막대 차트 <em>bar chart</em></span><span class="gl-brief">범주별 크기 비교용 그래프. 히스토그램과 달리 막대 사이에 간격이 있다.</span></summary>
+                        <div class="gl-body">
+                            <p>"범주 비교 = 막대(간격 있음), 연속형 분포 = 히스토그램(간격 없음)" 짝으로 기억한다. 항목 이름이 길면 가로 막대가 읽기 좋다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-hist">히스토그램</button><button type="button" class="gl-link" data-goto="gl-categorical">범주형 변수</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-variable" data-cat="scale" data-key="변수 variable 항목 열 column">
+                        <summary><span class="gl-term">변수 <em>variable</em></span><span class="gl-brief">측정하는 항목 하나(키, 성별, 소득). 표에서는 열 하나에 해당.</span></summary>
+                        <div class="gl-body">
+                            <p>분석의 최소 단위. 변수의 척도(명목/순서/등간/비율)에 따라 쓸 수 있는 통계량과 그래프가 정해진다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-observation">관측치</button><button type="button" class="gl-link" data-goto="gl-tidy">Tidy Data</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-observation" data-cat="scale" data-key="관측치 observation case 케이스 행 row 레코드">
+                        <summary><span class="gl-term">관측치 <em>observation</em></span><span class="gl-brief">한 개체에 대한 측정값 묶음. 표에서는 행 하나(한 사람, 하루).</span></summary>
+                        <div class="gl-body">
+                            <p>"행 = 관측치, 열 = 변수, 셀 = 값"이라는 약속이 모든 분석 도구의 전제다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-variable">변수</button><button type="button" class="gl-link" data-goto="gl-tidy">Tidy Data</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-categorical" data-cat="scale" data-key="범주형 categorical qualitative 질적 분류">
+                        <summary><span class="gl-term">범주형 변수 <em>categorical</em></span><span class="gl-brief">분류/이름을 나타내는 변수(성별, 시도명). 빈도/비율로 요약한다.</span></summary>
+                        <div class="gl-body">
+                            <p>명목척도와 순서척도가 여기에 속한다. 그래프는 막대/원형이 짝이다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-nominal">명목척도</button><button type="button" class="gl-link" data-goto="gl-ordinal">순서척도</button><button type="button" class="gl-link" data-goto="gl-freq">빈도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-numerical" data-cat="scale" data-key="연속형 수치형 numerical quantitative 양적 이산 discrete continuous">
+                        <summary><span class="gl-term">수치형(양적) 변수 <em>numerical</em></span><span class="gl-brief">수량을 나타내는 변수(키, 소득). 평균/표준편차로 요약한다.</span></summary>
+                        <div class="gl-body">
+                            <p>셀 수 있으면 이산형(자녀 수), 잴 수 있으면 연속형(키)으로 더 나뉜다. 그래프는 히스토그램/상자그림/산점도가 짝이다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-interval">등간척도</button><button type="button" class="gl-link" data-goto="gl-ratio">비율척도</button><button type="button" class="gl-link" data-goto="gl-hist">히스토그램</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-nominal" data-cat="scale" data-key="명목척도 nominal 이름표 분류 혈액형 우편번호">
+                        <summary><span class="gl-term">명목척도 <em>nominal</em></span><span class="gl-brief">순서 없는 이름표(성별, 혈액형, 우편번호). 최빈값만 의미가 있다.</span></summary>
+                        <div class="gl-body">
+                            <p>숫자로 표기되어 있어도 "이름표일 뿐인 숫자"면 명목이다. 평균/덧셈은 무의미하다.</p>
+                            <p class="gl-ex">예: 지역코드 02와 051을 더하거나 평균 내는 것은 의미가 없다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-mode">최빈값</button><button type="button" class="gl-link" data-goto="gl-categorical">범주형 변수</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-ordinal" data-cat="scale" data-key="순서척도 ordinal 서열 만족도 등급 학점">
+                        <summary><span class="gl-term">순서척도 <em>ordinal</em></span><span class="gl-brief">순서는 있지만 간격이 일정하지 않은 척도(만족도 상/중/하, 학점). 중앙값까지 의미.</span></summary>
+                        <div class="gl-body">
+                            <p>"상-중"의 차이와 "중-하"의 차이가 같다고 보장할 수 없어 평균은 조심해야 한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-median">중앙값</button><button type="button" class="gl-link" data-goto="gl-nominal">명목척도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-interval" data-cat="scale" data-key="등간척도 interval 간격 섭씨 연도 절대0 없음">
+                        <summary><span class="gl-term">등간척도 <em>interval</em></span><span class="gl-brief">간격은 일정하지만 절대 0이 없는 척도(섭씨 온도, 연도). 배수 비교는 무의미.</span></summary>
+                        <div class="gl-body">
+                            <p>덧셈/뺄셈(차이)은 의미가 있지만 "0 = 없음"이 아니라서 배수는 성립하지 않는다.</p>
+                            <p class="gl-ex">예: 20도는 10도보다 10도 높지만 "두 배 덥다"는 아니다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-ratio">비율척도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-ratio" data-cat="scale" data-key="비율척도 ratio 절대0 배수 키 소득 나이">
+                        <summary><span class="gl-term">비율척도 <em>ratio</em></span><span class="gl-brief">절대 0이 있어 배수 비교까지 가능한 척도(키, 소득, 나이). 모든 사칙연산 의미.</span></summary>
+                        <div class="gl-body">
+                            <p>정보량 순서: 명목 &lt; 순서 &lt; 등간 &lt; 비율. 위 척도에서 되는 연산은 아래(더 높은) 척도에서도 항상 된다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-interval">등간척도</button><button type="button" class="gl-link" data-goto="gl-numerical">수치형 변수</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-population" data-cat="infer" data-key="모집단 population 전체">
+                        <summary><span class="gl-term">모집단 <em>population</em></span><span class="gl-brief">알고 싶은 대상 전체(예: 전국 대학생 전부).</span></summary>
+                        <div class="gl-body">
+                            <p>전부 조사(전수조사)하기 어려워서 보통 일부(표본)만 뽑아 조사한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-sample">표본</button><button type="button" class="gl-link" data-goto="gl-parameter">모수</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-sample" data-cat="infer" data-key="표본 sample 샘플 일부 추출">
+                        <summary><span class="gl-term">표본 <em>sample</em></span><span class="gl-brief">모집단에서 뽑은 일부. 현실의 분석 대부분은 표본 분석이다.</span></summary>
+                        <div class="gl-body">
+                            <p>표본을 잘못 뽑으면(편향) 모집단과 다른 결론이 난다. "내 데이터가 전체인가 일부인가"를 항상 먼저 묻는다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-population">모집단</button><button type="button" class="gl-link" data-goto="gl-bias">편향</button><button type="button" class="gl-link" data-goto="gl-ddof">n-1 보정</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-parameter" data-cat="infer" data-key="모수 parameter 모평균 모표준편차">
+                        <summary><span class="gl-term">모수 <em>parameter</em></span><span class="gl-brief">모집단의 특성치(모평균, 모표준편차). 보통 직접 알 수 없다.</span></summary>
+                        <div class="gl-body">
+                            <p>알 수 없는 모수를 표본의 통계량으로 추정하는 것이 추론통계의 기본 구도다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-statistic">통계량</button><button type="button" class="gl-link" data-goto="gl-inferential">추론통계</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-statistic" data-cat="infer" data-key="통계량 statistic 표본평균 추정치">
+                        <summary><span class="gl-term">통계량 <em>statistic</em></span><span class="gl-brief">표본에서 계산한 특성치(표본평균 등). 모수를 추정하는 데 쓴다.</span></summary>
+                        <div class="gl-body">
+                            <p>"모집단의 값은 모수, 표본의 값은 통계량" - 이름 짝만 외워도 시험 단골 문제가 풀린다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-parameter">모수</button><button type="button" class="gl-link" data-goto="gl-sample">표본</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-descriptive" data-cat="infer" data-key="기술통계 descriptive statistics 요약 묘사">
+                        <summary><span class="gl-term">기술통계 <em>descriptive statistics</em></span><span class="gl-brief">가진 데이터를 요약/묘사하는 통계(평균, 표준편차, 그래프). 이 과목의 중심.</span></summary>
+                        <div class="gl-body">
+                            <p>여기서 "기술"은 technology가 아니라 기록하고 묘사한다(describe, 記述)는 뜻이다. 수백 개의 숫자를 대표값 몇 개와 그래프로 압축한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-center">중심경향</button><button type="button" class="gl-link" data-goto="gl-spread">산포</button><button type="button" class="gl-link" data-goto="gl-inferential">추론통계</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-inferential" data-cat="infer" data-key="추론통계 inferential 추정 검정 가설">
+                        <summary><span class="gl-term">추론통계 <em>inferential statistics</em></span><span class="gl-brief">표본으로 모집단을 추정/검정하는 통계. 후속 통계 과목에서 본격적으로 다룬다.</span></summary>
+                        <div class="gl-body">
+                            <p>"표본 평균이 80이니 모집단 평균도 80 근처일 것"처럼 일부에서 전체로 일반화하는 논리다. 이 과목에서는 개념 구분까지만 알면 된다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-descriptive">기술통계</button><button type="button" class="gl-link" data-goto="gl-sample">표본</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-bias" data-cat="infer" data-key="편향 bias 치우침 대표성">
+                        <summary><span class="gl-term">편향 <em>bias</em></span><span class="gl-brief">표본이 모집단을 대표하지 못해 결과가 한쪽으로 치우치는 것.</span></summary>
+                        <div class="gl-body">
+                            <p class="gl-ex">예: "대학생 평균 공부 시간"을 도서관 이용자에게만 물으면 실제보다 과대평가된다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-sample">표본</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-missing" data-cat="clean" data-key="결측치 missing value na nan none null 빈칸">
+                        <summary><span class="gl-term">결측치 <em>missing value</em></span><span class="gl-brief">비어 있는 값. 엑셀 빈 칸, R의 NA, pandas의 NaN/None.</span></summary>
+                        <div class="gl-body">
+                            <p>빈칸인지, 0인지, "모름"이라는 문자열인지 반드시 구분해야 한다. 0은 값이 있는 것이고 결측은 값이 없는 것이다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>COUNTBLANK</code> · R <code>is.na()</code> · pandas <code>.isnull().sum()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-impute">대치</button><button type="button" class="gl-link" data-goto="gl-cleaning">데이터 정제</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-impute" data-cat="clean" data-key="대치 imputation fillna 채우기 보간">
+                        <summary><span class="gl-term">대치 <em>imputation</em></span><span class="gl-brief">결측치를 다른 값으로 채우는 것. 수치형은 평균/중앙값, 범주형은 최빈값이 기본.</span></summary>
+                        <div class="gl-body">
+                            <p>행을 통째로 지우는 방법(dropna)과 채우는 방법(fillna)을 둘 다 해 보고 행 수/평균이 어떻게 달라지는지 비교하는 것이 과제 단골이다.</p>
+                            <p class="gl-tool">도구: pandas <code>.fillna(중앙값)</code> · R <code>df$x[is.na(df$x)] &lt;- median(...)</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-missing">결측치</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-outlier" data-cat="clean" data-key="이상치 outlier 극단값 튀는값 특이값">
+                        <summary><span class="gl-term">이상치 <em>outlier</em></span><span class="gl-brief">분포에서 비정상적으로 멀리 떨어진 값. 입력 오류일 수도, 진짜 극단값일 수도 있다.</span></summary>
+                        <div class="gl-body">
+                            <p>탐지: 상자그림(수염 밖 점), IQR 규칙(Q1 - 1.5×IQR ~ Q3 + 1.5×IQR 밖), Z-점수. 무조건 지우지 말고 원인(오타인가, 진짜인가)을 먼저 확인한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-iqr">IQR</button><button type="button" class="gl-link" data-goto="gl-zscore">Z-점수</button><button type="button" class="gl-link" data-goto="gl-boxplot">상자그림</button><button type="button" class="gl-link" data-goto="gl-robust">강건성</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-cleaning" data-cat="clean" data-key="정제 cleaning 클리닝 전처리 preprocessing 중복">
+                        <summary><span class="gl-term">데이터 정제 <em>data cleaning</em></span><span class="gl-brief">중복 제거, 오타/공백 정리, 자료형 통일 등 분석 가능한 상태로 다듬는 작업.</span></summary>
+                        <div class="gl-body">
+                            <p>분석가 시간의 60~80%가 여기에 들어간다는 통념이 있을 만큼 비중이 크다. 정제 없이 낸 결론은 GIGO로 직행한다.</p>
+                            <p class="gl-tool">도구: 엑셀 [중복된 항목 제거] · pandas <code>.drop_duplicates()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-missing">결측치</button><button type="button" class="gl-link" data-goto="gl-outlier">이상치</button><button type="button" class="gl-link" data-goto="gl-gigo">GIGO</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-tidy" data-cat="clean" data-key="tidy data 깔끔한 데이터 타이디 wickham 3원칙">
+                        <summary><span class="gl-term">Tidy Data <em>깔끔한 데이터</em></span><span class="gl-brief">(1) 변수 = 열, (2) 관측치 = 행, (3) 값 = 셀. Hadley Wickham의 3원칙.</span></summary>
+                        <div class="gl-body">
+                            <p>분석 도구가 곧바로 받아먹을 수 있는 표의 표준형. KOSIS에서 받은 표는 보통 이 약속을 어기고 있어서(연도가 여러 열로) 변환이 필요하다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-widelong">넓은/긴 형식</button><button type="button" class="gl-link" data-goto="gl-variable">변수</button><button type="button" class="gl-link" data-goto="gl-observation">관측치</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-widelong" data-cat="clean" data-key="wide long 넓은 형식 긴 형식 pivot_longer melt 변환">
+                        <summary><span class="gl-term">넓은 형식 / 긴 형식 <em>wide / long</em></span><span class="gl-brief">연도가 여러 열로 펼쳐진 표(wide)를 연도 열 하나로 모은 표(long)로 바꾸는 변환.</span></summary>
+                        <div class="gl-body">
+                            <p>변환 후에는 "각 변수 = 한 열, 각 관측치 = 한 행"이 되어 Tidy Data 3원칙을 만족한다.</p>
+                            <p class="gl-tool">도구: R <code>tidyr::pivot_longer()</code> · pandas <code>melt()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-tidy">Tidy Data</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-gigo" data-cat="clean" data-key="gigo garbage in garbage out 쓰레기">
+                        <summary><span class="gl-term">GIGO <em>garbage in, garbage out</em></span><span class="gl-brief">쓰레기를 넣으면 쓰레기가 나온다. 더러운 데이터로는 어떤 분석도 틀린다.</span></summary>
+                        <div class="gl-body">
+                            <p>아무리 좋은 기법과 그래프를 써도 입력 데이터가 더러우면 결론이 틀린다는 데이터 분석의 제1원칙.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-cleaning">데이터 정제</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-encoding" data-cat="clean" data-key="인코딩 encoding utf-8 cp949 euc-kr 한글 깨짐">
+                        <summary><span class="gl-term">인코딩 <em>encoding</em></span><span class="gl-brief">글자를 저장하는 방식. 한글 CSV가 깨지면 UTF-8과 CP949를 바꿔 읽는다.</span></summary>
+                        <div class="gl-body">
+                            <p>KOSIS/공공데이터 CSV에서 한글이 깨지는 원인 1순위. 메모장으로 먼저 열어 확인하는 습관을 들인다. CP949는 EUC-KR을 확장한 윈도우 한글 인코딩이다.</p>
+                            <p class="gl-tool">도구: pandas <code>read_csv(..., encoding="cp949")</code> · R <code>read.csv(..., fileEncoding="UTF-8")</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-csv">CSV</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-eda" data-cat="clean" data-key="eda 탐색적 데이터 분석 exploratory 워크플로우">
+                        <summary><span class="gl-term">탐색적 데이터 분석 <em>EDA</em></span><span class="gl-brief">본격 분석 전에 분포/이상치/관계를 그래프와 요약통계로 훑어보는 단계.</span></summary>
+                        <div class="gl-body">
+                            <p>분석 워크플로우 7단계 중 4번째: 문제 정의 → 수집 → 정제 → <strong>탐색(EDA)</strong> → 분석/모형화 → 해석/시각화 → 보고.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-descriptive">기술통계</button><button type="button" class="gl-link" data-goto="gl-hist">히스토그램</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-corr" data-cat="rel" data-key="상관계수 correlation r 상관 관계 correl">
+                        <summary><span class="gl-term">상관계수 <em>correlation (r)</em></span><span class="gl-brief">두 수치형 변수의 직선 관계 방향/세기를 -1 ~ +1로 요약.</span></summary>
+                        <div class="gl-body">
+                            <p>+1에 가까우면 우상향(양의 상관), -1에 가까우면 우하향(음의 상관), 0 근처면 직선 관계가 약함. 산점도와 함께 봐야 안전하다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>CORREL</code> · R <code>cor()</code> · pandas <code>.corr()</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-scatter">산점도</button><button type="button" class="gl-link" data-goto="gl-rsq">R제곱</button><button type="button" class="gl-link" data-goto="gl-causation">상관과 인과</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-causation" data-cat="rel" data-key="인과 causation 상관 원인 결과 제3변수">
+                        <summary><span class="gl-term">상관 ≠ 인과 <em>correlation vs causation</em></span><span class="gl-brief">같이 움직인다고 원인-결과는 아니다. 제3의 변수나 우연일 수 있다.</span></summary>
+                        <div class="gl-body">
+                            <p class="gl-ex">예: 아이스크림 판매량과 익사 사고는 상관이 높지만, 서로의 원인이 아니라 둘 다 "더위(여름)"가 원인이다.</p>
+                            <p>보고서에서 "상관이 있으므로 ~ 때문이다"라고 쓰면 감점 1순위. "관련이 있다"까지만 말한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-corr">상관계수</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-regression" data-cat="rel" data-key="회귀 regression 단순선형회귀 기울기 절편 slope intercept lm">
+                        <summary><span class="gl-term">단순선형회귀 <em>simple linear regression</em></span><span class="gl-brief">y = a + bx 직선 하나로 x에서 y를 예측하는 모형. 산점도 추세선의 정체.</span></summary>
+                        <div class="gl-body">
+                            <p>기울기 b = x가 1 늘 때 y의 평균 변화량(방향과 세기). 절편 a = x가 0일 때의 예측값(데이터에 x=0이 없으면 해석은 조심).</p>
+                            <p class="gl-tool">도구: 엑셀 <code>SLOPE</code>/<code>INTERCEPT</code>/추세선 · R <code>lm(y ~ x)</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-trend">추세선</button><button type="button" class="gl-link" data-goto="gl-rsq">R제곱</button><button type="button" class="gl-link" data-goto="gl-scatter">산점도</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-rsq" data-cat="rel" data-key="r제곱 결정계수 r-squared rsq r2 설명력">
+                        <summary><span class="gl-term">R제곱(결정계수) <em>R-squared</em></span><span class="gl-brief">회귀직선이 y의 흩어짐 중 몇 %를 설명하는지(0~1).</span></summary>
+                        <div class="gl-body">
+                            <p>1에 가까울수록 점들이 직선에 잘 붙어 있다. 단순선형회귀에서는 상관계수 r의 제곱과 같다. R제곱이 높아도 인과관계를 뜻하지는 않는다.</p>
+                            <p class="gl-tool">도구: 엑셀 <code>RSQ</code>/추세선 옵션 · R <code>summary(fit)</code>의 Multiple R-squared</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-corr">상관계수</button><button type="button" class="gl-link" data-goto="gl-regression">단순선형회귀</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-trend" data-cat="rel" data-key="추세선 trendline 추세 직선 적합">
+                        <summary><span class="gl-term">추세선 <em>trendline</em></span><span class="gl-brief">산점도 점들에 가장 잘 맞는 직선/곡선. 엑셀에서 우클릭 한 번으로 회귀를 체험하는 도구.</span></summary>
+                        <div class="gl-body">
+                            <p>점 우클릭 → [추세선 추가] → 선형 선택 후 "수식 표시"와 "R-제곱 값 표시"를 체크하면 회귀식과 R제곱이 차트에 나타난다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-regression">단순선형회귀</button><button type="button" class="gl-link" data-goto="gl-scatter">산점도</button></p>
+                        </div>
+                    </details>
+
+                    <details class="gl-card" id="gl-csv" data-cat="tool" data-key="csv comma separated values 쉼표 텍스트 파일">
+                        <summary><span class="gl-term">CSV <em>comma-separated values</em></span><span class="gl-brief">쉼표로 구분된 텍스트 표 파일. KOSIS/공공데이터포털 다운로드의 기본 형식.</span></summary>
+                        <div class="gl-body">
+                            <p>엑셀 전용 형식(xlsx)과 달리 어떤 도구로도 읽을 수 있다. 받은 직후 메모장으로 열어 한글 깨짐(인코딩)부터 확인한다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-encoding">인코딩</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-dataframe" data-cat="tool" data-key="dataframe series 데이터프레임 시리즈 pandas 판다스">
+                        <summary><span class="gl-term">DataFrame / Series <em>pandas</em></span><span class="gl-brief">pandas의 표(2차원)와 열(1차원) 자료구조. 엑셀의 시트와 열에 대응.</span></summary>
+                        <div class="gl-body">
+                            <p>DataFrame은 행(index)과 열(column)로 구성된다. <code>df["열이름"]</code>으로 한 열(Series)을 꺼낸다.</p>
+                            <p class="gl-tool">도구: <code>pd.DataFrame({...})</code> · <code>pd.read_csv(...)</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-vector">벡터(R)</button><button type="button" class="gl-link" data-goto="gl-tidy">Tidy Data</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-vector" data-cat="tool" data-key="벡터 vector r c() 데이터프레임 data.frame">
+                        <summary><span class="gl-term">벡터 <em>vector (R)</em></span><span class="gl-brief">같은 자료형 값을 1차원으로 묶은 R의 기본 그릇. c(1, 2, 3)으로 만든다.</span></summary>
+                        <div class="gl-body">
+                            <p>R의 data.frame은 길이가 같은 벡터(열)들을 묶은 표다. 숫자형/문자형/논리형 벡터가 있다.</p>
+                            <p class="gl-tool">도구: <code>scores &lt;- c(85, 90, 78)</code> · <code>mean(scores)</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-dataframe">DataFrame</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-describe" data-cat="tool" data-key="describe summary 기술통계법 요약 명령">
+                        <summary><span class="gl-term">describe() / summary() <em>요약 명령</em></span><span class="gl-brief">개수/평균/표준편차/최소/사분위/최대를 한 번에 뽑는 요약 명령.</span></summary>
+                        <div class="gl-body">
+                            <p>기술통계 전체를 한 줄로 얻는 지름길. 단 R <code>summary()</code>는 최소/사분위/평균/최대만 보여 주므로 개수는 <code>length()</code>, 표준편차는 <code>sd()</code>를 병기한다. 도구별 결과(특히 표준편차의 n-1 여부)를 비교해 보면 개념이 잡힌다.</p>
+                            <p class="gl-tool">도구: pandas <code>.describe()</code> · R <code>summary()</code> · 엑셀 [데이터 분석 &gt; 기술 통계법]</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-descriptive">기술통계</button><button type="button" class="gl-link" data-goto="gl-quartile">사분위수</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-groupby" data-cat="tool" data-key="groupby 피벗 pivot 그룹 집계 교차">
+                        <summary><span class="gl-term">groupby / 피벗테이블 <em>그룹 집계</em></span><span class="gl-brief">범주별로 묶어 합계/평균을 내는 교차 집계. 엑셀 피벗 = pandas groupby.</span></summary>
+                        <div class="gl-body">
+                            <p>"시도별 인구 합계"처럼 범주형 변수로 그룹을 나눠 수치형 변수를 요약한다. 엑셀 피벗테이블, pandas groupby, R dplyr group_by가 모두 같은 일이다.</p>
+                            <p class="gl-tool">도구: <code>df.groupby("시도")["인구"].sum()</code> · 엑셀 [삽입 &gt; 피벗 테이블]</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-freq">빈도</button><button type="button" class="gl-link" data-goto="gl-categorical">범주형 변수</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-absref" data-cat="tool" data-key="절대참조 상대참조 혼합참조 $a$1 f4 고정">
+                        <summary><span class="gl-term">절대/상대 참조 <em>$A$1 / A1</em></span><span class="gl-brief">수식을 복사할 때 참조가 따라 움직이면 상대(A1), 고정되면 절대($A$1). F4로 순환.</span></summary>
+                        <div class="gl-body">
+                            <p>F4를 반복해 누르면 A1 → $A$1 → A$1 → $A1 순으로 바뀐다. VLOOKUP 범위를 절대 참조로 고정하지 않으면 복사 시 범위가 밀려 #N/A가 나는 것이 단골 사고다.</p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-groupby">피벗테이블</button></p>
+                        </div>
+                    </details>
+                    <details class="gl-card" id="gl-fv" data-cat="tool" data-key="복리 원리합계 fv pmt 재무함수 적금 대출 이자">
+                        <summary><span class="gl-term">복리와 원리합계 <em>FV / PMT</em></span><span class="gl-brief">이자에 이자가 붙는 복리 계산. FV는 만기금액, PMT는 매기 납입/상환액.</span></summary>
+                        <div class="gl-body">
+                            <p>부호 규칙: 내가 내는 돈은 음수(-), 받는 돈은 양수(+). 월 단위면 이율은 연이율/12, 기간은 년수×12로 환산한다.</p>
+                            <p class="gl-ex">예: 월 30만원, 연 3%, 3년 적금의 만기금액 = <code>=FV(0.03/12, 3*12, -300000)</code></p>
+                            <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-absref">절대/상대 참조</button></p>
+                        </div>
+                    </details>
+                </div>
+                <p class="gl-empty" hidden>검색 결과가 없다. 다른 단어나 영문 표기로 시도해 보자.</p>
+            </div>
+        </details>
     </main>
 
     <button class="to-top" aria-label="맨 위로">&#8593;</button>
@@ -873,7 +1589,9 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
         (function () {
             "use strict";
 
-            var PRISM_CSS = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css";
+            /* Prism 테마 CSS는 로드하지 않는다. 기본(라이트) 테마가 pre[class*="language-"]에
+               밝은 배경을 강제해 어두운 코드 블록(--codeblock-bg)을 덮어쓰기 때문이다.
+               토큰 색은 위 페이지 전용 스타일이 담당한다. */
             var PRISM_CORE = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js";
             var PRISM_LANGS = [
                 "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js",
@@ -897,10 +1615,6 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
             function loadPrism() {
                 if (prismLoaded) return Promise.resolve();
                 prismLoaded = true;
-                var link = document.createElement("link");
-                link.rel = "stylesheet";
-                link.href = PRISM_CSS;
-                document.head.appendChild(link);
                 return loadScript(PRISM_CORE)
                     .then(function () {
                         return PRISM_LANGS.reduce(function (p, src) {
@@ -977,6 +1691,228 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
                     });
                 });
             });
+        })();
+    </script>
+    <script>
+        /* 페이지 전용: 부록 용어 사전(검색/분류 필터/암기 모드) + 미니 통계 위젯 */
+        (function () {
+            "use strict";
+
+            /* ----- 통계 도우미 (표본 기준, 사분위는 QUARTILE.INC식 선형 보간) ----- */
+            function sorted(a) { return a.slice().sort(function (x, y) { return x - y; }); }
+            function mean(a) {
+                var s = 0, i;
+                for (i = 0; i < a.length; i++) { s += a[i]; }
+                return s / a.length;
+            }
+            function median(a) {
+                var s = sorted(a), n = s.length, m = Math.floor(n / 2);
+                return (n % 2) ? s[m] : (s[m - 1] + s[m]) / 2;
+            }
+            function quantile(a, p) {
+                var s = sorted(a), idx = p * (s.length - 1),
+                    lo = Math.floor(idx), hi = Math.ceil(idx);
+                return s[lo] + (s[hi] - s[lo]) * (idx - lo);
+            }
+            function sampleVar(a) {
+                var m = mean(a), ss = 0, i, d;
+                for (i = 0; i < a.length; i++) { d = a[i] - m; ss += d * d; }
+                return ss / (a.length - 1);
+            }
+            function sampleSD(a) { return Math.sqrt(sampleVar(a)); }
+            function rangeOf(a) { var s = sorted(a); return s[s.length - 1] - s[0]; }
+            function iqrOf(a) { return quantile(a, 0.75) - quantile(a, 0.25); }
+            function fmt(x) { return String(Math.round(x * 10) / 10); }
+
+            /* ----- 위젯 1: 이상치 실험실 ----- */
+            var lab = document.getElementById("gl-lab");
+            if (lab) {
+                var labSlider = lab.querySelector("input[type=range]");
+                var labX = lab.querySelector("[data-lab-x]");
+                var labSvg = lab.querySelector("[data-lab-svg]");
+                var labRows = lab.querySelector("[data-lab-rows]");
+                var BASE = [60, 70, 80, 90, 100];
+                var LAB_STATS = [
+                    { name: "평균", fn: mean, sens: true },
+                    { name: "중앙값", fn: median, sens: false },
+                    { name: "범위", fn: rangeOf, sens: true },
+                    { name: "분산(표본)", fn: sampleVar, sens: true },
+                    { name: "표준편차(표본)", fn: sampleSD, sens: true },
+                    { name: "IQR (Q3-Q1)", fn: iqrOf, sens: false }
+                ];
+                var labBase = LAB_STATS.map(function (s) { return s.fn(BASE); });
+
+                var labScale = function (v) { return 20 + (v - 50) / 1000 * 600; };
+                var drawLab = function (vals) {
+                    var m = mean(vals), md = median(vals), i, x, last;
+                    var mx = labScale(m), mdx = labScale(md);
+                    var svg = '<svg viewBox="0 0 640 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+                    svg += '<line x1="20" y1="58" x2="620" y2="58" stroke="var(--border)" stroke-width="2"/>';
+                    svg += '<text x="20" y="46" font-size="11" fill="var(--text-muted)">50</text>';
+                    svg += '<text x="620" y="46" font-size="11" fill="var(--text-muted)" text-anchor="end">1050</text>';
+                    for (i = 0; i < vals.length; i++) {
+                        x = labScale(vals[i]);
+                        last = (i === vals.length - 1);
+                        svg += '<circle cx="' + x + '" cy="58" r="6" fill="var(--accent)"' +
+                            ' opacity="' + (last ? '1' : '0.65') + '"' +
+                            (last ? ' stroke="var(--text)" stroke-width="1.5"' : '') + '/>';
+                    }
+                    svg += '<line x1="' + mdx + '" y1="28" x2="' + mdx + '" y2="68" stroke="var(--gl-ok)" stroke-width="3" stroke-linecap="round"/>';
+                    svg += '<text x="' + mdx + '" y="22" font-size="11" fill="var(--gl-ok)" text-anchor="middle" font-weight="700">중앙값 ' + fmt(md) + '</text>';
+                    svg += '<path d="M ' + (mx - 7) + ' 82 L ' + (mx + 7) + ' 82 L ' + mx + ' 68 Z" fill="var(--code-text)"/>';
+                    svg += '<text x="' + mx + '" y="96" font-size="11" fill="var(--code-text)" text-anchor="middle" font-weight="700">평균 ' + fmt(m) + '</text>';
+                    svg += '</svg>';
+                    labSvg.innerHTML = svg;
+                };
+                var updateLab = function () {
+                    var x = Number(labSlider.value);
+                    var vals = BASE.slice(0, 4).concat([x]);
+                    var html = "", i, cur, changed;
+                    labX.textContent = String(x);
+                    drawLab(vals);
+                    for (i = 0; i < LAB_STATS.length; i++) {
+                        cur = LAB_STATS[i].fn(vals);
+                        changed = Math.abs(cur - labBase[i]) > 0.05;
+                        html += "<tr><td>" + LAB_STATS[i].name + "</td>" +
+                            '<td class="num">' + fmt(labBase[i]) + "</td>" +
+                            '<td class="num' + (changed ? " is-changed" : "") + '">' + fmt(cur) + "</td>" +
+                            '<td><span class="gl-badge ' +
+                            (LAB_STATS[i].sens ? 'gl-badge--sens">이상치에 민감' : 'gl-badge--robust">강건') +
+                            "</span></td></tr>";
+                    }
+                    labRows.innerHTML = html;
+                };
+                labSlider.addEventListener("input", updateLab);
+                updateLab();
+            }
+
+            /* ----- 위젯 2: 같은 평균, 다른 산포 (A반 vs B반) ----- */
+            var cmp = document.getElementById("gl-compare");
+            if (cmp) {
+                var A = [78, 79, 80, 81, 82];
+                var B = [40, 60, 80, 100, 120];
+                var cmpSvgBox = cmp.querySelector("[data-cmp-svg]");
+                var cmpRows = cmp.querySelector("[data-cmp-rows]");
+                var cmpScale = function (v) { return 40 + (v - 30) / 100 * 580; };
+                var strip = function (vals, y, color) {
+                    var out = '<line x1="40" y1="' + y + '" x2="620" y2="' + y + '" stroke="var(--border-soft)" stroke-width="2"/>', i;
+                    for (i = 0; i < vals.length; i++) {
+                        out += '<circle cx="' + cmpScale(vals[i]) + '" cy="' + y + '" r="6" fill="' + color + '" opacity="0.75"/>';
+                    }
+                    return out;
+                };
+                var mx = cmpScale(80);
+                var svg = '<svg viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+                svg += '<line x1="' + mx + '" y1="18" x2="' + mx + '" y2="98" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 4"/>';
+                svg += '<text x="' + mx + '" y="12" font-size="11" fill="var(--text-soft)" text-anchor="middle" font-weight="700">평균 80 (공통)</text>';
+                svg += '<text x="8" y="44" font-size="12" fill="var(--text-soft)" font-weight="700">A반</text>';
+                svg += '<text x="8" y="89" font-size="12" fill="var(--text-soft)" font-weight="700">B반</text>';
+                svg += strip(A, 40, "var(--accent)");
+                svg += strip(B, 85, "var(--code-text)");
+                svg += '</svg>';
+                cmpSvgBox.innerHTML = svg;
+
+                var CMP_STATS = [
+                    { name: "평균", fn: mean },
+                    { name: "범위", fn: rangeOf },
+                    { name: "분산(표본)", fn: sampleVar },
+                    { name: "표준편차(표본)", fn: sampleSD },
+                    { name: "IQR (Q3-Q1)", fn: iqrOf }
+                ];
+                var rowsHtml = "", j;
+                for (j = 0; j < CMP_STATS.length; j++) {
+                    rowsHtml += "<tr><td>" + CMP_STATS[j].name + "</td>" +
+                        '<td class="num">' + fmt(CMP_STATS[j].fn(A)) + "</td>" +
+                        '<td class="num">' + fmt(CMP_STATS[j].fn(B)) + "</td></tr>";
+                }
+                cmpRows.innerHTML = rowsHtml;
+            }
+
+            /* ----- 용어 사전: 검색 / 분류 / 암기 모드 / 연관 점프 ----- */
+            var grid = document.querySelector(".gl-grid");
+            if (!grid) { return; }
+            var cards = Array.prototype.slice.call(grid.querySelectorAll(".gl-card"));
+            var searchEl = document.querySelector(".gl-search");
+            var chips = Array.prototype.slice.call(document.querySelectorAll(".gl-chip"));
+            var countEl = document.querySelector(".gl-count");
+            var emptyEl = document.querySelector(".gl-empty");
+            var memBtn = document.querySelector("[data-gl-memorize]");
+            var expandBtn = document.querySelector("[data-gl-expand]");
+            var collapseBtn = document.querySelector("[data-gl-collapse]");
+            var activeCat = "all";
+
+            var hay = cards.map(function (card) {
+                var term = card.querySelector(".gl-term");
+                var brief = card.querySelector(".gl-brief");
+                return ((card.getAttribute("data-key") || "") + " " +
+                    (term ? term.textContent : "") + " " +
+                    (brief ? brief.textContent : "")).toLowerCase();
+            });
+
+            function applyFilter() {
+                var q = searchEl.value.trim().toLowerCase();
+                var shown = 0, i, ok;
+                for (i = 0; i < cards.length; i++) {
+                    ok = (activeCat === "all" || cards[i].getAttribute("data-cat") === activeCat) &&
+                        (!q || hay[i].indexOf(q) !== -1);
+                    cards[i].hidden = !ok;
+                    if (ok) { shown++; }
+                }
+                countEl.textContent = "전체 " + cards.length + "개 중 " + shown + "개 표시";
+                emptyEl.hidden = shown !== 0;
+            }
+
+            searchEl.addEventListener("input", applyFilter);
+            chips.forEach(function (chip) {
+                chip.addEventListener("click", function () {
+                    chips.forEach(function (c) { c.classList.remove("is-on"); });
+                    chip.classList.add("is-on");
+                    activeCat = chip.getAttribute("data-cat");
+                    applyFilter();
+                });
+            });
+            expandBtn.addEventListener("click", function () {
+                cards.forEach(function (c) { if (!c.hidden) { c.open = true; } });
+            });
+            collapseBtn.addEventListener("click", function () {
+                cards.forEach(function (c) { c.open = false; });
+            });
+            memBtn.addEventListener("click", function () {
+                var on = grid.classList.toggle("gl-memorize");
+                memBtn.setAttribute("aria-pressed", on ? "true" : "false");
+                if (on) { cards.forEach(function (c) { c.open = false; }); }
+            });
+
+            /* 연관 용어 버튼: 필터를 풀고 해당 카드로 점프 + 강조 */
+            var hitTimer = null, hitTarget = null;
+            grid.addEventListener("click", function (e) {
+                var btn = e.target.closest(".gl-link");
+                if (!btn) { return; }
+                var target = document.getElementById(btn.getAttribute("data-goto"));
+                if (!target) { return; }
+                searchEl.value = "";
+                activeCat = "all";
+                chips.forEach(function (c) {
+                    c.classList.remove("is-on");
+                    if (c.getAttribute("data-cat") === "all") { c.classList.add("is-on"); }
+                });
+                applyFilter();
+                target.open = true;
+                target.scrollIntoView({ behavior: "smooth", block: "center" });
+                if (hitTimer) {
+                    window.clearTimeout(hitTimer);
+                    if (hitTarget) { hitTarget.classList.remove("is-hit"); }
+                }
+                hitTarget = target;
+                target.classList.add("is-hit");
+                hitTimer = window.setTimeout(function () {
+                    target.classList.remove("is-hit");
+                    hitTimer = null;
+                    hitTarget = null;
+                }, 1600);
+            });
+
+            applyFilter();
         })();
     </script>
 </body>
