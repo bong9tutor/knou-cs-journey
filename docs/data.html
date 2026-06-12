@@ -318,7 +318,7 @@
             <button class="iconbtn" data-toc-close aria-label="목차 닫기">&#10005;</button>
         </div>
         <div class="toc__nav">
-            <a href="#intro">0. 학습 방향과 우선순위</a>
+            <a href="#intro">0. 학습 방향과 로드맵</a>
             <a href="#ch1">1. 데이터 분석과 컴퓨터</a>
             <a href="#ch2">2. 데이터의 입력과 점검</a>
             <a href="#ch3">3. 통계정보 검색 및 활용</a>
@@ -346,29 +346,36 @@
             <p>본문 곳곳에 직접 만져 보는 위젯 7개가 들어 있다. <strong>직접 해보기</strong> 카드에서 IQR 이상치 판별, 기술통계(평균 vs 중앙값), 셀 참조 F4 순환, 조건 집계 함수, 차트 고르기, 단순선형회귀, 적금 FV 계산까지 손으로 실험해 보자. 생소한 용어는 <a href="#glossary">부록 용어 사전</a>에서 검색/분류 필터/암기 모드로 점검하고, 이상치 실험실에서 평균/중앙값/IQR이 어떻게 다르게 반응하는지 직접 실험할 수 있다.</p>
         </div>
 
-        <h2 id="intro">0. 학습 방향과 우선순위</h2>
+        <h2 id="intro">0. 학습 방향과 로드맵</h2>
         <details class="section" open>
-            <summary>개요 - 무엇을, 어떤 순서로</summary>
+            <summary>개요 - 처음부터 차근차근, 34 Step 로드맵</summary>
             <div class="section__body">
-                <p>이 과목은 도구(엑셀/R/Python)가 바뀌어도 "원본 데이터 → 가공 → 요약 → 해석"이라는 분석 사고는 같다는 감각을 기르는 것이 핵심이다. 각 장은 개요(왜 배우나) - 핵심 개념 - 단계별 실습 - 무료 자료 - 미션으로 구성된다.</p>
+                <p>이 과목은 도구(엑셀/R/Python)가 바뀌어도 "원본 데이터 → 가공 → 요약 → 해석"이라는 분석 사고는 같다는 감각을 기르는 것이 핵심이다. 학습 트래커(노션)는 초심자 기준 <strong>34 Step</strong>으로 구성한다: 개념과 용어를 먼저 다지고, 같은 KOSIS 데이터를 엑셀 → R → 파이썬으로 도구만 바꿔 가며 반복한다. 매일 텔레그램 노티가 그날의 Step 하나를 안내한다.</p>
                 <div class="callout tip">
-                    <p class="callout__title">중급자 기준 공략 순서</p>
-                    <p>이미 기초 컴퓨터 활용 경험이 있다면 순서대로가 아니라 투자 대비 효과가 큰 장부터 공략하는 편이 효율적이다.</p>
+                    <p class="callout__title">용어가 절반이다</p>
+                    <p>모든 Step에 "오늘의 용어"가 있다. 생소한 용어는 그때그때 <a href="#glossary">부록 용어 사전</a>에서 검색하고, 주기적으로 암기 모드로 점검하면 뒤 단계가 쉬워진다.</p>
                 </div>
                 <div class="table-wrap">
                     <table>
                         <thead>
-                            <tr><th>우선</th><th>장</th><th>왜 먼저인가</th></tr>
+                            <tr><th>순서</th><th>그룹 (Step)</th><th>교재</th><th>핵심</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>3장 통계정보 검색 및 활용</td><td>중간과제와 직결. KOSIS 검색-다운로드-기술통계-시각화 흐름을 먼저 손에 익힌다.</td></tr>
-                            <tr><td>2</td><td>9장 파이썬 + pandas</td><td>오픈소스기반데이터분석, 머신러닝, 딥러닝으로 그대로 이어진다. 투자가치 최고.</td></tr>
-                            <tr><td>3</td><td>8장 R</td><td>통계/시각화 전용 언어. 파이썬과 함께 다뤄 "도구가 바뀌어도 분석 사고는 같다"를 굳힌다.</td></tr>
-                            <tr><td>4</td><td>5-7장 엑셀</td><td>익숙하면 복습 위주로. 절대참조/피벗/조건집계/재무함수만 점검.</td></tr>
-                            <tr><td>5</td><td>1-2장 개념/데이터 위생</td><td>척도 구분, 결측치/이상치, Tidy Data는 빠르게 읽되 실습은 꼭 한 번 따라 한다.</td></tr>
-                            <tr><td>6</td><td>4장 문서작성</td><td>분석 결과를 보고서로 엮는 마지막 단계. 표/수식/구조는 제출 직전에 정리.</td></tr>
+                            <tr><td>1</td><td>데이터 개념과 용어 기초 (1~4)</td><td>1장</td><td>변수/관측치, 범주형 vs 수치형, 척도 4수준, 모집단/표본. 용어 사전과 병행.</td></tr>
+                            <tr><td>2</td><td>실데이터 받기와 점검 (5~6)</td><td>2~3장</td><td>KOSIS 검색/다운로드, 인코딩 확인, 결측치 찾기/채우기.</td></tr>
+                            <tr><td>3</td><td>기술통계 - 중심·산포·시각화 (7~13)</td><td>2~3장</td><td>평균/중앙값, 분산/표준편차, IQR 이상치, 정제와 Tidy Data, 엑셀 계산, 분포 그래프, 미니 보고서(중간과제 형식).</td></tr>
+                            <tr><td>4</td><td>엑셀 데이터 처리 (14~18)</td><td>5장</td><td>셀 참조(F4), IF/COUNTIF/SUMIF, VLOOKUP, 정렬/필터/피벗, 상관과 산점도.</td></tr>
+                            <tr><td>5</td><td>엑셀 그래프와 활용 (19~22)</td><td>6~7장</td><td>차트 선택 기준과 축 왜곡, 추세선/단순선형회귀(R제곱), 날짜/문자열, 재무함수(FV/PMT)와 목표값 찾기.</td></tr>
+                            <tr><td>6</td><td>R 자료분석 (23~25)</td><td>8장</td><td>벡터/데이터프레임, 기본 통계와 시각화, wide → long(Tidy) 변환.</td></tr>
+                            <tr><td>7</td><td>파이썬 pandas 분석 (26~31)</td><td>9장</td><td>Colab, DataFrame, CSV 탐색, groupby, 정제 종합, matplotlib(한글 폰트).</td></tr>
+                            <tr><td>8</td><td>문서작성과 마무리 (32~34)</td><td>4장+종합</td><td>표/수식, 서론-분석-결론 보고서, 용어 암기 모드 + 모의시험.</td></tr>
                         </tbody>
                     </table>
+                </div>
+                <p>문서작성(교재 4장)은 분석 결과가 있어야 의미가 있으므로 마지막 보고서 단계에 둔다. 본문 1~9장은 교재 장 순서 그대로이니, 그날 Step이 속한 장을 펼쳐 깊이를 더하면 된다.</p>
+                <div class="callout info">
+                    <p class="callout__title">중급자 속성 트랙 (참고)</p>
+                    <p>엑셀과 기초 통계가 이미 익숙하다면 투자 대비 효과가 큰 순서로 건너뛸 수 있다: 3장(KOSIS·기술통계) → 9장(파이썬) → 8장(R) → 5~7장(엑셀 점검) → 1~2장(개념 훑기) → 4장(문서작성).</p>
                 </div>
                 <div class="callout info">
                     <p class="callout__title">실습 데이터원은 항상 둘</p>
@@ -400,7 +407,7 @@
                 </div>
                 <div class="callout tip">
                     <p class="callout__title">암기 팁</p>
-                    <p>명목 &lt; 순서 &lt; 등간 &lt; 비율 순으로 "정보량"이 커진다. 위 단계 연산은 아래 단계에서도 항상 가능하다(비율은 다 됨).</p>
+                    <p>명목 &lt; 순서 &lt; 등간 &lt; 비율 순으로 "정보량"이 커진다. 낮은 척도에서 되는 연산은 더 높은 척도에서도 항상 된다(비율은 다 됨).</p>
                 </div>
 
                 <h3>꼭 구분할 짝</h3>
@@ -944,7 +951,7 @@ plt.show()</code></pre>
                 </div>
                 <div class="callout warn">
                     <p class="callout__title">한글 폰트</p>
-                    <p>폰트 설정이 없으면 그래프 한글이 네모로 깨진다. Colab에서는 <code>!apt -qq install fonts-nanum</code> 실행 후 폰트를 <code>NanumGothic</code>으로 지정한다.</p>
+                    <p>폰트 설정이 없으면 그래프 한글이 네모로 깨진다. Colab에서는 <code>!apt -qq install fonts-nanum</code> 실행 후 <code>matplotlib.font_manager.fontManager.addfont("/usr/share/fonts/truetype/nanum/NanumGothic.ttf")</code>로 폰트를 등록하고 <code>NanumGothic</code>으로 지정한다(등록 또는 런타임 재시작 없이 rcParams만 바꾸면 여전히 깨진다).</p>
                 </div>
 
                 <h3>실습 D 확장: 결측치 처리</h3>
@@ -1355,7 +1362,7 @@ df.fillna(0)         # 0으로 대치 -- 전후 행 개수를 비교</code></pre
                     <details class="gl-card" id="gl-ratio" data-cat="scale" data-key="비율척도 ratio 절대0 배수 키 소득 나이">
                         <summary><span class="gl-term">비율척도 <em>ratio</em></span><span class="gl-brief">절대 0이 있어 배수 비교까지 가능한 척도(키, 소득, 나이). 모든 사칙연산 의미.</span></summary>
                         <div class="gl-body">
-                            <p>정보량 순서: 명목 &lt; 순서 &lt; 등간 &lt; 비율. 위 척도에서 되는 연산은 아래(더 높은) 척도에서도 항상 된다.</p>
+                            <p>정보량 순서: 명목 &lt; 순서 &lt; 등간 &lt; 비율. 낮은 척도에서 되는 연산은 더 높은 척도에서도 항상 된다(예: 최빈값은 네 척도 모두, 평균은 등간 이상).</p>
                             <p class="gl-rel">연관: <button type="button" class="gl-link" data-goto="gl-interval">등간척도</button><button type="button" class="gl-link" data-goto="gl-numerical">수치형 변수</button></p>
                         </div>
                     </details>
