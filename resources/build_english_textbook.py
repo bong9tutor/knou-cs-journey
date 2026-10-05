@@ -1,5 +1,6 @@
 """Build the English reader from local textbook and workbook notes outside Git."""
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -139,7 +140,9 @@ def build(source_dir, output_root):
     assert units, 'No matching textbook/workbook pairs'
     template = (Path(__file__).parent / 'templates' / 'english-textbook.html').read_text(encoding='utf-8')
     payload = json.dumps({'units': units}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    write(output_root / 'docs' / 'english-textbook.html', template.replace('__TEXTBOOK_DATA__', payload))
+    script_version = hashlib.sha256((ROOT / 'docs/assets/english-textbook.js').read_bytes()).hexdigest()[:12]
+    page = template.replace('__TEXTBOOK_DATA__', payload).replace('__TEXTBOOK_SCRIPT_VERSION__', script_version)
+    write(output_root / 'docs' / 'english-textbook.html', page)
     for unit in units:
         print(f"Unit {unit['id']}: {len(unit['paragraphs'])} paragraphs, {len(unit['vocabulary'])} words, {len(unit['verbs'])} verb groups, {len(unit['exercises'])} questions, {unit['confirmedAnswers']} confirmed answers")
 
