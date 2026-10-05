@@ -5,7 +5,7 @@
 > 🔗 **학습 사이트** -> **https://bong9tutor.github.io/knou-cs-journey/**
 > 모바일 최적화 · 다크모드 · 목차 · 플래시카드 · 영어 발음 듣기(Web Speech)
 
-대학영어: [15강 학습노트와 모의고사](https://bong9tutor.github.io/knou-cs-journey/english-study.html) · [2026학년도 2학기 중간과제물 진행 안내](https://bong9tutor.github.io/knou-cs-journey/english-study.html#assignments) · [과제 진행 안내 원문](year1/1-2_대학영어/assignments/2026-2-중간과제물-진행안내.md).
+대학영어: [교재·워크북 Unit 1·2](https://bong9tutor.github.io/knou-cs-journey/english-textbook.html) · [15강 학습노트와 모의고사](https://bong9tutor.github.io/knou-cs-journey/english-study.html) · [2026학년도 2학기 중간과제물 진행 안내](https://bong9tutor.github.io/knou-cs-journey/english-study.html#assignments) · [과제 진행 안내 원문](year1/1-2_대학영어/assignments/2026-2-중간과제물-진행안내.md).
 
 ## 📦 구성과 활용
 
@@ -74,3 +74,13 @@ knou-cs-journey/
 ---
 
 > 개인 학습 기록용 레포입니다. 빈 폴더는 `.gitkeep`으로 구조를 유지합니다.
+
+### 대학영어 교재·워크북 HTML 갱신
+
+`year1/1-2_대학영어/notes/UnitNN_*.md`와 같은 이름의 `Workbook_UnitNN_*.md`를 함께 정리한 후 아래 명령으로 페이지를 다시 생성합니다. 업로드된 교재 본문·어휘·동사 예문과 워크북 해석·문제·확인된 정답을 연결합니다. 잘린 정답표의 답은 추정하지 않습니다.
+
+```sh
+python resources/build_english_textbook.py
+```
+
+템플릿은 `resources/templates/english-textbook.html`, 학습 도구와 디자인은 `docs/assets/english-textbook.js` 및 `docs/assets/english-textbook.css`에 있습니다. 암기 표시와 워크북 답안은 브라우저의 로컬 저장소에 저장됩니다.

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>대학영어 교재와 워크북 | KNOU 학습 노트</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/english-textbook.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+    <header class="topbar">
+        <h1 class="topbar__title"><a href="./index.html">KNOU 학습 노트</a></h1>
+        <button class="iconbtn" data-theme-toggle aria-label="다크 모드로 전환" aria-pressed="false">&#127769;</button>
+    </header>
+    <main class="content textbook">
+        <div class="reader-heading">
+            <p class="eyebrow">COLLEGE ENGLISH · TEXTBOOK &amp; WORKBOOK</p>
+            <h1>대학영어 교재와 워크북</h1>
+            <p>영문을 읽고, 해석으로 확인하고, 문제로 복습하세요. 업로드한 교재와 워크북의 Unit 1·2를 연결했습니다.</p>
+            <div class="reader-links">
+                <a href="./english-study.html">15강 학습과 모의고사</a>
+                <a href="./english-study.html#assignments">중간과제 안내</a>
+                <a href="./english.html">영문법·어휘 요약</a>
+            </div>
+        </div>
+        <div id="unit-switch" class="unit-switch" aria-label="교재 단원 선택"></div>
+        <section class="unit-overview" aria-label="선택한 단원의 정보">
+            <h2 id="unit-title"></h2>
+            <p class="reader-muted">본문 → 어휘 → 동사 예문 → 워크북 순서로 학습해 보세요.</p>
+            <div id="unit-counts" class="unit-counts"></div>
+        </section>
+        <div id="view-tabs" class="view-tabs" role="tablist" aria-label="학습 자료"></div>
+        <div class="reader-tools">
+            <label id="search-wrap" hidden>검색 <input id="reader-search" type="search" placeholder="단어·표현·뜻 검색" autocomplete="off"></label>
+            <button id="translation-toggle" class="reader-button" aria-pressed="false">해석 가리기</button>
+            <button id="stop-speech" class="reader-button" hidden>읽기 중지</button>
+            <span id="reader-status" class="reader-muted" role="status" aria-live="polite"></span>
+        </div>
+        <section id="reader-panel" role="tabpanel" aria-label="학습 내용"></section>
+        <details class="reader-sources">
+            <summary>원문과 자료 범위 확인</summary>
+            <div id="source-info"></div>
+            <p>해석과 정답은 업로드한 워크북을 기준으로 표시합니다. 암기 표시와 입력한 답안은 현재 브라우저에 저장됩니다. 영어 읽기는 브라우저의 음성 기능을 사용합니다.</p>
+        </details>
+        <noscript><p>이 페이지의 학습 도구에는 JavaScript가 필요합니다. <a href="https://github.com/bong9tutor/knou-cs-journey/tree/master/year1/1-2_%EB%8C%80%ED%95%99%EC%98%81%EC%96%B4/notes">원문 학습 노트</a>를 읽을 수 있습니다.</p></noscript>
+    </main>
+    <button class="to-top" aria-label="맨 위로">&#8593;</button>
+    <script type="application/json" id="textbook-data">__TEXTBOOK_DATA__</script>
+    <script src="./assets/english-textbook.js" defer></script>
+    <script src="./assets/app.js" defer></script>
+</body>
+</html>
