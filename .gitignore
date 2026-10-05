@@ -73,3 +73,7 @@ TODO.local.md
 
 # ===== Claude Code (개인 설정/권한 - 공유 안 함) =====
 .claude/settings.local.json
+
+# 대학영어 교재·워크북 원문은 knou-study-notes에만 보관
+/year1/1-2_대학영어/notes/Unit*.md
+/year1/1-2_대학영어/notes/Workbook_Unit*.md

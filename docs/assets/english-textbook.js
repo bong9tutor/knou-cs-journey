@@ -40,7 +40,7 @@
     }
 
     function readingHTML() {
-        return unit.paragraphs.map(p => `<article class="reading-block"><h3>문단 ${p.number}</h3><div class="parallel"><div><span class="language-label">TEXTBOOK · ENGLISH</span><p class="english-text" lang="en">${esc(p.english)}</p>${speakButton(p.english)}</div><div class="translation"><span class="language-label">WORKBOOK · 한국어 해석</span><p>${esc(p.korean)}</p></div></div></article>`).join('');
+        return unit.paragraphs.map(p => `<article class="reading-block"><h3>${esc(p.title || `문단 ${p.number}`)}</h3><div class="parallel"><div><span class="language-label">TEXTBOOK · ENGLISH</span><p class="english-text" lang="en">${esc(p.english)}</p>${speakButton(p.english)}</div><div class="translation"><span class="language-label">WORKBOOK · 한국어 해석</span><p>${esc(p.korean)}</p></div></div></article>`).join('');
     }
 
     function vocabularyHTML() {
@@ -71,19 +71,27 @@
     function exerciseHTML(item, group) {
         const key = answerKey(group, item.number);
         const solution = item.answer ? `<p class="answer-key">원문 정답: ${esc(item.answer.answer)}</p><p class="reader-muted">확인 근거: ${esc(item.answer.evidence)}</p>` : '<p class="reader-muted">원문 정답 미확인. 제공된 자료에 정답이 없어 표시하지 않았습니다.</p>';
-        return `<article class="exercise-card"><h3>${group === 'vocab' ? '어휘 연습' : '연습문제'} ${item.number}</h3>${item.prompt}<label for="answer-${group}-${item.number}">내 답안</label><textarea id="answer-${group}-${item.number}" data-answer="${esc(key)}" placeholder="답안이나 풀이 메모를 적어 보세요.">${esc(progress.answers[key] || '')}</textarea><details class="answer-details"><summary>정답·해설 보기</summary>${solution}${item.explanation ? `<strong>워크북 해설</strong>${item.explanation}` : ''}</details></article>`;
+        return `<article class="exercise-card"><h3>${group === 'vocab' ? '어휘 연습' : '연습문제'} ${item.number}</h3>${item.passage ? `<div class="verb-checks"><strong>문제 지문</strong>${item.passage}</div>` : ''}${item.prompt}<label for="answer-${group}-${item.number}">내 답안</label><textarea id="answer-${group}-${item.number}" data-answer="${esc(key)}" placeholder="답안이나 풀이 메모를 적어 보세요.">${esc(progress.answers[key] || '')}</textarea><details class="answer-details"><summary>정답·해설 보기</summary>${solution}${item.explanation ? `<strong>워크북 해설</strong>${item.explanation}` : ''}</details></article>`;
     }
 
     function workbookHTML() {
-        return `<p class="reader-muted">먼저 답안을 적고 정답·해설을 펼쳐 확인하세요. ${unit.confirmedAnswers}/${unit.exercises.length}문항의 정답이 원문에서 확인되었습니다.</p>${unit.answerNote ? `<div class="verb-checks">${unit.answerNote}</div>` : ''}<details class="exercise-group"><summary>어휘 연습 · ${unit.vocabularyExercises.length}문항</summary>${unit.vocabularyExercises.map(item => exerciseHTML(item, 'vocab')).join('')}</details><details class="exercise-group" open><summary>연습문제 · ${unit.exercises.length}문항</summary>${unit.exercises.map(item => exerciseHTML(item, 'practice')).join('')}</details>`;
+        return `<p class="reader-muted">먼저 답안을 적고 정답·해설을 펼쳐 확인하세요. ${unit.confirmedAnswers}/${unit.exercises.length}문항의 정답이 원문에서 확인되었습니다.</p>${unit.answerNote ? `<div class="verb-checks">${unit.answerNote}</div>` : ''}${unit.vocabularyExercises.length ? `<details class="exercise-group"><summary>어휘 연습 · ${unit.vocabularyExercises.length}문항</summary>${unit.vocabularyExercises.map(item => exerciseHTML(item, 'vocab')).join('')}</details>` : ''}<details class="exercise-group" open><summary>연습문제 · ${unit.exercises.length}문항</summary>${unit.exercises.map(item => exerciseHTML(item, 'practice')).join('')}</details>`;
+    }
+
+    function availableLabels() {
+        return Object.fromEntries(Object.entries(labels).filter(([id]) => id !== 'verbs' || unit.verbs.length));
     }
 
     function render() {
+        if (!availableLabels()[view]) view = 'reading';
         stopSpeech();
-        document.getElementById('unit-switch').innerHTML = units.map(item => `<button data-unit="${item.id}" aria-pressed="${unit.id === item.id}">${esc(item.title.replace('UNIT ', 'Unit '))}</button>`).join('');
+        document.getElementById('unit-study-order').textContent = unit.verbs.length
+            ? '본문 → 어휘 → 동사 예문 → 워크북 순서로 학습해 보세요.'
+            : '본문 → 어휘 → 워크북 순서로 학습해 보세요.';
+        document.getElementById('unit-switch').innerHTML = units.map(item => `<button data-unit="${item.id}" aria-pressed="${unit.id === item.id}">${esc((item.shortTitle || item.title).replace('UNIT ', 'Unit '))}</button>`).join('');
         document.getElementById('unit-title').textContent = unit.title;
-        document.getElementById('unit-counts').innerHTML = [`본문 ${unit.paragraphs.length}문단`, `어휘 ${unit.vocabulary.length}개`, `동사 ${unit.verbs.length}개`, `워크북 ${unit.vocabularyExercises.length + unit.exercises.length}문항`].map(text => `<span>${text}</span>`).join('');
-        document.getElementById('view-tabs').innerHTML = Object.entries(labels).map(([id, label]) => `<button id="tab-${id}" role="tab" data-view="${id}" aria-selected="${view === id}" aria-controls="reader-panel" tabindex="${view === id ? 0 : -1}">${label}</button>`).join('');
+        document.getElementById('unit-counts').innerHTML = [`본문 ${unit.paragraphs.length}문단`, `어휘 ${unit.vocabulary.length}개`, ...(unit.verbs.length ? [`동사 예문 ${unit.verbs.length}묶음`] : []), `워크북 ${unit.vocabularyExercises.length + unit.exercises.length}문항`].map(text => `<span>${text}</span>`).join('');
+        document.getElementById('view-tabs').innerHTML = Object.entries(availableLabels()).map(([id, label]) => `<button id="tab-${id}" role="tab" data-view="${id}" aria-selected="${view === id}" aria-controls="reader-panel" tabindex="${view === id ? 0 : -1}">${label}</button>`).join('');
         panel.setAttribute('aria-labelledby', `tab-${view}`);
         panel.innerHTML = ({ reading: readingHTML, vocabulary: vocabularyHTML, verbs: verbsHTML, workbook: workbookHTML })[view]();
         panel.classList.toggle('translations-hidden', hiddenTranslation);
@@ -91,8 +99,7 @@
         document.getElementById('translation-toggle').hidden = !['reading', 'verbs'].includes(view);
         status.textContent = canSave ? '암기 표시와 답안은 현재 브라우저에 저장됩니다.' : '브라우저 저장을 사용할 수 없습니다.';
         if (view === 'vocabulary') filterWords();
-        const sourceURL = filename => `https://github.com/bong9tutor/knou-cs-journey/blob/master/year1/${encodeURIComponent('1-2_대학영어')}/notes/${encodeURIComponent(filename)}`;
-        document.getElementById('source-info').innerHTML = `<p><a href="${sourceURL(unit.bookFile)}">교재 원문 · ${esc(unit.bookFile)}</a></p><p>${esc(unit.bookSource)}</p><p><a href="${sourceURL(unit.workbookFile)}">워크북 원문 · ${esc(unit.workbookFile)}</a></p><p>${esc(unit.workbookSource)}</p>`;
+        document.getElementById('source-info').innerHTML = `<p><strong>교재 원문</strong></p><p>${esc(unit.bookSource)}</p><p><strong>워크북 해석과 문제</strong></p><p>${esc(unit.workbookSource)}</p>`;
     }
 
     function navigate() {
@@ -123,7 +130,7 @@
         }
     });
     document.getElementById('view-tabs').addEventListener('keydown', event => {
-        const ids = Object.keys(labels);
+        const ids = Object.keys(availableLabels());
         if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
         event.preventDefault();
         let index = ids.indexOf(view);

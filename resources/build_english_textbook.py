@@ -1,4 +1,4 @@
-"""Build the English reader from the checked-in textbook and workbook notes."""
+"""Build the English reader from local textbook and workbook notes outside Git."""
 import argparse
 import html
 import json
@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_SOURCE_DIR = ROOT.parent / 'knou-study-notes' / '대학영어' / '교재'
 
 
 def inline(text):
@@ -63,26 +64,37 @@ def rows(text):
 
 def questions(text):
     result = []
+    passage = ''
     for title, body in subsections(text):
+        if not title.isdigit():
+            passage = fragment(body.replace('> ', ''))
+            continue
         prompt, _, explanation = body.partition('**해설:**')
-        result.append({'number': int(title), 'prompt': fragment(prompt), 'explanation': fragment(explanation)})
+        result.append({'number': int(title), 'passage': passage, 'prompt': fragment(prompt), 'explanation': fragment(explanation)})
     return result
 
 
 def source_note(text):
-    return ' '.join(line.removeprefix('>').strip() for line in text.splitlines() if line.startswith('>'))
+    return ' '.join(line.removeprefix('>').strip() for line in text.split('\n## ', 1)[0].splitlines() if line.startswith('>'))
+
+
+def reading_blocks(text):
+    intro = re.split(r'^### ', text, maxsplit=1, flags=re.M)[0].strip()
+    return ([('도입', intro)] if intro else []) + subsections(text)
 
 
 def read_unit(book_path, workbook_path):
     book = book_path.read_text(encoding='utf-8').replace('\u2014', '-')
     workbook = workbook_path.read_text(encoding='utf-8').replace('\u2014', '-')
     b, w = sections(book), sections(workbook)
-    translations = dict(subsections(w['본문 해석']))
-    reading = subsections(b['본문'])
+    translations = reading_blocks(w['본문 해석'])
+    reading = reading_blocks(b['본문'])
     assert len(reading) == len(translations), 'Paragraph translation count differs'
+    if all(title.isdigit() for title, _ in reading):
+        assert [title for title, _ in reading] == [title for title, _ in translations], 'Paragraph numbers differ'
     verbs = []
-    translated_verbs = dict(subsections(w['How to Use Verbs in Sentences']))
-    for title, body in subsections(b['How to Use Verbs in Sentences']):
+    translated_verbs = dict(subsections(w.get('How to Use Verbs in Sentences', '')))
+    for title, body in subsections(b.get('How to Use Verbs in Sentences', '')):
         pairs = re.findall(r'^- (.+)\n[ \t]+- (.+)$', translated_verbs[title], re.M)
         examples, _, checks = body.partition('**확인 사항**')
         original_examples = re.findall(r'^- (.+)$', examples, re.M)
@@ -95,12 +107,14 @@ def read_unit(book_path, workbook_path):
         item['answer'] = answers.get(item['number'])
     return {
         'id': re.search(r'Unit(\d+)', book_path.name).group(1),
-        'title': book.splitlines()[0].removeprefix('# '),
-        'bookFile': book_path.name, 'workbookFile': workbook_path.name,
+        'title': book.splitlines()[0].removeprefix('# ').removesuffix(' - 교재'),
+        'shortTitle': book.splitlines()[0].removeprefix('# ').split(':', 1)[0].removesuffix(' - 교재'),
         'bookSource': source_note(book), 'workbookSource': source_note(workbook),
-        'paragraphs': [{'number': int(title), 'english': body, 'korean': translations[title]} for title, body in reading],
+        'paragraphs': [{'number': number, 'title': f'문단 {title}' if title.isdigit() else title,
+                        'english': body, 'korean': translation[1]}
+                       for number, ((title, body), translation) in enumerate(zip(reading, translations), 1)],
         'vocabulary': [{'number': int(row[0]), 'word': row[1], 'meaning': row[2]} for row in rows(b['어휘'])],
-        'verbs': verbs, 'vocabularyExercises': questions(w['어휘 연습']), 'exercises': exercises,
+        'verbs': verbs, 'vocabularyExercises': questions(w.get('어휘 연습', '')), 'exercises': exercises,
         'answerNote': fragment('\n'.join(line for line in answer_section.splitlines() if not line.startswith('|'))),
         'confirmedAnswers': len(answers)
     }
@@ -114,8 +128,9 @@ def write(path, text):
         output.write(text)
 
 
-def build(source_root, output_root):
-    notes = source_root / 'year1' / '1-2_대학영어' / 'notes'
+def build(source_dir, output_root):
+    notes = source_dir.resolve()
+    assert notes.is_dir(), f'Local source folder not found: {notes}'
     units = []
     for book in sorted(notes.glob('Unit[0-9][0-9]_*.md')):
         workbook = notes / ('Workbook_' + book.name)
@@ -131,7 +146,12 @@ def build(source_root, output_root):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source-root', type=Path, default=ROOT)
+    parser.add_argument('--source-dir', type=Path, default=DEFAULT_SOURCE_DIR,
+                        help='Local folder containing UnitNN_*.md and Workbook_UnitNN_*.md; sources are not copied')
+    parser.add_argument('--source-root', dest='legacy_source_root', type=Path, help=argparse.SUPPRESS)
     parser.add_argument('--output-root', type=Path, default=ROOT)
     args = parser.parse_args()
-    build(args.source_root, args.output_root)
+    source_dir = args.source_dir
+    if args.legacy_source_root:
+        source_dir = args.legacy_source_root / '대학영어' / '교재'
+    build(source_dir, args.output_root)
